@@ -1,0 +1,77 @@
+/home/rnm/clion-2020.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCATKIN_DEVEL_PREFIX:PATH=/home/rnm/catkin_ws/devel -G "CodeBlocks - Unix Makefiles" /home/rnm/catkin_ws/src
+CMake Warning (dev) in CMakeLists.txt:
+  No project() command is present.  The top-level CMakeLists.txt file must
+  contain a literal, direct call to the project() command.  Add a line of
+  code such as
+
+    project(ProjectName)
+
+  near the top of the file, but after cmake_minimum_required().
+
+  CMake is pretending there is a "project(Project)" command on the first
+  line.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Using CATKIN_DEVEL_PREFIX: /home/rnm/catkin_ws/devel
+-- Using CMAKE_PREFIX_PATH: /home/rnm/catkin_ws/devel;/opt/ros/melodic
+-- This workspace overlays: /home/rnm/catkin_ws/devel;/opt/ros/melodic
+-- Found PythonInterp: /usr/bin/python2 (found suitable version "2.7.17", minimum required is "2") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python2
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /home/rnm/catkin_ws/build/test_results
+-- Found gtest sources under '/usr/src/googletest': gtests will be built
+-- Found gmock sources under '/usr/src/googletest': gmock will be built
+-- Found PythonInterp: /usr/bin/python2 (found version "2.7.17") 
+-- Using Python nosetests: /usr/bin/nosetests-2.7
+-- catkin 0.7.20
+-- BUILD_SHARED_LIBS is on
+-- BUILD_SHARED_LIBS is on
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- ~~  traversing 9 packages in topological order:
+-- ~~  - franka_description
+-- ~~  - franka_ros (metapackage)
+-- ~~  - franka_msgs
+-- ~~  - franka_gripper
+-- ~~  - franka_visualization
+-- ~~  - panda_joint_reader
+-- ~~  - franka_hw
+-- ~~  - franka_control
+-- ~~  - franka_example_controllers
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- +++ processing catkin package: 'franka_description'
+-- ==> add_subdirectory(franka_ros/franka_description)
+-- +++ processing catkin metapackage: 'franka_ros'
+-- ==> add_subdirectory(franka_ros/franka_ros)
+-- +++ processing catkin package: 'franka_msgs'
+-- ==> add_subdirectory(franka_ros/franka_msgs)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- franka_msgs: 2 messages, 0 services
+-- +++ processing catkin package: 'franka_gripper'
+-- ==> add_subdirectory(franka_ros/franka_gripper)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- Generating .msg files for action franka_gripper/Grasp /home/rnm/catkin_ws/src/franka_ros/franka_gripper/action/Grasp.action
+-- Generating .msg files for action franka_gripper/Homing /home/rnm/catkin_ws/src/franka_ros/franka_gripper/action/Homing.action
+-- Generating .msg files for action franka_gripper/Stop /home/rnm/catkin_ws/src/franka_ros/franka_gripper/action/Stop.action
+-- Generating .msg files for action franka_gripper/Move /home/rnm/catkin_ws/src/franka_ros/franka_gripper/action/Move.action
+-- franka_gripper: 29 messages, 0 services
+-- +++ processing catkin package: 'franka_visualization'
+-- ==> add_subdirectory(franka_ros/franka_visualization)
+-- +++ processing catkin package: 'panda_joint_reader'
+-- ==> add_subdirectory(panda_joint_reader)
+-- +++ processing catkin package: 'franka_hw'
+-- ==> add_subdirectory(franka_ros/franka_hw)
+-- +++ processing catkin package: 'franka_control'
+-- ==> add_subdirectory(franka_ros/franka_control)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- Generating .msg files for action franka_control/ErrorRecovery /home/rnm/catkin_ws/src/franka_ros/franka_control/action/ErrorRecovery.action
+-- franka_control: 7 messages, 7 services
+-- +++ processing catkin package: 'franka_example_controllers'
+-- ==> add_subdirectory(franka_ros/franka_example_controllers)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- franka_example_controllers: 1 messages, 0 services
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/rnm/catkin_ws/build

@@ -1,0 +1,8 @@
+prefix=/home/rnm/catkin_ws/install
+
+Name: panda_joint_reader
+Description: Description of panda_joint_reader
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: roscpp sensor_msgs

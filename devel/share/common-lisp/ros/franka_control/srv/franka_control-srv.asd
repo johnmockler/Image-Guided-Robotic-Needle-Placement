@@ -1,0 +1,21 @@
+
+(cl:in-package :asdf)
+
+(defsystem "franka_control-srv"
+  :depends-on (:roslisp-msg-protocol :roslisp-utils )
+  :components ((:file "_package")
+    (:file "SetCartesianImpedance" :depends-on ("_package_SetCartesianImpedance"))
+    (:file "_package_SetCartesianImpedance" :depends-on ("_package"))
+    (:file "SetEEFrame" :depends-on ("_package_SetEEFrame"))
+    (:file "_package_SetEEFrame" :depends-on ("_package"))
+    (:file "SetForceTorqueCollisionBehavior" :depends-on ("_package_SetForceTorqueCollisionBehavior"))
+    (:file "_package_SetForceTorqueCollisionBehavior" :depends-on ("_package"))
+    (:file "SetFullCollisionBehavior" :depends-on ("_package_SetFullCollisionBehavior"))
+    (:file "_package_SetFullCollisionBehavior" :depends-on ("_package"))
+    (:file "SetJointImpedance" :depends-on ("_package_SetJointImpedance"))
+    (:file "_package_SetJointImpedance" :depends-on ("_package"))
+    (:file "SetKFrame" :depends-on ("_package_SetKFrame"))
+    (:file "_package_SetKFrame" :depends-on ("_package"))
+    (:file "SetLoad" :depends-on ("_package_SetLoad"))
+    (:file "_package_SetLoad" :depends-on ("_package"))
+  ))

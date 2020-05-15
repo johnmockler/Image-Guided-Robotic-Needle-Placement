@@ -1,0 +1,8 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~desired_mass" : \b [double] desired mass for rendered force due to gravity applied in the z axis min: 0.0, default: 0.0, max: 2.0
+- \b "~k_p" : \b [double] force P gain min: 0.0, default: 0.0, max: 2.0
+- \b "~k_i" : \b [double] force I gain min: 0.0, default: 0.0, max: 2.0
+

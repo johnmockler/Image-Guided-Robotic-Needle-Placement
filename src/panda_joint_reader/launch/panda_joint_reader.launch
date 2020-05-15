@@ -1,0 +1,8 @@
+<launch>
+
+    <node name="panda_joint_reader" pkg="panda_joint_reader" type="panda_joint_reader_node" output="screen">
+        <rosparam command="load" file="$(find panda_joint_reader)/config/panda_joint_reader_node.yaml" />
+
+    </node>
+
+</launch>

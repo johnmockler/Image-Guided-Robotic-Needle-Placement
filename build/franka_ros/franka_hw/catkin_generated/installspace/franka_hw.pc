@@ -1,0 +1,8 @@
+prefix=/home/rnm/catkin_ws/install
+
+Name: franka_hw
+Description: Description of franka_hw
+Version: 0.7.0
+Cflags: -I${prefix}/include -I/opt/ros/melodic/include/libfranka
+Libs: -L${prefix}/lib -lfranka_hw /opt/ros/melodic/lib/libfranka.so.0.7.1
+Requires: controller_interface hardware_interface joint_limits_interface roscpp urdf

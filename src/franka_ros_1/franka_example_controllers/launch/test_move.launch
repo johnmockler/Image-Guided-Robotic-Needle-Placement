@@ -1,0 +1,10 @@
+<launch>
+
+    <include file="$(find franka_example_controllers)/launch/joint_position_example_controller_sim.launch" />
+
+    <node name="simple_trajectory_player" pkg="franka_example_controllers" type="test_move_node" />
+
+    <param name="joint_move_dist" type="double" value="30.0" />
+
+
+</launch>

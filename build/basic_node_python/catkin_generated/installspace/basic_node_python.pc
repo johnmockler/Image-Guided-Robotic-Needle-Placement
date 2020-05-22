@@ -1,0 +1,8 @@
+prefix=/home/rnm/catkin_ws/install
+
+Name: basic_node_python
+Description: Description of basic_node_python
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

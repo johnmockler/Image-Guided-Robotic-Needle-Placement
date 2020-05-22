@@ -67,7 +67,7 @@ set(franka_example_controllers_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(franka_example_controllers_SOURCE_PREFIX /home/rnm/catkin_ws/src/franka_ros/franka_example_controllers)
+  set(franka_example_controllers_SOURCE_PREFIX /home/rnm/catkin_ws/src/franka_ros_1/franka_example_controllers)
   set(franka_example_controllers_DEVEL_PREFIX /home/rnm/catkin_ws/devel)
   set(franka_example_controllers_INSTALL_PREFIX "")
   set(franka_example_controllers_PREFIX ${franka_example_controllers_DEVEL_PREFIX})
@@ -110,7 +110,7 @@ if(NOT "/home/rnm/catkin_ws/devel/include;/opt/ros/melodic/include/libfranka " S
         message(FATAL_ERROR "Project 'franka_example_controllers' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'franka_example_controllers' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/rnm/catkin_ws/src/franka_ros/franka_example_controllers/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'franka_example_controllers' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/rnm/catkin_ws/src/franka_ros_1/franka_example_controllers/${idir}'.  ${_report}")
     endif()
     _list_append_unique(franka_example_controllers_INCLUDE_DIRS ${include})
   endforeach()

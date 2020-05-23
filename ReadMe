@@ -1,0 +1,19 @@
+
+
+***Post Cloning setup****
+After cloning the repos run the following command on the terminal
+
+cd rnm_group_2
+catkin_make
+
+If the build executes then you are good to go.
+If it fails then source your workspace by 
+  1.Run the follwing command on the terminal
+        -> gedit .bashrc
+  2. A document will open scroll to the bottom of the document and you will find
+        -> source /home/rnm/catkin_ws/devel/setup.bash
+      Replace this with
+         -> source /home/rnm/rnm_group_2/devel/setup.bash
+ 	Save and close the file.
+
+   3. Now build the workspace

@@ -1,1 +1,1 @@
-Copy this node structure to your node (if you want!)
+Use this node structure as a starting point for your nodes

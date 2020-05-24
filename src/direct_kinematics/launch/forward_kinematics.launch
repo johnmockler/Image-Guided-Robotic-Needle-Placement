@@ -1,0 +1,11 @@
+<launch>
+
+    <arg name="joint_state_topic_name" default="/joint_states" />
+    <arg name="subscriber_queue_size" default="10" />
+
+   <node name="forward_kinematics" pkg="direct_kinematics" type="forward_kinematics" output="screen">
+        <param name="joint_state_topic_name" type="str" value="$(arg joint_state_topic_name)"/>
+        <param name="subscriber_queue_size" type="int" value="$(arg subscriber_queue_size)"/>
+   </node>
+
+</launch>

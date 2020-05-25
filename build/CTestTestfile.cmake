@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/rnm/catkin_ws/src
-# Build directory: /home/rnm/catkin_ws/build
+# Source directory: /home/rnm/rnm_group_2/src
+# Build directory: /home/rnm/rnm_group_2/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
@@ -9,6 +9,7 @@ subdirs("basic_node_python")
 subdirs("franka_ros_1/franka_description")
 subdirs("franka_ros_1/franka_ros")
 subdirs("franka_ros_1/franka_msgs")
+subdirs("forward_kinematics")
 subdirs("franka_ros_1/franka_gripper")
 subdirs("franka_ros_1/franka_visualization")
 subdirs("panda_joint_reader")

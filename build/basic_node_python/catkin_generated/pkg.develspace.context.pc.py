@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "basic_node_python"
-PROJECT_SPACE_DIR = "/home/rnm/catkin_ws/devel"
+PROJECT_SPACE_DIR = "/home/rnm/rnm_group_2/devel"
 PROJECT_VERSION = "0.0.0"

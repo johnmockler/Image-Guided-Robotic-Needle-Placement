@@ -1,4 +1,4 @@
-prefix=/home/rnm/catkin_ws/install
+prefix=/home/rnm/rnm_group_2/install
 
 Name: panda_joint_reader
 Description: Description of panda_joint_reader

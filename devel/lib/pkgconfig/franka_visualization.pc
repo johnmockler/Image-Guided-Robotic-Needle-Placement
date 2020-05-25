@@ -1,4 +1,4 @@
-prefix=/home/rnm/catkin_ws/devel
+prefix=/home/rnm/rnm_group_2/devel
 
 Name: franka_visualization
 Description: Description of franka_visualization

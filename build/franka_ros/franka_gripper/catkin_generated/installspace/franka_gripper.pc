@@ -1,8 +1,0 @@
-prefix=/home/rnm/catkin_ws/install
-
-Name: franka_gripper
-Description: Description of franka_gripper
-Version: 0.7.0
-Cflags: -I${prefix}/include -I/opt/ros/melodic/include/libfranka
-Libs: -L${prefix}/lib -lfranka_gripper /opt/ros/melodic/lib/libfranka.so.0.7.1
-Requires: roscpp message_runtime control_msgs actionlib sensor_msgs xmlrpcpp actionlib_msgs

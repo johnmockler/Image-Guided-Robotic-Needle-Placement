@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "${prefix}/include;/opt/ros/melodic/include/li
 PROJECT_CATKIN_DEPENDS = "controller_interface;dynamic_reconfigure;franka_hw;geometry_msgs;hardware_interface;message_runtime;pluginlib;realtime_tools;roscpp".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lfranka_example_controllers;/opt/ros/melodic/lib/libfranka.so.0.7.1".split(';') if "-lfranka_example_controllers;/opt/ros/melodic/lib/libfranka.so.0.7.1" != "" else []
 PROJECT_NAME = "franka_example_controllers"
-PROJECT_SPACE_DIR = "/home/rnm/catkin_ws/install"
+PROJECT_SPACE_DIR = "/home/rnm/rnm_group_2/install"
 PROJECT_VERSION = "0.7.0"

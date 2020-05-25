@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/rnm/catkin_ws/devel/include/franka_gripper/GraspAction.h
+/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspAction.h
 string
 -
 vector
@@ -28,7 +28,7 @@ franka_gripper/GraspActionResult.h
 franka_gripper/GraspActionFeedback.h
 -
 
-/home/rnm/catkin_ws/devel/include/franka_gripper/GraspActionFeedback.h
+/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspActionFeedback.h
 string
 -
 vector
@@ -50,7 +50,7 @@ actionlib_msgs/GoalStatus.h
 franka_gripper/GraspFeedback.h
 -
 
-/home/rnm/catkin_ws/devel/include/franka_gripper/GraspActionGoal.h
+/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspActionGoal.h
 string
 -
 vector
@@ -72,7 +72,7 @@ actionlib_msgs/GoalID.h
 franka_gripper/GraspGoal.h
 -
 
-/home/rnm/catkin_ws/devel/include/franka_gripper/GraspActionResult.h
+/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspActionResult.h
 string
 -
 vector
@@ -94,7 +94,7 @@ actionlib_msgs/GoalStatus.h
 franka_gripper/GraspResult.h
 -
 
-/home/rnm/catkin_ws/devel/include/franka_gripper/GraspEpsilon.h
+/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspEpsilon.h
 string
 -
 vector
@@ -110,7 +110,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/rnm/catkin_ws/devel/include/franka_gripper/GraspFeedback.h
+/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspFeedback.h
 string
 -
 vector
@@ -126,7 +126,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/rnm/catkin_ws/devel/include/franka_gripper/GraspGoal.h
+/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspGoal.h
 string
 -
 vector
@@ -144,7 +144,7 @@ ros/message_operations.h
 franka_gripper/GraspEpsilon.h
 -
 
-/home/rnm/catkin_ws/devel/include/franka_gripper/GraspResult.h
+/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspResult.h
 string
 -
 vector
@@ -160,7 +160,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/rnm/catkin_ws/devel/include/franka_gripper/HomingAction.h
+/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingAction.h
 string
 -
 vector
@@ -182,7 +182,7 @@ franka_gripper/HomingActionResult.h
 franka_gripper/HomingActionFeedback.h
 -
 
-/home/rnm/catkin_ws/devel/include/franka_gripper/HomingActionFeedback.h
+/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingActionFeedback.h
 string
 -
 vector
@@ -204,7 +204,7 @@ actionlib_msgs/GoalStatus.h
 franka_gripper/HomingFeedback.h
 -
 
-/home/rnm/catkin_ws/devel/include/franka_gripper/HomingActionGoal.h
+/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingActionGoal.h
 string
 -
 vector
@@ -226,7 +226,7 @@ actionlib_msgs/GoalID.h
 franka_gripper/HomingGoal.h
 -
 
-/home/rnm/catkin_ws/devel/include/franka_gripper/HomingActionResult.h
+/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingActionResult.h
 string
 -
 vector
@@ -248,7 +248,7 @@ actionlib_msgs/GoalStatus.h
 franka_gripper/HomingResult.h
 -
 
-/home/rnm/catkin_ws/devel/include/franka_gripper/HomingFeedback.h
+/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingFeedback.h
 string
 -
 vector
@@ -264,7 +264,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/rnm/catkin_ws/devel/include/franka_gripper/HomingGoal.h
+/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingGoal.h
 string
 -
 vector
@@ -280,7 +280,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/rnm/catkin_ws/devel/include/franka_gripper/HomingResult.h
+/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingResult.h
 string
 -
 vector
@@ -296,7 +296,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/rnm/catkin_ws/devel/include/franka_gripper/MoveAction.h
+/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveAction.h
 string
 -
 vector
@@ -318,7 +318,7 @@ franka_gripper/MoveActionResult.h
 franka_gripper/MoveActionFeedback.h
 -
 
-/home/rnm/catkin_ws/devel/include/franka_gripper/MoveActionFeedback.h
+/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveActionFeedback.h
 string
 -
 vector
@@ -340,7 +340,7 @@ actionlib_msgs/GoalStatus.h
 franka_gripper/MoveFeedback.h
 -
 
-/home/rnm/catkin_ws/devel/include/franka_gripper/MoveActionGoal.h
+/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveActionGoal.h
 string
 -
 vector
@@ -362,7 +362,7 @@ actionlib_msgs/GoalID.h
 franka_gripper/MoveGoal.h
 -
 
-/home/rnm/catkin_ws/devel/include/franka_gripper/MoveActionResult.h
+/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveActionResult.h
 string
 -
 vector
@@ -384,7 +384,7 @@ actionlib_msgs/GoalStatus.h
 franka_gripper/MoveResult.h
 -
 
-/home/rnm/catkin_ws/devel/include/franka_gripper/MoveFeedback.h
+/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveFeedback.h
 string
 -
 vector
@@ -400,7 +400,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/rnm/catkin_ws/devel/include/franka_gripper/MoveGoal.h
+/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveGoal.h
 string
 -
 vector
@@ -416,7 +416,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/rnm/catkin_ws/devel/include/franka_gripper/MoveResult.h
+/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveResult.h
 string
 -
 vector
@@ -432,7 +432,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/rnm/catkin_ws/devel/include/franka_gripper/StopAction.h
+/home/rnm/rnm_group_2/devel/include/franka_gripper/StopAction.h
 string
 -
 vector
@@ -454,7 +454,7 @@ franka_gripper/StopActionResult.h
 franka_gripper/StopActionFeedback.h
 -
 
-/home/rnm/catkin_ws/devel/include/franka_gripper/StopActionFeedback.h
+/home/rnm/rnm_group_2/devel/include/franka_gripper/StopActionFeedback.h
 string
 -
 vector
@@ -476,7 +476,7 @@ actionlib_msgs/GoalStatus.h
 franka_gripper/StopFeedback.h
 -
 
-/home/rnm/catkin_ws/devel/include/franka_gripper/StopActionGoal.h
+/home/rnm/rnm_group_2/devel/include/franka_gripper/StopActionGoal.h
 string
 -
 vector
@@ -498,7 +498,7 @@ actionlib_msgs/GoalID.h
 franka_gripper/StopGoal.h
 -
 
-/home/rnm/catkin_ws/devel/include/franka_gripper/StopActionResult.h
+/home/rnm/rnm_group_2/devel/include/franka_gripper/StopActionResult.h
 string
 -
 vector
@@ -520,7 +520,7 @@ actionlib_msgs/GoalStatus.h
 franka_gripper/StopResult.h
 -
 
-/home/rnm/catkin_ws/devel/include/franka_gripper/StopFeedback.h
+/home/rnm/rnm_group_2/devel/include/franka_gripper/StopFeedback.h
 string
 -
 vector
@@ -536,7 +536,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/rnm/catkin_ws/devel/include/franka_gripper/StopGoal.h
+/home/rnm/rnm_group_2/devel/include/franka_gripper/StopGoal.h
 string
 -
 vector
@@ -552,7 +552,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/rnm/catkin_ws/devel/include/franka_gripper/StopResult.h
+/home/rnm/rnm_group_2/devel/include/franka_gripper/StopResult.h
 string
 -
 vector
@@ -568,7 +568,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/rnm/catkin_ws/src/franka_ros_1/franka_gripper/include/franka_gripper/franka_gripper.h
+/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/include/franka_gripper/franka_gripper.h
 cmath
 -
 string
@@ -594,7 +594,7 @@ franka_gripper/MoveAction.h
 franka_gripper/StopAction.h
 -
 
-/home/rnm/catkin_ws/src/franka_ros_1/franka_gripper/src/franka_gripper_node.cpp
+/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/src/franka_gripper_node.cpp
 functional
 -
 mutex

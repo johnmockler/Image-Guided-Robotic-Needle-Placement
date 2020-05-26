@@ -1,0 +1,6 @@
+<launch>
+
+    <node name="forward_kinematics" pkg="forward_kinematics" type="forward_kinematics_node" output="screen">
+    </node>
+
+</launch>

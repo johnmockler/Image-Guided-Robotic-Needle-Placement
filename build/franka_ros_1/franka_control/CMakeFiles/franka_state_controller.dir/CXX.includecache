@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/rnm/catkin_ws/devel/include/franka_msgs/Errors.h
+/home/rnm/rnm_group_2/devel/include/franka_msgs/Errors.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/rnm/catkin_ws/devel/include/franka_msgs/FrankaState.h
+/home/rnm/rnm_group_2/devel/include/franka_msgs/FrankaState.h
 string
 -
 vector
@@ -44,7 +44,7 @@ franka_msgs/Errors.h
 franka_msgs/Errors.h
 -
 
-/home/rnm/catkin_ws/src/franka_ros_1/franka_control/include/franka_control/franka_state_controller.h
+/home/rnm/rnm_group_2/src/franka_ros_1/franka_control/include/franka_control/franka_state_controller.h
 cstdint
 -
 memory
@@ -68,7 +68,7 @@ sensor_msgs/JointState.h
 tf2_msgs/TFMessage.h
 -
 
-/home/rnm/catkin_ws/src/franka_ros_1/franka_control/src/franka_state_controller.cpp
+/home/rnm/rnm_group_2/src/franka_ros_1/franka_control/src/franka_state_controller.cpp
 franka_control/franka_state_controller.h
 -
 cmath
@@ -96,7 +96,7 @@ tf/tf.h
 tf/transform_datatypes.h
 -
 
-/home/rnm/catkin_ws/src/franka_ros_1/franka_hw/include/franka_hw/franka_cartesian_command_interface.h
+/home/rnm/rnm_group_2/src/franka_ros_1/franka_hw/include/franka_hw/franka_cartesian_command_interface.h
 array
 -
 franka_hw/franka_state_interface.h
@@ -104,7 +104,7 @@ franka_hw/franka_state_interface.h
 hardware_interface/internal/hardware_resource_manager.h
 -
 
-/home/rnm/catkin_ws/src/franka_ros_1/franka_hw/include/franka_hw/franka_state_interface.h
+/home/rnm/rnm_group_2/src/franka_ros_1/franka_hw/include/franka_hw/franka_state_interface.h
 string
 -
 franka/robot_state.h
@@ -112,7 +112,7 @@ franka/robot_state.h
 hardware_interface/internal/hardware_resource_manager.h
 -
 
-/home/rnm/catkin_ws/src/franka_ros_1/franka_hw/include/franka_hw/trigger_rate.h
+/home/rnm/rnm_group_2/src/franka_ros_1/franka_hw/include/franka_hw/trigger_rate.h
 ros/time.h
 -
 
@@ -612,13 +612,13 @@ franka/duration.h
 franka/errors.h
 -
 
-/opt/ros/melodic/include/pluginlib/class_list_macros.h
-./class_list_macros.hpp
-/opt/ros/melodic/include/pluginlib/class_list_macros.hpp
-
-/opt/ros/melodic/include/pluginlib/class_list_macros.hpp
+/opt/ros/melodic/include/pluginlib/./class_list_macros.hpp
 class_loader/class_loader.hpp
 -
+
+/opt/ros/melodic/include/pluginlib/class_list_macros.h
+./class_list_macros.hpp
+/opt/ros/melodic/include/pluginlib/./class_list_macros.hpp
 
 /opt/ros/melodic/include/realtime_tools/realtime_publisher.h
 string

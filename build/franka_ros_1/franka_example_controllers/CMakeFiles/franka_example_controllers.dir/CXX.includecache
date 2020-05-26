@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/rnm/catkin_ws/src/franka_ros_1/franka_example_controllers/include/franka_example_controllers/joint_position_example_controller.h
+/home/rnm/rnm_group_2/src/franka_ros_1/franka_example_controllers/include/franka_example_controllers/joint_position_example_controller.h
 array
 -
 string
@@ -26,7 +26,7 @@ ros/time.h
 std_msgs/Float64MultiArray.h
 -
 
-/home/rnm/catkin_ws/src/franka_ros_1/franka_example_controllers/include/franka_example_controllers/joint_position_example_controller_sim.h
+/home/rnm/rnm_group_2/src/franka_ros_1/franka_example_controllers/include/franka_example_controllers/joint_position_example_controller_sim.h
 array
 -
 string
@@ -44,7 +44,7 @@ ros/time.h
 std_msgs/Float64MultiArray.h
 -
 
-/home/rnm/catkin_ws/src/franka_ros_1/franka_example_controllers/src/joint_position_example_controller.cpp
+/home/rnm/rnm_group_2/src/franka_ros_1/franka_example_controllers/src/joint_position_example_controller.cpp
 franka_example_controllers/joint_position_example_controller.h
 -
 cmath
@@ -60,7 +60,7 @@ pluginlib/class_list_macros.h
 ros/ros.h
 -
 
-/home/rnm/catkin_ws/src/franka_ros_1/franka_example_controllers/src/joint_position_example_controller_sim.cpp
+/home/rnm/rnm_group_2/src/franka_ros_1/franka_example_controllers/src/joint_position_example_controller_sim.cpp
 franka_example_controllers/joint_position_example_controller_sim.h
 -
 cmath
@@ -310,13 +310,13 @@ ros/console.h
 ros/node_handle.h
 -
 
-/opt/ros/melodic/include/pluginlib/class_list_macros.h
-./class_list_macros.hpp
-/opt/ros/melodic/include/pluginlib/class_list_macros.hpp
-
-/opt/ros/melodic/include/pluginlib/class_list_macros.hpp
+/opt/ros/melodic/include/pluginlib/./class_list_macros.hpp
 class_loader/class_loader.hpp
 -
+
+/opt/ros/melodic/include/pluginlib/class_list_macros.h
+./class_list_macros.hpp
+/opt/ros/melodic/include/pluginlib/./class_list_macros.hpp
 
 /opt/ros/melodic/include/ros/advertise_options.h
 ros/forwards.h

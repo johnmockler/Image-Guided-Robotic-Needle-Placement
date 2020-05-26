@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/rnm/catkin_ws/src/panda_joint_reader/src/panda_joint_reader.cpp" "/home/rnm/catkin_ws/build/panda_joint_reader/CMakeFiles/panda_joint_reader_node.dir/src/panda_joint_reader.cpp.o"
+  "/home/rnm/rnm_group_2/src/panda_joint_reader/src/panda_joint_reader.cpp" "/home/rnm/rnm_group_2/build/panda_joint_reader/CMakeFiles/panda_joint_reader_node.dir/src/panda_joint_reader.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,7 +17,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/rnm/catkin_ws/src/panda_joint_reader/include"
+  "/home/rnm/rnm_group_2/src/panda_joint_reader/include"
   "/opt/ros/melodic/include"
   "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )

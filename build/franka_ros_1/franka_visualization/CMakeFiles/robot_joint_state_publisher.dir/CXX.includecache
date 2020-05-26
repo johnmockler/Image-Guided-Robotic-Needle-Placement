@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/rnm/catkin_ws/src/franka_ros_1/franka_visualization/src/robot_joint_state_publisher.cpp
+/home/rnm/rnm_group_2/src/franka_ros_1/franka_visualization/src/robot_joint_state_publisher.cpp
 franka/exception.h
 -
 franka/robot.h

@@ -67,7 +67,7 @@ set(franka_example_controllers_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(franka_example_controllers_SOURCE_PREFIX /home/rnm/rnm_group_2/src/franka_ros_1/franka_example_controllers)
+  set(franka_example_controllers_SOURCE_PREFIX /home/rnm/rnm_group_2/src/franka_ros/franka_example_controllers)
   set(franka_example_controllers_DEVEL_PREFIX /home/rnm/rnm_group_2/devel)
   set(franka_example_controllers_INSTALL_PREFIX "")
   set(franka_example_controllers_PREFIX ${franka_example_controllers_DEVEL_PREFIX})
@@ -110,7 +110,7 @@ if(NOT "/home/rnm/rnm_group_2/devel/include;/opt/ros/melodic/include/libfranka "
         message(FATAL_ERROR "Project 'franka_example_controllers' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'franka_example_controllers' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/rnm/rnm_group_2/src/franka_ros_1/franka_example_controllers/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'franka_example_controllers' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/rnm/rnm_group_2/src/franka_ros/franka_example_controllers/${idir}'.  ${_report}")
     endif()
     _list_append_unique(franka_example_controllers_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/rnm/rnm_group_2/devel/lib;/home/rnm/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/rnm/rnm_group_2/devel/lib;/home/rnm/rnm_group_2/devel/lib;/home/rnm/catkin_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

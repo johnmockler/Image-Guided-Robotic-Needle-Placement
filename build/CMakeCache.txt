@@ -285,7 +285,7 @@ UBUNTU:BOOL=TRUE
 UBUNTU_BIONIC:BOOL=TRUE
 
 //Path to a file.
-_file_name:FILEPATH=/home/rnm/rnm_group_2/src/franka_ros_1/franka_hw/test/launch/franka_hw_test.test
+_file_name:FILEPATH=/home/rnm/rnm_group_2/src/franka_ros/franka_hw/test/launch/franka_hw_test.test
 
 //Path to a file.
 _gmock_INCLUDES:FILEPATH=/usr/include/gmock/gmock.h
@@ -342,40 +342,40 @@ forward_kinematics_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/forward_kinemat
 forward_kinematics_SOURCE_DIR:STATIC=/home/rnm/rnm_group_2/src/forward_kinematics
 
 //Value Computed by CMake
-franka_control_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/franka_ros_1/franka_control
+franka_control_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/franka_ros/franka_control
 
 //Value Computed by CMake
-franka_control_SOURCE_DIR:STATIC=/home/rnm/rnm_group_2/src/franka_ros_1/franka_control
+franka_control_SOURCE_DIR:STATIC=/home/rnm/rnm_group_2/src/franka_ros/franka_control
 
 //Dependencies for the target
 franka_control_services_LIB_DEPENDS:STATIC=general;Franka::Franka;general;/opt/ros/melodic/lib/libcontroller_manager.so;general;franka_hw;general;/opt/ros/melodic/lib/libfranka.so.0.7.1;general;/opt/ros/melodic/lib/liburdf.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_sensor.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model_state.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_world.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/melodic/lib/librosconsole_bridge.so;general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/librealtime_tools.so;general;/opt/ros/melodic/lib/libtf.so;general;/opt/ros/melodic/lib/libtf2_ros.so;general;/opt/ros/melodic/lib/libactionlib.so;general;/opt/ros/melodic/lib/libmessage_filters.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/libtf2.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;
 
 //Value Computed by CMake
-franka_description_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/franka_ros_1/franka_description
+franka_description_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/franka_ros/franka_description
 
 //Value Computed by CMake
-franka_description_SOURCE_DIR:STATIC=/home/rnm/rnm_group_2/src/franka_ros_1/franka_description
+franka_description_SOURCE_DIR:STATIC=/home/rnm/rnm_group_2/src/franka_ros/franka_description
 
 //Value Computed by CMake
-franka_example_controllers_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/franka_ros_1/franka_example_controllers
+franka_example_controllers_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/franka_ros/franka_example_controllers
 
 //Dependencies for the target
 franka_example_controllers_LIB_DEPENDS:STATIC=general;Franka::Franka;general;/opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so;general;franka_hw;general;/opt/ros/melodic/lib/libfranka.so.0.7.1;general;/opt/ros/melodic/lib/liburdf.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_sensor.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model_state.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_world.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/melodic/lib/librosconsole_bridge.so;general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/librealtime_tools.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;
 
 //Value Computed by CMake
-franka_example_controllers_SOURCE_DIR:STATIC=/home/rnm/rnm_group_2/src/franka_ros_1/franka_example_controllers
+franka_example_controllers_SOURCE_DIR:STATIC=/home/rnm/rnm_group_2/src/franka_ros/franka_example_controllers
 
 //Value Computed by CMake
-franka_gripper_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper
+franka_gripper_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/franka_ros/franka_gripper
 
 //Dependencies for the target
 franka_gripper_LIB_DEPENDS:STATIC=general;Franka::Franka;general;/opt/ros/melodic/lib/libactionlib.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;
 
 //Value Computed by CMake
-franka_gripper_SOURCE_DIR:STATIC=/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper
+franka_gripper_SOURCE_DIR:STATIC=/home/rnm/rnm_group_2/src/franka_ros/franka_gripper
 
 //Value Computed by CMake
-franka_hw_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/franka_ros_1/franka_hw
+franka_hw_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/franka_ros/franka_hw
 
 //The directory containing a CMake configuration file for franka_hw.
 franka_hw_DIR:PATH=/home/rnm/rnm_group_2/devel/share/franka_hw/cmake
@@ -384,31 +384,31 @@ franka_hw_DIR:PATH=/home/rnm/rnm_group_2/devel/share/franka_hw/cmake
 franka_hw_LIB_DEPENDS:STATIC=general;Franka::Franka;general;/opt/ros/melodic/lib/liburdf.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_sensor.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model_state.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_world.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/librosconsole_bridge.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;
 
 //Value Computed by CMake
-franka_hw_SOURCE_DIR:STATIC=/home/rnm/rnm_group_2/src/franka_ros_1/franka_hw
+franka_hw_SOURCE_DIR:STATIC=/home/rnm/rnm_group_2/src/franka_ros/franka_hw
 
 //Value Computed by CMake
-franka_msgs_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/franka_ros_1/franka_msgs
+franka_msgs_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/franka_ros/franka_msgs
 
 //The directory containing a CMake configuration file for franka_msgs.
 franka_msgs_DIR:PATH=/home/rnm/rnm_group_2/devel/share/franka_msgs/cmake
 
 //Value Computed by CMake
-franka_msgs_SOURCE_DIR:STATIC=/home/rnm/rnm_group_2/src/franka_ros_1/franka_msgs
+franka_msgs_SOURCE_DIR:STATIC=/home/rnm/rnm_group_2/src/franka_ros/franka_msgs
 
 //Value Computed by CMake
-franka_ros_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/franka_ros_1/franka_ros
+franka_ros_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/franka_ros/franka_ros
 
 //Value Computed by CMake
-franka_ros_SOURCE_DIR:STATIC=/home/rnm/rnm_group_2/src/franka_ros_1/franka_ros
+franka_ros_SOURCE_DIR:STATIC=/home/rnm/rnm_group_2/src/franka_ros/franka_ros
 
 //Dependencies for the target
 franka_state_controller_LIB_DEPENDS:STATIC=general;Franka::Franka;general;/opt/ros/melodic/lib/libcontroller_manager.so;general;franka_hw;general;/opt/ros/melodic/lib/libfranka.so.0.7.1;general;/opt/ros/melodic/lib/liburdf.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_sensor.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model_state.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_world.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/melodic/lib/librosconsole_bridge.so;general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/librealtime_tools.so;general;/opt/ros/melodic/lib/libtf.so;general;/opt/ros/melodic/lib/libtf2_ros.so;general;/opt/ros/melodic/lib/libactionlib.so;general;/opt/ros/melodic/lib/libmessage_filters.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/libtf2.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;
 
 //Value Computed by CMake
-franka_visualization_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/franka_ros_1/franka_visualization
+franka_visualization_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/franka_ros/franka_visualization
 
 //Value Computed by CMake
-franka_visualization_SOURCE_DIR:STATIC=/home/rnm/rnm_group_2/src/franka_ros_1/franka_visualization
+franka_visualization_SOURCE_DIR:STATIC=/home/rnm/rnm_group_2/src/franka_ros/franka_visualization
 
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/opt/ros/melodic/share/gencpp/cmake
@@ -435,7 +435,7 @@ geometry_msgs_DIR:PATH=/opt/ros/melodic/share/geometry_msgs/cmake
 gmock_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/gtest/googlemock
 
 //Dependencies for the target
-gmock_LIB_DEPENDS:STATIC=general;-lpthread;
+gmock_LIB_DEPENDS:STATIC=general;-pthread;
 
 //Value Computed by CMake
 gmock_SOURCE_DIR:STATIC=/usr/src/googletest/googlemock
@@ -444,7 +444,7 @@ gmock_SOURCE_DIR:STATIC=/usr/src/googletest/googlemock
 gmock_build_tests:BOOL=OFF
 
 //Dependencies for the target
-gmock_main_LIB_DEPENDS:STATIC=general;-lpthread;
+gmock_main_LIB_DEPENDS:STATIC=general;-pthread;
 
 //Value Computed by CMake
 googletest-distribution_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/gtest
@@ -456,7 +456,7 @@ googletest-distribution_SOURCE_DIR:STATIC=/usr/src/googletest
 gtest_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/gtest/googlemock/gtest
 
 //Dependencies for the target
-gtest_LIB_DEPENDS:STATIC=general;-lpthread;
+gtest_LIB_DEPENDS:STATIC=general;-pthread;
 
 //Value Computed by CMake
 gtest_SOURCE_DIR:STATIC=/usr/src/googletest/googletest
@@ -478,7 +478,7 @@ gtest_force_shared_crt:BOOL=OFF
 gtest_hide_internal_symbols:BOOL=OFF
 
 //Dependencies for the target
-gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
+gtest_main_LIB_DEPENDS:STATIC=general;-pthread;general;gtest;
 
 //The directory containing a CMake configuration file for hardware_interface.
 hardware_interface_DIR:PATH=/opt/ros/melodic/share/hardware_interface/cmake

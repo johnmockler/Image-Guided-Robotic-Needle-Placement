@@ -285,7 +285,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.10/Modules/CMakeParseArguments.cmake"
   "/usr/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake"
   "/usr/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake"
-  "/usr/share/cmake-3.10/Modules/CheckForPthreads.c"
   "/usr/share/cmake-3.10/Modules/CheckIncludeFile.cmake"
   "/usr/share/cmake-3.10/Modules/CheckLibraryExists.cmake"
   "/usr/share/cmake-3.10/Modules/CheckSymbolExists.cmake"

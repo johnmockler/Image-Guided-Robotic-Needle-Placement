@@ -10,6 +10,7 @@ project(forward_kinematics)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   sensor_msgs
+  OpenCV
 )
 
 ## System dependencies are found with CMake's conventions
@@ -102,7 +103,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
+ INCLUDE_DIRS include
 #  LIBRARIES forward_kinematics
 #  CATKIN_DEPENDS roscpp sensor_msgs
   DEPENDS system_lib

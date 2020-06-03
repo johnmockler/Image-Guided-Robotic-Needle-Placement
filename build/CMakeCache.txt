@@ -257,6 +257,9 @@ LSB_RELEASE_EXECUTABLE:FILEPATH=/usr/bin/lsb_release
 //Path to a program.
 NOSETESTS:FILEPATH=/usr/bin/nosetests-2.7
 
+//The directory containing a CMake configuration file for OpenCV.
+OpenCV_DIR:PATH=OpenCV_DIR-NOTFOUND
+
 //Path to a program.
 PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python2
 
@@ -389,8 +392,7 @@ franka_hw_SOURCE_DIR:STATIC=/home/rnm/rnm_group_2/src/franka_ros_1/franka_hw
 //Value Computed by CMake
 franka_msgs_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/franka_ros_1/franka_msgs
 
-//The directory containing a CMake configuration file for franka_msgs.
-franka_msgs_DIR:PATH=/home/rnm/rnm_group_2/devel/share/franka_msgs/cmake
+franka_msgs_DIR:PATH=
 
 //Value Computed by CMake
 franka_msgs_SOURCE_DIR:STATIC=/home/rnm/rnm_group_2/src/franka_ros_1/franka_msgs
@@ -435,7 +437,7 @@ geometry_msgs_DIR:PATH=/opt/ros/melodic/share/geometry_msgs/cmake
 gmock_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/gtest/googlemock
 
 //Dependencies for the target
-gmock_LIB_DEPENDS:STATIC=general;-lpthread;
+gmock_LIB_DEPENDS:STATIC=general;-pthread;
 
 //Value Computed by CMake
 gmock_SOURCE_DIR:STATIC=/usr/src/googletest/googlemock
@@ -444,7 +446,7 @@ gmock_SOURCE_DIR:STATIC=/usr/src/googletest/googlemock
 gmock_build_tests:BOOL=OFF
 
 //Dependencies for the target
-gmock_main_LIB_DEPENDS:STATIC=general;-lpthread;
+gmock_main_LIB_DEPENDS:STATIC=general;-pthread;
 
 //Value Computed by CMake
 googletest-distribution_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/gtest
@@ -456,7 +458,7 @@ googletest-distribution_SOURCE_DIR:STATIC=/usr/src/googletest
 gtest_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/gtest/googlemock/gtest
 
 //Dependencies for the target
-gtest_LIB_DEPENDS:STATIC=general;-lpthread;
+gtest_LIB_DEPENDS:STATIC=general;-pthread;
 
 //Value Computed by CMake
 gtest_SOURCE_DIR:STATIC=/usr/src/googletest/googletest
@@ -478,7 +480,7 @@ gtest_force_shared_crt:BOOL=OFF
 gtest_hide_internal_symbols:BOOL=OFF
 
 //Dependencies for the target
-gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
+gtest_main_LIB_DEPENDS:STATIC=general;-pthread;general;gtest;
 
 //The directory containing a CMake configuration file for hardware_interface.
 hardware_interface_DIR:PATH=/opt/ros/melodic/share/hardware_interface/cmake
@@ -487,7 +489,7 @@ hardware_interface_DIR:PATH=/opt/ros/melodic/share/hardware_interface/cmake
 joint_limits_interface_DIR:PATH=/opt/ros/melodic/share/joint_limits_interface/cmake
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/melodic/lib/librealtime_tools.so
+lib:FILEPATH=/opt/ros/melodic/lib/libxmlrpcpp.so
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/melodic/share/message_filters/cmake
@@ -686,7 +688,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=16
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=9
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

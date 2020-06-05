@@ -21,8 +21,9 @@ void CameraCalibrationNode::cameraCallback(const sensor_msgs::ImageConstPtr& msg
         ROS_ERROR("cv_bridge exception: %s", e.what());
         return;
     }
-    
+
 
     //cv_ptr is now compatible with open cv. you can run code here. Create other functions as necessary
+    //use "cv_ptr->image" where you would need a cv::Mat data type
 
 }

@@ -8,7 +8,6 @@
 
 
 class CameraCalibrationNode
-
 {
 private:
 
@@ -18,8 +17,8 @@ private:
 
     //all global class variables here
     cv::Mat cameraMatrix;
-    vector<vector<Point2f>> imagePoints;
-    vector<vector<Point3f>> objectPoints;
+    std::vector<std::vector<cv::Point2f>> imagePoints;
+    std::vector<std::vector<cv::Point3f>> objectPoints;
 
 
     void cameraCallback(const sensor_msgs::ImageConstPtr& msg);
@@ -28,4 +27,4 @@ public:
 
     CameraCalibrationNode();
 
-}
+};

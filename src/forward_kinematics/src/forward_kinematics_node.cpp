@@ -13,9 +13,17 @@ class Kinematics{
   
 private:
  std::vector<float> joint_angles;
- std::vector<float> d={0.33,0,0.316,0,0.384,0.107};
+ std::vector<float> d={0.33,0,0.316,0,0.384,0,0.107};
  std::vector<float> alpha={0,-M_PI/2,M_PI/2,M_PI/2,-M_PI/2,M_PI/2,0};
- std::vector<float> a={0,0,0,0.0825,-0.0825,0.088};
+ std::vector<float> a={0,0,0,0.0825,-0.0825,0,0.088};
+ cv::Mat T_1;
+ cv::Mat T_2;
+ cv::Mat T_3;
+ cv::Mat T_4;
+ cv::Mat T_5;
+ cv::Mat T_6;
+ cv::Mat T_7;
+ cv::Mat T_F;
  //ros::NodeHandle n;
 
  //ros::Publisher EEcord_pub = n.advertise<std_msgs::Float64MultiArray>("/endeffector_Cord", 1000);
@@ -27,33 +35,46 @@ Kinematics()
 
 }
 
-void compute(std::vector<float> angles)
+void compute(std::vector<float> theta)
 {
-   std::vector<cv::Mat> transformations;
+  std::vector<cv::Mat> transformations;
   std::cout<<"entered callback"<<std::endl;
-  for (size_t i = 0; i < angles.size(); i++)
-  {
-    //std::cout << msg->position[i]*180.0/M_PI << " ";
-    //joint_angles.push_back(msg->position[i]*180.0/M_PI);
-    transformations.push_back(forward_kin(alpha[i],angles[i],a[i],d[i]));
-  }
+  float mat_data1[16]={cos(theta[0]),-sin(theta[0]),0,0,  sin(theta[0]),cos(theta[0]),0,0,  0,0,1,d[0],  0,0,0,1};
+  T_1= cv::Mat(4,4,CV_32F,mat_data1);
+  transformations.push_back(T_1);
+
+  float mat_data2[16]={cos(theta[1]),0,-sin(theta[1]),0,  sin(theta[1]),0,cos(theta[1]),0,  0,-1,0,0,  0,0,0,1};
+  T_2= cv::Mat(4,4,CV_32F,mat_data2);
+  transformations.push_back(T_2);
+
+  float mat_data3[16]={cos(theta[2]),0,sin(theta[2]),0,  -sin(theta[2]),0,-cos(theta[2]),0,  0,1,0,d[2],  0,0,0,1};
+  T_3= cv::Mat(4,4,CV_32F,mat_data3);
+  transformations.push_back(T_3);
+
+  float mat_data4[16]={cos(theta[3]),0,sin(theta[3]),a[3]*cos(theta[3]),  sin(theta[3]),0,-cos(theta[3]),a[3]*sin(theta[3]),  0,1,0,0,  0,0,0,1};
+  T_4= cv::Mat(4,4,CV_32F,mat_data4);
+  transformations.push_back(T_4);
+
+  float mat_data5[16]={cos(theta[4]),0,-sin(theta[4]),a[4]*cos(theta[4]),  sin(theta[4]),0,cos(theta[4]),a[4]*sin(theta[4]),  0,-1,0,d[4],  0,0,0,1};
+  T_5= cv::Mat(4,4,CV_32F,mat_data5);
+  transformations.push_back(T_5);
+
+  float mat_data6[16]={cos(theta[5]),0,sin(theta[5]),0,  sin(theta[5]),0,-cos(theta[5]),0,  0,1,0,0,  0,0,0,1};
+   T_6= cv::Mat(4,4,CV_32F,mat_data6);
+  transformations.push_back(T_6);
+
+  float mat_data7[16]={cos(theta[6]),0,sin(theta[6]),a[6]*cos(theta[6]),  sin(theta[6]),0,-cos(theta[6]),a[6]*sin(theta[6]),  0,1,0,0,  0,0,0,1};
+  T_7= cv::Mat(4,4,CV_32F,mat_data7);
+  transformations.push_back(T_7);
+  
+  float mat_dataF[16]={1,0,0,0,  0,1,0,0,  0,0,1,d[6],  0,0,0,1};
+  T_F= cv::Mat(4,4,CV_32F,mat_dataF);
+  transformations.push_back(T_F);
+
   setCoordinates(transformations);
   
-
 }
-cv::Mat forward_kin(float alpha, float theta, float ai, float di)
-{
-  std::cout<<"entered kincalc"<<std::endl;
-  float mat_data[16]={cos(theta),-cos(alpha)*sin(theta),sin(alpha)*sin(theta),ai*cos(theta),
-                              sin(theta),cos(alpha)*sin(theta),-sin(alpha)*cos(theta), ai*sin(theta),
-                              0,sin(alpha),cos(alpha),di,
-                              0,0,0,1};
-  cv::Mat dhCalc = cv::Mat(4,4,CV_32F,mat_data);
-  //std::cout<<dhCalc<<std::endl;
 
-return dhCalc;
-  
-}
 void setCoordinates(std::vector<cv::Mat> transformations)
 {
   std::cout<<"entered setcord"<<std::endl;
@@ -63,8 +84,8 @@ void setCoordinates(std::vector<cv::Mat> transformations)
   cv::Mat temp1 = cv::Mat(4,4,CV_32F,mat_data1);
   for(int i=0;i<transformations.size();i++)
   {
-    finalTrans=finalTrans*temp1;
-     //finalTrans=finalTrans*transformations[i];
+    //finalTrans=finalTrans*temp1;
+     finalTrans=finalTrans*transformations[i];
      //std::cout<<transformations[i]<<std::endl;
     
   }
@@ -87,7 +108,9 @@ void jointStateCallback(const sensor_msgs::JointState::ConstPtr& msg)
    std::vector<float> joint_angles;
   for (size_t i = 0; i < msg->position.size(); i++)
   {
-    joint_angles.push_back(msg->position[i]);
+    //joint_angles.push_back(msg->position[i]);
+    joint_angles.push_back(0);
+    std::cout<<"angles :"<<joint_angles[i]<<std::endl;
    
   } 
   Kinematics kinObj;

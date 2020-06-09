@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<launch>
-    <node pkg="basic_node_python" type="main.py" name="basic_node_python" output="screen">
-        <param name="first_param" value="10" type="int" />
-    </node>
-</launch>

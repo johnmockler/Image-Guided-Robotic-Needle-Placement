@@ -1,2 +1,0 @@
-joint_state_topic_name: /joint_state
-subscriber_queue_size: 1

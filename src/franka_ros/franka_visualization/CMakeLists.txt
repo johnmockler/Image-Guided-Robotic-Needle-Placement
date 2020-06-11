@@ -18,7 +18,7 @@ set(EXECUTABLES robot_joint_state_publisher gripper_joint_state_publisher)
 foreach(executable ${EXECUTABLES})
   add_executable(${executable}
     src/${executable}.cpp
-          ../../panda_joint_reader/include/panda_joint_reader/panda_joint_reader.h)
+  )
   add_dependencies(${executable}
     ${${PROJECT_NAME}_EXPORTED_TARGETS}
     ${catkin_EXPORTED_TARGETS}

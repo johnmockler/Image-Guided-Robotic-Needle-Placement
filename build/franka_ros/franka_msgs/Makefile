@@ -90,17 +90,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -111,6 +100,28 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -123,17 +134,6 @@ install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,19 +168,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-franka_ros/franka_msgs/CMakeFiles/franka_msgs_gennodejs.dir/rule:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_msgs/CMakeFiles/franka_msgs_gennodejs.dir/rule
-.PHONY : franka_ros/franka_msgs/CMakeFiles/franka_msgs_gennodejs.dir/rule
+franka_ros/franka_msgs/CMakeFiles/franka_msgs_genpy.dir/rule:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_msgs/CMakeFiles/franka_msgs_genpy.dir/rule
+.PHONY : franka_ros/franka_msgs/CMakeFiles/franka_msgs_genpy.dir/rule
 
 # Convenience name for target.
-franka_msgs_gennodejs: franka_ros/franka_msgs/CMakeFiles/franka_msgs_gennodejs.dir/rule
+franka_msgs_genpy: franka_ros/franka_msgs/CMakeFiles/franka_msgs_genpy.dir/rule
 
-.PHONY : franka_msgs_gennodejs
+.PHONY : franka_msgs_genpy
 
 # fast build rule for target.
-franka_msgs_gennodejs/fast:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_msgs/CMakeFiles/franka_msgs_gennodejs.dir/build.make franka_ros/franka_msgs/CMakeFiles/franka_msgs_gennodejs.dir/build
-.PHONY : franka_msgs_gennodejs/fast
+franka_msgs_genpy/fast:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_msgs/CMakeFiles/franka_msgs_genpy.dir/build.make franka_ros/franka_msgs/CMakeFiles/franka_msgs_genpy.dir/build
+.PHONY : franka_msgs_genpy/fast
 
 # Convenience name for target.
 franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_py.dir/rule:
@@ -198,6 +198,66 @@ franka_msgs_generate_messages_py/fast:
 .PHONY : franka_msgs_generate_messages_py/fast
 
 # Convenience name for target.
+franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages.dir/rule:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages.dir/rule
+.PHONY : franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages.dir/rule
+
+# Convenience name for target.
+franka_msgs_generate_messages: franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages.dir/rule
+
+.PHONY : franka_msgs_generate_messages
+
+# fast build rule for target.
+franka_msgs_generate_messages/fast:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages.dir/build.make franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages.dir/build
+.PHONY : franka_msgs_generate_messages/fast
+
+# Convenience name for target.
+franka_ros/franka_msgs/CMakeFiles/franka_msgs_genlisp.dir/rule:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_msgs/CMakeFiles/franka_msgs_genlisp.dir/rule
+.PHONY : franka_ros/franka_msgs/CMakeFiles/franka_msgs_genlisp.dir/rule
+
+# Convenience name for target.
+franka_msgs_genlisp: franka_ros/franka_msgs/CMakeFiles/franka_msgs_genlisp.dir/rule
+
+.PHONY : franka_msgs_genlisp
+
+# fast build rule for target.
+franka_msgs_genlisp/fast:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_msgs/CMakeFiles/franka_msgs_genlisp.dir/build.make franka_ros/franka_msgs/CMakeFiles/franka_msgs_genlisp.dir/build
+.PHONY : franka_msgs_genlisp/fast
+
+# Convenience name for target.
+franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+.PHONY : franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_nodejs: franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : std_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+std_msgs_generate_messages_nodejs/fast:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+.PHONY : std_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+.PHONY : franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_cpp: franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : std_msgs_generate_messages_cpp
+
+# fast build rule for target.
+std_msgs_generate_messages_cpp/fast:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+.PHONY : std_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
 franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_cpp.dir/rule:
 	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_cpp.dir/rule
 .PHONY : franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_cpp.dir/rule
@@ -213,19 +273,49 @@ franka_msgs_generate_messages_cpp/fast:
 .PHONY : franka_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
-franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_eus.dir/rule:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_eus.dir/rule
-.PHONY : franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_eus.dir/rule
+franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+.PHONY : franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-franka_msgs_generate_messages_eus: franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_eus.dir/rule
+std_msgs_generate_messages_eus: franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
 
-.PHONY : franka_msgs_generate_messages_eus
+.PHONY : std_msgs_generate_messages_eus
 
 # fast build rule for target.
-franka_msgs_generate_messages_eus/fast:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_eus.dir/build.make franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_eus.dir/build
-.PHONY : franka_msgs_generate_messages_eus/fast
+std_msgs_generate_messages_eus/fast:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+.PHONY : std_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_lisp.dir/rule:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_lisp.dir/rule
+.PHONY : franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+franka_msgs_generate_messages_lisp: franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : franka_msgs_generate_messages_lisp
+
+# fast build rule for target.
+franka_msgs_generate_messages_lisp/fast:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_lisp.dir/build.make franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_lisp.dir/build
+.PHONY : franka_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+franka_ros/franka_msgs/CMakeFiles/_franka_msgs_generate_messages_check_deps_Errors.dir/rule:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_msgs/CMakeFiles/_franka_msgs_generate_messages_check_deps_Errors.dir/rule
+.PHONY : franka_ros/franka_msgs/CMakeFiles/_franka_msgs_generate_messages_check_deps_Errors.dir/rule
+
+# Convenience name for target.
+_franka_msgs_generate_messages_check_deps_Errors: franka_ros/franka_msgs/CMakeFiles/_franka_msgs_generate_messages_check_deps_Errors.dir/rule
+
+.PHONY : _franka_msgs_generate_messages_check_deps_Errors
+
+# fast build rule for target.
+_franka_msgs_generate_messages_check_deps_Errors/fast:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_msgs/CMakeFiles/_franka_msgs_generate_messages_check_deps_Errors.dir/build.make franka_ros/franka_msgs/CMakeFiles/_franka_msgs_generate_messages_check_deps_Errors.dir/build
+.PHONY : _franka_msgs_generate_messages_check_deps_Errors/fast
 
 # Convenience name for target.
 franka_ros/franka_msgs/CMakeFiles/_franka_msgs_generate_messages_check_deps_FrankaState.dir/rule:
@@ -258,34 +348,49 @@ franka_msgs_gencpp/fast:
 .PHONY : franka_msgs_gencpp/fast
 
 # Convenience name for target.
-franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages.dir/rule:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages.dir/rule
-.PHONY : franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages.dir/rule
+franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_eus.dir/rule:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_eus.dir/rule
+.PHONY : franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-franka_msgs_generate_messages: franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages.dir/rule
+franka_msgs_generate_messages_eus: franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_eus.dir/rule
 
-.PHONY : franka_msgs_generate_messages
+.PHONY : franka_msgs_generate_messages_eus
 
 # fast build rule for target.
-franka_msgs_generate_messages/fast:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages.dir/build.make franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages.dir/build
-.PHONY : franka_msgs_generate_messages/fast
+franka_msgs_generate_messages_eus/fast:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_eus.dir/build.make franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_eus.dir/build
+.PHONY : franka_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
-franka_ros/franka_msgs/CMakeFiles/_franka_msgs_generate_messages_check_deps_Errors.dir/rule:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_msgs/CMakeFiles/_franka_msgs_generate_messages_check_deps_Errors.dir/rule
-.PHONY : franka_ros/franka_msgs/CMakeFiles/_franka_msgs_generate_messages_check_deps_Errors.dir/rule
+franka_ros/franka_msgs/CMakeFiles/franka_msgs_gennodejs.dir/rule:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_msgs/CMakeFiles/franka_msgs_gennodejs.dir/rule
+.PHONY : franka_ros/franka_msgs/CMakeFiles/franka_msgs_gennodejs.dir/rule
 
 # Convenience name for target.
-_franka_msgs_generate_messages_check_deps_Errors: franka_ros/franka_msgs/CMakeFiles/_franka_msgs_generate_messages_check_deps_Errors.dir/rule
+franka_msgs_gennodejs: franka_ros/franka_msgs/CMakeFiles/franka_msgs_gennodejs.dir/rule
 
-.PHONY : _franka_msgs_generate_messages_check_deps_Errors
+.PHONY : franka_msgs_gennodejs
 
 # fast build rule for target.
-_franka_msgs_generate_messages_check_deps_Errors/fast:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_msgs/CMakeFiles/_franka_msgs_generate_messages_check_deps_Errors.dir/build.make franka_ros/franka_msgs/CMakeFiles/_franka_msgs_generate_messages_check_deps_Errors.dir/build
-.PHONY : _franka_msgs_generate_messages_check_deps_Errors/fast
+franka_msgs_gennodejs/fast:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_msgs/CMakeFiles/franka_msgs_gennodejs.dir/build.make franka_ros/franka_msgs/CMakeFiles/franka_msgs_gennodejs.dir/build
+.PHONY : franka_msgs_gennodejs/fast
+
+# Convenience name for target.
+franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+.PHONY : franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_py: franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+
+.PHONY : std_msgs_generate_messages_py
+
+# fast build rule for target.
+std_msgs_generate_messages_py/fast:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build.make franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build
+.PHONY : std_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 franka_ros/franka_msgs/CMakeFiles/franka_msgs_geneus.dir/rule:
@@ -303,34 +408,19 @@ franka_msgs_geneus/fast:
 .PHONY : franka_msgs_geneus/fast
 
 # Convenience name for target.
-franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_lisp.dir/rule:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_lisp.dir/rule
-.PHONY : franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_lisp.dir/rule
+franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+.PHONY : franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-franka_msgs_generate_messages_lisp: franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_lisp.dir/rule
+std_msgs_generate_messages_lisp: franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 
-.PHONY : franka_msgs_generate_messages_lisp
+.PHONY : std_msgs_generate_messages_lisp
 
 # fast build rule for target.
-franka_msgs_generate_messages_lisp/fast:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_lisp.dir/build.make franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_lisp.dir/build
-.PHONY : franka_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-franka_ros/franka_msgs/CMakeFiles/franka_msgs_genlisp.dir/rule:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_msgs/CMakeFiles/franka_msgs_genlisp.dir/rule
-.PHONY : franka_ros/franka_msgs/CMakeFiles/franka_msgs_genlisp.dir/rule
-
-# Convenience name for target.
-franka_msgs_genlisp: franka_ros/franka_msgs/CMakeFiles/franka_msgs_genlisp.dir/rule
-
-.PHONY : franka_msgs_genlisp
-
-# fast build rule for target.
-franka_msgs_genlisp/fast:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_msgs/CMakeFiles/franka_msgs_genlisp.dir/build.make franka_ros/franka_msgs/CMakeFiles/franka_msgs_genlisp.dir/build
-.PHONY : franka_msgs_genlisp/fast
+std_msgs_generate_messages_lisp/fast:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+.PHONY : std_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_nodejs.dir/rule:
@@ -347,21 +437,6 @@ franka_msgs_generate_messages_nodejs/fast:
 	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_nodejs.dir/build.make franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_nodejs.dir/build
 .PHONY : franka_msgs_generate_messages_nodejs/fast
 
-# Convenience name for target.
-franka_ros/franka_msgs/CMakeFiles/franka_msgs_genpy.dir/rule:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_msgs/CMakeFiles/franka_msgs_genpy.dir/rule
-.PHONY : franka_ros/franka_msgs/CMakeFiles/franka_msgs_genpy.dir/rule
-
-# Convenience name for target.
-franka_msgs_genpy: franka_ros/franka_msgs/CMakeFiles/franka_msgs_genpy.dir/rule
-
-.PHONY : franka_msgs_genpy
-
-# fast build rule for target.
-franka_msgs_genpy/fast:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_msgs/CMakeFiles/franka_msgs_genpy.dir/build.make franka_ros/franka_msgs/CMakeFiles/franka_msgs_genpy.dir/build
-.PHONY : franka_msgs_genpy/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -371,23 +446,28 @@ help:
 	@echo "... install/strip"
 	@echo "... install"
 	@echo "... list_install_components"
-	@echo "... franka_msgs_gennodejs"
-	@echo "... franka_msgs_generate_messages_py"
-	@echo "... franka_msgs_generate_messages_cpp"
-	@echo "... franka_msgs_generate_messages_eus"
-	@echo "... _franka_msgs_generate_messages_check_deps_FrankaState"
-	@echo "... franka_msgs_gencpp"
-	@echo "... franka_msgs_generate_messages"
-	@echo "... test"
-	@echo "... _franka_msgs_generate_messages_check_deps_Errors"
-	@echo "... franka_msgs_geneus"
-	@echo "... franka_msgs_generate_messages_lisp"
 	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... test"
+	@echo "... franka_msgs_genpy"
+	@echo "... franka_msgs_generate_messages_py"
+	@echo "... franka_msgs_generate_messages"
 	@echo "... install/local"
 	@echo "... franka_msgs_genlisp"
+	@echo "... std_msgs_generate_messages_nodejs"
+	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... franka_msgs_generate_messages_cpp"
+	@echo "... std_msgs_generate_messages_eus"
+	@echo "... franka_msgs_generate_messages_lisp"
+	@echo "... _franka_msgs_generate_messages_check_deps_Errors"
+	@echo "... _franka_msgs_generate_messages_check_deps_FrankaState"
+	@echo "... franka_msgs_gencpp"
+	@echo "... franka_msgs_generate_messages_eus"
+	@echo "... franka_msgs_gennodejs"
+	@echo "... std_msgs_generate_messages_py"
+	@echo "... franka_msgs_geneus"
+	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... franka_msgs_generate_messages_nodejs"
-	@echo "... franka_msgs_genpy"
-	@echo "... edit_cache"
 .PHONY : help
 
 

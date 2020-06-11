@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"camera_calibration\" -Dcamera_calibration_EXPORTS
 
-CXX_INCLUDES = -I/home/rnm/rnm_group_2/src/camera_calibration/src -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/opencv 
+CXX_INCLUDES = -I/home/rnm/rnm_group_2/src/camera_calibration/src -I/home/rnm/rnm_group_2/devel/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/opencv 
 

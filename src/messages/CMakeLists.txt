@@ -21,12 +21,10 @@ add_service_files(FILES
 generate_messages(
   DEPENDENCIES
   std_msgs
-  geometry_msgs
-  sensor_msgs
 )
 
 catkin_package(
-  CATKIN_DEPENDS message_runtime std_msgs sensor_msgs
+  CATKIN_DEPENDS  message_runtime std_msgs roscpp
 )
 
 ###########

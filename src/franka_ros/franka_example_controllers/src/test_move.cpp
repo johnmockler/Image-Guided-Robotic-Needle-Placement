@@ -28,37 +28,44 @@ public:
     void jointSet()
     {
         
-        std::vector<double> J1={1.5,0,0,0,0,0,0};
+        std::vector<double> J1={-0.5,0,0,-0.8,0.7,1.5,0};
         positionSet.push_back(J1);
-        std::vector<double> J2={-1.5,0,0,0,0,0,0};
+        std::vector<double> J2={0,0,0,-0.8,0,1.5,0};
          positionSet.push_back(J2);
-        std::vector<double> J3={0,0,0,-1.6,0,0,0};
+        std::vector<double> J3={0.5,0,0,-0.8,-0.7,1.5,0};
          positionSet.push_back(J3);
-        std::vector<double> J4={0,0,0,0.5,0,1.5,0};
+        std::vector<double> J4={-0.5,-0.9,0,-1.5,0.7,1.2,0};
+        positionSet.push_back(J4);
+        std::vector<double> J5={0,-0.9,0,-1.5,0,1.2,0};
+         positionSet.push_back(J5);
+        std::vector<double> J6={0.5,-0.9,0,-1.5,-0.7,1.2,0};
+         positionSet.push_back(J6);
+        std::vector<double> J7={-0.5,0.5,0,-0.6,0.7,0.9,0};
+        positionSet.push_back(J7);
+        std::vector<double> J8={0,0.5,0,-0.6,0,0.9,0};
+         positionSet.push_back(J8);
+        std::vector<double> J9={0.5,0.5,0,-0.6,-0.7,0.9,0};
+         positionSet.push_back(J9);
+        /*std::vector<double> J4={0,0,0,0.5,0,1.5,0};
          positionSet.push_back(J4);
         std::vector<double> J5={1.2,0,0,0,0,0,0};
-         positionSet.push_back(J5);
+         positionSet.push_back(J5);*/
 
         
     }
 
-    void sendStepCommand(int val)
+    void sendStepCommand()
     {
+        //std::vector<double> jangle={0,1.2,0,0,0,0,0};
         // calculate new joint angles
         jointSet();
-        //double delta_angle = joint_move_dist_/180.*M_PI * (std::sin(counter/10.));
-        //double delta_angle = joint_move_dist_/180.*M_PI;
-       
+       for(int j=0;j<positionSet.size();j++)
+       {
             std::vector<double> goal_position;
             for (size_t i = 0; i < 7; i++) 
             {
-                /*if (i == 4) {
-                goal_position.push_back(init_position[i] - delta_angle);
-                } else {
-                goal_position.push_back(init_position[i] + delta_angle);
-                }*/
-                //goal_position.push_back(new_pos[i]);  
-                goal_position.push_back(positionSet[val][i]);       
+              goal_position.push_back(positionSet[j][i]);
+              //goal_position.push_back(jangle[i]);       
             }
 
             // create message and publish it
@@ -68,8 +75,9 @@ public:
             command_pub.publish(msg);
             int num;
             //std::cin>>num;
-            ros::Rate rate(0.3);
+            ros::Rate rate(0.2);
             rate.sleep();
+       }
 
         
         
@@ -91,9 +99,10 @@ int main(int argc, char** argv)
   RobotArm arm(nh, joint_move_dist);
 
   // loop infinitely with a fixed frequency and send our commands
-  ros::Rate loop_rate(5);
+  ros::Rate loop_rate(20);
   while (ros::ok())
   {
+      std::cout<<"new code works"<<std::endl;
       arm.sendStepCommand();
       loop_rate.sleep();
       ros::spinOnce();

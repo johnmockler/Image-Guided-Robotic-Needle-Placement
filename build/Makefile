@@ -1949,6 +1949,19 @@ gripper_joint_state_publisher/fast:
 .PHONY : gripper_joint_state_publisher/fast
 
 #=============================================================================
+# Target rules for targets named master_sim_node
+
+# Build rule for target.
+master_sim_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 master_sim_node
+.PHONY : master_sim_node
+
+# fast build rule for target.
+master_sim_node/fast:
+	$(MAKE) -f master_sim/CMakeFiles/master_sim_node.dir/build.make master_sim/CMakeFiles/master_sim_node.dir/build
+.PHONY : master_sim_node/fast
+
+#=============================================================================
 # Target rules for targets named franka_hw
 
 # Build rule for target.
@@ -2917,6 +2930,7 @@ help:
 	@echo "... _franka_gripper_generate_messages_check_deps_GraspEpsilon"
 	@echo "... robot_joint_state_publisher"
 	@echo "... gripper_joint_state_publisher"
+	@echo "... master_sim_node"
 	@echo "... franka_hw"
 	@echo "... clean_test_results_franka_hw"
 	@echo "... _run_tests_franka_hw_rostest_test_launch_franka_hw_test.test"

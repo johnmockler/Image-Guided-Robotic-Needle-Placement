@@ -219,6 +219,14 @@
 /home/rnm/rnm_group_2/build/franka_ros/franka_visualization/CMakeFiles/gripper_joint_state_publisher.dir
 /home/rnm/rnm_group_2/build/franka_ros/franka_visualization/CMakeFiles/test.dir
 /home/rnm/rnm_group_2/build/franka_ros/franka_visualization/CMakeFiles/list_install_components.dir
+/home/rnm/rnm_group_2/build/master_sim/CMakeFiles/install/strip.dir
+/home/rnm/rnm_group_2/build/master_sim/CMakeFiles/install/local.dir
+/home/rnm/rnm_group_2/build/master_sim/CMakeFiles/test.dir
+/home/rnm/rnm_group_2/build/master_sim/CMakeFiles/list_install_components.dir
+/home/rnm/rnm_group_2/build/master_sim/CMakeFiles/master_sim_node.dir
+/home/rnm/rnm_group_2/build/master_sim/CMakeFiles/edit_cache.dir
+/home/rnm/rnm_group_2/build/master_sim/CMakeFiles/rebuild_cache.dir
+/home/rnm/rnm_group_2/build/master_sim/CMakeFiles/install.dir
 /home/rnm/rnm_group_2/build/franka_ros/franka_hw/CMakeFiles/install/strip.dir
 /home/rnm/rnm_group_2/build/franka_ros/franka_hw/CMakeFiles/install/local.dir
 /home/rnm/rnm_group_2/build/franka_ros/franka_hw/CMakeFiles/test.dir

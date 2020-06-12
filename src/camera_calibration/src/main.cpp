@@ -10,7 +10,7 @@ int main(int argc, char **argv)
     node.listenTransform;
     node.broadcastTransform;
 
-    ROS_INFO("Calibration node initiated");
+    ROS_INFO("Calibration node initiated!");
 
     ros::spin();
 

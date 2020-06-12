@@ -504,6 +504,12 @@ joint_limits_interface_DIR:PATH=/opt/ros/melodic/share/joint_limits_interface/cm
 //Path to a library.
 lib:FILEPATH=/opt/ros/melodic/lib/librealtime_tools.so
 
+//Value Computed by CMake
+master_sim_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/master_sim
+
+//Value Computed by CMake
+master_sim_SOURCE_DIR:STATIC=/home/rnm/rnm_group_2/src/master_sim
+
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/melodic/share/message_filters/cmake
 
@@ -710,7 +716,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=16
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=17
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

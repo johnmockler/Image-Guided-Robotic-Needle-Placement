@@ -38,6 +38,7 @@ void CameraCalibrationNode::cameraCallback(const sensor_msgs::ImageConstPtr& msg
 
 bool CameraCalibrationNode::captureImage(messages::ImageCapture::Request &req, messages::ImageCapture::Response &res)
 {
+    bool alreadyProcessed = false;
     
     //false request indicates more calibration images are needed. Save most recent image to calibration image matrix
     //also save end effector position at this time. 
@@ -46,15 +47,18 @@ bool CameraCalibrationNode::captureImage(messages::ImageCapture::Request &req, m
         calibrationImages.push_back(mostRecentImage);
         imagesTaken++;
         ROS_INFO("capturing image number [%ld]", (int) imagesTaken);
+
     }
     //if true, process images and computer K matrix and Hand-eye Calibration
     else if (req.x == true)
     {
-        ROS_INFO("processing calibration images...");
-        calibrateCamera();
-        estimatePoses();
-        computeHandeyeTransform();
-
+        if (!alreadyProcessed){
+            ROS_INFO("processing calibration images...");
+            calibrateCamera();
+            estimatePoses();
+            computeHandeyeTransform();
+            alreadyProcessed = true;
+        }
 
     }
     
@@ -80,7 +84,7 @@ void CameraCalibrationNode::computeHandeyeTransform()
     Mat R_cam2gripper;
     Mat t_cam2gripper;
 
-    cv::CalibrateHandEye(endEffectorPosesR,endEffectorPosesT, cameraPosesR, cameraPosesT, R_cam2gripper, t_cam2gripper);
+    //cv::CalibrateHandEye(endEffectorPosesR,endEffectorPosesT, cameraPosesR, cameraPosesT, R_cam2gripper, t_cam2gripper);
 
     //conver R_cam2gripper and t_cam2gripper to Point3f or Vector3, and publish or something
 

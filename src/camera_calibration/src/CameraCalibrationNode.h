@@ -64,6 +64,7 @@ private:
     std::vector<cv::Mat> cameraPosesR;
     std::vector<cv::Mat> cameraPosesT;
 
+    bool alreadyProcessed;
 
 
 public:

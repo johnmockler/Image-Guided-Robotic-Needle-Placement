@@ -7,13 +7,13 @@
 int main(int argc, char** argv)
 {
 
-
   ros::init(argc, argv, "master_sim");
   ros::NodeHandle n;
   ros::ServiceClient client = n.serviceClient<messages::ImageCapture>("capture_image");
   messages::ImageCapture srv;
 
-  std::vector<float> times = {3.0,12.0, 24.0, 35.0, 44.0, 54.0,63.0,70.0,77.0,84.0,92.0,103.0,113.0,123.0,133.0,141.0,152.0,164.0,174.0,188.0,196.0,208.0,217.0,230.0};
+  std::vector<float> times = {5.0,15.0,27.0,36.0,45.0,61.0,72.0,82.0,93.0,107.0,117.0,127.0,137.0,147.0,155.0,161.0,167.0,176.0,186.0,196.0,206.0,217.0,225.0,233.0,247.0,260.0,271.0,280.0,290.0,300.0};
+  
   double begin = ros::Time::now().toSec();
   double now;
   double elapsedTime;
@@ -26,7 +26,7 @@ int main(int argc, char** argv)
     elapsedTime = now - begin;
     currentPt = times[i];
 
-    if (i > 22){
+    if (i > times.size()){
       srv.request.x = true;
       client.call(srv);
     }

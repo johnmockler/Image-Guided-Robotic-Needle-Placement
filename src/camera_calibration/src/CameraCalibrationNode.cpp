@@ -8,9 +8,9 @@ CameraCalibrationNode::CameraCalibrationNode()
 
 
 {
-
-
-
+    alreadyProcessed = false;
+    //testing
+    cv::namedWindow("Display window", cv::WINDOW_AUTOSIZE);
 }
 
 void CameraCalibrationNode::cameraCallback(const sensor_msgs::ImageConstPtr& msg)
@@ -37,9 +37,7 @@ void CameraCalibrationNode::cameraCallback(const sensor_msgs::ImageConstPtr& msg
 }
 
 bool CameraCalibrationNode::captureImage(messages::ImageCapture::Request &req, messages::ImageCapture::Response &res)
-{
-    bool alreadyProcessed = false;
-    
+{    
     //false request indicates more calibration images are needed. Save most recent image to calibration image matrix
     //also save end effector position at this time. 
     if (req.x == false) 
@@ -48,11 +46,20 @@ bool CameraCalibrationNode::captureImage(messages::ImageCapture::Request &req, m
         imagesTaken++;
         ROS_INFO("capturing image number [%ld]", (int) imagesTaken);
 
+
     }
     //if true, process images and computer K matrix and Hand-eye Calibration
     else if (req.x == true)
     {
         if (!alreadyProcessed){
+            //test purposes~~~~~~~~~~~~~~~
+            for (int i = 0; i < calibrationImages.size(); i++)
+            {
+                cv::imshow("Display window", calibrationImages[i]);
+                cv::waitKey(0);
+            }
+            //~~~~~~~~~~~~~~~~~~~~~~~~~~~~            
+
             ROS_INFO("processing calibration images...");
             calibrateCamera();
             estimatePoses();

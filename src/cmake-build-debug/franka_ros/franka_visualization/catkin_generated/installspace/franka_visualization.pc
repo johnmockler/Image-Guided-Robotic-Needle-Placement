@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: franka_visualization
+Description: Description of franka_visualization
+Version: 0.7.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: sensor_msgs roscpp

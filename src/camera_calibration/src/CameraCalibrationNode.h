@@ -16,7 +16,8 @@
 #include <tf/transform_listener.h>
 #include <tf/transform_broadcaster.h>
 
-
+using namespace cv;
+using namespace std;
 
 class CameraCalibrationNode
 {
@@ -31,17 +32,26 @@ private:
     //service advertisement
     ros::ServiceServer captureService;
 
+    // Additional constant for calibration
+    const float calibrationSquareDimension = 0.01905f; //meters
+
+    const Size chessboardDimension = Size(6, 9);
+
+    //Additional Function for camera calibration
+    void createKnownBoardPosition(Size boardSize, float squareEdgeLength, vector<Point3f>& corners);
+    void getChessboardCorners(vector <Mat> images, vector <vector<Point2f>>& allFoundCorners, bool showResults = false);
 
 
-
+    //
 
     void cameraCallback(const sensor_msgs::ImageConstPtr& msg);
 
     bool captureImage(messages::ImageCapture::Request& req, messages::ImageCapture::Response& res);
 
-    void calibrateCamera();
+    void calibrateCamera(vector<Mat> calibrationImages, Size chessboardDimension, float squareEdgeLength, Mat& cameraMatrix, Mat& distCoeffs);
 
-    void estimatePoses();
+    void estimatePoses(vector<Mat> calibrationImages, Size chessboardDimension, float calibrationSquareDimension, Mat cameraMatrix, Mat distCoeffs, std::vector<cv::Mat>& cameraPosesR, std::vector<cv::Mat>& cameraPosesT);
+
     void computeHandeyeTransform();
 
     //tf broadcasters and listeners here
@@ -51,6 +61,9 @@ private:
 
     //all global class variables here
     cv::Mat cameraMatrix = cv::Mat::eye(3,3, CV_64F);
+    cv::Mat distCoeffs = cv::Mat::zeros(8, 1, CV_64F);
+
+
     std::vector<std::vector<cv::Point2f>> imagePoints;
     std::vector<std::vector<cv::Point3f>> objectPoints;
 

@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libcamera_calibration.so -o ../devel/lib/libcamera_calibration.so CMakeFiles/camera_calibration.dir/src/CameraCalibrationNode.cpp.o 

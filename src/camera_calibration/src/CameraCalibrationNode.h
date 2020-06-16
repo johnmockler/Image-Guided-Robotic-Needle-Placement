@@ -27,55 +27,33 @@ private:
     ros::NodeHandle nh;
     ros::Subscriber imageSub;
 
-
-
     //service advertisement
     ros::ServiceServer captureService;
 
     // Additional constant for calibration
     const float calibrationSquareDimension = 0.01905f; //meters
-
-    const Size chessboardDimension = Size(5, 8);
+    const Size chessboardDimension = Size(8,5);
 
     //Additional Function for camera calibration
-    void createKnownBoardPosition(Size boardSize, float squareEdgeLength, std::vector<Point3f>& corners);
-    void getChessboardCorners(std::vector<Mat> images, std::vector<std::vector<Point2f>>& allFoundCorners, bool showResults = false);
-
+    void createKnownBoardPosition(std::vector<Point3f>& corners);
+    void getChessboardCorners(std::vector<Mat> images, std::vector<std::vector<Point2f>>& allFoundCorners);
 
     //
-
     void cameraCallback(const sensor_msgs::ImageConstPtr& msg);
-
     bool captureImage(messages::ImageCapture::Request& req, messages::ImageCapture::Response& res);
-
-    void calibrateCamera(std::vector<Mat> calibrationImages, Size chessboardDimension, float squareEdgeLength, Mat& cameraMatrix, Mat& distCoeffs);
-
-    void estimatePoses(std::vector<Mat> calibrationImages, Size chessboardDimension, float calibrationSquareDimension, Mat cameraMatrix, Mat distCoeffs, std::vector<cv::Mat>& cameraPosesR, std::vector<cv::Mat>& cameraPosesT);
-
+    void calibrateAndPoseEstimation();
     void computeHandeyeTransform();
-
-    //void findCorners(std::vec)
 
     //tf broadcasters and listeners here
     tf::TransformBroadcaster br;
     tf::Transform transform;
     tf::TransformListener listener;
 
-    //all global class variables here
+    //class variables
     cv::Mat cameraMatrix = cv::Mat::eye(3,3, CV_64F);
     cv::Mat distCoeffs = cv::Mat::zeros(8, 1, CV_64F);
-
-
-    std::vector<std::vector<cv::Point2f>> imagePoints;
-    std::vector<std::vector<cv::Point3f>> objectPoints;
-
-    int imagesTaken = 0;
-    const int CALIB_IMAGES = 15;
     cv::Mat mostRecentImage;
     std::vector<cv::Mat> calibrationImages;
-
-    //std::vector<std::vector<Point2f>> imagePoints;
-    //std::vector<std::vector<Point3f>> objectPoints(1);
 
 
     std::vector<cv::Mat> endEffectorPosesR;

@@ -49,6 +49,14 @@ private:
     void computeHandeyeTransform();
     void readTextFiles();
 
+    //baseline methods
+    void calibrateHandEyeTsai(const std::vector<Mat>& Hg, const std::vector<Mat>& Hc, Mat& R_cam2gripper, Mat& t_cam2gripper);
+    Mat rot2quatMinimal(const Mat& R);
+    Mat rot2quat(const Mat& R);
+    Mat skew(const Mat& v);
+    Mat quatMinimal2rot(const Mat& q);
+
+
 
     //tf broadcasters and listeners here
     tf::TransformBroadcaster br;

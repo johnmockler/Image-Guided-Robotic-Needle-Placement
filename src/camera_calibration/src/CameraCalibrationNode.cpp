@@ -51,9 +51,9 @@ bool CameraCalibrationNode::captureImage(messages::ImageCapture::Request &req, m
             {
                 
                 alreadyCalibrated = true;
-                /*
+                
                 calibrateAndPoseEstimation();
-
+                /*
                 //For Testing
                 std::cout << "M= " << std::endl;
                 std::cout << cameraMatrix << std::endl;
@@ -80,13 +80,15 @@ bool CameraCalibrationNode::captureImage(messages::ImageCapture::Request &req, m
                     std::cout<<"T = "<<std::endl;
                     std::cout<<cameraPosesT[i]<<std::endl;
                 }
-                //*/
+                //
                 readTextFiles();
                 calibrateHandEye(Rrpose, Trpose,Rmpose, Tmpose, cameraPosesR, cameraPosesT);
                 std::cout<<cameraPosesR<<std::endl;
                 std::cout<<cameraPosesT<<std::endl;
 
                 //computeHandeyeTransform();
+
+                */
             }
         }
     res.y = true;

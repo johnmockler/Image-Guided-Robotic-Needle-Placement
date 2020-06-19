@@ -15,6 +15,7 @@
 #include <messages/ImageCapture.h>
 #include <tf/transform_listener.h>
 #include <tf/transform_broadcaster.h>
+#include <fstream>
 
 using namespace cv;
 //using namespace std;
@@ -31,18 +32,23 @@ private:
     ros::ServiceServer captureService;
 
     // Additional constant for calibration
-    const float calibrationSquareDimension = 0.01905f; //meters
+    const float calibrationSquareDimension = 0.04f; //meters
     const Size chessboardDimension = Size(8,5);
 
     //Additional Function for camera calibration
     void createKnownBoardPosition(std::vector<Point3f>& corners);
     void getChessboardCorners(std::vector<Mat> images, std::vector<std::vector<Point2f>>& allFoundCorners);
 
+    Mat homogeneousInverse(const Mat& T);
+    void calibrateHandEyeQR24(std::vector<Mat>& Hg, const std::vector<Mat>& Hc, Mat& R_cam2gripper, Mat& t_cam2gripper);
+    void calibrateHandEye(InputArrayOfArrays R_gripper2base, InputArrayOfArrays t_gripper2base, InputArrayOfArrays R_target2cam, InputArrayOfArrays t_target2cam, OutputArray R_cam2gripper, OutputArray t_cam2gripper);
     //
     void cameraCallback(const sensor_msgs::ImageConstPtr& msg);
     bool captureImage(messages::ImageCapture::Request& req, messages::ImageCapture::Response& res);
     void calibrateAndPoseEstimation();
     void computeHandeyeTransform();
+    void readTextFiles();
+
 
     //tf broadcasters and listeners here
     tf::TransformBroadcaster br;
@@ -58,8 +64,11 @@ private:
 
     std::vector<cv::Mat> endEffectorPosesR;
     std::vector<cv::Mat> endEffectorPosesT;
-    std::vector<cv::Mat> cameraPosesR;
-    std::vector<cv::Mat> cameraPosesT;
+    cv::Mat cameraPosesR;
+    cv::Mat cameraPosesT;
+
+    std::vector<Mat> Trpose, Rrpose, Tmpose, Rmpose;
+
 
     bool alreadyCalibrated;
 

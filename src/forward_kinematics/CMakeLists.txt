@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   sensor_msgs
   cv_bridge
+  geometry_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -108,6 +109,7 @@ catkin_package(
 #  LIBRARIES forward_kinematics
 #  CATKIN_DEPENDS roscpp sensor_msgs
   DEPENDS system_lib
+  CATKIN_DEPENDS geometry_msgs
 )
 
 ###########

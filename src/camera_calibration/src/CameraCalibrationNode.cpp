@@ -53,7 +53,7 @@ bool CameraCalibrationNode::captureImage(messages::ImageCapture::Request &req, m
                 alreadyCalibrated = true;
                 
                 calibrateAndPoseEstimation();
-                /*
+                
                 //For Testing
                 std::cout << "M= " << std::endl;
                 std::cout << cameraMatrix << std::endl;
@@ -111,13 +111,50 @@ void CameraCalibrationNode::calibrateAndPoseEstimation()
     ROS_INFO("Beginning Pose Estimation...");
     Mat rvec;
     Mat tvec;
+
+    size_t totalPoints = 0;
+    double totalErr = 0, err;
     for (int i=0; i < calibrationImages.size(); i++)
     {
         cv::solvePnPRansac(objectPoints[i],  imagePoints[i],  cameraMatrix,  distCoeffs,  rvec,  tvec);
         cameraPosesR.push_back(rvec);
         cameraPosesT.push_back(tvec);
-    }
 
+
+        cv::Mat img1_copy_pose = calibrationImages[i].clone();
+
+        
+        namedWindow( "Display window", CV_WINDOW_KEEPRATIO);
+        imshow("Display window", img1_copy_pose);
+        resizeWindow("Display window",img1_copy_pose.cols/2,img1_copy_pose.rows/2);
+        ROS_INFO("Hit a key to continue");
+        waitKey(0);
+
+
+
+        cv::Mat img_draw_poses;
+        cv::Mat Rrvec;
+        cv::Rodrigues(rvec,Rrvec);
+        drawFrameAxes(img1_copy_pose, cameraMatrix, distCoeffs, Rrvec, tvec, 0.1,2);
+        hconcat(img1_copy_pose, img_draw_poses);
+        imshow("Chessboard poses", img1_copy_pose);
+       
+        ROS_INFO("Estimated error of picture no [%ld]", i);
+        std::vector<Point2f> imagePoints2;
+
+        perViewErrors.resize(objectPoints.size());
+
+        projectPoints(objectPoints[i], rvec, tvec, cameraMatrix, distCoeffs, imagePoints2);
+        //Error Calculation
+        err = norm(imagePoints[i], imagePoints2, NORM_L2);
+        size_t n = objectPoints[i].size();
+        perViewErrors[i] = (float) std::sqrt(err*err/n);
+        std::cout<< "Current Image Error [%ld]" <<perViewErrors[i]<<std::endl;
+        totalErr        += err*err;
+        totalPoints     += n;
+        std::cout<< "Total Error: " << std::sqrt(totalErr/totalPoints)<<std::endl;
+
+    }
 }
 
 
@@ -663,3 +700,31 @@ Mat CameraCalibrationNode::skew(const Mat& v)
                                 vz, 0, -vx,
                                 -vy, vx, 0);
 }
+void CameraCalibrationNode::drawFrameAxes(InputOutputArray image, InputArray cameraMatrix, InputArray distCoeffs,
+                   InputArray rvec, InputArray tvec, float length, int thickness)
+{
+    //CV_INSTRUMENT_REGION();
+
+    int type = image.type();
+    int cn = CV_MAT_CN(type);
+    //CV_CheckType(type, cn == 1 || cn == 3 || cn == 4,
+    //             "Number of channels must be 1, 3 or 4" );
+
+    CV_Assert(image.getMat().total() > 0);
+    CV_Assert(length > 0);
+
+    // project axes points
+    std::vector<Point3f> axesPoints;
+    axesPoints.push_back(Point3f(0, 0, 0));
+    axesPoints.push_back(Point3f(length, 0, 0));
+    axesPoints.push_back(Point3f(0, length, 0));
+    axesPoints.push_back(Point3f(0, 0, length));
+    std::vector<Point2f> imagePoints;
+    projectPoints(axesPoints, rvec, tvec, cameraMatrix, distCoeffs, imagePoints);
+
+    // draw axes lines
+    line(image, imagePoints[0], imagePoints[1], Scalar(0, 0, 255), thickness);
+    line(image, imagePoints[0], imagePoints[2], Scalar(0, 255, 0), thickness);
+    line(image, imagePoints[0], imagePoints[3], Scalar(255, 0, 0), thickness);
+}
+

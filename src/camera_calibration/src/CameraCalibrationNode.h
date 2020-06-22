@@ -16,6 +16,18 @@
 #include <tf/transform_listener.h>
 #include <tf/transform_broadcaster.h>
 #include <fstream>
+#include <opencv/cv.hpp>
+#include <iostream>
+
+#include <opencv2/core.hpp>
+#include <opencv2/calib3d.hpp>
+#include <opencv2/imgproc.hpp>
+#include <opencv2/highgui.hpp>
+#include <opencv2/calib3d.hpp>
+
+//#include <opencv4/opencv2/calib3d.hpp>
+
+
 
 using namespace cv;
 //using namespace std;
@@ -48,6 +60,7 @@ private:
     void calibrateAndPoseEstimation();
     void computeHandeyeTransform();
     void readTextFiles();
+    void drawFrameAxes(InputOutputArray image, InputArray cameraMatrix, InputArray distCoeffs,InputArray rvec, InputArray tvec, float length, int thickness);
 
     //baseline methods
     void calibrateHandEyeTsai(const std::vector<Mat>& Hg, const std::vector<Mat>& Hc, Mat& R_cam2gripper, Mat& t_cam2gripper);
@@ -56,7 +69,8 @@ private:
     Mat skew(const Mat& v);
     Mat quatMinimal2rot(const Mat& q);
 
-
+    //Total Project Point Error
+    std::vector<cv::Mat> perViewErrors;
 
     //tf broadcasters and listeners here
     tf::TransformBroadcaster br;

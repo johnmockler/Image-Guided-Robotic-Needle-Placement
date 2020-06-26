@@ -19,7 +19,7 @@ class Kinematics{
 private:
  std::vector<float> joint_angles;
  std::vector<float> d={0.33,0,0.316,0,0.384,0,0.107};
- std::vector<float> alpha={0,-M_PI/2,M_PI/2,M_PI/2,-M_PI/2,M_PI/2,0};
+ std::vector<float> alpha={0,-M_PI/2,M_PI/2,M_PI/2,-M_PI/2,M_PI/2,M_PI/2};
  std::vector<float> a={0,0,0,0.0825,-0.0825,0,0.088};
  cv::Mat T_1;
  cv::Mat T_2;

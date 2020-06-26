@@ -11,6 +11,7 @@
 #include <tf/transform_listener.h>
 #include <tf/transform_broadcaster.h>
 #include <geometry_msgs/Point.h>
+#include <tf2_msgs/TFMessage.h>
 
 
 class Kinematics{
@@ -31,7 +32,7 @@ private:
  ros::NodeHandle n;
 
  ros::Publisher EEcord_pub = n.advertise<std_msgs::Float64MultiArray>("/endeffector_Cord", 1000);
- ros::Publisher test_pub = n.advertise<geometry_msgs::Point>("/tf_publisher", 1000);
+ ros::Publisher test_pub = n.advertise<tf2_msgs::TFMessage>("/tf_publisher", 1000);
 
 public:
 Kinematics()
@@ -100,11 +101,24 @@ void setCoordinates(std::vector<cv::Mat> transformations)
   coord.push_back(finalTrans.at<float>(1,3));
   coord.push_back(finalTrans.at<float>(2,3));
 
-geometry_msgs::Point newCord;
+  geometry_msgs::TransformStamped trans;
+  trans.transform.translation.x=10.0;
+  trans.transform.translation.y=20.0;
+  trans.transform.translation.z=30.0;
+  trans.transform.rotation.x=0.6;
+  trans.transform.rotation.y=0.45;
+  trans.transform.rotation.z=1.0;
+  trans.transform.rotation.w=0.0;
+
+  tf2_msgs::TFMessage mesg;
+  mesg.transforms.push_back(trans);
+  test_pub.publish(mesg);
+
+/*geometry_msgs::Point newCord;
 newCord.x=25.0;
 newCord.y=10.0;
 newCord.z=12.0;
-test_pub.publish(newCord);
+test_pub.publish(newCord);*/
 
   std_msgs::Float64MultiArray msg;
         msg.data.clear();

@@ -33,6 +33,8 @@ tf/transform_broadcaster.h
 -
 geometry_msgs/Point.h
 -
+tf2_msgs/TFMessage.h
+-
 
 /opt/ros/melodic/include/boost_161_condition_variable.h
 boost/thread/detail/platform.hpp

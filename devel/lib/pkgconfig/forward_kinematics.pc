@@ -5,4 +5,4 @@ Description: Description of forward_kinematics
 Version: 0.0.0
 Cflags: -I/home/rnm/rnm_group_2/src/forward_kinematics/include
 Libs: -L${prefix}/lib 
-Requires: geometry_msgs
+Requires: geometry_msgs tf2_msgs

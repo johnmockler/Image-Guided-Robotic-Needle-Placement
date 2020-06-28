@@ -38,9 +38,30 @@ class InverseKinematics
     {
 
     }
-void CalculateRotationMatrix()
+cv::Mat CalculateRotationMatrix(float j1, float j2, float j3, float j4)
 {
+    Tf_01=TMatrix(a(0),d(0), alpha(0), j1);
+    cv::Mat Tf_12=TMatrix(a(1),d(1), alpha(1), j2);
+    cv::Mat Tf_23=TMatrix(a(2),d(2), alpha(2), j3);
+    cv::Mat Tf_34=TMatrix(a(3),d(3), alpha(3), j4);
+    Tf_02=Tf_01*Tf_12;
+    Tf_03=Tf_02*Tf_23;
+    Tf_04=Tf_03*Tf_34;
+    cv::Mat Rf_04, Rf_07, Rf_47;
+     float mat_data[16]={Tf_0.at<float>(0,0),Tf_0.at<float>(0,1),Tf_0.at<float>(0,2),  
+                        Tf_0.at<float>(1,0),Tf_0.at<float>(1,1),Tf_0.at<float>(1,2),  
+                        Tf_0.at<float>(2,0),Tf_0.at<float>(2,1),Tf_0.at<float>(2,2)};
 
+     float mat_data1[16]={Tf_04.at<float>(0,0),Tf_04.at<float>(0,1),Tf_04.at<float>(0,2),  
+                        Tf_04.at<float>(1,0),Tf_04.at<float>(1,1),Tf_04.at<float>(1,2),  
+                        Tf_04.at<float>(2,0),Tf_04.at<float>(2,1),Tf_04.at<float>(2,2)};
+
+    Rf_07=cv::Mat(4,4,CV_32F,mat_data);
+    Rf_04=cv::Mat(4,4,CV_32F,mat_data1);
+    Rf_47= Rf_04.inv()*Rf_07.inv();
+
+    return Rf_47;
+                        
 }
 cv::Mat TransformationM(float x,float y, float z)
 {
@@ -129,11 +150,44 @@ std::vector<double> getInversK(std::vector<double> posVector)
     jointAngles.push_back(j3);
     j4=2*M_PI-delta-epsilon-zeta;
     jointAngles.push_back(j4);
+    cv::Mat rotMat = CalculateRotationMatrix(j1, j2, j3, j4);
+    j5= atan(rotMat.at<float>(1,2)/rotMat.at<float>(0,3));
+    jointAngles.push_back(j5);
+    float temp = sqrt(1- pow(rotMat.at<float>(2,2),2));
+    j6= atan(temp/rotMat.at<float>(2,2));
+    jointAngles.push_back(j6);
+    j7= atan(rotMat.at<float>(2,1),rotMat.at<float>(2,0));
+    jointAngles.push_back(j7);
     
     return jointAngles;
 
 }
 
 };
+void jointStateCallback(const std_msgs::Float64MultiArray::ConstPtr& msg)
+{
+    std::vector<float> cordinates;
+  for (size_t i = 0; i < msg.size(); i++)
+  {
+    joint_angles.push_back(0);
+  } 
+  InverseKinematics inKinObj;
+  inkinObj.geometry_msgs(cordinates);
+   
+
+}
+
+int main(int argc, char** argv)
+{
+
+  ros::init(argc, argv, "inverseKinematics_node");
+  std::cout<<"entered the main"<<std::endl;
+  ros::NodeHandle n;
+  Kinematics kinObj;
+  ros::Subscriber sub = n.subscribe("/endeffector_Cord", 1, jointStateCallback);
+  ros::spin();
+
+  return 0;
+}
 
 

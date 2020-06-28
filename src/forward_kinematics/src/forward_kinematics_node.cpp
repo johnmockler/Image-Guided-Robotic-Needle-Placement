@@ -146,7 +146,6 @@ int main(int argc, char** argv)
 {
 
   ros::init(argc, argv, "forward_kinematics_node");
-  std::cout<<"entered the main"<<std::endl;
   ros::NodeHandle n;
   Kinematics kinObj;
   ros::Subscriber sub = n.subscribe("/joint_states", 1, jointStateCallback);

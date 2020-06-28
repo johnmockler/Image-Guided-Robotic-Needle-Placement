@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+forward_kinematics/CMakeFiles/inverse_kinematics.dir/rule:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 forward_kinematics/CMakeFiles/inverse_kinematics.dir/rule
+.PHONY : forward_kinematics/CMakeFiles/inverse_kinematics.dir/rule
+
+# Convenience name for target.
+inverse_kinematics: forward_kinematics/CMakeFiles/inverse_kinematics.dir/rule
+
+.PHONY : inverse_kinematics
+
+# fast build rule for target.
+inverse_kinematics/fast:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f forward_kinematics/CMakeFiles/inverse_kinematics.dir/build.make forward_kinematics/CMakeFiles/inverse_kinematics.dir/build
+.PHONY : inverse_kinematics/fast
+
+# Convenience name for target.
 forward_kinematics/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule:
 	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 forward_kinematics/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
 .PHONY : forward_kinematics/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
@@ -509,6 +524,33 @@ src/forward_kinematics_node.cpp.s:
 	cd /home/rnm/rnm_group_2/build && $(MAKE) -f forward_kinematics/CMakeFiles/forward_kinematics_node.dir/build.make forward_kinematics/CMakeFiles/forward_kinematics_node.dir/src/forward_kinematics_node.cpp.s
 .PHONY : src/forward_kinematics_node.cpp.s
 
+src/inverse_kinematics.o: src/inverse_kinematics.cpp.o
+
+.PHONY : src/inverse_kinematics.o
+
+# target to build an object file
+src/inverse_kinematics.cpp.o:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f forward_kinematics/CMakeFiles/inverse_kinematics.dir/build.make forward_kinematics/CMakeFiles/inverse_kinematics.dir/src/inverse_kinematics.cpp.o
+.PHONY : src/inverse_kinematics.cpp.o
+
+src/inverse_kinematics.i: src/inverse_kinematics.cpp.i
+
+.PHONY : src/inverse_kinematics.i
+
+# target to preprocess a source file
+src/inverse_kinematics.cpp.i:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f forward_kinematics/CMakeFiles/inverse_kinematics.dir/build.make forward_kinematics/CMakeFiles/inverse_kinematics.dir/src/inverse_kinematics.cpp.i
+.PHONY : src/inverse_kinematics.cpp.i
+
+src/inverse_kinematics.s: src/inverse_kinematics.cpp.s
+
+.PHONY : src/inverse_kinematics.s
+
+# target to generate assembly for a file
+src/inverse_kinematics.cpp.s:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f forward_kinematics/CMakeFiles/inverse_kinematics.dir/build.make forward_kinematics/CMakeFiles/inverse_kinematics.dir/src/inverse_kinematics.cpp.s
+.PHONY : src/inverse_kinematics.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -517,6 +559,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... inverse_kinematics"
 	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... actionlib_msgs_generate_messages_lisp"
 	@echo "... actionlib_msgs_generate_messages_eus"
@@ -546,6 +589,9 @@ help:
 	@echo "... src/forward_kinematics_node.o"
 	@echo "... src/forward_kinematics_node.i"
 	@echo "... src/forward_kinematics_node.s"
+	@echo "... src/inverse_kinematics.o"
+	@echo "... src/inverse_kinematics.i"
+	@echo "... src/inverse_kinematics.s"
 .PHONY : help
 
 

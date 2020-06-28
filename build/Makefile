@@ -662,6 +662,19 @@ franka_msgs_genpy/fast:
 .PHONY : franka_msgs_genpy/fast
 
 #=============================================================================
+# Target rules for targets named inverse_kinematics
+
+# Build rule for target.
+inverse_kinematics: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 inverse_kinematics
+.PHONY : inverse_kinematics
+
+# fast build rule for target.
+inverse_kinematics/fast:
+	$(MAKE) -f forward_kinematics/CMakeFiles/inverse_kinematics.dir/build.make forward_kinematics/CMakeFiles/inverse_kinematics.dir/build
+.PHONY : inverse_kinematics/fast
+
+#=============================================================================
 # Target rules for targets named actionlib_msgs_generate_messages_py
 
 # Build rule for target.
@@ -2649,6 +2662,7 @@ help:
 	@echo "... franka_msgs_genlisp"
 	@echo "... franka_msgs_generate_messages_nodejs"
 	@echo "... franka_msgs_genpy"
+	@echo "... inverse_kinematics"
 	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... actionlib_msgs_generate_messages_lisp"
 	@echo "... actionlib_msgs_generate_messages_eus"

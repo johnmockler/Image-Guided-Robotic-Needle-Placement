@@ -44,7 +44,7 @@ private:
     void stitchClouds();
     void pairAlign(const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_src, const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_tgt, pcl::PointCloud<pcl::PointXYZ>::Ptr output, Eigen::Matrix4f &final_transform);
     void listenTransform();
-    void formatTransform(tf::StampedTransform tfTransform, const Eigen::Matrix4f &eigenTransform);
+    void formatTransform(tf::StampedTransform tfTransform, Eigen::Matrix4f &eigenTransform);
     void registerModel();
 
 
@@ -53,14 +53,14 @@ private:
 
     //Variables here
     bool cloudProcessed;
-    pcl::PointCloud<pcl::PointXYZ> mostRecentCloud;
-    pcl::PointCloud<pcl::PointXYZ> scanResults;
+    pcl::PointCloud<pcl::PointXYZ>::Ptr mostRecentCloud;
+    pcl::PointCloud<pcl::PointXYZ>::Ptr scanResults;
 
     tf::StampedTransform mostRecentTransform;
     tf::TransformListener listener;
 
-    std::vector<pcl::PointCloud<pcl::PointXYZ>> cloudList;
-    std::vector<Eigen::Matrix4d> cloudTransforms;
+    std::vector<pcl::PointCloud<pcl::PointXYZ>::Ptr> cloudList;
+    std::vector<Eigen::Matrix4f> cloudTransforms;
 
 
 public:

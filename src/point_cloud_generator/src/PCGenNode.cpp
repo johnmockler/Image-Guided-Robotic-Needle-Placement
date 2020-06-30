@@ -11,7 +11,7 @@ PCGenNode::PCGenNode()
 
 void PCGenNode::cloudCallback(const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
 {
-    pcl::fromROSMsg (*cloud_msg, mostRecentCloud);
+    pcl::fromROSMsg (*cloud_msg, *mostRecentCloud);
 
 }
 
@@ -61,12 +61,12 @@ void PCGenNode::stitchClouds()
     pcl::PointCloud<pcl::PointXYZ>::Ptr source, target;
 
     //first target is the first point in the cloud
-    pcl::transformPointCloud(cloudList[0], target, cloudTransforms[0]);
+    pcl::transformPointCloud(*cloudList[0], *target, cloudTransforms[0]);
 
     for (int i = 0; i < cloudList.size(); i++)
     {
         Eigen::Matrix4f pairTransform;
-        pcl::transformPointCloud(cloudList[i], source, cloudTransforms[i]);
+        pcl::transformPointCloud(*cloudList[i], *source, cloudTransforms[i]);
         pcl::PointCloud<pcl::PointXYZ>::Ptr temp (new PointCloud<pcl::PointXYZ>);
 
         pairAlign(source,target,temp, pairTransform);
@@ -105,11 +105,11 @@ void PCGenNode::pairAlign(const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_src, c
 
     final_transform = icp.getFinalTransformation();
 
-    *output = cloud_source_registered + cloud_tgt;
+    *output = cloud_source_registered + *cloud_tgt;
 
 }
 
-void PCGenNode::formatTransform(tf::StampedTransform tfTransform, const Eigen::Matrix4f &eigenTransform)
+void PCGenNode::formatTransform(tf::StampedTransform tfTransform, Eigen::Matrix4f &eigenTransform)
 {
     tf::Matrix3x3 rotTF;
     tf::Vector3 transTF;
@@ -128,6 +128,6 @@ void PCGenNode::formatTransform(tf::StampedTransform tfTransform, const Eigen::M
     Trans.block<3,3>(0,0) = R;
     Trans.block<3,1>(0,3) = T;
 
-    eigenTransform = Trans.cast<float>();
+    eigenTransform = Trans.cast<float> ();
 
 }

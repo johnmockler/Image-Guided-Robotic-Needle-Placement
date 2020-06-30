@@ -40,6 +40,8 @@ private:
     pcl::PointCloud mostRecentCloud;
     pcl::PointCloud scanResults;
 
+    tf::StampedTransform mostRecentTransform;
+
     std::vector<pcl::PointCloud> cloudList;
     std::vector<Eigen::Matrix4f> cloudTransforms;
 

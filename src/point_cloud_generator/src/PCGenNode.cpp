@@ -15,12 +15,33 @@ void PCGenNode::cloudCallback(const pcl::PointCloud& msg)
 
 }
 
+void PCGenNode::listenTransform()
+{
+    //To - do get transform from base2gripper and convert from quarternion to 4x4 matrix.
+    tf::StampedTransform base2gripper;
+    try
+    {
+        listener.lookupTransform("end_effector", "base", ros::Time(0), base2gripper);
+        mostRecentTransform = base2gripper;
+        //add store transform to class variables
+    }
+    catch (tf::TransformException ex)
+    {
+        ROS_ERROR("%s", ex.what());
+        ros::Duration(1.0).sleep();
+    }
+}
+
 bool PCGenNode::captureCloud(messages::ImageCapture::Request& req, messages::ImageCapture::Response& res)
 {
     if (req.x == false)
     {
         ROS_INFO("capturing point cloud [%ld]", (int) cloudList.size());
         cloudList.push_back(mostRecentCloud);
+
+        Eigen::Eigen4f convertedTransform;
+        formatTransform(mostRecentTransform, convertedTransform);
+        cloudTransforms.push_back(convertedTransform);
     }
     else if (req.x == true && cloudProcessed == false)
     {
@@ -36,9 +57,7 @@ bool PCGenNode::captureCloud(messages::ImageCapture::Request& req, messages::Ima
 //correspondense)
 void PCGenNode::stitchClouds()
 {
-
     //visualize cloud?
-    
     PointCloud::Ptr source, target;
 
     //first target is the first point in the cloud
@@ -86,5 +105,28 @@ void PCGenNode::pairAlign(const PointCloud::Ptr cloud_src, const PointCloud::Ptr
     final_transform = icp.getFinalTransformation();
 
     *output = cloud_source_registered + cloud_tgt;
+
+}
+
+void formatTransform(tf::StampedTransform tfTransform, Eigen::Matrix4f& eigenTransform)
+{
+    tf::Matrix3x3 rotTF;
+    tf::Vector3 transTF;
+
+    Eigen::Matrix3d R;
+    Eigen::Vector3d T;
+
+    rotTF = tfTransform.getBasis();
+    transTF = tfTransform.getOrigin();
+
+    tf::matrixTFToEigen(rotTF, R);
+    tf::vectorTFToEigen(transTF,T);
+
+    Eigen::Matrix4d Trans;
+    Trans.setIdentity();
+    Trans.block<3,3>(0,0) = R;
+    Trans.block<3,1>(0,3) = T;
+
+    eigenTransform = Trans;
 
 }

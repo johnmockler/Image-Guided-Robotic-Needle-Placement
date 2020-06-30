@@ -151,6 +151,7 @@ void CameraCalibrationNode::broadcastTransform()
 
 void CameraCalibrationNode::listenTransform()
 {
+
     tf::StampedTransform base2gripper;
     try
     {

@@ -114,6 +114,16 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -124,16 +134,6 @@ test:
 test/fast: test
 
 .PHONY : test/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,34 +168,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/rule:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/rule
-.PHONY : franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/rule
+franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_cpp.dir/rule:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_cpp.dir/rule
+.PHONY : franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-franka_example_controllers: franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/rule
+franka_example_controllers_generate_messages_cpp: franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_cpp.dir/rule
 
-.PHONY : franka_example_controllers
+.PHONY : franka_example_controllers_generate_messages_cpp
 
 # fast build rule for target.
-franka_example_controllers/fast:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/build.make franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/build
-.PHONY : franka_example_controllers/fast
-
-# Convenience name for target.
-franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_gencfg.dir/rule:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_gencfg.dir/rule
-.PHONY : franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_gencfg.dir/rule
-
-# Convenience name for target.
-franka_example_controllers_gencfg: franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_gencfg.dir/rule
-
-.PHONY : franka_example_controllers_gencfg
-
-# fast build rule for target.
-franka_example_controllers_gencfg/fast:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_gencfg.dir/build.make franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_gencfg.dir/build
-.PHONY : franka_example_controllers_gencfg/fast
+franka_example_controllers_generate_messages_cpp/fast:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_cpp.dir/build.make franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_cpp.dir/build
+.PHONY : franka_example_controllers_generate_messages_cpp/fast
 
 # Convenience name for target.
 franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_py.dir/rule:
@@ -213,139 +198,19 @@ franka_example_controllers_generate_messages_py/fast:
 .PHONY : franka_example_controllers_generate_messages_py/fast
 
 # Convenience name for target.
-franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-.PHONY : franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_eus.dir/rule:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_eus.dir/rule
+.PHONY : franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-dynamic_reconfigure_gencfg: franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+franka_example_controllers_generate_messages_eus: franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_eus.dir/rule
 
-.PHONY : dynamic_reconfigure_gencfg
+.PHONY : franka_example_controllers_generate_messages_eus
 
 # fast build rule for target.
-dynamic_reconfigure_gencfg/fast:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
-.PHONY : dynamic_reconfigure_gencfg/fast
-
-# Convenience name for target.
-franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_genpy.dir/rule:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_genpy.dir/rule
-.PHONY : franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_genpy.dir/rule
-
-# Convenience name for target.
-franka_example_controllers_genpy: franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_genpy.dir/rule
-
-.PHONY : franka_example_controllers_genpy
-
-# fast build rule for target.
-franka_example_controllers_genpy/fast:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_genpy.dir/build.make franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_genpy.dir/build
-.PHONY : franka_example_controllers_genpy/fast
-
-# Convenience name for target.
-franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-.PHONY : franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_nodejs: franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_nodejs
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_nodejs/fast:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
-
-# Convenience name for target.
-franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-.PHONY : franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_py: franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_py
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_py/fast:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_py/fast
-
-# Convenience name for target.
-franka_ros/franka_example_controllers/CMakeFiles/_franka_example_controllers_generate_messages_check_deps_JointTorqueComparison.dir/rule:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_example_controllers/CMakeFiles/_franka_example_controllers_generate_messages_check_deps_JointTorqueComparison.dir/rule
-.PHONY : franka_ros/franka_example_controllers/CMakeFiles/_franka_example_controllers_generate_messages_check_deps_JointTorqueComparison.dir/rule
-
-# Convenience name for target.
-_franka_example_controllers_generate_messages_check_deps_JointTorqueComparison: franka_ros/franka_example_controllers/CMakeFiles/_franka_example_controllers_generate_messages_check_deps_JointTorqueComparison.dir/rule
-
-.PHONY : _franka_example_controllers_generate_messages_check_deps_JointTorqueComparison
-
-# fast build rule for target.
-_franka_example_controllers_generate_messages_check_deps_JointTorqueComparison/fast:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_example_controllers/CMakeFiles/_franka_example_controllers_generate_messages_check_deps_JointTorqueComparison.dir/build.make franka_ros/franka_example_controllers/CMakeFiles/_franka_example_controllers_generate_messages_check_deps_JointTorqueComparison.dir/build
-.PHONY : _franka_example_controllers_generate_messages_check_deps_JointTorqueComparison/fast
-
-# Convenience name for target.
-franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-.PHONY : franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_lisp: franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_lisp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_lisp/fast:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
-
-# Convenience name for target.
-franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-.PHONY : franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_eus: franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_eus
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_eus/fast:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_eus/fast
-
-# Convenience name for target.
-franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-.PHONY : franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_cpp: franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_cpp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_cpp/fast:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make franka_ros/franka_example_controllers/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
-
-# Convenience name for target.
-franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_cpp.dir/rule:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_cpp.dir/rule
-.PHONY : franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-franka_example_controllers_generate_messages_cpp: franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_cpp.dir/rule
-
-.PHONY : franka_example_controllers_generate_messages_cpp
-
-# fast build rule for target.
-franka_example_controllers_generate_messages_cpp/fast:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_cpp.dir/build.make franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_cpp.dir/build
-.PHONY : franka_example_controllers_generate_messages_cpp/fast
+franka_example_controllers_generate_messages_eus/fast:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_eus.dir/build.make franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_eus.dir/build
+.PHONY : franka_example_controllers_generate_messages_eus/fast
 
 # Convenience name for target.
 franka_ros/franka_example_controllers/CMakeFiles/test_move_node.dir/rule:
@@ -378,19 +243,19 @@ franka_example_controllers_gencpp/fast:
 .PHONY : franka_example_controllers_gencpp/fast
 
 # Convenience name for target.
-franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_eus.dir/rule:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_eus.dir/rule
-.PHONY : franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_eus.dir/rule
+franka_ros/franka_example_controllers/CMakeFiles/_franka_example_controllers_generate_messages_check_deps_JointTorqueComparison.dir/rule:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_example_controllers/CMakeFiles/_franka_example_controllers_generate_messages_check_deps_JointTorqueComparison.dir/rule
+.PHONY : franka_ros/franka_example_controllers/CMakeFiles/_franka_example_controllers_generate_messages_check_deps_JointTorqueComparison.dir/rule
 
 # Convenience name for target.
-franka_example_controllers_generate_messages_eus: franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_eus.dir/rule
+_franka_example_controllers_generate_messages_check_deps_JointTorqueComparison: franka_ros/franka_example_controllers/CMakeFiles/_franka_example_controllers_generate_messages_check_deps_JointTorqueComparison.dir/rule
 
-.PHONY : franka_example_controllers_generate_messages_eus
+.PHONY : _franka_example_controllers_generate_messages_check_deps_JointTorqueComparison
 
 # fast build rule for target.
-franka_example_controllers_generate_messages_eus/fast:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_eus.dir/build.make franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_eus.dir/build
-.PHONY : franka_example_controllers_generate_messages_eus/fast
+_franka_example_controllers_generate_messages_check_deps_JointTorqueComparison/fast:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_example_controllers/CMakeFiles/_franka_example_controllers_generate_messages_check_deps_JointTorqueComparison.dir/build.make franka_ros/franka_example_controllers/CMakeFiles/_franka_example_controllers_generate_messages_check_deps_JointTorqueComparison.dir/build
+.PHONY : _franka_example_controllers_generate_messages_check_deps_JointTorqueComparison/fast
 
 # Convenience name for target.
 franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages.dir/rule:
@@ -481,6 +346,51 @@ franka_example_controllers_gennodejs: franka_ros/franka_example_controllers/CMak
 franka_example_controllers_gennodejs/fast:
 	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_gennodejs.dir/build.make franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_gennodejs.dir/build
 .PHONY : franka_example_controllers_gennodejs/fast
+
+# Convenience name for target.
+franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_genpy.dir/rule:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_genpy.dir/rule
+.PHONY : franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_genpy.dir/rule
+
+# Convenience name for target.
+franka_example_controllers_genpy: franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_genpy.dir/rule
+
+.PHONY : franka_example_controllers_genpy
+
+# fast build rule for target.
+franka_example_controllers_genpy/fast:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_genpy.dir/build.make franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_genpy.dir/build
+.PHONY : franka_example_controllers_genpy/fast
+
+# Convenience name for target.
+franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_gencfg.dir/rule:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_gencfg.dir/rule
+.PHONY : franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_gencfg.dir/rule
+
+# Convenience name for target.
+franka_example_controllers_gencfg: franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_gencfg.dir/rule
+
+.PHONY : franka_example_controllers_gencfg
+
+# fast build rule for target.
+franka_example_controllers_gencfg/fast:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_gencfg.dir/build.make franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_gencfg.dir/build
+.PHONY : franka_example_controllers_gencfg/fast
+
+# Convenience name for target.
+franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/rule:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/rule
+.PHONY : franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/rule
+
+# Convenience name for target.
+franka_example_controllers: franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/rule
+
+.PHONY : franka_example_controllers
+
+# fast build rule for target.
+franka_example_controllers/fast:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/build.make franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/build
+.PHONY : franka_example_controllers/fast
 
 src/joint_position_example_controller.o: src/joint_position_example_controller.cpp.o
 
@@ -574,29 +484,23 @@ help:
 	@echo "... install"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... test"
-	@echo "... franka_example_controllers"
-	@echo "... franka_example_controllers_gencfg"
+	@echo "... franka_example_controllers_generate_messages_cpp"
 	@echo "... list_install_components"
 	@echo "... franka_example_controllers_generate_messages_py"
-	@echo "... dynamic_reconfigure_gencfg"
-	@echo "... franka_example_controllers_genpy"
-	@echo "... dynamic_reconfigure_generate_messages_nodejs"
-	@echo "... dynamic_reconfigure_generate_messages_py"
-	@echo "... _franka_example_controllers_generate_messages_check_deps_JointTorqueComparison"
-	@echo "... dynamic_reconfigure_generate_messages_lisp"
-	@echo "... dynamic_reconfigure_generate_messages_eus"
-	@echo "... dynamic_reconfigure_generate_messages_cpp"
-	@echo "... franka_example_controllers_generate_messages_cpp"
+	@echo "... franka_example_controllers_generate_messages_eus"
 	@echo "... test_move_node"
 	@echo "... franka_example_controllers_gencpp"
-	@echo "... franka_example_controllers_generate_messages_eus"
+	@echo "... _franka_example_controllers_generate_messages_check_deps_JointTorqueComparison"
 	@echo "... franka_example_controllers_generate_messages"
 	@echo "... franka_example_controllers_generate_messages_lisp"
 	@echo "... franka_example_controllers_geneus"
 	@echo "... franka_example_controllers_genlisp"
 	@echo "... franka_example_controllers_generate_messages_nodejs"
 	@echo "... franka_example_controllers_gennodejs"
+	@echo "... franka_example_controllers_genpy"
+	@echo "... franka_example_controllers_gencfg"
+	@echo "... franka_example_controllers"
+	@echo "... test"
 	@echo "... src/joint_position_example_controller.o"
 	@echo "... src/joint_position_example_controller.i"
 	@echo "... src/joint_position_example_controller.s"

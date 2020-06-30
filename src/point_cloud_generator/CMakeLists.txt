@@ -12,13 +12,15 @@ find_package(catkin REQUIRED COMPONENTS
   sensor_msgs
   messages REQUIRED
   tf
+  pcl_ros
+  pcl_conversions
 )
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
 find_package(Eigen3)
-find_package(PCL)
+find_package(PCL 1.8 REQUIRED)
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
@@ -122,11 +124,12 @@ include_directories(
 # include
   ${CMAKE_CURRENT_SOURCE_DIR}/src/
   ${catkin_INCLUDE_DIRS}
+  ${PCL_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
 add_library(${PROJECT_NAME}
-  src/PCGENNode.cpp
+  src/PCGenNode.cpp
 )
 
 ## Add cmake target dependencies of the library

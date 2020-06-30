@@ -4,14 +4,14 @@ using namespace pcl;
 
 PCGenNode::PCGenNode()
 : cloudSub(nh.subscribe("/points2", 1, &PCGenNode::cloudCallback, this))
-, captureService(nh.advertiseService("capture_image", &CameraCalibrationNode::captureImage, this))
+, captureService(nh.advertiseService("capture_cloud", &PCGenNode::captureCloud, this))
 {
     cloudProcessed = false;
 }
 
-void PCGenNode::cloudCallback(const pcl::PointCloud& msg)
+void PCGenNode::cloudCallback(const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
 {
-    mostRecentCloud = msg;
+    pcl::fromROSMsg (*cloud_msg, mostRecentCloud);
 
 }
 
@@ -39,13 +39,13 @@ bool PCGenNode::captureCloud(messages::ImageCapture::Request& req, messages::Ima
         ROS_INFO("capturing point cloud [%ld]", (int) cloudList.size());
         cloudList.push_back(mostRecentCloud);
 
-        Eigen::Eigen4f convertedTransform;
+        Eigen::Matrix4f convertedTransform;
         formatTransform(mostRecentTransform, convertedTransform);
         cloudTransforms.push_back(convertedTransform);
     }
     else if (req.x == true && cloudProcessed == false)
     {
-        ROS_INFO("stitching point clouds...")
+        ROS_INFO("stitching point clouds...");
         stitchClouds();
         registerModel();
 
@@ -58,15 +58,16 @@ bool PCGenNode::captureCloud(messages::ImageCapture::Request& req, messages::Ima
 void PCGenNode::stitchClouds()
 {
     //visualize cloud?
-    PointCloud::Ptr source, target;
+    pcl::PointCloud<pcl::PointXYZ>::Ptr source, target;
 
     //first target is the first point in the cloud
     pcl::transformPointCloud(cloudList[0], target, cloudTransforms[0]);
 
     for (int i = 0; i < cloudList.size(); i++)
     {
+        Eigen::Matrix4f pairTransform;
         pcl::transformPointCloud(cloudList[i], source, cloudTransforms[i]);
-        PointCloud::Ptr temp (new PointCloud);
+        pcl::PointCloud<pcl::PointXYZ>::Ptr temp (new PointCloud<pcl::PointXYZ>);
 
         pairAlign(source,target,temp, pairTransform);
 
@@ -83,7 +84,7 @@ void PCGenNode::registerModel()
     return;
 }
 
-void PCGenNode::pairAlign(const PointCloud::Ptr cloud_src, const PointCloud::Ptr cloud_tgt, PointCloud::Ptr output, Eigen::Matrix4f &final_transform)
+void PCGenNode::pairAlign(const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_src, const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_tgt, pcl::PointCloud<pcl::PointXYZ>::Ptr output, Eigen::Matrix4f &final_transform)
 {
     pcl::PointCloud<pcl::PointXYZ> cloud_source_registered;
     IterativeClosestPoint<PointXYZ, PointXYZ> icp;
@@ -108,7 +109,7 @@ void PCGenNode::pairAlign(const PointCloud::Ptr cloud_src, const PointCloud::Ptr
 
 }
 
-void formatTransform(tf::StampedTransform tfTransform, Eigen::Matrix4f& eigenTransform)
+void PCGenNode::formatTransform(tf::StampedTransform tfTransform, const Eigen::Matrix4f &eigenTransform)
 {
     tf::Matrix3x3 rotTF;
     tf::Vector3 transTF;
@@ -127,6 +128,6 @@ void formatTransform(tf::StampedTransform tfTransform, Eigen::Matrix4f& eigenTra
     Trans.block<3,3>(0,0) = R;
     Trans.block<3,1>(0,3) = T;
 
-    eigenTransform = Trans;
+    eigenTransform = Trans.cast<float>();
 
 }

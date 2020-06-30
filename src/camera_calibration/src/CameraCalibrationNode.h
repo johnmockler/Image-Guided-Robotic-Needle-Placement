@@ -1,6 +1,7 @@
 #include <ros/ros.h>
+//#include <tf2_msgs/TFMessage.msg>
 #include <sensor_msgs/JointState.h>
-#include <vector> 
+#include <vector>
 #include <opencv2/opencv.hpp>
 #include <opencv2/core.hpp>
 #include <opencv2/core/utility.hpp>
@@ -25,6 +26,9 @@
 #include <opencv2/highgui.hpp>
 #include <opencv2/calib3d.hpp>
 
+//#include <Eigen/Geometry>
+#include <opencv2/opencv.hpp>
+
 //#include <opencv4/opencv2/calib3d.hpp>
 
 
@@ -39,9 +43,11 @@ private:
     //all subscribers here
     ros::NodeHandle nh;
     ros::Subscriber imageSub;
+    ros::Subscriber poseSub;
 
     //service advertisement
     ros::ServiceServer captureService;
+    ros::Publisher PubRotationCam2Base;
 
     // Additional constant for calibration
     const float calibrationSquareDimension = 0.04f; //meters
@@ -78,21 +84,40 @@ private:
     tf::TransformListener listener;
 
     //class variables
+
     cv::Mat cameraMatrix = cv::Mat::eye(3,3, CV_64F);
     cv::Mat distCoeffs = cv::Mat::zeros(8, 1, CV_64F);
     cv::Mat mostRecentImage;
     std::vector<cv::Mat> calibrationImages;
 
+    // Hand-Eye Calibration varaibales
+    void poseCallback(const tf2_msgs::TFMessage::ConstPtr& pose);
+    tf::StampedTransform base2gripper;
+    cv::Vec3d mostRecentPoseT;
+    cv::Vec3d mostRecentPoseR;
 
-    std::vector<cv::Mat> endEffectorPosesR;
-    std::vector<cv::Mat> endEffectorPosesT;
-    cv::Mat cameraPosesR;
-    cv::Mat cameraPosesT;
+    Matx41d aa2quaternion(const Matx31d& aa);
+
+    std::vector<cv::Vec3d> endEffectorPosesR;
+    std::vector<cv::Vec3d> endEffectorPosesT;
+
+    std::vector<Mat> Target2CamPosesR_Matrix;
+    std::vector<Mat> endEffector2BasePosesR_Matrix;
+
+    std::vector<cv::Vec3d> cameraPosesR;
+    std::vector<cv::Vec3d> cameraPosesT;
+
+    std::vector<Mat> cam2endEffectorR;
+    std::vector<Vec3d> cam2endEffectorT;
+
+    //cv::Mat cameraPosesR;
+    //cv::Mat cameraPosesT;
 
     std::vector<Mat> Trpose, Rrpose, Tmpose, Rmpose;
 
 
     bool alreadyCalibrated;
+    bool alreadyHandEyeCalibrated;
 
 
 public:

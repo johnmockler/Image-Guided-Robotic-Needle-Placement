@@ -3,12 +3,14 @@
 using namespace cv;
 
 CameraCalibrationNode::CameraCalibrationNode()
-    : imageSub(nh.subscribe("/rgb/image_raw", 1, &CameraCalibrationNode::cameraCallback, this))
-    , captureService(nh.advertiseService("capture_image", &CameraCalibrationNode::captureImage, this))
-
+        : imageSub(nh.subscribelistenTransform("/rgb/image_raw", 1, &CameraCalibrationNode::cameraCallback, this))
+        , captureService(nh.advertiseService("capture_image", &CameraCalibrationNode::captureImage, this))
+        , poseSub(nh.subscribe("/tf_publishe",1, &CameraCalibrationNode::poseCallback,this))
+        , PubRotationCam2Base(nh.advertise<geometry_msgs::TransformStamped>("/toPointCloud",1,this))
 
 {
     alreadyCalibrated = false;
+    alreadyHandEyeCalibrated = false;
     //testing
     cv::namedWindow("Display window", cv::WINDOW_AUTOSIZE);
 }
@@ -35,62 +37,107 @@ void CameraCalibrationNode::cameraCallback(const sensor_msgs::ImageConstPtr& msg
 
 }
 
+void CameraCalibrationNode::poseCallback(const tf2_msgs::TFMessage::ConstPtr& pose)
+{
+    ROS_INFO("I heard: [%s]", pose->transforms.data());
+    mostRecentPoseT[0] = pose->transforms[0].transform.translation.x;
+    mostRecentPoseT[1] = pose->transforms[0].transform.translation.y;
+    mostRecentPoseT[2] = pose->transforms[0].transform.translation.z;
+
+    mostRecentPoseR[0] = pose->transforms[0].transform.rotation.x;
+    mostRecentPoseR[1] = pose->transforms[0].transform.rotation.y;
+    mostRecentPoseR[2] = pose->transforms[0].transform.rotation.z;
+
+}
+
 bool CameraCalibrationNode::captureImage(messages::ImageCapture::Request &req, messages::ImageCapture::Response &res)
 {
-        //false request indicates more calibration images are needed. Save most recent image to calibration image matrix
-        //also save end effector position at this time. 
-        if (req.x == false)
+    //false request indicates more calibration images are needed. Save most recent image to calibration image matrix
+    //also save end effector position at this time.
+
+    if (req.x == false)
+    {
+        calibrationImages.push_back(mostRecentImage);
+        ROS_INFO("capturing image number [%ld]", (long) calibrationImages.size());
+
+
+        endEffectorPosesT.push_back(mostRecentPoseT);
+        endEffectorPosesR.push_back(mostRecentPoseR);
+
+        /*
+        try
         {
-            calibrationImages.push_back(mostRecentImage);
-            ROS_INFO("capturing image number [%ld]", (int) calibrationImages.size());
+            listener.lookupTransform("end_effector", "base", ros::Time(0), base2gripper);
+            ROS_INFO_STREAM(" base2gripper: " << base2gripper.getOrigin().x() << ", " << base2gripper.getOrigin().y() << ", " <<base2gripper.getOrigin().z() << ", "
+                                              << base2gripper.getRotation().x() << ", " << base2gripper.getRotation().y() << ", " << base2gripper.getRotation().z());
+
+
+            cv::Vec3d temp_translation(base2gripper.getOrigin().x(), base2gripper.getOrigin().y(), base2gripper.getOrigin().z());
+            endEffectorPosesT.push_back(temp_translation);
+
+            cv::Vec3d temp_rotation(base2gripper.getRotation().x(), base2gripper.getRotation().y(), base2gripper.getRotation().z());
+            endEffectorPosesR.push_back(temp_rotation);
+
         }
+        catch (tf::TransformException ex)
+        {
+            ROS_ERROR("%s", ex.what());
+            ros::Duration(1.0).sleep();
+        }
+         */
+    }
         //if true, process images and computer K matrix and Hand-eye Calibration
-        else if (req.x == true)
+    else if (req.x == true)
+    {
+        if (!alreadyCalibrated)
         {
-            if (!alreadyCalibrated)
+
+            alreadyCalibrated = true;
+
+            calibrateAndPoseEstimation();
+
+            //For Testing
+            std::cout << "M= " << std::endl;
+            std::cout << cameraMatrix << std::endl;
+            std::cout << "Dist Coeff" << std::endl;
+            std::cout << distCoeffs << std::endl;
+
+            /*test purposes~~~~~~~~~~~~~~~
+            for (int i = 0; i < calibrationImages.size(); i++)
             {
-                
-                alreadyCalibrated = true;
-                
-                calibrateAndPoseEstimation();
-                
-                //For Testing
-                std::cout << "M= " << std::endl;
-                std::cout << cameraMatrix << std::endl;
-                std::cout << "Dist Coeff" << std::endl;
-                std::cout << distCoeffs << std::endl;
-
-                /*test purposes~~~~~~~~~~~~~~~
-                for (int i = 0; i < calibrationImages.size(); i++)
-                {
-                    cv::Mat temp = calibrationImages[i].clone();
-                    cv::undistort(temp, calibrationImages[i], cameraMatrix, distCoeffs);
-                    cv::imshow("Display window", calibrationImages[i]);
-                    cv::waitKey(0);
-                }
-                
-
-                ///*
-                Mat Rot;
-                for (int i = 0; i < cameraPosesR.size(); i++)
-                {
-                    std::cout<<"R = "<<std::endl;
-                    cv::Rodrigues(cameraPosesR[i],Rot);
-                    std::cout<<Rot<<std::endl;
-                    std::cout<<"T = "<<std::endl;
-                    std::cout<<cameraPosesT[i]<<std::endl;
-                }
-                //
-                readTextFiles();
-                calibrateHandEye(Rrpose, Trpose,Rmpose, Tmpose, cameraPosesR, cameraPosesT);
-                std::cout<<cameraPosesR<<std::endl;
-                std::cout<<cameraPosesT<<std::endl;
-
-                //computeHandeyeTransform();
-
-                */
+                cv::Mat temp = calibrationImages[i].clone();
+                cv::undistort(temp, calibrationImages[i], cameraMatrix, distCoeffs);
+                cv::imshow("Display window", calibrationImages[i]);
+                cv::waitKey(0);
             }
+
+            ///*
+
+            for (int i = 0; i < cameraPosesR.size(); i++)
+            {
+                std::cout<<"R = "<<std::endl;
+                cv::Rodrigues(cameraPosesR[i],Rot);
+                std::cout<<Rot<<std::endl;
+                std::cout<<"T = "<<std::endl;
+                std::cout<<cameraPosesT[i]<<std::endl;
+            }
+            //
+            readTextFiles();
+            calibrateHandEye(Rrpose, Trpose,Rmpose, Tmpose, cameraPosesR, cameraPosesT);
+            std::cout<<cameraPosesR<<std::endl;
+            std::cout<<cameraPosesT<<std::endl;
+            //computeHandeyeTransform();
+            */
+
+            if(!alreadyHandEyeCalibrated)
+            {
+                alreadyHandEyeCalibrated =true;
+                computeHandeyeTransform();
+            }
+
+
         }
+    }
     res.y = true;
     return true;
 }
@@ -107,7 +154,7 @@ void CameraCalibrationNode::calibrateAndPoseEstimation()
     ROS_INFO("Calibrating Camera...");
     std::vector<cv::Mat> rVectors,tVectors;
     cv::calibrateCamera(objectPoints, imagePoints, cv::Size(calibrationImages[0].rows,calibrationImages[0].cols), cameraMatrix, distCoeffs, rVectors, tVectors);
-    
+
     ROS_INFO("Beginning Pose Estimation...");
     Mat rvec;
     Mat tvec;
@@ -123,14 +170,11 @@ void CameraCalibrationNode::calibrateAndPoseEstimation()
 
         cv::Mat img1_copy_pose = calibrationImages[i].clone();
 
-        
-        namedWindow( "Display window", CV_WINDOW_KEEPRATIO);
+        namedWindow( "Display window", WINDOW_KEEPRATIO);
         imshow("Display window", img1_copy_pose);
         resizeWindow("Display window",img1_copy_pose.cols/2,img1_copy_pose.rows/2);
         ROS_INFO("Hit a key to continue");
         waitKey(0);
-
-
 
         cv::Mat img_draw_poses;
         cv::Mat Rrvec;
@@ -138,7 +182,7 @@ void CameraCalibrationNode::calibrateAndPoseEstimation()
         drawFrameAxes(img1_copy_pose, cameraMatrix, distCoeffs, Rrvec, tvec, 0.1,2);
         hconcat(img1_copy_pose, img_draw_poses);
         imshow("Chessboard poses", img1_copy_pose);
-       
+
         ROS_INFO("Estimated error of picture no [%ld]", i);
         std::vector<Point2f> imagePoints2;
 
@@ -160,38 +204,115 @@ void CameraCalibrationNode::calibrateAndPoseEstimation()
 
 void CameraCalibrationNode::computeHandeyeTransform()
 {
-    Mat R_cam2gripper;
-    Mat t_cam2gripper;
 
-    //cv::CalibrateHandEye(endEffectorPosesR,endEffectorPosesT, cameraPosesR, cameraPosesT, R_cam2gripper, t_cam2gripper);
+    for (int i = 0; i < cameraPosesR.size(); i++)
+    {
+
+        // Creating a target2cam rotation matrix, later will be passed into HandEyeCalibration
+        Mat target2cam;
+        cv::Rodrigues(cameraPosesR[i],target2cam);
+        Target2CamPosesR_Matrix.push_back(target2cam.inv());
+
+        // Creating a endEffector2Base rotation matrix, later will be passed into HandEyeCalibration
+
+        Mat endEffector2Base;
+        cv::Rodrigues(endEffectorPosesR[i],endEffector2Base);
+        endEffector2BasePosesR_Matrix.push_back(endEffector2Base.inv());
+    }
+
+    calibrateHandEye(endEffector2BasePosesR_Matrix,endEffectorPosesT,Target2CamPosesR_Matrix,cameraPosesT,cam2endEffectorR,cam2endEffectorT);
+    //cv::calibrateHandEye(endEffector2BasePosesR_Matrix,endEffectorPosesT,Target2CamPosesR_Matrix,cameraPosesT,cam2endEffectorR,cam2endEffectorT,method=CALIB_HAND_EYE_TSAI);
+
 
     //convert R_cam2gripper and t_cam2gripper to Point3f or Vector3, and publish or something
 
-    //cv::calibrateHandEye (InputArrayOfArrays R_gripper2base,
-    //                      InputArrayOfArrays t_gripper2base,
-    //                      InputArrayOfArrays R_target2cam,
-    //                      InputArrayOfArrays t_target2cam,
-    //
-    //                      OutputArray R_cam2gripper,
-    //                      OutputArray t_cam2gripper,
-    //
-    //                      HandEyeCalibrationMethod method=CALIB_HAND_EYE_TSAI)
+
 }
 
 void CameraCalibrationNode::broadcastTransform()
 {
-    //fill matrices with correct vectors
-    transform.setOrigin( tf::Vector3(0.0, 2.0, 0.0) );
-    transform.setRotation( tf::Quaternion(0, 0, 0, 1));
-    br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), "end effector", "camera"));
-}
 
-void CameraCalibrationNode::listenTransform()
+    // Camere2EndEffector Rotation Vector
+    cv::Mat came2endEffectorR_vec;
+    cv::Rodrigues(cam2endEffectorR,came2endEffectorR_vec);
+
+
+    //Base2EndEffector of mostRecentPoseT Vector
+
+    //Base2EndEffector of mostRecentPoseR Vector
+
+    cv::Mat Base2EndEffectorR_mat;
+    cv::Rodrigues(mostRecentPoseR,Base2EndEffectorR_mat);
+
+    //SVD of base2endEffector * camera2endEffector
+    cv::Vec3d w,u,vt;
+    // Pre-processing for SVD
+
+    cv::Matx31d Total_Rotation; cv::multiply(Base2EndEffectorR_mat.inv(),cam2endEffectorR,Total_Rotation);
+
+    cv::Matx31d temp; cv::multiply(Base2EndEffectorR_mat.inv(),cam2endEffectorT,temp);
+    cv::Matx31d Total_Translation; cv::add(temp,endEffectorPosesT,Total_Translation);
+
+    cv::SVD::compute(Total_Rotation,w,u,vt,DECOMP_SVD);
+
+
+    //Final rotation matrix from base to camera
+    cv::Mat R; cv::multiply(u,vt,R);
+    cv::Matx31d r;
+    cv::Rodrigues(R,r);
+    //Converge 3x1 Matrix  to quaternions 4x1
+    Matx41d q_cv = aa2quaternion(r);
+
+    geometry_msgs::TransformStamped trans;
+    // fill out a translation vector values of camera2base
+    trans.transform.translation.x = Total_Translation.val[0];
+    trans.transform.translation.y = Total_Translation.val[1];
+    trans.transform.translation.z = Total_Translation.val[2];
+
+    trans.transform.rotation.x = q_cv.val[0];
+    trans.transform.rotation.y = q_cv.val[1];
+    trans.transform.rotation.z = q_cv.val[2];
+    trans.transform.rotation.w = q_cv.val[3];
+
+    tf2_msgs::TFMessage mesg;
+    mesg.transforms.push_back(trans);
+    PubRotationCam2Base.publish(mesg);
+
+    /*
+    //fill matrices with correct vectors
+
+    tf::Vector3 temp_for_set_Origin(cam2endEffectorT.at<double>()[0],cam2endEffectorT.at<double()[1],cam2endEffectorT.at<double>()[2]);
+    transform.setOrigin(temp_for_set_Origin);
+    transform.setOrigin(tf::Vector3(temp_for_set_Origin));
+
+
+    tf::Matrix3x3 temp; temp.getRPY(camera2endEffector_vec.val[0],camera2endEffector_vec.val[1],camera2endEffector_vec.val[2]);
+    transform.setBasis(temp);
+    //Or via Quaternion
+    transform.setRotation(tf::Quaternion(q_cv[0],q_cv[1],q_cv[2},q_cv[3]));
+
+
+    //br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), "end effector", "camera"));
+    br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), "base", "camera"));
+    */
+}
+/*
+void CameraCalibrationNode::listenTransform()    //std::vector<geometry_msgs::PoseStamped> PosEndEffector,std::vector<geometry_msgs::PoseStamped> OrEndEffector)
 {
-    tf::StampedTransform base2gripper;
+    tf::StampedTransform base2gripper;  //base2endeffector
+    //tf::Quaternion endEffectorPosesR = tf::createQuaternionFromRPY(0.0,0.0,0.0);
     try
     {
         listener.lookupTransform("end_effector", "base", ros::Time(0), base2gripper);
+        ROS_INFO_STREAM(" base2gripper: " << base2gripper.getOrigin().x() << ", " << base2gripper.getOrigin().y() << ", " <<base2gripper.getOrigin().z() << ", "
+                                       << base2gripper.getRotation().x() << ", " << base2gripper.getRotation().y() << ", " << base2gripper.getRotation().z());
+        endEffectorPosesT = base2gripper.getOrigin();
+        endEffectorPosesR = base2gripper.getRotation();
+
+        //cv::Mat temp, w , y, u , vt;
+        //cv::solve(base2gripper.getRotation(), Rrvec, temp ,DECOMP_SVD);
+        //cv::SVD::compute(temp ,  w,  u,  vt, DECOMP_SVD );
+
         //add store transform to class variables
     }
     catch (tf::TransformException ex)
@@ -200,7 +321,7 @@ void CameraCalibrationNode::listenTransform()
         ros::Duration(1.0).sleep();
     }
 }
-
+*/
 // Additional Function for camera calibration
 void CameraCalibrationNode::getChessboardCorners(std::vector<Mat> images, std::vector<std::vector<Point2f>>& allFoundCorners)
 {
@@ -234,8 +355,8 @@ void CameraCalibrationNode::createKnownBoardPosition(std::vector<Point3f>& corne
 }
 
 void CameraCalibrationNode::calibrateHandEye(InputArrayOfArrays R_gripper2base, InputArrayOfArrays t_gripper2base,
-                      InputArrayOfArrays R_target2cam, InputArrayOfArrays t_target2cam,
-                      OutputArray R_cam2gripper, OutputArray t_cam2gripper)
+                                             InputArrayOfArrays R_target2cam, InputArrayOfArrays t_target2cam,
+                                             OutputArray R_cam2gripper, OutputArray t_cam2gripper)
 {
     CV_Assert(R_gripper2base.isMatVector() && t_gripper2base.isMatVector() &&
               R_target2cam.isMatVector() && t_target2cam.isMatVector());
@@ -287,15 +408,15 @@ void CameraCalibrationNode::calibrateHandEye(InputArrayOfArrays R_gripper2base, 
     Mat Rcg = Mat::eye(3, 3, CV_64FC1);
     Mat Tcg = Mat::zeros(3, 1, CV_64FC1);
 
-    
+
     calibrateHandEyeQR24(Hg, Hc, Rcg, Tcg);
-    
+
     Rcg.copyTo(R_cam2gripper);
     Tcg.copyTo(t_cam2gripper);
 }
 
 void CameraCalibrationNode::calibrateHandEyeQR24(std::vector<Mat>& Hg, const std::vector<Mat>& Hc,
-                                 Mat& R_cam2gripper, Mat& t_cam2gripper)
+                                                 Mat& R_cam2gripper, Mat& t_cam2gripper)
 {
     int K = static_cast<int>(Hg.size());
 
@@ -333,7 +454,7 @@ void CameraCalibrationNode::calibrateHandEyeQR24(std::vector<Mat>& Hg, const std
 
         //generate Ai matrix
         a00.copyTo(A(Rect(0,i*12,3,3)));
-        a01.copyTo(A(Rect(3,i*12,3,3)));        
+        a01.copyTo(A(Rect(3,i*12,3,3)));
         a02.copyTo(A(Rect(6,i*12,3,3)));
         a10.copyTo(A(Rect(0,3 + i*12,3,3)));
         a11.copyTo(A(Rect(3,3 + i*12,3,3)));
@@ -392,9 +513,9 @@ Mat CameraCalibrationNode::homogeneousInverse(const Mat& T)
 
 void CameraCalibrationNode::readTextFiles()
 {
-    String robot_poses = "/home/rnm/robot_poses.txt";
+    String  robot_poses  = "/home/rnm/robot_poses.txt";
     String  marker_poses = "/home/rnm/marker_poses.txt";
-    
+
 
 
     std::ifstream myfile;
@@ -455,7 +576,7 @@ void CameraCalibrationNode::readTextFiles()
         myfile.close();
     }
 
-    
+
     std::ifstream myfile1;
     myfile1.open(marker_poses);
     if (myfile1.is_open())
@@ -511,8 +632,8 @@ void CameraCalibrationNode::readTextFiles()
         myfile1.close();
     }
 
-    
-    
+
+
 }
 //Reference:
 //R. Y. Tsai and R. K. Lenz, "A new technique for fully autonomous and efficient 3D robotics hand/eye calibration."
@@ -520,7 +641,7 @@ void CameraCalibrationNode::readTextFiles()
 //C++ code converted from Zoran Lazarevic's Matlab code:
 //http://lazax.com/www.cs.columbia.edu/~laza/html/Stewart/matlab/handEye.m
 void CameraCalibrationNode::calibrateHandEyeTsai(const std::vector<Mat>& Hg, const std::vector<Mat>& Hc,
-                                 Mat& R_cam2gripper, Mat& t_cam2gripper)
+                                                 Mat& R_cam2gripper, Mat& t_cam2gripper)
 {
     //Number of unique camera position pairs
     int K = static_cast<int>((Hg.size()*Hg.size() - Hg.size()) / 2.0);
@@ -697,11 +818,11 @@ Mat CameraCalibrationNode::skew(const Mat& v)
     double vy = v.at<double>(1,0);
     double vz = v.at<double>(2,0);
     return (Mat_<double>(3,3) << 0, -vz, vy,
-                                vz, 0, -vx,
-                                -vy, vx, 0);
+            vz, 0, -vx,
+            -vy, vx, 0);
 }
 void CameraCalibrationNode::drawFrameAxes(InputOutputArray image, InputArray cameraMatrix, InputArray distCoeffs,
-                   InputArray rvec, InputArray tvec, float length, int thickness)
+                                          InputArray rvec, InputArray tvec, float length, int thickness)
 {
     //CV_INSTRUMENT_REGION();
 
@@ -728,3 +849,13 @@ void CameraCalibrationNode::drawFrameAxes(InputOutputArray image, InputArray cam
     line(image, imagePoints[0], imagePoints[3], Scalar(255, 0, 0), thickness);
 }
 
+// From Mat 3x1 Matrix to Quaternions
+Matx41d CameraCalibrationNode::aa2quaternion(const Matx31d& aa)
+{
+    double angle = norm(aa);
+    cv::Matx31d axis(aa(0) / angle, aa(1) / angle, aa(2) / angle);
+    double angle_2 = angle / 2;
+    //qx, qy, qz, qw
+    cv::Matx41d q(axis(0) * sin(angle_2), axis(1) * sin(angle_2), axis(2) * sin(angle_2), cos(angle_2));
+    return q;
+}

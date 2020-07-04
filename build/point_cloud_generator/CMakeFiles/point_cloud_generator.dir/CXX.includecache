@@ -85,6 +85,12 @@ pcl/registration/transforms.h
 -
 pcl/visualization/pcl_visualizer.h
 -
+pcl/visualization/cloud_viewer.h
+-
+pcl/common/common_headers.h
+-
+pcl/console/parse.h
+-
 messages/ImageCapture.h
 -
 tf/transform_listener.h
@@ -2970,6 +2976,10 @@ pcl/correspondence.h
 pcl/impl/cloud_iterator.hpp
 -
 
+/usr/include/pcl-1.8/pcl/common/angles.h
+pcl/common/impl/angles.hpp
+-
+
 /usr/include/pcl-1.8/pcl/common/centroid.h
 pcl/point_cloud.h
 -
@@ -2994,6 +3004,20 @@ pcl/pcl_base.h
 cfloat
 -
 pcl/common/impl/common.hpp
+-
+
+/usr/include/pcl-1.8/pcl/common/common_headers.h
+pcl/common/common.h
+-
+pcl/common/norms.h
+-
+pcl/common/angles.h
+-
+pcl/common/time.h
+-
+pcl/common/file_io.h
+-
+pcl/common/eigen.h
 -
 
 /usr/include/pcl-1.8/pcl/common/concatenate.h
@@ -3028,6 +3052,18 @@ Eigen/Eigenvalues
 pcl/common/impl/eigen.hpp
 -
 
+/usr/include/pcl-1.8/pcl/common/file_io.h
+iostream
+-
+dirent.h
+-
+vector
+-
+algorithm
+-
+pcl/common/impl/file_io.hpp
+-
+
 /usr/include/pcl-1.8/pcl/common/impl/accumulators.hpp
 map
 -
@@ -3040,6 +3076,12 @@ boost/fusion/include/for_each.hpp
 boost/fusion/include/as_vector.hpp
 -
 pcl/point_types.h
+-
+
+/usr/include/pcl-1.8/pcl/common/impl/angles.hpp
+cmath
+-
+pcl/pcl_macros.h
 -
 
 /usr/include/pcl-1.8/pcl/common/impl/centroid.hpp
@@ -3070,12 +3112,20 @@ pcl/common/concatenate.h
 pcl/console/print.h
 -
 
+/usr/include/pcl-1.8/pcl/common/impl/file_io.hpp
+
 /usr/include/pcl-1.8/pcl/common/impl/io.hpp
 pcl/common/concatenate.h
 -
 pcl/common/copy_point.h
 -
 pcl/point_types.h
+-
+
+/usr/include/pcl-1.8/pcl/common/impl/norms.hpp
+pcl/pcl_macros.h
+-
+pcl/console/print.h
 -
 
 /usr/include/pcl-1.8/pcl/common/impl/projection_matrix.hpp
@@ -3098,6 +3148,10 @@ pcl/exceptions.h
 locale
 -
 pcl/common/impl/io.hpp
+-
+
+/usr/include/pcl-1.8/pcl/common/norms.h
+pcl/common/impl/norms.hpp
 -
 
 /usr/include/pcl-1.8/pcl/common/point_operators.h
@@ -3136,6 +3190,14 @@ pcl/common/eigen.h
 pcl/PointIndices.h
 -
 pcl/common/impl/transforms.hpp
+-
+
+/usr/include/pcl-1.8/pcl/console/parse.h
+vector
+-
+sstream
+-
+pcl/pcl_macros.h
 -
 
 /usr/include/pcl-1.8/pcl/console/print.h
@@ -4140,6 +4202,12 @@ boost/foreach.hpp
 boost/date_time/posix_time/posix_time.hpp
 -
 boost/filesystem.hpp
+-
+
+/usr/include/pcl-1.8/pcl/visualization/cloud_viewer.h
+pcl/visualization/pcl_visualizer.h
+-
+string
 -
 
 /usr/include/pcl-1.8/pcl/visualization/common/actor_map.h

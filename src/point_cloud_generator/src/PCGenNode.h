@@ -19,6 +19,10 @@
 #include <pcl/registration/icp_nl.h>
 #include <pcl/registration/transforms.h>
 #include <pcl/visualization/pcl_visualizer.h>
+#include <pcl/visualization/cloud_viewer.h>
+#include <pcl/common/common_headers.h>
+#include <pcl/console/parse.h>
+
 
 #include <messages/ImageCapture.h>
 #include <tf/transform_listener.h>
@@ -46,6 +50,8 @@ private:
     void listenTransform();
     void formatTransform(tf::StampedTransform tfTransform, Eigen::Matrix4f &eigenTransform);
     void registerModel();
+    void pcViewer(const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_src);
+
 
 
 
@@ -53,7 +59,7 @@ private:
 
     //Variables here
     bool cloudProcessed;
-    pcl::PointCloud<pcl::PointXYZ>::Ptr mostRecentCloud;
+    pcl::PointCloud<pcl::PointXYZ>::Ptr  mostRecentCloud;
     pcl::PointCloud<pcl::PointXYZ>::Ptr scanResults;
 
     tf::StampedTransform mostRecentTransform;

@@ -12,6 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
   sensor_msgs
   messages REQUIRED
   tf
+  tf_conversions
   pcl_ros
   pcl_conversions
 )

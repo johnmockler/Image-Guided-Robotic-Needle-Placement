@@ -370,26 +370,34 @@ point_cloud_generator/CMakeFiles/point_cloud_generator.dir/src/PCGenNode.cpp.o
  /usr/include/pcl-1.8/pcl/TextureMesh.h
  /usr/include/pcl-1.8/pcl/Vertices.h
  /usr/include/pcl-1.8/pcl/cloud_iterator.h
+ /usr/include/pcl-1.8/pcl/common/angles.h
  /usr/include/pcl-1.8/pcl/common/centroid.h
  /usr/include/pcl-1.8/pcl/common/colors.h
  /usr/include/pcl-1.8/pcl/common/common.h
+ /usr/include/pcl-1.8/pcl/common/common_headers.h
  /usr/include/pcl-1.8/pcl/common/concatenate.h
  /usr/include/pcl-1.8/pcl/common/copy_point.h
  /usr/include/pcl-1.8/pcl/common/eigen.h
+ /usr/include/pcl-1.8/pcl/common/file_io.h
  /usr/include/pcl-1.8/pcl/common/impl/accumulators.hpp
+ /usr/include/pcl-1.8/pcl/common/impl/angles.hpp
  /usr/include/pcl-1.8/pcl/common/impl/centroid.hpp
  /usr/include/pcl-1.8/pcl/common/impl/common.hpp
  /usr/include/pcl-1.8/pcl/common/impl/copy_point.hpp
  /usr/include/pcl-1.8/pcl/common/impl/eigen.hpp
+ /usr/include/pcl-1.8/pcl/common/impl/file_io.hpp
  /usr/include/pcl-1.8/pcl/common/impl/io.hpp
+ /usr/include/pcl-1.8/pcl/common/impl/norms.hpp
  /usr/include/pcl-1.8/pcl/common/impl/projection_matrix.hpp
  /usr/include/pcl-1.8/pcl/common/impl/transforms.hpp
  /usr/include/pcl-1.8/pcl/common/io.h
+ /usr/include/pcl-1.8/pcl/common/norms.h
  /usr/include/pcl-1.8/pcl/common/point_operators.h
  /usr/include/pcl-1.8/pcl/common/point_tests.h
  /usr/include/pcl-1.8/pcl/common/projection_matrix.h
  /usr/include/pcl-1.8/pcl/common/time.h
  /usr/include/pcl-1.8/pcl/common/transforms.h
+ /usr/include/pcl-1.8/pcl/console/parse.h
  /usr/include/pcl-1.8/pcl/console/print.h
  /usr/include/pcl-1.8/pcl/conversions.h
  /usr/include/pcl-1.8/pcl/correspondence.h
@@ -485,6 +493,7 @@ point_cloud_generator/CMakeFiles/point_cloud_generator.dir/src/PCGenNode.cpp.o
  /usr/include/pcl-1.8/pcl/search/search.h
  /usr/include/pcl-1.8/pcl/visualization/area_picking_event.h
  /usr/include/pcl-1.8/pcl/visualization/boost.h
+ /usr/include/pcl-1.8/pcl/visualization/cloud_viewer.h
  /usr/include/pcl-1.8/pcl/visualization/common/actor_map.h
  /usr/include/pcl-1.8/pcl/visualization/common/common.h
  /usr/include/pcl-1.8/pcl/visualization/common/impl/common.hpp

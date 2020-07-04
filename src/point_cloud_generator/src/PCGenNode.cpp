@@ -13,22 +13,16 @@ PCGenNode::PCGenNode()
     
 }
 
+//Receive most recent cloud and convert it to PCL message (this is apparently slow, perhaps we can do another way)
 void PCGenNode::cloudCallback(const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
 {
-    pcl::PointCloud<pcl::PointXYZ> temp;
     pcl::fromROSMsg (*cloud_msg, *mostRecentCloud);
-
-
-
-
-    //mostRecentCloud = temp;
-
 }
 
+//This function is no longer necessary. but i am commenting without being able to test the code so i'm afraid to make changes
 void PCGenNode::listenTransform()
 {
     ROS_INFO("collecting stuff");
-    //To - do get transform from base2gripper and convert from quarternion to 4x4 matrix.
     tf::StampedTransform base2gripper;
     try
     {
@@ -36,7 +30,6 @@ void PCGenNode::listenTransform()
         ROS_INFO_STREAM(" base2gripper: " << base2gripper.getOrigin().x() << ", " << base2gripper.getOrigin().y() << ", " <<base2gripper.getOrigin().z() << ", "
                                               << base2gripper.getRotation().x() << ", " << base2gripper.getRotation().y() << ", " << base2gripper.getRotation().z());
         mostRecentTransform = base2gripper;
-        //add store transform to class variables
     }
     catch (tf::TransformException ex)
     {
@@ -45,6 +38,15 @@ void PCGenNode::listenTransform()
     }
 }
 
+/*When false is received: 
+filter point cloud to remove NaN values
+add filtered cloud to list
+convert tf::StampedTransform to a 4x4 Eigen Matrix4f
+add transform to list
+
+when true:
+process point clouds
+*/
 bool PCGenNode::captureCloud(messages::ImageCapture::Request& req, messages::ImageCapture::Response& res)
 {
     if (req.x == false)
@@ -54,6 +56,7 @@ bool PCGenNode::captureCloud(messages::ImageCapture::Request& req, messages::Ima
         pcl::PointCloud<pcl::PointXYZ>::Ptr filteredCloud(new PointCloud<pcl::PointXYZ>);
         
         std::vector< int > indices;
+        //here we can use most recent cloud as output probably, to avoid creating a new variable
         pcl::removeNaNFromPointCloud(*mostRecentCloud, *filteredCloud, indices);
 
         cloudList.push_back(filteredCloud);
@@ -82,15 +85,14 @@ bool PCGenNode::captureCloud(messages::ImageCapture::Request& req, messages::Ima
 
 }
 
-//Convert all captured point clouds to base frame using Interative Closest Point to find all points in first frame (i think icp automatically finds
-//correspondense)
+//Loop through all point clouds, and find correspondences between them. Output should be the 'Full' point cloud merged from all of the views.
 void PCGenNode::stitchClouds()
 {
     //visualize cloud?
     pcl::PointCloud<pcl::PointXYZ>::Ptr source(new PointCloud<pcl::PointXYZ>), target(new PointCloud<pcl::PointXYZ>);
     ROS_INFO("here");
 
-    //first target is the first point in the cloud
+    //first target is the first point in the cloud. Transform to base frame
     pcl::transformPointCloud(*cloudList[0], *target, cloudTransforms[0]);
 
     ROS_INFO("here 2");
@@ -111,11 +113,13 @@ void PCGenNode::stitchClouds()
 
 }
 
+//To do. Convert Stl model to a point cloud, then use the ICP method to find transformation. finally find the target in base coords.
 void PCGenNode::registerModel()
 {
     return;
 }
 
+//Take two point clouds, and find the transformation between them. Output is the merged point cloud. 
 void PCGenNode::pairAlign(const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_src, const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_tgt, pcl::PointCloud<pcl::PointXYZ>::Ptr output, Eigen::Matrix4f &final_transform)
 {
     pcl::PointCloud<pcl::PointXYZ> cloud_source_registered;
@@ -141,6 +145,7 @@ void PCGenNode::pairAlign(const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_src, c
 
 }
 
+//Converts a Tf::StampedTransform to an Eigen::Matrix4f
 void PCGenNode::formatTransform(tf::StampedTransform tfTransform, Eigen::Matrix4f &eigenTransform)
 {
     tf::Matrix3x3 rotTF;
@@ -167,6 +172,7 @@ void PCGenNode::formatTransform(tf::StampedTransform tfTransform, Eigen::Matrix4
 
 }
 
+//Cloud viewer gives a library error when used. Perhaps try the pcl::Visualizer or w/e?
 void PCGenNode::pcViewer(const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_src)
 {
     //pcl::visualization::CloudViewer viewer("Simple Cloud Viewer");

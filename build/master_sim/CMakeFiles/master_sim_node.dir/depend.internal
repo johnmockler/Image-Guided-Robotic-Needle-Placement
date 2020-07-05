@@ -63,6 +63,10 @@ master_sim/CMakeFiles/master_sim_node.dir/src/master_sim.cpp.o
  /opt/ros/melodic/include/ros/wall_timer_options.h
  /opt/ros/melodic/include/rosconsole/macros_generated.h
  /opt/ros/melodic/include/sensor_msgs/JointState.h
+ /opt/ros/melodic/include/std_msgs/Float64MultiArray.h
  /opt/ros/melodic/include/std_msgs/Header.h
+ /opt/ros/melodic/include/std_msgs/MultiArrayDimension.h
+ /opt/ros/melodic/include/std_msgs/MultiArrayLayout.h
+ /opt/ros/melodic/include/std_msgs/String.h
  /opt/ros/melodic/include/xmlrpcpp/XmlRpcDecl.h
  /opt/ros/melodic/include/xmlrpcpp/XmlRpcValue.h

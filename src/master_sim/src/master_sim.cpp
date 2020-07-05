@@ -1,50 +1,118 @@
 #include <ros/ros.h>
 #include <sensor_msgs/JointState.h>
+#include <std_msgs/String.h>
+#include <std_msgs/Float64MultiArray.h>
 #include <messages/ImageCapture.h>
+#include <math.h>
 
 
+class MasterSim
+{
+private:
+  ros::NodeHandle nh;
+  std::vector<std::string> joint_names_;
+  ros::Subscriber jointSubscriber = nh.subscribe("sensor_msgs/JointState",1000,&MasterSim::checkPosition,this);
+  ros::ServiceClient client = nh.serviceClient<messages::ImageCapture>("capture_image");
+  messages::ImageCapture srv;
+  std::vector<std::vector<double>> positionSet;
+  double currentPos[7]={0};
+  int count = 0;
+  double error;
+
+public:
+MasterSim(ros::NodeHandle n):nh(n)
+{
+  jointSet();
+}
+
+void jointSet()
+    {
+        
+        std::vector<double> J1={-0.5,0,0,-0.8,0.7,1.5,0};
+        positionSet.push_back(J1);
+        std::vector<double> J2={0,0,0,-0.8,0,1.5,0};
+         positionSet.push_back(J2);
+        std::vector<double> J3={0.5,0,0,-0.8,-0.7,1.5,0};
+         positionSet.push_back(J3);
+        std::vector<double> J4={-0.5,-0.9,0,-1.5,0.7,1.2,0};
+        positionSet.push_back(J4);
+        std::vector<double> J5={0,-0.9,0,-1.5,0,1.2,0};
+         positionSet.push_back(J5);
+        std::vector<double> J6={0.5,-0.9,0,-1.5,-0.7,1.2,0};
+         positionSet.push_back(J6);
+        std::vector<double> J7={-0.5,0.5,0,-0.6,0.7,0.9,0};
+        positionSet.push_back(J7);
+        std::vector<double> J8={0,0.5,0,-0.6,0,0.9,0};
+         positionSet.push_back(J8);
+        std::vector<double> J9={0.5,0.5,0,-0.6,-0.7,0.9,0};
+         positionSet.push_back(J9);
+        
+
+        
+    }
+
+void checkPosition(const sensor_msgs::JointStateConstPtr& msg)
+{
+  for(int i =0;i<7;i++)
+  {
+  currentPos[i] = msg->position[i];
+  }
+}
+
+void calibrate()
+{
+  count++;
+  error = 0.0;
+  bool reached = false;
+  if(count <= positionSet.size())
+  {
+    while(!reached)
+    {
+      ros::spin();
+      for(int i  = 0;i<7;i++)
+      {
+        int temp = currentPos[i]- positionSet[count][i];
+        error = error + std::pow(temp,2.0);
+      }
+      error = std::sqrt(error);
+      if(error <0.01 )
+      {
+        std::cout<<"Bot Reached position %ld"<<count<<std::endl;
+        srv.request.x = false;
+        while(!client.call(srv))
+        {
+          std::cout<<"Waiting on response";
+        }
+      reached = true;
+
+      }
+    }
+  }
+  else
+  {
+    std::cout<<"Calibration Done"<<std::endl;
+    ros::shutdown();
+  }
+}
+
+void run()
+{
+  while(ros::ok())
+  {
+    calibrate();
+  }
+}
+
+};
 
 int main(int argc, char** argv)
 {
 
   ros::init(argc, argv, "master_sim");
   ros::NodeHandle n;
-  ros::ServiceClient client = n.serviceClient<messages::ImageCapture>("capture_image");
-  messages::ImageCapture srv;
-  
-  //std::vector<float> times = {5.0,15.0,27.0,36.0,45.0,61.0,72.0,82.0,93.0,107.0,117.0,127.0,137.0,147.0,155.0,161.0,167.0,176.0,186.0,196.0,206.0,217.0,225.0,233.0,247.0,260.0,271.0,280.0,290.0,300.0};
+  MasterSim obj(n);
+  obj.run();
 
-  std::vector<float> times = {15.0,27.0,36.0,45.0,61.0,72.0,82.0,93.0,107.0,117.0,127.0,137.0,147.0,155.0,161.0,167.0,176.0,186.0,196.0,206.0,217.0,225.0,233.0,247.0,260.0,271.0,280.0,290.0,300.0};
-    //std::vector<float> times = {15.0,27.0,36.0,45.0,61.0,72.0,82.0,93.0,107.0,117.0,127.0,137.0,147.0,155.0,161.0,167.0,176.0,186.0,196.0,206.0,217.0,225.0,233.0,247.0,260.0,271.0,280.0,290.0,300.0};
-
-  //std::vector<float> times = {5.0,15.0,27.0};
-  //std::vector<float> times = {5.0};
-
-
-  double begin = ros::Time::now().toSec();
-  double now;
-  double elapsedTime;
-  float currentPt;
-  int i = 0;
-
-  
-  while (ros::ok()) {
-    now = ros::Time::now().toSec();
-    elapsedTime = now - begin;
-    currentPt = times[i];
-
-    if (i > times.size()){
-      srv.request.x = true;
-      client.call(srv);
-    }
-    else if (elapsedTime > currentPt){
-      srv.request.x = false;
-      client.call(srv);
-      ROS_INFO("sending capture request..");
-      i++;
-    }
-
-  }
   
 
 

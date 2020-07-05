@@ -15,35 +15,70 @@ private:
     int counter = 0;
     ros::Publisher command_pub = nh_.advertise<std_msgs::Float64MultiArray>("/joint_position_example_controller_sim/joint_command", 1000);
     std::vector<double> init_position = {0,-0.5,0,-2.5,0,2,0};
+    std::vector<double> new_pos = {0.5,0,0,-1.6,0,1.6,0};
+    std::vector<std::vector<double>> positionSet;
     
 public:
 
     // Initialize
-    RobotArm(ros::NodeHandle nh, double joint_move_dist): nh_(nh), num_joints_(7), joint_move_dist_(joint_move_dist)
+    RobotArm(ros::NodeHandle nh): nh_(nh)
     {
 
+    }
+    void jointSet()
+    {
+        
+        std::vector<double> J1={-0.5,0,0,-0.8,0.7,1.5,0};
+        positionSet.push_back(J1);
+        std::vector<double> J2={0,0,0,-0.8,0,1.5,0};
+         positionSet.push_back(J2);
+        std::vector<double> J3={0.5,0,0,-0.8,-0.7,1.5,0};
+         positionSet.push_back(J3);
+        std::vector<double> J4={-0.5,-0.9,0,-1.5,0.7,1.2,0};
+        positionSet.push_back(J4);
+        std::vector<double> J5={0,-0.9,0,-1.5,0,1.2,0};
+         positionSet.push_back(J5);
+        std::vector<double> J6={0.5,-0.9,0,-1.5,-0.7,1.2,0};
+         positionSet.push_back(J6);
+        std::vector<double> J7={-0.5,0.5,0,-0.6,0.7,0.9,0};
+        positionSet.push_back(J7);
+        std::vector<double> J8={0,0.5,0,-0.6,0,0.9,0};
+         positionSet.push_back(J8);
+        std::vector<double> J9={0.5,0.5,0,-0.6,-0.7,0.9,0};
+         positionSet.push_back(J9);
+        
+
+        
     }
 
     void sendStepCommand()
     {
+      ros::Rate rate(1);
+        //std::vector<double> jangle={0,1.2,0,0,0,0,0};
         // calculate new joint angles
-        std::vector<double> goal_position;
-        double delta_angle = joint_move_dist_/180.*M_PI * (std::sin(counter/10.));
-        for (size_t i = 0; i < 7; ++i) {
-          if (i == 4) {
-              goal_position.push_back(init_position[i] - delta_angle);
-          } else {
-              goal_position.push_back(init_position[i] + delta_angle);
-          }
-        }
-        counter++;
+        jointSet();
+       for(int j=0;j<positionSet.size();j++)
+       {
+            std::vector<double> goal_position;
+            for (size_t i = 0; i < 7; i++) 
+            {
+              goal_position.push_back(positionSet[j][i]);
+              //goal_position.push_back(jangle[i]);       
+            }
 
-        // create message and publish it
-        std_msgs::Float64MultiArray msg;
-        msg.data.clear();
-        msg.data.insert(msg.data.end(), goal_position.begin(), goal_position.end());
-        command_pub.publish(msg);
+            // create message and publish it
+            std_msgs::Float64MultiArray msg;
+            msg.data.clear();
+            msg.data.insert(msg.data.end(), goal_position.begin(), goal_position.end());
+            command_pub.publish(msg);
+            int num;
+            //std::cin>>num;
+            ros::spinOnce();
+            ros::Duration(3.0).sleep();
+       }
 
+        
+        
     }
 };
 
@@ -54,24 +89,22 @@ int main(int argc, char** argv)
   ros::NodeHandle nh;
 
   // Amount of movement in each joint
-  double joint_move_dist = 15.0;
-  ros::param::get("~joint_move_dist", joint_move_dist);
-  ROS_INFO_STREAM("joint_move_dist: " << joint_move_dist << " degrees.");
+  
 
   // create RobotArm object
-  RobotArm arm(nh, joint_move_dist);
+  RobotArm arm(nh);
 
   // loop infinitely with a fixed frequency and send our commands
-  ros::Rate loop_rate(10);
+  //ros::Rate loop_rate(20);
   while (ros::ok())
   {
-      arm.sendStepCommand();
-      loop_rate.sleep();
-      ros::spinOnce();
+  std::cout<<"new code works"<<std::endl;
+  arm.sendStepCommand();
+  ros::shutdown();
+  //loop_rate.sleep();
+  //ros::spinOnce();
+      
   }
 
   return 0;
 }
-
-
-

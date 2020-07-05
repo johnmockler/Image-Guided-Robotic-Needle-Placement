@@ -11,8 +11,8 @@ class MasterSim
 private:
   ros::NodeHandle nh;
   std::vector<std::string> joint_names_;
-  ros::Subscriber jointSubscriber = nh.subscribe("sensor_msgs/JointState",1000,&MasterSim::checkPosition,this);
-  ros::ServiceClient client = nh.serviceClient<messages::ImageCapture>("capture_image");
+  ros::Subscriber jointSubscriber;
+  ros::ServiceClient client;
   messages::ImageCapture srv;
   std::vector<std::vector<double>> positionSet;
   double currentPos[7]={0};
@@ -23,6 +23,9 @@ public:
 MasterSim(ros::NodeHandle n):nh(n)
 {
   jointSet();
+  jointSubscriber = nh.subscribe("/joint_states",10,&MasterSim::checkPosition,this);
+  client = nh.serviceClient<messages::ImageCapture>("capture_image",this);
+  ROS_INFO("sUSCRIBED"); 
 }
 
 void jointSet()
@@ -53,6 +56,7 @@ void jointSet()
 
 void checkPosition(const sensor_msgs::JointStateConstPtr& msg)
 {
+  ROS_INFO("In sub callback");
   for(int i =0;i<7;i++)
   {
   currentPos[i] = msg->position[i];
@@ -61,36 +65,44 @@ void checkPosition(const sensor_msgs::JointStateConstPtr& msg)
 
 void calibrate()
 {
+  ROS_INFO("In Calibrate() within mastersim");
+
   count++;
   error = 0.0;
   bool reached = false;
   if(count <= positionSet.size())
   {
+    ROS_INFO("In IF");
     while(!reached)
     {
-      ros::spin();
+      
+      //ROS_INFO("In while");
+      //ros::spin();
       for(int i  = 0;i<7;i++)
       {
         int temp = currentPos[i]- positionSet[count][i];
         error = error + std::pow(temp,2.0);
+        //ROS_INFO("In error calc");
       }
       error = std::sqrt(error);
       if(error <0.01 )
       {
-        std::cout<<"Bot Reached position %ld"<<count<<std::endl;
+        ROS_INFO("Bot Reached position");
         srv.request.x = false;
         while(!client.call(srv))
         {
-          std::cout<<"Waiting on response";
+          ROS_INFO("Waiting on response");
         }
       reached = true;
 
       }
+      //ros::Rate r(10);
+      //ros::spin();
     }
   }
   else
   {
-    std::cout<<"Calibration Done"<<std::endl;
+    ROS_INFO("Calibration Done");
     ros::shutdown();
   }
 }
@@ -99,6 +111,7 @@ void run()
 {
   while(ros::ok())
   {
+    ROS_INFO("Entered run()");
     calibrate();
   }
 }
@@ -109,15 +122,16 @@ int main(int argc, char** argv)
 {
 
   ros::init(argc, argv, "master_sim");
+  ROS_INFO("Master Sim node initiated"); 
   ros::NodeHandle n;
   MasterSim obj(n);
   obj.run();
-
+  ros::Rate r(10);
   
 
 
 
- // ros::spin();
+ ros::spin();
 
   return 0;
 }

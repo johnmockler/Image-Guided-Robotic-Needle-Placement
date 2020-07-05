@@ -74,7 +74,7 @@ public:
             int num;
             //std::cin>>num;
             ros::spinOnce();
-            ros::Duration(3.0).sleep();
+            ros::Duration(5.0).sleep();
        }
 
         
@@ -98,7 +98,7 @@ int main(int argc, char** argv)
   //ros::Rate loop_rate(20);
   while (ros::ok())
   {
-  std::cout<<"new code works"<<std::endl;
+  ROS_INFO("new code works");
   arm.sendStepCommand();
   ros::shutdown();
   //loop_rate.sleep();

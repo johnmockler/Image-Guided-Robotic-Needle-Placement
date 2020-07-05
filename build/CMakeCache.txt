@@ -489,6 +489,12 @@ gtest_main_LIB_DEPENDS:STATIC=general;-pthread;general;gtest;
 //The directory containing a CMake configuration file for hardware_interface.
 hardware_interface_DIR:PATH=/opt/ros/melodic/share/hardware_interface/cmake
 
+//Value Computed by CMake
+inverse_kinematics_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/inverse_kinematics
+
+//Value Computed by CMake
+inverse_kinematics_SOURCE_DIR:STATIC=/home/rnm/rnm_group_2/src/inverse_kinematics
+
 //The directory containing a CMake configuration file for joint_limits_interface.
 joint_limits_interface_DIR:PATH=/opt/ros/melodic/share/joint_limits_interface/cmake
 
@@ -692,7 +698,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=16
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=17
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

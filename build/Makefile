@@ -662,19 +662,6 @@ franka_msgs_genpy/fast:
 .PHONY : franka_msgs_genpy/fast
 
 #=============================================================================
-# Target rules for targets named inverse_kinematics
-
-# Build rule for target.
-inverse_kinematics: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 inverse_kinematics
-.PHONY : inverse_kinematics
-
-# fast build rule for target.
-inverse_kinematics/fast:
-	$(MAKE) -f forward_kinematics/CMakeFiles/inverse_kinematics.dir/build.make forward_kinematics/CMakeFiles/inverse_kinematics.dir/build
-.PHONY : inverse_kinematics/fast
-
-#=============================================================================
 # Target rules for targets named actionlib_msgs_generate_messages_py
 
 # Build rule for target.
@@ -1715,6 +1702,19 @@ gripper_joint_state_publisher/fast:
 .PHONY : gripper_joint_state_publisher/fast
 
 #=============================================================================
+# Target rules for targets named inverseKinematics
+
+# Build rule for target.
+inverseKinematics: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 inverseKinematics
+.PHONY : inverseKinematics
+
+# fast build rule for target.
+inverseKinematics/fast:
+	$(MAKE) -f inverse_kinematics/CMakeFiles/inverseKinematics.dir/build.make inverse_kinematics/CMakeFiles/inverseKinematics.dir/build
+.PHONY : inverseKinematics/fast
+
+#=============================================================================
 # Target rules for targets named panda_joint_reader_node
 
 # Build rule for target.
@@ -2662,7 +2662,6 @@ help:
 	@echo "... franka_msgs_genlisp"
 	@echo "... franka_msgs_generate_messages_nodejs"
 	@echo "... franka_msgs_genpy"
-	@echo "... inverse_kinematics"
 	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... actionlib_msgs_generate_messages_lisp"
 	@echo "... actionlib_msgs_generate_messages_eus"
@@ -2743,6 +2742,7 @@ help:
 	@echo "... _franka_gripper_generate_messages_check_deps_MoveActionFeedback"
 	@echo "... robot_joint_state_publisher"
 	@echo "... gripper_joint_state_publisher"
+	@echo "... inverseKinematics"
 	@echo "... panda_joint_reader_node"
 	@echo "... franka_hw"
 	@echo "... clean_test_results_franka_hw"

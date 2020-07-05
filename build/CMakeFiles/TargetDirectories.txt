@@ -94,7 +94,6 @@
 /home/rnm/rnm_group_2/build/franka_ros_1/franka_msgs/CMakeFiles/edit_cache.dir
 /home/rnm/rnm_group_2/build/forward_kinematics/CMakeFiles/rebuild_cache.dir
 /home/rnm/rnm_group_2/build/forward_kinematics/CMakeFiles/test.dir
-/home/rnm/rnm_group_2/build/forward_kinematics/CMakeFiles/inverse_kinematics.dir
 /home/rnm/rnm_group_2/build/forward_kinematics/CMakeFiles/actionlib_msgs_generate_messages_py.dir
 /home/rnm/rnm_group_2/build/forward_kinematics/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir
 /home/rnm/rnm_group_2/build/forward_kinematics/CMakeFiles/actionlib_msgs_generate_messages_eus.dir
@@ -194,6 +193,14 @@
 /home/rnm/rnm_group_2/build/franka_ros_1/franka_visualization/CMakeFiles/gripper_joint_state_publisher.dir
 /home/rnm/rnm_group_2/build/franka_ros_1/franka_visualization/CMakeFiles/test.dir
 /home/rnm/rnm_group_2/build/franka_ros_1/franka_visualization/CMakeFiles/list_install_components.dir
+/home/rnm/rnm_group_2/build/inverse_kinematics/CMakeFiles/install/strip.dir
+/home/rnm/rnm_group_2/build/inverse_kinematics/CMakeFiles/install/local.dir
+/home/rnm/rnm_group_2/build/inverse_kinematics/CMakeFiles/test.dir
+/home/rnm/rnm_group_2/build/inverse_kinematics/CMakeFiles/list_install_components.dir
+/home/rnm/rnm_group_2/build/inverse_kinematics/CMakeFiles/inverseKinematics.dir
+/home/rnm/rnm_group_2/build/inverse_kinematics/CMakeFiles/rebuild_cache.dir
+/home/rnm/rnm_group_2/build/inverse_kinematics/CMakeFiles/edit_cache.dir
+/home/rnm/rnm_group_2/build/inverse_kinematics/CMakeFiles/install.dir
 /home/rnm/rnm_group_2/build/panda_joint_reader/CMakeFiles/install/strip.dir
 /home/rnm/rnm_group_2/build/panda_joint_reader/CMakeFiles/list_install_components.dir
 /home/rnm/rnm_group_2/build/panda_joint_reader/CMakeFiles/install/local.dir

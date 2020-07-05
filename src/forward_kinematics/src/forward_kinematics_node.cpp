@@ -83,17 +83,14 @@ void compute(std::vector<float> theta)
 
 void setCoordinates(std::vector<cv::Mat> transformations)
 {
-  std::cout<<"entered setcord"<<std::endl;
   std::vector<double> coord;
   cv::Mat finalTrans= cv::Mat::eye(4,4,CV_32F);
   float mat_data1[16]={1,2,3,4,1,2,3,4,1,2,3,4,0,0,0,1};
   cv::Mat temp1 = cv::Mat(4,4,CV_32F,mat_data1);
   for(int i=0;i<transformations.size();i++)
   {
-    //finalTrans=finalTrans*temp1;
      finalTrans=finalTrans*transformations[i];
-     //std::cout<<transformations[i]<<std::endl;
-    
+   
   }
   
   std::cout<<finalTrans<<std::endl;

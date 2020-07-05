@@ -11,8 +11,12 @@ class MasterSim
 private:
   ros::NodeHandle nh;
   std::vector<std::string> joint_names_;
+<<<<<<< HEAD
   ros::Subscriber jointSubscriber;
   ros::ServiceClient client;
+=======
+  ros::ServiceClient client = nh.serviceClient<messages::ImageCapture>("capture_image",this);
+>>>>>>> test2_suyash
   messages::ImageCapture srv;
   std::vector<std::vector<double>> positionSet;
   double currentPos[7]={0};
@@ -23,8 +27,12 @@ public:
 MasterSim(ros::NodeHandle n):nh(n)
 {
   jointSet();
+<<<<<<< HEAD
   jointSubscriber = nh.subscribe("/joint_states",10,&MasterSim::checkPosition,this);
   client = nh.serviceClient<messages::ImageCapture>("capture_image",this);
+=======
+  ros::Subscriber jointSubscriber = nh.subscribe("sensor_msgs/JointState",1000,&MasterSim::checkPosition,this);
+>>>>>>> test2_suyash
   ROS_INFO("sUSCRIBED"); 
 }
 
@@ -66,7 +74,10 @@ void checkPosition(const sensor_msgs::JointStateConstPtr& msg)
 void calibrate()
 {
   ROS_INFO("In Calibrate() within mastersim");
+<<<<<<< HEAD
 
+=======
+>>>>>>> test2_suyash
   count++;
   error = 0.0;
   bool reached = false;
@@ -75,14 +86,22 @@ void calibrate()
     ROS_INFO("In IF");
     while(!reached)
     {
+<<<<<<< HEAD
       
       //ROS_INFO("In while");
+=======
+      ROS_INFO("In while");
+>>>>>>> test2_suyash
       //ros::spin();
       for(int i  = 0;i<7;i++)
       {
         int temp = currentPos[i]- positionSet[count][i];
         error = error + std::pow(temp,2.0);
+<<<<<<< HEAD
         //ROS_INFO("In error calc");
+=======
+        ROS_INFO("In error calc");
+>>>>>>> test2_suyash
       }
       error = std::sqrt(error);
       if(error <0.01 )

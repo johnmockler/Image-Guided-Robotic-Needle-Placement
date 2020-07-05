@@ -87,28 +87,31 @@ void setCoordinates(std::vector<cv::Mat> transformations)
   cv::Mat finalTrans= cv::Mat::eye(4,4,CV_32F);
   float mat_data1[16]={1,2,3,4,1,2,3,4,1,2,3,4,0,0,0,1};
   cv::Mat temp1 = cv::Mat(4,4,CV_32F,mat_data1);
+  
+  tf2_msgs::TFMessage mesg;
   for(int i=0;i<transformations.size();i++)
   {
      finalTrans=finalTrans*transformations[i];
-   
+
+     geometry_msgs::TransformStamped trans;
+     trans.transform.translation.x=finalTrans.at<float>(0,3);
+     trans.transform.translation.y=finalTrans.at<float>(1,3);
+     trans.transform.translation.z=finalTrans.at<float>(2,3);
+     trans.transform.rotation.x=0.0;
+     trans.transform.rotation.y=0.0;
+     trans.transform.rotation.z=0.0;
+     trans.transform.rotation.w=0.0;
+      
+      
+      mesg.transforms.push_back(trans);
+       
   }
   
-  std::cout<<finalTrans<<std::endl;
+  //std::cout<<finalTrans<<std::endl;
   coord.push_back(finalTrans.at<float>(0,3));
   coord.push_back(finalTrans.at<float>(1,3));
   coord.push_back(finalTrans.at<float>(2,3));
-
-  geometry_msgs::TransformStamped trans;
-  trans.transform.translation.x=10.0;
-  trans.transform.translation.y=20.0;
-  trans.transform.translation.z=30.0;
-  trans.transform.rotation.x=0.6;
-  trans.transform.rotation.y=0.45;
-  trans.transform.rotation.z=1.0;
-  trans.transform.rotation.w=0.0;
-
-  tf2_msgs::TFMessage mesg;
-  mesg.transforms.push_back(trans);
+ 
   test_pub.publish(mesg);
 
 /*geometry_msgs::Point newCord;

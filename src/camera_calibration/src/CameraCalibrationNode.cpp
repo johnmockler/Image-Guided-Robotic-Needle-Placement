@@ -36,7 +36,8 @@ void CameraCalibrationNode::cameraCallback(const sensor_msgs::ImageConstPtr& msg
 
 void CameraCalibrationNode::poseCallback(const tf2_msgs::TFMessage::ConstPtr& pose)
 {
-    ROS_INFO("I heard: [%s]", pose->transforms.data());
+    //ROS_INFO("I heard: [%s]", pose->transforms.data());
+    
     mostRecentPoseT[0] = pose->transforms[0].transform.translation.x;
     mostRecentPoseT[1] = pose->transforms[0].transform.translation.y;
     mostRecentPoseT[2] = pose->transforms[0].transform.translation.z;
@@ -44,6 +45,8 @@ void CameraCalibrationNode::poseCallback(const tf2_msgs::TFMessage::ConstPtr& po
     mostRecentPoseR[0] = pose->transforms[0].transform.rotation.x;
     mostRecentPoseR[1] = pose->transforms[0].transform.rotation.y;
     mostRecentPoseR[2] = pose->transforms[0].transform.rotation.z;
+
+    //std::cout<<mostRecentPoseT[0]<<std::endl;
 
 }
 
@@ -81,7 +84,12 @@ bool CameraCalibrationNode::captureImage(messages::ImageCapture::Request &req, m
             {
                 alreadyHandEyeCalibrated =true;
                 computeHandeyeTransform();
+                std::cout << "R= " << std::endl;
+                std::cout << cam2endEffectorR << std::endl;
+                std::cout << "T" << std::endl;
+                std::cout << cam2endEffectorT << std::endl;
             }
+
 
 
         }
@@ -117,7 +125,7 @@ void CameraCalibrationNode::calibrateAndPoseEstimation()
         cameraPosesR.push_back(rvec);
         cameraPosesT.push_back(tvec);
 
-
+        /*
         cv::Mat img1_copy_pose = calibrationImages[i].clone();
 
         namedWindow( "Display window", WINDOW_KEEPRATIO);
@@ -132,7 +140,7 @@ void CameraCalibrationNode::calibrateAndPoseEstimation()
         drawFrameAxes(img1_copy_pose, cameraMatrix, distCoeffs, Rrvec, tvec, 0.1,2);
         hconcat(img1_copy_pose, img_draw_poses);
         imshow("Chessboard poses", img1_copy_pose);
-
+        */
         ROS_INFO("Estimated error of picture no [%ld]", i);
         std::vector<Point2f> imagePoints2;
 

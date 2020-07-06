@@ -2,6 +2,10 @@
    	<node name="master_sim" pkg="master_sim" type="master_sim_node" output="screen"/>
    	<node name="simple_trajectory_player" pkg="franka_example_controllers" type="test_move_node" />
    
+   
+    <include file="$(find franka_example_controllers)/launch/joint_position_example_controller_sim.launch" />
+	<include file="$(find forward_kinematics)/launch/forward_kinematics.launch" />
+    <include file="$(find inverse_kinematics)/launch/inverse_kin.launch" />
 
     <node name="camera_calibration" pkg="camera_calibration" type="camera_calibration_node" output = "screen"/>
     

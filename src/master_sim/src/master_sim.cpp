@@ -60,7 +60,7 @@ void jointSet()
 
 void checkPosition(const sensor_msgs::JointStateConstPtr& msg)
 {
-  ROS_INFO("In sub callback");
+  //ROS_INFO("In sub callback");
   //ros::ServiceClient client = (ros::ServiceClient)*clientPtr;
   error = 0.0;
   if(count < positionSet.size())

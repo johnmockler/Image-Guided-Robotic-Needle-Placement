@@ -2996,13 +2996,11 @@ clean: camera_calibration/CMakeFiles/camera_calibration.dir/clean
 # Directory level rules for directory forward_kinematics
 
 # Convenience name for "all" pass in the directory.
-forward_kinematics/all: forward_kinematics/CMakeFiles/inverse_kinematics.dir/all
 forward_kinematics/all: forward_kinematics/CMakeFiles/forward_kinematics_node.dir/all
 
 .PHONY : forward_kinematics/all
 
 # Convenience name for "clean" pass in the directory.
-forward_kinematics/clean: forward_kinematics/CMakeFiles/inverse_kinematics.dir/clean
 forward_kinematics/clean: forward_kinematics/CMakeFiles/forward_kinematics_node.dir/clean
 
 .PHONY : forward_kinematics/clean
@@ -3011,43 +3009,6 @@ forward_kinematics/clean: forward_kinematics/CMakeFiles/forward_kinematics_node.
 forward_kinematics/preinstall:
 
 .PHONY : forward_kinematics/preinstall
-
-#=============================================================================
-# Target rules for target forward_kinematics/CMakeFiles/inverse_kinematics.dir
-
-# All Build rule for target.
-forward_kinematics/CMakeFiles/inverse_kinematics.dir/all:
-	$(MAKE) -f forward_kinematics/CMakeFiles/inverse_kinematics.dir/build.make forward_kinematics/CMakeFiles/inverse_kinematics.dir/depend
-	$(MAKE) -f forward_kinematics/CMakeFiles/inverse_kinematics.dir/build.make forward_kinematics/CMakeFiles/inverse_kinematics.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num= "Built target inverse_kinematics"
-.PHONY : forward_kinematics/CMakeFiles/inverse_kinematics.dir/all
-
-# Include target in all.
-all: forward_kinematics/CMakeFiles/inverse_kinematics.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-forward_kinematics/CMakeFiles/inverse_kinematics.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 forward_kinematics/CMakeFiles/inverse_kinematics.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
-.PHONY : forward_kinematics/CMakeFiles/inverse_kinematics.dir/rule
-
-# Convenience name for target.
-inverse_kinematics: forward_kinematics/CMakeFiles/inverse_kinematics.dir/rule
-
-.PHONY : inverse_kinematics
-
-# clean rule for target.
-forward_kinematics/CMakeFiles/inverse_kinematics.dir/clean:
-	$(MAKE) -f forward_kinematics/CMakeFiles/inverse_kinematics.dir/build.make forward_kinematics/CMakeFiles/inverse_kinematics.dir/clean
-.PHONY : forward_kinematics/CMakeFiles/inverse_kinematics.dir/clean
-
-# clean rule for target.
-clean: forward_kinematics/CMakeFiles/inverse_kinematics.dir/clean
-
-.PHONY : clean
 
 #=============================================================================
 # Target rules for target forward_kinematics/CMakeFiles/forward_kinematics_node.dir
@@ -5223,6 +5184,61 @@ franka_ros/franka_visualization/CMakeFiles/gripper_joint_state_publisher.dir/cle
 
 # clean rule for target.
 clean: franka_ros/franka_visualization/CMakeFiles/gripper_joint_state_publisher.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory inverse_kinematics
+
+# Convenience name for "all" pass in the directory.
+inverse_kinematics/all: inverse_kinematics/CMakeFiles/inverseKinematics.dir/all
+
+.PHONY : inverse_kinematics/all
+
+# Convenience name for "clean" pass in the directory.
+inverse_kinematics/clean: inverse_kinematics/CMakeFiles/inverseKinematics.dir/clean
+
+.PHONY : inverse_kinematics/clean
+
+# Convenience name for "preinstall" pass in the directory.
+inverse_kinematics/preinstall:
+
+.PHONY : inverse_kinematics/preinstall
+
+#=============================================================================
+# Target rules for target inverse_kinematics/CMakeFiles/inverseKinematics.dir
+
+# All Build rule for target.
+inverse_kinematics/CMakeFiles/inverseKinematics.dir/all:
+	$(MAKE) -f inverse_kinematics/CMakeFiles/inverseKinematics.dir/build.make inverse_kinematics/CMakeFiles/inverseKinematics.dir/depend
+	$(MAKE) -f inverse_kinematics/CMakeFiles/inverseKinematics.dir/build.make inverse_kinematics/CMakeFiles/inverseKinematics.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num= "Built target inverseKinematics"
+.PHONY : inverse_kinematics/CMakeFiles/inverseKinematics.dir/all
+
+# Include target in all.
+all: inverse_kinematics/CMakeFiles/inverseKinematics.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+inverse_kinematics/CMakeFiles/inverseKinematics.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 inverse_kinematics/CMakeFiles/inverseKinematics.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
+.PHONY : inverse_kinematics/CMakeFiles/inverseKinematics.dir/rule
+
+# Convenience name for target.
+inverseKinematics: inverse_kinematics/CMakeFiles/inverseKinematics.dir/rule
+
+.PHONY : inverseKinematics
+
+# clean rule for target.
+inverse_kinematics/CMakeFiles/inverseKinematics.dir/clean:
+	$(MAKE) -f inverse_kinematics/CMakeFiles/inverseKinematics.dir/build.make inverse_kinematics/CMakeFiles/inverseKinematics.dir/clean
+.PHONY : inverse_kinematics/CMakeFiles/inverseKinematics.dir/clean
+
+# clean rule for target.
+clean: inverse_kinematics/CMakeFiles/inverseKinematics.dir/clean
 
 .PHONY : clean
 

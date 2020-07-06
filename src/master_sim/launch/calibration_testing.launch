@@ -5,8 +5,10 @@
     <include file="$(find franka_example_controllers)/launch/joint_position_example_controller_sim.launch" />
 
     <include file="$(find forward_kinematics)/launch/forward_kinematics.launch" />
-    <include file="$(find forward_kinematics)/launch/inverse_kin.launch" />
-    <include file="$(find azure_kinect_ros_driver)/launch/driver.launch" />
+    <include file="$(find inverse_kinematics)/launch/inverse_kin.launch" />
+        
+        
+   <include file="$(find azure_kinect_ros_driver)/launch/driver.launch" />
 
     <node name="camera_calibration" pkg="camera_calibration" type="camera_calibration_node" output="screen">
     </node>

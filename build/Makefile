@@ -1234,19 +1234,6 @@ camera_calibration/fast:
 .PHONY : camera_calibration/fast
 
 #=============================================================================
-# Target rules for targets named inverse_kinematics
-
-# Build rule for target.
-inverse_kinematics: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 inverse_kinematics
-.PHONY : inverse_kinematics
-
-# fast build rule for target.
-inverse_kinematics/fast:
-	$(MAKE) -f forward_kinematics/CMakeFiles/inverse_kinematics.dir/build.make forward_kinematics/CMakeFiles/inverse_kinematics.dir/build
-.PHONY : inverse_kinematics/fast
-
-#=============================================================================
 # Target rules for targets named forward_kinematics_node
 
 # Build rule for target.
@@ -1960,6 +1947,19 @@ gripper_joint_state_publisher: cmake_check_build_system
 gripper_joint_state_publisher/fast:
 	$(MAKE) -f franka_ros/franka_visualization/CMakeFiles/gripper_joint_state_publisher.dir/build.make franka_ros/franka_visualization/CMakeFiles/gripper_joint_state_publisher.dir/build
 .PHONY : gripper_joint_state_publisher/fast
+
+#=============================================================================
+# Target rules for targets named inverseKinematics
+
+# Build rule for target.
+inverseKinematics: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 inverseKinematics
+.PHONY : inverseKinematics
+
+# fast build rule for target.
+inverseKinematics/fast:
+	$(MAKE) -f inverse_kinematics/CMakeFiles/inverseKinematics.dir/build.make inverse_kinematics/CMakeFiles/inverseKinematics.dir/build
+.PHONY : inverseKinematics/fast
 
 #=============================================================================
 # Target rules for targets named master_sim_node
@@ -3044,7 +3044,6 @@ help:
 	@echo "... tf2_msgs_generate_messages_lisp"
 	@echo "... camera_calibration_node"
 	@echo "... camera_calibration"
-	@echo "... inverse_kinematics"
 	@echo "... forward_kinematics_node"
 	@echo "... franka_gripper_node"
 	@echo "... franka_gripper"
@@ -3100,6 +3099,7 @@ help:
 	@echo "... _franka_gripper_generate_messages_check_deps_GraspEpsilon"
 	@echo "... robot_joint_state_publisher"
 	@echo "... gripper_joint_state_publisher"
+	@echo "... inverseKinematics"
 	@echo "... master_sim_node"
 	@echo "... nodelet_generate_messages_lisp"
 	@echo "... bond_generate_messages_cpp"

@@ -307,7 +307,7 @@ class InverseKinematics
 };
 void jointStateCallback(const std_msgs::Float64MultiArray::ConstPtr& msg)
 {
-    std::cout<<"entered callback"<<std::endl;
+    //std::cout<<"entered callback"<<std::endl;
     std::vector<float> cordinates{0.180,0.1,0.618};
     std::vector<float> ja;
 
@@ -317,11 +317,11 @@ void jointStateCallback(const std_msgs::Float64MultiArray::ConstPtr& msg)
   } */
   InverseKinematics inKinObj;
   ja=inKinObj.getInversK(cordinates);
-  for (int i = 0; i < 7; i++)
+  /*for (int i = 0; i < 7; i++)
   {
     std::cout<<ja[i]<<std::endl;
   }
-
+*/
 }
 
 int main(int argc, char** argv)

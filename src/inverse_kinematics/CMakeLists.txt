@@ -106,10 +106,10 @@ find_package(OpenCV)
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-  INCLUDE_DIRS include
+#  INCLUDE_DIRS include
 #  LIBRARIES inverse_kinematics
 #  CATKIN_DEPENDS roscpp sensor_msgs
-  DEPENDS system_lib
+#  DEPENDS system_lib
   CATKIN_DEPENDS geometry_msgs
   CATKIN_DEPENDS tf2_msgs
 )

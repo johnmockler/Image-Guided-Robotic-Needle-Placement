@@ -101,17 +101,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -122,6 +111,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # Special rule for the target install
 install: preinstall
@@ -137,14 +137,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/rnm/rnm_group_2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles /home/rnm/rnm_group_2/build/forward_kinematics/CMakeFiles/progress.marks
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 forward_kinematics/all
+	cd /home/rnm/rnm_group_2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles /home/rnm/rnm_group_2/build/inverse_kinematics/CMakeFiles/progress.marks
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 inverse_kinematics/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 forward_kinematics/clean
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 inverse_kinematics/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,12 +154,12 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 forward_kinematics/preinstall
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 inverse_kinematics/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 forward_kinematics/preinstall
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 inverse_kinematics/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
@@ -168,46 +168,46 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-forward_kinematics/CMakeFiles/forward_kinematics_node.dir/rule:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 forward_kinematics/CMakeFiles/forward_kinematics_node.dir/rule
-.PHONY : forward_kinematics/CMakeFiles/forward_kinematics_node.dir/rule
+inverse_kinematics/CMakeFiles/inverseKinematics.dir/rule:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 inverse_kinematics/CMakeFiles/inverseKinematics.dir/rule
+.PHONY : inverse_kinematics/CMakeFiles/inverseKinematics.dir/rule
 
 # Convenience name for target.
-forward_kinematics_node: forward_kinematics/CMakeFiles/forward_kinematics_node.dir/rule
+inverseKinematics: inverse_kinematics/CMakeFiles/inverseKinematics.dir/rule
 
-.PHONY : forward_kinematics_node
+.PHONY : inverseKinematics
 
 # fast build rule for target.
-forward_kinematics_node/fast:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f forward_kinematics/CMakeFiles/forward_kinematics_node.dir/build.make forward_kinematics/CMakeFiles/forward_kinematics_node.dir/build
-.PHONY : forward_kinematics_node/fast
+inverseKinematics/fast:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f inverse_kinematics/CMakeFiles/inverseKinematics.dir/build.make inverse_kinematics/CMakeFiles/inverseKinematics.dir/build
+.PHONY : inverseKinematics/fast
 
-src/forward_kinematics_node.o: src/forward_kinematics_node.cpp.o
+src/inverseKinematics.o: src/inverseKinematics.cpp.o
 
-.PHONY : src/forward_kinematics_node.o
+.PHONY : src/inverseKinematics.o
 
 # target to build an object file
-src/forward_kinematics_node.cpp.o:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f forward_kinematics/CMakeFiles/forward_kinematics_node.dir/build.make forward_kinematics/CMakeFiles/forward_kinematics_node.dir/src/forward_kinematics_node.cpp.o
-.PHONY : src/forward_kinematics_node.cpp.o
+src/inverseKinematics.cpp.o:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f inverse_kinematics/CMakeFiles/inverseKinematics.dir/build.make inverse_kinematics/CMakeFiles/inverseKinematics.dir/src/inverseKinematics.cpp.o
+.PHONY : src/inverseKinematics.cpp.o
 
-src/forward_kinematics_node.i: src/forward_kinematics_node.cpp.i
+src/inverseKinematics.i: src/inverseKinematics.cpp.i
 
-.PHONY : src/forward_kinematics_node.i
+.PHONY : src/inverseKinematics.i
 
 # target to preprocess a source file
-src/forward_kinematics_node.cpp.i:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f forward_kinematics/CMakeFiles/forward_kinematics_node.dir/build.make forward_kinematics/CMakeFiles/forward_kinematics_node.dir/src/forward_kinematics_node.cpp.i
-.PHONY : src/forward_kinematics_node.cpp.i
+src/inverseKinematics.cpp.i:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f inverse_kinematics/CMakeFiles/inverseKinematics.dir/build.make inverse_kinematics/CMakeFiles/inverseKinematics.dir/src/inverseKinematics.cpp.i
+.PHONY : src/inverseKinematics.cpp.i
 
-src/forward_kinematics_node.s: src/forward_kinematics_node.cpp.s
+src/inverseKinematics.s: src/inverseKinematics.cpp.s
 
-.PHONY : src/forward_kinematics_node.s
+.PHONY : src/inverseKinematics.s
 
 # target to generate assembly for a file
-src/forward_kinematics_node.cpp.s:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f forward_kinematics/CMakeFiles/forward_kinematics_node.dir/build.make forward_kinematics/CMakeFiles/forward_kinematics_node.dir/src/forward_kinematics_node.cpp.s
-.PHONY : src/forward_kinematics_node.cpp.s
+src/inverseKinematics.cpp.s:
+	cd /home/rnm/rnm_group_2/build && $(MAKE) -f inverse_kinematics/CMakeFiles/inverseKinematics.dir/build.make inverse_kinematics/CMakeFiles/inverseKinematics.dir/src/inverseKinematics.cpp.s
+.PHONY : src/inverseKinematics.cpp.s
 
 # Help Target
 help:
@@ -219,13 +219,13 @@ help:
 	@echo "... install/local"
 	@echo "... test"
 	@echo "... list_install_components"
-	@echo "... forward_kinematics_node"
-	@echo "... edit_cache"
+	@echo "... inverseKinematics"
 	@echo "... rebuild_cache"
+	@echo "... edit_cache"
 	@echo "... install"
-	@echo "... src/forward_kinematics_node.o"
-	@echo "... src/forward_kinematics_node.i"
-	@echo "... src/forward_kinematics_node.s"
+	@echo "... src/inverseKinematics.o"
+	@echo "... src/inverseKinematics.i"
+	@echo "... src/inverseKinematics.s"
 .PHONY : help
 
 

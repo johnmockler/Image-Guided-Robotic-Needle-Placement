@@ -5,7 +5,7 @@ using namespace cv;
 CameraCalibrationNode::CameraCalibrationNode()
         : imageSub(nh.subscribe("/rgb/image_raw", 1, &CameraCalibrationNode::cameraCallback, this))
         , captureService(nh.advertiseService("capture_image", &CameraCalibrationNode::captureImage, this))
-        , poseSub(nh.subscribe("/tf_publishe",1, &CameraCalibrationNode::poseCallback,this))
+        , poseSub(nh.subscribe("/tf_publisher",1, &CameraCalibrationNode::poseCallback,this))
         , PubRotationCam2Base(nh.advertise<geometry_msgs::TransformStamped>("/toPointCloud",1,this))
 
 {
@@ -17,7 +17,6 @@ CameraCalibrationNode::CameraCalibrationNode()
 
 void CameraCalibrationNode::cameraCallback(const sensor_msgs::ImageConstPtr& msg)
 {
-    //convert image from sensor_msg to open cv data type "cv::Mat"
     cv_bridge::CvImagePtr cv_ptr;
     try
     {
@@ -31,8 +30,6 @@ void CameraCalibrationNode::cameraCallback(const sensor_msgs::ImageConstPtr& msg
     }
 
     mostRecentImage = cv_ptr->image;
-
-    //need to add end effector rotation and coordinates callback function
 
 
 }
@@ -63,28 +60,6 @@ bool CameraCalibrationNode::captureImage(messages::ImageCapture::Request &req, m
 
         endEffectorPosesT.push_back(mostRecentPoseT);
         endEffectorPosesR.push_back(mostRecentPoseR);
-
-        /*
-        try
-        {
-            listener.lookupTransform("end_effector", "base", ros::Time(0), base2gripper);
-            ROS_INFO_STREAM(" base2gripper: " << base2gripper.getOrigin().x() << ", " << base2gripper.getOrigin().y() << ", " <<base2gripper.getOrigin().z() << ", "
-                                              << base2gripper.getRotation().x() << ", " << base2gripper.getRotation().y() << ", " << base2gripper.getRotation().z());
-
-
-            cv::Vec3d temp_translation(base2gripper.getOrigin().x(), base2gripper.getOrigin().y(), base2gripper.getOrigin().z());
-            endEffectorPosesT.push_back(temp_translation);
-
-            cv::Vec3d temp_rotation(base2gripper.getRotation().x(), base2gripper.getRotation().y(), base2gripper.getRotation().z());
-            endEffectorPosesR.push_back(temp_rotation);
-
-        }
-        catch (tf::TransformException ex)
-        {
-            ROS_ERROR("%s", ex.what());
-            ros::Duration(1.0).sleep();
-        }
-         */
     }
         //if true, process images and computer K matrix and Hand-eye Calibration
     else if (req.x == true)
@@ -101,33 +76,6 @@ bool CameraCalibrationNode::captureImage(messages::ImageCapture::Request &req, m
             std::cout << cameraMatrix << std::endl;
             std::cout << "Dist Coeff" << std::endl;
             std::cout << distCoeffs << std::endl;
-
-            /*test purposes~~~~~~~~~~~~~~~
-            for (int i = 0; i < calibrationImages.size(); i++)
-            {
-                cv::Mat temp = calibrationImages[i].clone();
-                cv::undistort(temp, calibrationImages[i], cameraMatrix, distCoeffs);
-                cv::imshow("Display window", calibrationImages[i]);
-                cv::waitKey(0);
-            }
-
-            ///*
-
-            for (int i = 0; i < cameraPosesR.size(); i++)
-            {
-                std::cout<<"R = "<<std::endl;
-                cv::Rodrigues(cameraPosesR[i],Rot);
-                std::cout<<Rot<<std::endl;
-                std::cout<<"T = "<<std::endl;
-                std::cout<<cameraPosesT[i]<<std::endl;
-            }
-            //
-            readTextFiles();
-            calibrateHandEye(Rrpose, Trpose,Rmpose, Tmpose, cameraPosesR, cameraPosesT);
-            std::cout<<cameraPosesR<<std::endl;
-            std::cout<<cameraPosesT<<std::endl;
-            //computeHandeyeTransform();
-            */
 
             if(!alreadyHandEyeCalibrated)
             {
@@ -154,6 +102,8 @@ void CameraCalibrationNode::calibrateAndPoseEstimation()
     ROS_INFO("Calibrating Camera...");
     std::vector<cv::Mat> rVectors,tVectors;
     cv::calibrateCamera(objectPoints, imagePoints, cv::Size(calibrationImages[0].rows,calibrationImages[0].cols), cameraMatrix, distCoeffs, rVectors, tVectors);
+
+
 
     ROS_INFO("Beginning Pose Estimation...");
     Mat rvec;

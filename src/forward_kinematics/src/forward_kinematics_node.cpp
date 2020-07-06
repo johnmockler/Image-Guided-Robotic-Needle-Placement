@@ -44,7 +44,6 @@ Kinematics()
 void compute(std::vector<float> theta)
 {
   std::vector<cv::Mat> transformations;
-  std::cout<<"entered callback"<<std::endl;
   float mat_data1[16]={cos(theta[0]),-sin(theta[0]),0,0,  sin(theta[0]),cos(theta[0]),0,0,  0,0,1,d[0],  0,0,0,1};
   T_1= cv::Mat(4,4,CV_32F,mat_data1);
   transformations.push_back(T_1);
@@ -132,9 +131,7 @@ void jointStateCallback(const sensor_msgs::JointState::ConstPtr& msg)
    std::vector<float> joint_angles;
   for (size_t i = 0; i < msg->position.size(); i++)
   {
-    //joint_angles.push_back(msg->position[i]);
     joint_angles.push_back(0);
-    std::cout<<"angles :"<<joint_angles[i]<<std::endl;
    
   } 
   Kinematics kinObj;

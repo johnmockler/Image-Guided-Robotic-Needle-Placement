@@ -1,10 +1,12 @@
 <launch>
-    <node name="master_sim" pkg="master_sim" type="master_sim_node" output="screen">
-    </node>
-    <node pkg="rosbag" type="play" name="player" output="screen" args="/home/rnm/calibration.bag">
-    </node>
+   	<node name="master_sim" pkg="master_sim" type="master_sim_node" output="screen"/>
+   	<node name="simple_trajectory_player" pkg="franka_example_controllers" type="test_move_node" />
+   
 
-    <node name="camera_calibration" pkg="camera_calibration" type="camera_calibration_node" output="screen">
-    </node>
+    <node name="camera_calibration" pkg="camera_calibration" type="camera_calibration_node" output = "screen"/>
+    
+
+    
+    
 
 </launch>

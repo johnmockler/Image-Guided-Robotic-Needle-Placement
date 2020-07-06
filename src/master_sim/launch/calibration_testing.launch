@@ -2,7 +2,7 @@
     <node name="master_sim" pkg="master_sim" type="master_sim_node" output="screen">
     </node>
 
-    <include file="$(find franka_example_controllers)/launch/joint_position_example_controller_sim.launch" />
+    <include file="$(find franka_example_controllers)/launch/joint_position_example_controller.launch" />
 
     <include file="$(find forward_kinematics)/launch/forward_kinematics.launch" />
     <include file="$(find inverse_kinematics)/launch/inverse_kin.launch" />

@@ -164,8 +164,16 @@ int main(int argc, char** argv)
     }
     else
     {
-      ROS_INFO("Calibration Done");
+      
       srv.request.x = true;
+      if(client.call(srv))
+      {
+        ROS_INFO("Calibration Done");
+      }
+      else
+      {
+        ROS_INFO("Calibration Failed");
+      }
       ros::shutdown(); 
     }
 

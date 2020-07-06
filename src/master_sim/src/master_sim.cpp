@@ -57,71 +57,87 @@ void jointSet()
 void checkPosition(const sensor_msgs::JointStateConstPtr& msg)
 {
   ROS_INFO("In sub callback");
-  for(int i =0;i<7;i++)
-  {
-  currentPos[i] = msg->position[i];
-  }
-}
-
-void calibrate()
-{
-  ROS_INFO("In Calibrate() within mastersim");
-  count++;
   error = 0.0;
-  bool reached = false;
-  if(count <= positionSet.size())
+  if(count < positionSet.size())
   {
-    ROS_INFO("In IF");
-    while(!reached)
+    for(int i =0;i<7;i++)
     {
-
-      
-      //ROS_INFO("In while");
-
-      ROS_INFO("In while");
-
-      //ros::spin();
-      for(int i  = 0;i<7;i++)
-      {
-        int temp = currentPos[i]- positionSet[count][i];
-        error = error + std::pow(temp,2.0);
-
-        //ROS_INFO("In error calc");
-
-        ROS_INFO("In error calc");
-
-      }
-      error = std::sqrt(error);
-      if(error <0.01 )
-      {
-        ROS_INFO("Bot Reached position");
-        srv.request.x = false;
-        while(!client.call(srv))
-        {
-          ROS_INFO("Waiting on response");
-        }
-      reached = true;
-
-      }
-      //ros::Rate r(10);
-      //ros::spin();
+    currentPos[i] = msg->position[i];
+    int temp = currentPos[i]- positionSet[count][i];
+    error = error + std::pow(temp,2.0);
     }
+    
+    error = std::sqrt(error);
+    if(error < 0.01)
+    {
+      calibrate();
+      //count++;
+      //ros::Duration(3.0).sleep();
+    }
+
   }
   else
   {
     ROS_INFO("Calibration Done");
+    srv.request.x = true;
     ros::shutdown();
   }
+
+
+
+
 }
 
-void run()
+void calibrate()
 {
-  while(ros::ok())
-  {
-    ROS_INFO("Entered run()");
-    calibrate();
-  }
+  //ROS_INFO("In Calibrate() within mastersim");
+  //bool reached = false;
+    //ROS_INFO("In IF");
+    //while(!reached)
+    //{
+
+      
+      //ROS_INFO("In while");
+
+      //ROS_INFO("In while");
+
+      //ros::spin();
+      
+      //if(error <0.01 )
+      //{
+        ROS_INFO("Bot Reached position");
+        srv.request.x = false;
+        if(client.call(srv))
+        {
+          count++;
+          ROS_INFO("Got response");
+        }
+        else
+        {
+          ROS_INFO("Got no response"); 
+        }
+      //reached = true;
+
+      //}
+      //ros::Rate r(10);
+      //ros::spin();
+    //}
+  //}
+  //else
+  //{
+    //ROS_INFO("Calibration Done");
+    //ros::shutdown();
+  //}
 }
+
+//void run()
+//{
+  //while(ros::ok())
+  //{
+    //ROS_INFO("Entered run()");
+    //calibrate();
+  //}
+//}
 
 };
 
@@ -132,13 +148,12 @@ int main(int argc, char** argv)
   ROS_INFO("Master Sim node initiated"); 
   ros::NodeHandle n;
   MasterSim obj(n);
-  obj.run();
-  ros::Rate r(10);
-  
-
-
-
- ros::spin();
-
+  //obj.run();
+  ros::Rate r(1);
+  while(ros::ok())
+  {
+    ros::spinOnce();
+    r.sleep();
+  }
   return 0;
 }

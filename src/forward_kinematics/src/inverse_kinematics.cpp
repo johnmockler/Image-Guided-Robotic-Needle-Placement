@@ -327,6 +327,7 @@ void jointStateCallback(const std_msgs::Float64MultiArray::ConstPtr& msg)
 int main(int argc, char** argv)
 {
 
+  ROS_INFO("Inverse Kinematics node initiated!");
   ros::init(argc, argv, "inverse_kinematics");
   ros::NodeHandle nh;
   InverseKinematics inKinObj;

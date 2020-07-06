@@ -145,6 +145,7 @@ void jointStateCallback(const sensor_msgs::JointState::ConstPtr& msg)
 int main(int argc, char** argv)
 {
 
+  ROS_INFO("Forward Kinematics node initiated!");
   ros::init(argc, argv, "forward_kinematics_node");
   ros::NodeHandle n;
   Kinematics kinObj;

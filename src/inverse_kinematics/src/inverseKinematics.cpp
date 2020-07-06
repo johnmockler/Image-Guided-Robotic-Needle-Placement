@@ -327,7 +327,7 @@ void jointStateCallback(const std_msgs::Float64MultiArray::ConstPtr& msg)
 int main(int argc, char** argv)
 {
 
-  ros::init(argc, argv, "inverse_kinematics");
+  ros::init(argc, argv, "inverseKinematics");
   ros::NodeHandle nh;
   InverseKinematics inKinObj;
   ros::Subscriber sub = nh.subscribe("/endeffector_Cord", 1, jointStateCallback);

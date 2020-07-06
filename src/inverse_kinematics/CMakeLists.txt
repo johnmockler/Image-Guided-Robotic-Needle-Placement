@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(forward_kinematics)
+project(inverse_kinematics)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -106,8 +106,8 @@ find_package(OpenCV)
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
- INCLUDE_DIRS include
-#  LIBRARIES forward_kinematics
+  INCLUDE_DIRS include
+#  LIBRARIES inverse_kinematics
 #  CATKIN_DEPENDS roscpp sensor_msgs
   DEPENDS system_lib
   CATKIN_DEPENDS geometry_msgs
@@ -128,7 +128,7 @@ include_directories(
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/forward_kinematics.cpp
+#   src/${PROJECT_NAME}/inverse_kinematics.cpp
 # )
 
 ## Add cmake target dependencies of the library
@@ -139,11 +139,7 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable(${PROJECT_NAME}_node src/forward_kinematics_node.cpp)
- target_link_libraries(${PROJECT_NAME}_node
- ${catkin_LIBRARIES}
- )
- ##add_executable(inverse_kinematics src/inverse_kinematics.cpp)
+ add_executable(inverseKinematics src/inverseKinematics.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -153,13 +149,12 @@ add_executable(${PROJECT_NAME}_node src/forward_kinematics_node.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-# add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+ #add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-
-#target_link_libraries(inverse_kinematics PUBLIC
-#   ${catkin_LIBRARIES}
-# )
+ target_link_libraries(inverseKinematics PUBLIC
+   ${catkin_LIBRARIES}
+ )
 
 #############
 ## Install ##
@@ -208,7 +203,7 @@ add_executable(${PROJECT_NAME}_node src/forward_kinematics_node.cpp)
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_forward_kinematics.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_inverse_kinematics.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()

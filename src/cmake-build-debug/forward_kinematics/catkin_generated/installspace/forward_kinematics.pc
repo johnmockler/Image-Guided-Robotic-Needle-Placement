@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: forward_kinematics
+Description: Description of forward_kinematics
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

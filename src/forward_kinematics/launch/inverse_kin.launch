@@ -1,0 +1,6 @@
+<launch>
+
+    <node name="inverse" pkg="forward_kinematics" type= "inverse_kinematics" output="screen" >
+    </node>
+
+</launch>

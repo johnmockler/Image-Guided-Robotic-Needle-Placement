@@ -1,0 +1,8 @@
+prefix=/home/rnm/rnm_group_2/devel
+
+Name: master_sim
+Description: Description of master_sim
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

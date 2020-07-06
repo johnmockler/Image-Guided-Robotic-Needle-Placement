@@ -47,6 +47,7 @@ cdf45696abb14d26dbe1177c8db9188b /home/rnm/rnm_group_2/devel/include/franka_grip
 b85a4b25249307992c189cfc45efba86 /home/rnm/rnm_group_2/devel/include/franka_gripper/StopResult.h
 d41b51fae75d82497c3c9e13da10fa3e /home/rnm/rnm_group_2/devel/include/franka_msgs/Errors.h
 afa7301cf6c4fb41b45a54e36b549f4f /home/rnm/rnm_group_2/devel/include/franka_msgs/FrankaState.h
+a02406dff5907b47c4daa0dfa2bea91a /home/rnm/rnm_group_2/devel/include/messages/ImageCapture.h
 b47f8d6e6922c82821f263dc7d492f4c /home/rnm/rnm_group_2/devel/lib/python2.7/dist-packages/franka_control/msg/_ErrorRecoveryAction.py
 c96fef751c0ed5f176e770ec6b1aab07 /home/rnm/rnm_group_2/devel/lib/python2.7/dist-packages/franka_control/msg/_ErrorRecoveryActionFeedback.py
 6885eeddc69adccbcc6197cee5f8b156 /home/rnm/rnm_group_2/devel/lib/python2.7/dist-packages/franka_control/msg/_ErrorRecoveryActionGoal.py
@@ -98,6 +99,8 @@ ce4148dd35e2bf1beeac4cf47d3e48f1 /home/rnm/rnm_group_2/devel/lib/python2.7/dist-
 ca64ff86e6aeeaef9f7f7bd000fddac5 /home/rnm/rnm_group_2/devel/lib/python2.7/dist-packages/franka_msgs/msg/_Errors.py
 043548dae9bb4d067cffb400a30b9f83 /home/rnm/rnm_group_2/devel/lib/python2.7/dist-packages/franka_msgs/msg/_FrankaState.py
 67edfe8a3a0482ac11f312dce7d754eb /home/rnm/rnm_group_2/devel/lib/python2.7/dist-packages/franka_msgs/msg/__init__.py
+ce94d13ed6f7ec894fd593c53d6f48ce /home/rnm/rnm_group_2/devel/lib/python2.7/dist-packages/messages/srv/_ImageCapture.py
+80e4cf112e15d84069f6b8fe7a77c750 /home/rnm/rnm_group_2/devel/lib/python2.7/dist-packages/messages/srv/__init__.py
 b514cf0ddb3b8be93c3742dd7c4976a2 /home/rnm/rnm_group_2/devel/share/common-lisp/ros/franka_control/msg/ErrorRecoveryAction.lisp
 eba831a2219237e1fefc49f4f2048aed /home/rnm/rnm_group_2/devel/share/common-lisp/ros/franka_control/msg/ErrorRecoveryActionFeedback.lisp
 7c5a64d5c889bee2b9bca03030905a33 /home/rnm/rnm_group_2/devel/share/common-lisp/ros/franka_control/msg/ErrorRecoveryActionGoal.lisp
@@ -144,6 +147,7 @@ c401c07bd47eafd2fb4de2cca6d328ec /home/rnm/rnm_group_2/devel/share/common-lisp/r
 591679e5640e962bc5ca7146e8d52400 /home/rnm/rnm_group_2/devel/share/common-lisp/ros/franka_gripper/msg/StopResult.lisp
 7850f0c484f266bf40a620d47eacec7a /home/rnm/rnm_group_2/devel/share/common-lisp/ros/franka_msgs/msg/Errors.lisp
 dee766c66ec4b436a7fa5a8f96303244 /home/rnm/rnm_group_2/devel/share/common-lisp/ros/franka_msgs/msg/FrankaState.lisp
+53f40323e43f4e469c467f4622a38405 /home/rnm/rnm_group_2/devel/share/common-lisp/ros/messages/srv/ImageCapture.lisp
 5a543603c32cd684765c3ee8ecda22af /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_control/msg/ErrorRecoveryAction.js
 aff3cc73678b04d48ef3e41430471fb2 /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_control/msg/ErrorRecoveryActionFeedback.js
 4710a25e8eacc9b4ac067fd845c03da8 /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_control/msg/ErrorRecoveryActionGoal.js
@@ -190,6 +194,7 @@ a6756585d201ee86ceef9e6fbdbebffd /home/rnm/rnm_group_2/devel/share/gennodejs/ros
 243d05b531f683effe243db412ce6814 /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopResult.js
 7521c5761703dc247aab20ccab01389b /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_msgs/msg/Errors.js
 3505cbb73c47896faebabbfa0fb5eecd /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_msgs/msg/FrankaState.js
+0ba89f999dbb48ec3d3fc2046221ddf3 /home/rnm/rnm_group_2/devel/share/gennodejs/ros/messages/srv/ImageCapture.js
 a7d728347df3dcec90a84e83b46c277a /home/rnm/rnm_group_2/devel/share/roseus/ros/franka_control/manifest.l
 6e89654e09e6279d4323da85668d9c4e /home/rnm/rnm_group_2/devel/share/roseus/ros/franka_control/msg/ErrorRecoveryAction.l
 cc49e5eb8bbe9ec6215bf3b28f652e97 /home/rnm/rnm_group_2/devel/share/roseus/ros/franka_control/msg/ErrorRecoveryActionFeedback.l
@@ -240,6 +245,8 @@ b47b26d721719c706539582a3f44a8f8 /home/rnm/rnm_group_2/devel/share/roseus/ros/fr
 0a4421fc7a6b7e0620ebe8aacdf54572 /home/rnm/rnm_group_2/devel/share/roseus/ros/franka_msgs/manifest.l
 a8879a3a6ff8ff17a249801912e0ba5b /home/rnm/rnm_group_2/devel/share/roseus/ros/franka_msgs/msg/Errors.l
 65caf17bd77ede7550a4a64bad71fea6 /home/rnm/rnm_group_2/devel/share/roseus/ros/franka_msgs/msg/FrankaState.l
+80c5080a881421415b814739dce09051 /home/rnm/rnm_group_2/devel/share/roseus/ros/messages/manifest.l
+ce3440f27724290f8ef5bc92fdbca336 /home/rnm/rnm_group_2/devel/share/roseus/ros/messages/srv/ImageCapture.l
 96554d64d7ca8cea661ccaf40b2e54e6 CMakeFiles/clean_test_results
 187cc8d20f586f60cc4c1c0dc4186227 franka_ros/franka_control/CMakeFiles/_franka_control_generate_messages_check_deps_ErrorRecoveryAction
 a64841619124f38c9b5e7d46b3d30390 franka_ros/franka_control/CMakeFiles/_franka_control_generate_messages_check_deps_ErrorRecoveryActionFeedback
@@ -311,3 +318,9 @@ dbcb4c4fdc930286cbf814dbbdd504c3 franka_ros/franka_msgs/CMakeFiles/franka_msgs_g
 dbcb4c4fdc930286cbf814dbbdd504c3 franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_lisp
 dbcb4c4fdc930286cbf814dbbdd504c3 franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_nodejs
 dbcb4c4fdc930286cbf814dbbdd504c3 franka_ros/franka_msgs/CMakeFiles/franka_msgs_generate_messages_py
+0371d4a4d5964e36095a682c787b3ef1 messages/CMakeFiles/_messages_generate_messages_check_deps_ImageCapture
+c7d687b79bca607840625c59093f6768 messages/CMakeFiles/messages_generate_messages_cpp
+c7d687b79bca607840625c59093f6768 messages/CMakeFiles/messages_generate_messages_eus
+c7d687b79bca607840625c59093f6768 messages/CMakeFiles/messages_generate_messages_lisp
+c7d687b79bca607840625c59093f6768 messages/CMakeFiles/messages_generate_messages_nodejs
+c7d687b79bca607840625c59093f6768 messages/CMakeFiles/messages_generate_messages_py

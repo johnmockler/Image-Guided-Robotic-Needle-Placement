@@ -1,0 +1,8 @@
+prefix=/home/rnm/rnm_group_2/install
+
+Name: azure_kinect_ros_driver
+Description: Description of azure_kinect_ros_driver
+Version: 0.9.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

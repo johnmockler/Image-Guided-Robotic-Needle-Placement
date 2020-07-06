@@ -1,0 +1,2 @@
+set(franka_control_MESSAGE_FILES "msg/ErrorRecoveryAction.msg;msg/ErrorRecoveryActionGoal.msg;msg/ErrorRecoveryActionResult.msg;msg/ErrorRecoveryActionFeedback.msg;msg/ErrorRecoveryGoal.msg;msg/ErrorRecoveryResult.msg;msg/ErrorRecoveryFeedback.msg")
+set(franka_control_SERVICE_FILES "srv/SetCartesianImpedance.srv;srv/SetEEFrame.srv;srv/SetForceTorqueCollisionBehavior.srv;srv/SetFullCollisionBehavior.srv;srv/SetJointImpedance.srv;srv/SetKFrame.srv;srv/SetLoad.srv")

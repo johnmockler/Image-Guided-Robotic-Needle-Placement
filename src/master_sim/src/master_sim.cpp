@@ -17,7 +17,7 @@ private:
   //messages::ImageCapture srv;
   std::vector<std::vector<double>> positionSet;
   double currentPos[7]={0};
-  int count = 0;
+  int count = 1;
   bool reached = false;
   double error;
   bool imagesCollected = false;
@@ -62,18 +62,22 @@ void checkPosition(const sensor_msgs::JointStateConstPtr& msg)
 {
   ROS_INFO("In sub callback");
   //ros::ServiceClient client = (ros::ServiceClient)*clientPtr;
-  error = 0.0;
+  
   if(count < positionSet.size())
   {
+    error = 0.0;
     for(int i =0;i<7;i++)
     {
     currentPos[i] = msg->position[i];
-    int temp = currentPos[i]- positionSet[count][i];
-    error = error + std::pow(temp,2.0);
+    double temp = currentPos[i]- positionSet[count][i];
+    std::cout<<"posSet: "<<positionSet[count][i]<<"         currentPos: "<<currentPos[i]<<std::endl;
+    error = error + std::pow(temp,2);
+    
     }
     
     error = std::sqrt(error);
-    if(error < 0.001)
+    ROS_INFO("Count inside: %ld; Error: %f",count,error);
+    if(error < 0.01)
     {
       reached = true;
       //count++;
@@ -131,13 +135,13 @@ int main(int argc, char** argv)
   messages::ImageCapture srv;
   MasterSim obj(n);
   //obj.run();
-  ros::Rate r(10);
+  ros::Rate r(2);
   while(ros::ok())
   {
     if(!obj.getStatus() && !obj.getImagesCollected())
     {
       ros::spinOnce();
-      //r.sleep();
+      r.sleep();
     }
     else if(obj.getStatus() && !obj.getImagesCollected()) 
     {

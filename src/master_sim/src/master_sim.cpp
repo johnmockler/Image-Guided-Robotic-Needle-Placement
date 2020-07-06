@@ -20,6 +20,7 @@ private:
   int count = 0;
   bool reached = false;
   double error;
+  bool imagesCollected = false;
 
 public:
 MasterSim(ros::NodeHandle n):nh(n)
@@ -72,7 +73,7 @@ void checkPosition(const sensor_msgs::JointStateConstPtr& msg)
     }
     
     error = std::sqrt(error);
-    if(error < 0.01)
+    if(error < 0.001)
     {
       reached = true;
       //count++;
@@ -86,9 +87,7 @@ void checkPosition(const sensor_msgs::JointStateConstPtr& msg)
   }
   else
   {
-    ROS_INFO("Calibration Done");
-    //srv.request.x = true;
-    ros::shutdown();
+    imagesCollected = true;
   }
 
 
@@ -102,6 +101,8 @@ void setCount(bool var)
   if(var)
     {
       count++;
+      reached = false;
+      ROS_INFO("Count: %ld",count);
     }
 }
 
@@ -111,28 +112,13 @@ bool getStatus()
   return reached;
 }
 
+bool getImagesCollected()
+{
+  return imagesCollected;
+}
+
 };
 
-bool calibrate()
-{
-        ROS_INFO("Bot Reached position");
-        ros::NodeHandle ns;
-        ros::ServiceClient client = ns.serviceClient<messages::ImageCapture>("capture_image");
-        messages::ImageCapture srv;
-        srv.request.x = false;
-        if(client.call(srv))
-        {
-          //count++;
-          ROS_INFO("Got response");
-          return true;
-        }
-        else
-        {
-          ROS_INFO("Got no response"); 
-          return false;
-        }
-      
-}
 
 int main(int argc, char** argv)
 {
@@ -140,20 +126,43 @@ int main(int argc, char** argv)
   ros::init(argc, argv, "master_sim");
   ROS_INFO("Master Sim node initiated"); 
   ros::NodeHandle n;
+  ros::NodeHandle ns;
+  ros::ServiceClient client = ns.serviceClient<messages::ImageCapture>("capture_image");
+  messages::ImageCapture srv;
   MasterSim obj(n);
   //obj.run();
   ros::Rate r(10);
   while(ros::ok())
   {
-    if(!obj.getStatus())
+    if(!obj.getStatus() && !obj.getImagesCollected())
     {
-    ros::spinOnce();
-    r.sleep();
+      ros::spinOnce();
+      //r.sleep();
+    }
+    else if(obj.getStatus() && !obj.getImagesCollected()) 
+    {
+      //bool result = calibrate();
+      bool result;
+      ROS_INFO("Bot Reached position");
+      srv.request.x = false;
+      if(client.call(srv))
+        {
+          //count++;
+          ROS_INFO("Got response");
+          result = true;
+        }
+      else
+        {
+          ROS_INFO("Got no response"); 
+          result = false;
+        }
+      obj.setCount(result);
     }
     else
     {
-    bool result = calibrate();
-    obj.setCount(result);
+      ROS_INFO("Calibration Done");
+      srv.request.x = true;
+      ros::shutdown(); 
     }
 
     //r.sleep();

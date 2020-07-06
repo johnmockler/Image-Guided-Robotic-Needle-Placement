@@ -13,10 +13,12 @@ private:
   std::vector<std::string> joint_names_;
   ros::Subscriber jointSubscriber;
   ros::ServiceClient client;
-  messages::ImageCapture srv;
+  //ros::ServiceClient *clientPtr;
+  //messages::ImageCapture srv;
   std::vector<std::vector<double>> positionSet;
   double currentPos[7]={0};
   int count = 0;
+  bool reached = false;
   double error;
 
 public:
@@ -24,7 +26,8 @@ MasterSim(ros::NodeHandle n):nh(n)
 {
   jointSet();
   jointSubscriber = nh.subscribe("/joint_states",10,&MasterSim::checkPosition,this);
-  client = nh.serviceClient<messages::ImageCapture>("capture_image",this);
+  //client = nh.serviceClient<messages::ImageCapture>("capture_image",this);
+  //clientPtr = &client;
   ROS_INFO("sUSCRIBED"); 
 }
 
@@ -57,6 +60,7 @@ void jointSet()
 void checkPosition(const sensor_msgs::JointStateConstPtr& msg)
 {
   ROS_INFO("In sub callback");
+  //ros::ServiceClient client = (ros::ServiceClient)*clientPtr;
   error = 0.0;
   if(count < positionSet.size())
   {
@@ -70,16 +74,20 @@ void checkPosition(const sensor_msgs::JointStateConstPtr& msg)
     error = std::sqrt(error);
     if(error < 0.01)
     {
-      calibrate();
+      reached = true;
       //count++;
       //ros::Duration(3.0).sleep();
+    }
+    else
+    {
+      reached = false;
     }
 
   }
   else
   {
     ROS_INFO("Calibration Done");
-    srv.request.x = true;
+    //srv.request.x = true;
     ros::shutdown();
   }
 
@@ -88,58 +96,43 @@ void checkPosition(const sensor_msgs::JointStateConstPtr& msg)
 
 }
 
-void calibrate()
+void setCount(bool var)
 {
-  //ROS_INFO("In Calibrate() within mastersim");
-  //bool reached = false;
-    //ROS_INFO("In IF");
-    //while(!reached)
-    //{
+  
+  if(var)
+    {
+      count++;
+    }
+}
 
-      
-      //ROS_INFO("In while");
 
-      //ROS_INFO("In while");
+bool getStatus()
+{
+  return reached;
+}
 
-      //ros::spin();
-      
-      //if(error <0.01 )
-      //{
+};
+
+bool calibrate()
+{
         ROS_INFO("Bot Reached position");
+        ros::NodeHandle ns;
+        ros::ServiceClient client = ns.serviceClient<messages::ImageCapture>("capture_image");
+        messages::ImageCapture srv;
         srv.request.x = false;
         if(client.call(srv))
         {
-          count++;
+          //count++;
           ROS_INFO("Got response");
+          return true;
         }
         else
         {
           ROS_INFO("Got no response"); 
+          return false;
         }
-      //reached = true;
-
-      //}
-      //ros::Rate r(10);
-      //ros::spin();
-    //}
-  //}
-  //else
-  //{
-    //ROS_INFO("Calibration Done");
-    //ros::shutdown();
-  //}
+      
 }
-
-//void run()
-//{
-  //while(ros::ok())
-  //{
-    //ROS_INFO("Entered run()");
-    //calibrate();
-  //}
-//}
-
-};
 
 int main(int argc, char** argv)
 {
@@ -149,11 +142,22 @@ int main(int argc, char** argv)
   ros::NodeHandle n;
   MasterSim obj(n);
   //obj.run();
-  ros::Rate r(1);
+  ros::Rate r(10);
   while(ros::ok())
   {
+    if(!obj.getStatus())
+    {
     ros::spinOnce();
     r.sleep();
+    }
+    else
+    {
+    bool result = calibrate();
+    obj.setCount(result);
+    }
+
+    //r.sleep();
   }
   return 0;
 }
+

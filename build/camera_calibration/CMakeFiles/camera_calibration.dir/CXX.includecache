@@ -101,6 +101,8 @@ opencv2/highgui.hpp
 -
 opencv2/calib3d.hpp
 -
+opencv2/opencv.hpp
+-
 
 /opt/ros/melodic/include/boost_161_condition_variable.h
 boost/thread/detail/platform.hpp

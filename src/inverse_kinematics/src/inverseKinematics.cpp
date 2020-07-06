@@ -307,20 +307,19 @@ class InverseKinematics
 };
 void jointStateCallback(const std_msgs::Float64MultiArray::ConstPtr& msg)
 {
-    std::cout<<"entered callback"<<std::endl;
-    std::vector<float> cordinates{0.180,0.1,0.618};
+    std::vector<float> cordinates;
     std::vector<float> ja;
 
-  /*for (size_t i = 0; i < msg.size(); i++)
+  for (size_t i = 0; i <3; i++)
   {
-    cordinates.push_back(msg[i]);
-  } */
+    cordinates.push_back(msg->data[i]);
+  } 
   InverseKinematics inKinObj;
   ja=inKinObj.getInversK(cordinates);
-  for (int i = 0; i < 7; i++)
+  /*for (int i = 0; i < 7; i++)
   {
     std::cout<<ja[i]<<std::endl;
-  }
+  }*/
 
 }
 
@@ -330,7 +329,7 @@ int main(int argc, char** argv)
   ros::init(argc, argv, "inverseKinematics");
   ros::NodeHandle nh;
   InverseKinematics inKinObj;
-  ros::Subscriber sub = nh.subscribe("/endeffector_Cord", 1, jointStateCallback);
+  ros::Subscriber sub = nh.subscribe("/target_Cordinate", 1, jointStateCallback);
   ros::spin();
 
   return 0;

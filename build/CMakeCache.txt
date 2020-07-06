@@ -516,6 +516,12 @@ panda_joint_reader_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/panda_joint_rea
 //Value Computed by CMake
 panda_joint_reader_SOURCE_DIR:STATIC=/home/rnm/rnm_group_2/src/panda_joint_reader
 
+//Value Computed by CMake
+pathPlanning_cc_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/pathPlanning_cc
+
+//Value Computed by CMake
+pathPlanning_cc_SOURCE_DIR:STATIC=/home/rnm/rnm_group_2/src/pathPlanning_cc
+
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/melodic/share/pluginlib/cmake
 
@@ -698,7 +704,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=17
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=18
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

@@ -1728,6 +1728,19 @@ panda_joint_reader_node/fast:
 .PHONY : panda_joint_reader_node/fast
 
 #=============================================================================
+# Target rules for targets named pathP_CC
+
+# Build rule for target.
+pathP_CC: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pathP_CC
+.PHONY : pathP_CC
+
+# fast build rule for target.
+pathP_CC/fast:
+	$(MAKE) -f pathPlanning_cc/CMakeFiles/pathP_CC.dir/build.make pathPlanning_cc/CMakeFiles/pathP_CC.dir/build
+.PHONY : pathP_CC/fast
+
+#=============================================================================
 # Target rules for targets named franka_hw
 
 # Build rule for target.
@@ -2744,6 +2757,7 @@ help:
 	@echo "... gripper_joint_state_publisher"
 	@echo "... inverseKinematics"
 	@echo "... panda_joint_reader_node"
+	@echo "... pathP_CC"
 	@echo "... franka_hw"
 	@echo "... clean_test_results_franka_hw"
 	@echo "... _run_tests_franka_hw_rostest_test_launch_franka_hw_test.test"

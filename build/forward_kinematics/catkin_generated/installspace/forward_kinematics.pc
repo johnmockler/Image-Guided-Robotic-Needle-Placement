@@ -3,6 +3,6 @@ prefix=/home/rnm/rnm_group_2/install
 Name: forward_kinematics
 Description: Description of forward_kinematics
 Version: 0.0.0
-Cflags: -I${prefix}/include
+Cflags: 
 Libs: -L${prefix}/lib 
 Requires: geometry_msgs tf2_msgs

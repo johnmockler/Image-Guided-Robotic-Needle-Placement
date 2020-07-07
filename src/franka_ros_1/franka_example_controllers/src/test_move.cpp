@@ -9,41 +9,60 @@ class RobotArm
 
 private:
     ros::NodeHandle nh_;
+    std::vector<std::vector<float>> jointAngleSet;
     std::vector<std::string> joint_names_;
     unsigned int num_joints_;
     double joint_move_dist_;
     int counter = 0;
+    ros::Subscriber inSub;
     ros::Publisher command_pub = nh_.advertise<std_msgs::Float64MultiArray>("/joint_position_example_controller_sim/joint_command", 1000);
     std::vector<double> init_position = {0,-0.5,0,-2.5,0,2,0};
     
 public:
 
     // Initialize
-    RobotArm(ros::NodeHandle nh, double joint_move_dist): nh_(nh), num_joints_(7), joint_move_dist_(joint_move_dist)
+    RobotArm(ros::NodeHandle nh, double joint_move_dist): nh_(nh), num_joints_(7), joint_move_dist_(joint_move_dist),inSub(nh_.subscribe("/joint_AnglesIK", 1, &RobotArm::AngleCallback,this))
     {
+
+    }
+    void AngleCallback(const std_msgs::Float64MultiArray::ConstPtr& msg)
+    {
+        std::cout<<"entered call back"<<std::endl;
+        std::vector<float> jointAngle;
+        for(int i=0;i<7;i++)
+        {
+            jointAngle.push_back(msg->data[i]);
+            std::cout<<"joint Angles :"<<jointAngle[i] <<std::endl;
+
+        }
+        jointAngleSet.push_back(jointAngle);
 
     }
 
     void sendStepCommand()
     {
-        // calculate new joint angles
-        std::vector<double> goal_position;
-        double delta_angle = joint_move_dist_/180.*M_PI * (std::sin(counter/10.));
-        for (size_t i = 0; i < 7; ++i) {
-          if (i == 4) {
-              goal_position.push_back(init_position[i] - delta_angle);
-          } else {
-              goal_position.push_back(init_position[i] + delta_angle);
-          }
+        if(jointAngleSet.size()>29)
+        {
+            for(int i=0;i<30;i++)
+           {
+             std::vector<float> goal_position;
+             for(int j=0;j<7;j++)
+             {
+                std::cout<<"goal pos :"<<jointAngleSet[i][j]<<std::endl;
+                goal_position.push_back(jointAngleSet[i][j]);
+                
+
+             }
+             std_msgs::Float64MultiArray msg;
+             msg.data.clear();
+             msg.data.insert(msg.data.end(), goal_position.begin(), goal_position.end());
+             command_pub.publish(msg);
+
+             ros::Duration(5.0).sleep();
+           }
+
         }
-        counter++;
-
-        // create message and publish it
-        std_msgs::Float64MultiArray msg;
-        msg.data.clear();
-        msg.data.insert(msg.data.end(), goal_position.begin(), goal_position.end());
-        command_pub.publish(msg);
-
+ // create message and publish it
     }
 };
 

@@ -1,0 +1,5 @@
+<launch>
+
+    <node name="traj_plan" pkg="trajectory_planning_cc" type= "trajectory_planning" output="screen" >
+    </node>
+</launch>

@@ -2,8 +2,8 @@
 
     <node name="pathPlanning_Ca" pkg="pathPlanning_cc" type= "pathP_CC" output="screen" >
     </node>
-   <node name="inverse_kinematics" pkg="inverse_kinematics" type= "inverseKinematics" output="screen" >
-    </node>
+   <!--node name="inverse_kinematics" pkg="inverse_kinematics" type= "inverseKinematics" output="screen" >
+    </node-->
 
 
 </launch>

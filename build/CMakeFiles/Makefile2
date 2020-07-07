@@ -71,7 +71,7 @@ CMakeFiles/tests.dir/all: franka_ros_1/franka_hw/test/CMakeFiles/franka_hw_test.
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : CMakeFiles/tests.dir/rule
@@ -135,7 +135,7 @@ CMakeFiles/run_tests.dir/all: franka_ros_1/franka_hw/test/CMakeFiles/_run_tests_
 
 # Build rule for subdir invocation for target.
 CMakeFiles/run_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/run_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : CMakeFiles/run_tests.dir/rule
@@ -264,7 +264,7 @@ gtest/googlemock/preinstall: gtest/googlemock/gtest/preinstall
 gtest/googlemock/CMakeFiles/gmock_main.dir/all:
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=94 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=93 "Built target gmock_main"
 .PHONY : gtest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -296,7 +296,7 @@ clean: gtest/googlemock/CMakeFiles/gmock_main.dir/clean
 gtest/googlemock/CMakeFiles/gmock.dir/all:
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=93 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=92 "Built target gmock"
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -347,7 +347,7 @@ gtest/googlemock/gtest/preinstall:
 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/all: gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=96 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num= "Built target gtest_main"
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -379,12 +379,12 @@ clean: gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/clean
 gtest/googlemock/gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num= "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=95 "Built target gtest"
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/googlemock/gtest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest.dir/rule
@@ -1055,7 +1055,7 @@ franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_py.dir/all: fr
 franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_py.dir/all: franka_ros_1/franka_msgs/CMakeFiles/_franka_msgs_generate_messages_check_deps_FrankaState.dir/all
 	$(MAKE) -f franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_py.dir/build.make franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_py.dir/build.make franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=91 "Built target franka_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=90 "Built target franka_msgs_generate_messages_py"
 .PHONY : franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1162,12 +1162,12 @@ franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_cpp.dir/all: f
 franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_cpp.dir/all: franka_ros_1/franka_msgs/CMakeFiles/_franka_msgs_generate_messages_check_deps_FrankaState.dir/all
 	$(MAKE) -f franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_cpp.dir/build.make franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_cpp.dir/build.make franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num= "Built target franka_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=87 "Built target franka_msgs_generate_messages_cpp"
 .PHONY : franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_cpp.dir/rule
@@ -1233,7 +1233,7 @@ franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_gencpp.dir/all: franka_ros_1/fra
 
 # Build rule for subdir invocation for target.
 franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_gencpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_gencpp.dir/rule
@@ -1326,12 +1326,12 @@ franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_lisp.dir/all: 
 franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_lisp.dir/all: franka_ros_1/franka_msgs/CMakeFiles/_franka_msgs_generate_messages_check_deps_FrankaState.dir/all
 	$(MAKE) -f franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_lisp.dir/build.make franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_lisp.dir/build.make franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=89 "Built target franka_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num= "Built target franka_msgs_generate_messages_lisp"
 .PHONY : franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_lisp.dir/rule
@@ -1363,7 +1363,7 @@ franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_genlisp.dir/all: franka_ros_1/fr
 
 # Build rule for subdir invocation for target.
 franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_genlisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_genlisp.dir/rule
@@ -1392,7 +1392,7 @@ franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_nodejs.dir/all
 franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_nodejs.dir/all: franka_ros_1/franka_msgs/CMakeFiles/_franka_msgs_generate_messages_check_deps_FrankaState.dir/all
 	$(MAKE) -f franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_nodejs.dir/build.make franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) -f franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_nodejs.dir/build.make franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=90 "Built target franka_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=89 "Built target franka_msgs_generate_messages_nodejs"
 .PHONY : franka_ros_1/franka_msgs/CMakeFiles/franka_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2297,7 +2297,7 @@ franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_node.dir/all: franka_ros_1
 franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_node.dir/all: franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_eus.dir/all
 	$(MAKE) -f franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_node.dir/build.make franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_node.dir/depend
 	$(MAKE) -f franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_node.dir/build.make franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=84 "Built target franka_gripper_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=83 "Built target franka_gripper_node"
 .PHONY : franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_node.dir/all
 
 # Include target in all.
@@ -2307,7 +2307,7 @@ all: franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_node.dir/all
 
 # Build rule for subdir invocation for target.
 franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 53
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 52
 	$(MAKE) -f CMakeFiles/Makefile2 franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_node.dir/rule
@@ -2393,7 +2393,7 @@ all: franka_ros_1/franka_gripper/CMakeFiles/franka_gripper.dir/all
 
 # Build rule for subdir invocation for target.
 franka_ros_1/franka_gripper/CMakeFiles/franka_gripper.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 52
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 51
 	$(MAKE) -f CMakeFiles/Makefile2 franka_ros_1/franka_gripper/CMakeFiles/franka_gripper.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : franka_ros_1/franka_gripper/CMakeFiles/franka_gripper.dir/rule
@@ -2425,7 +2425,7 @@ franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_genpy.dir/all: franka_ros_
 
 # Build rule for subdir invocation for target.
 franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 10
 	$(MAKE) -f CMakeFiles/Makefile2 franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_genpy.dir/rule
@@ -2481,12 +2481,12 @@ franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_py.dir/a
 franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_py.dir/all: franka_ros_1/franka_gripper/CMakeFiles/_franka_gripper_generate_messages_check_deps_MoveActionFeedback.dir/all
 	$(MAKE) -f franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_py.dir/build.make franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_py.dir/depend
 	$(MAKE) -f franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_py.dir/build.make franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=73,74,75,76,77,78,79,80,81,82,83 "Built target franka_gripper_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=73,74,75,76,77,78,79,80,81,82 "Built target franka_gripper_generate_messages_py"
 .PHONY : franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 10
 	$(MAKE) -f CMakeFiles/Makefile2 franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_py.dir/rule
@@ -3286,7 +3286,7 @@ all: franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages.dir
 
 # Build rule for subdir invocation for target.
 franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 51
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 50
 	$(MAKE) -f CMakeFiles/Makefile2 franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages.dir/rule
@@ -4378,7 +4378,7 @@ franka_ros_1/franka_visualization/CMakeFiles/robot_joint_state_publisher.dir/all
 franka_ros_1/franka_visualization/CMakeFiles/robot_joint_state_publisher.dir/all: forward_kinematics/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
 	$(MAKE) -f franka_ros_1/franka_visualization/CMakeFiles/robot_joint_state_publisher.dir/build.make franka_ros_1/franka_visualization/CMakeFiles/robot_joint_state_publisher.dir/depend
 	$(MAKE) -f franka_ros_1/franka_visualization/CMakeFiles/robot_joint_state_publisher.dir/build.make franka_ros_1/franka_visualization/CMakeFiles/robot_joint_state_publisher.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=99 "Built target robot_joint_state_publisher"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=98 "Built target robot_joint_state_publisher"
 .PHONY : franka_ros_1/franka_visualization/CMakeFiles/robot_joint_state_publisher.dir/all
 
 # Include target in all.
@@ -4439,7 +4439,7 @@ franka_ros_1/franka_visualization/CMakeFiles/gripper_joint_state_publisher.dir/a
 franka_ros_1/franka_visualization/CMakeFiles/gripper_joint_state_publisher.dir/all: forward_kinematics/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
 	$(MAKE) -f franka_ros_1/franka_visualization/CMakeFiles/gripper_joint_state_publisher.dir/build.make franka_ros_1/franka_visualization/CMakeFiles/gripper_joint_state_publisher.dir/depend
 	$(MAKE) -f franka_ros_1/franka_visualization/CMakeFiles/gripper_joint_state_publisher.dir/build.make franka_ros_1/franka_visualization/CMakeFiles/gripper_joint_state_publisher.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=95 "Built target gripper_joint_state_publisher"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=94 "Built target gripper_joint_state_publisher"
 .PHONY : franka_ros_1/franka_visualization/CMakeFiles/gripper_joint_state_publisher.dir/all
 
 # Include target in all.
@@ -4494,7 +4494,7 @@ inverse_kinematics/preinstall:
 inverse_kinematics/CMakeFiles/inverseKinematics.dir/all:
 	$(MAKE) -f inverse_kinematics/CMakeFiles/inverseKinematics.dir/build.make inverse_kinematics/CMakeFiles/inverseKinematics.dir/depend
 	$(MAKE) -f inverse_kinematics/CMakeFiles/inverseKinematics.dir/build.make inverse_kinematics/CMakeFiles/inverseKinematics.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=97 "Built target inverseKinematics"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=96 "Built target inverseKinematics"
 .PHONY : inverse_kinematics/CMakeFiles/inverseKinematics.dir/all
 
 # Include target in all.
@@ -4549,7 +4549,7 @@ panda_joint_reader/preinstall:
 panda_joint_reader/CMakeFiles/panda_joint_reader_node.dir/all:
 	$(MAKE) -f panda_joint_reader/CMakeFiles/panda_joint_reader_node.dir/build.make panda_joint_reader/CMakeFiles/panda_joint_reader_node.dir/depend
 	$(MAKE) -f panda_joint_reader/CMakeFiles/panda_joint_reader_node.dir/build.make panda_joint_reader/CMakeFiles/panda_joint_reader_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num= "Built target panda_joint_reader_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=97 "Built target panda_joint_reader_node"
 .PHONY : panda_joint_reader/CMakeFiles/panda_joint_reader_node.dir/all
 
 # Include target in all.
@@ -4559,7 +4559,7 @@ all: panda_joint_reader/CMakeFiles/panda_joint_reader_node.dir/all
 
 # Build rule for subdir invocation for target.
 panda_joint_reader/CMakeFiles/panda_joint_reader_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 panda_joint_reader/CMakeFiles/panda_joint_reader_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : panda_joint_reader/CMakeFiles/panda_joint_reader_node.dir/rule
@@ -4604,7 +4604,7 @@ pathPlanning_cc/preinstall:
 pathPlanning_cc/CMakeFiles/pathP_CC.dir/all:
 	$(MAKE) -f pathPlanning_cc/CMakeFiles/pathP_CC.dir/build.make pathPlanning_cc/CMakeFiles/pathP_CC.dir/depend
 	$(MAKE) -f pathPlanning_cc/CMakeFiles/pathP_CC.dir/build.make pathPlanning_cc/CMakeFiles/pathP_CC.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=98 "Built target pathP_CC"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num= "Built target pathP_CC"
 .PHONY : pathPlanning_cc/CMakeFiles/pathP_CC.dir/all
 
 # Include target in all.
@@ -4614,7 +4614,7 @@ all: pathPlanning_cc/CMakeFiles/pathP_CC.dir/all
 
 # Build rule for subdir invocation for target.
 pathPlanning_cc/CMakeFiles/pathP_CC.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 pathPlanning_cc/CMakeFiles/pathP_CC.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : pathPlanning_cc/CMakeFiles/pathP_CC.dir/rule
@@ -4631,6 +4631,61 @@ pathPlanning_cc/CMakeFiles/pathP_CC.dir/clean:
 
 # clean rule for target.
 clean: pathPlanning_cc/CMakeFiles/pathP_CC.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory trajectory_planning_cc
+
+# Convenience name for "all" pass in the directory.
+trajectory_planning_cc/all: trajectory_planning_cc/CMakeFiles/trajectory_planning.dir/all
+
+.PHONY : trajectory_planning_cc/all
+
+# Convenience name for "clean" pass in the directory.
+trajectory_planning_cc/clean: trajectory_planning_cc/CMakeFiles/trajectory_planning.dir/clean
+
+.PHONY : trajectory_planning_cc/clean
+
+# Convenience name for "preinstall" pass in the directory.
+trajectory_planning_cc/preinstall:
+
+.PHONY : trajectory_planning_cc/preinstall
+
+#=============================================================================
+# Target rules for target trajectory_planning_cc/CMakeFiles/trajectory_planning.dir
+
+# All Build rule for target.
+trajectory_planning_cc/CMakeFiles/trajectory_planning.dir/all:
+	$(MAKE) -f trajectory_planning_cc/CMakeFiles/trajectory_planning.dir/build.make trajectory_planning_cc/CMakeFiles/trajectory_planning.dir/depend
+	$(MAKE) -f trajectory_planning_cc/CMakeFiles/trajectory_planning.dir/build.make trajectory_planning_cc/CMakeFiles/trajectory_planning.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=100 "Built target trajectory_planning"
+.PHONY : trajectory_planning_cc/CMakeFiles/trajectory_planning.dir/all
+
+# Include target in all.
+all: trajectory_planning_cc/CMakeFiles/trajectory_planning.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+trajectory_planning_cc/CMakeFiles/trajectory_planning.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 trajectory_planning_cc/CMakeFiles/trajectory_planning.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
+.PHONY : trajectory_planning_cc/CMakeFiles/trajectory_planning.dir/rule
+
+# Convenience name for target.
+trajectory_planning: trajectory_planning_cc/CMakeFiles/trajectory_planning.dir/rule
+
+.PHONY : trajectory_planning
+
+# clean rule for target.
+trajectory_planning_cc/CMakeFiles/trajectory_planning.dir/clean:
+	$(MAKE) -f trajectory_planning_cc/CMakeFiles/trajectory_planning.dir/build.make trajectory_planning_cc/CMakeFiles/trajectory_planning.dir/clean
+.PHONY : trajectory_planning_cc/CMakeFiles/trajectory_planning.dir/clean
+
+# clean rule for target.
+clean: trajectory_planning_cc/CMakeFiles/trajectory_planning.dir/clean
 
 .PHONY : clean
 
@@ -4675,7 +4730,7 @@ franka_ros_1/franka_hw/CMakeFiles/franka_hw.dir/all: forward_kinematics/CMakeFil
 franka_ros_1/franka_hw/CMakeFiles/franka_hw.dir/all: forward_kinematics/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
 	$(MAKE) -f franka_ros_1/franka_hw/CMakeFiles/franka_hw.dir/build.make franka_ros_1/franka_hw/CMakeFiles/franka_hw.dir/depend
 	$(MAKE) -f franka_ros_1/franka_hw/CMakeFiles/franka_hw.dir/build.make franka_ros_1/franka_hw/CMakeFiles/franka_hw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=85 "Built target franka_hw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=84,85 "Built target franka_hw"
 .PHONY : franka_ros_1/franka_hw/CMakeFiles/franka_hw.dir/all
 
 # Include target in all.
@@ -4685,7 +4740,7 @@ all: franka_ros_1/franka_hw/CMakeFiles/franka_hw.dir/all
 
 # Build rule for subdir invocation for target.
 franka_ros_1/franka_hw/CMakeFiles/franka_hw.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 franka_ros_1/franka_hw/CMakeFiles/franka_hw.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : franka_ros_1/franka_hw/CMakeFiles/franka_hw.dir/rule
@@ -4776,7 +4831,7 @@ franka_ros_1/franka_hw/test/CMakeFiles/_run_tests_franka_hw_rostest_test_launch_
 
 # Build rule for subdir invocation for target.
 franka_ros_1/franka_hw/test/CMakeFiles/_run_tests_franka_hw_rostest_test_launch_franka_hw_test.test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 franka_ros_1/franka_hw/test/CMakeFiles/_run_tests_franka_hw_rostest_test_launch_franka_hw_test.test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : franka_ros_1/franka_hw/test/CMakeFiles/_run_tests_franka_hw_rostest_test_launch_franka_hw_test.test.dir/rule
@@ -4819,12 +4874,12 @@ franka_ros_1/franka_hw/test/CMakeFiles/franka_hw_test.dir/all: forward_kinematic
 franka_ros_1/franka_hw/test/CMakeFiles/franka_hw_test.dir/all: franka_ros_1/franka_hw/CMakeFiles/franka_hw.dir/all
 	$(MAKE) -f franka_ros_1/franka_hw/test/CMakeFiles/franka_hw_test.dir/build.make franka_ros_1/franka_hw/test/CMakeFiles/franka_hw_test.dir/depend
 	$(MAKE) -f franka_ros_1/franka_hw/test/CMakeFiles/franka_hw_test.dir/build.make franka_ros_1/franka_hw/test/CMakeFiles/franka_hw_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=86,87 "Built target franka_hw_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=86 "Built target franka_hw_test"
 .PHONY : franka_ros_1/franka_hw/test/CMakeFiles/franka_hw_test.dir/all
 
 # Build rule for subdir invocation for target.
 franka_ros_1/franka_hw/test/CMakeFiles/franka_hw_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 franka_ros_1/franka_hw/test/CMakeFiles/franka_hw_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : franka_ros_1/franka_hw/test/CMakeFiles/franka_hw_test.dir/rule
@@ -4856,7 +4911,7 @@ franka_ros_1/franka_hw/test/CMakeFiles/_run_tests_franka_hw.dir/all: franka_ros_
 
 # Build rule for subdir invocation for target.
 franka_ros_1/franka_hw/test/CMakeFiles/_run_tests_franka_hw.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 franka_ros_1/franka_hw/test/CMakeFiles/_run_tests_franka_hw.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : franka_ros_1/franka_hw/test/CMakeFiles/_run_tests_franka_hw.dir/rule
@@ -4888,7 +4943,7 @@ franka_ros_1/franka_hw/test/CMakeFiles/run_tests_franka_hw_rostest.dir/all: fran
 
 # Build rule for subdir invocation for target.
 franka_ros_1/franka_hw/test/CMakeFiles/run_tests_franka_hw_rostest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 franka_ros_1/franka_hw/test/CMakeFiles/run_tests_franka_hw_rostest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : franka_ros_1/franka_hw/test/CMakeFiles/run_tests_franka_hw_rostest.dir/rule
@@ -4920,7 +4975,7 @@ franka_ros_1/franka_hw/test/CMakeFiles/run_tests_franka_hw.dir/all: franka_ros_1
 
 # Build rule for subdir invocation for target.
 franka_ros_1/franka_hw/test/CMakeFiles/run_tests_franka_hw.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 franka_ros_1/franka_hw/test/CMakeFiles/run_tests_franka_hw.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : franka_ros_1/franka_hw/test/CMakeFiles/run_tests_franka_hw.dir/rule
@@ -4952,7 +5007,7 @@ franka_ros_1/franka_hw/test/CMakeFiles/_run_tests_franka_hw_rostest.dir/all: fra
 
 # Build rule for subdir invocation for target.
 franka_ros_1/franka_hw/test/CMakeFiles/_run_tests_franka_hw_rostest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 franka_ros_1/franka_hw/test/CMakeFiles/_run_tests_franka_hw_rostest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : franka_ros_1/franka_hw/test/CMakeFiles/_run_tests_franka_hw_rostest.dir/rule
@@ -4984,7 +5039,7 @@ franka_ros_1/franka_hw/test/CMakeFiles/run_tests_franka_hw_rostest_test_launch_f
 
 # Build rule for subdir invocation for target.
 franka_ros_1/franka_hw/test/CMakeFiles/run_tests_franka_hw_rostest_test_launch_franka_hw_test.test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 franka_ros_1/franka_hw/test/CMakeFiles/run_tests_franka_hw_rostest_test_launch_franka_hw_test.test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : franka_ros_1/franka_hw/test/CMakeFiles/run_tests_franka_hw_rostest_test_launch_franka_hw_test.test.dir/rule
@@ -5339,7 +5394,7 @@ franka_ros_1/franka_control/CMakeFiles/franka_control_node.dir/all: franka_ros_1
 franka_ros_1/franka_control/CMakeFiles/franka_control_node.dir/all: franka_ros_1/franka_control/CMakeFiles/tf_generate_messages_eus.dir/all
 	$(MAKE) -f franka_ros_1/franka_control/CMakeFiles/franka_control_node.dir/build.make franka_ros_1/franka_control/CMakeFiles/franka_control_node.dir/depend
 	$(MAKE) -f franka_ros_1/franka_control/CMakeFiles/franka_control_node.dir/build.make franka_ros_1/franka_control/CMakeFiles/franka_control_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num= "Built target franka_control_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=26 "Built target franka_control_node"
 .PHONY : franka_ros_1/franka_control/CMakeFiles/franka_control_node.dir/all
 
 # Include target in all.
@@ -5349,7 +5404,7 @@ all: franka_ros_1/franka_control/CMakeFiles/franka_control_node.dir/all
 
 # Build rule for subdir invocation for target.
 franka_ros_1/franka_control/CMakeFiles/franka_control_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 32
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 franka_ros_1/franka_control/CMakeFiles/franka_control_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : franka_ros_1/franka_control/CMakeFiles/franka_control_node.dir/rule
@@ -5637,7 +5692,7 @@ franka_ros_1/franka_control/CMakeFiles/franka_control_genpy.dir/all: franka_ros_
 
 # Build rule for subdir invocation for target.
 franka_ros_1/franka_control/CMakeFiles/franka_control_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 franka_ros_1/franka_control/CMakeFiles/franka_control_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : franka_ros_1/franka_control/CMakeFiles/franka_control_genpy.dir/rule
@@ -5867,7 +5922,7 @@ franka_ros_1/franka_control/CMakeFiles/franka_state_controller.dir/all: franka_r
 franka_ros_1/franka_control/CMakeFiles/franka_state_controller.dir/all: franka_ros_1/franka_control/CMakeFiles/tf_generate_messages_eus.dir/all
 	$(MAKE) -f franka_ros_1/franka_control/CMakeFiles/franka_state_controller.dir/build.make franka_ros_1/franka_control/CMakeFiles/franka_state_controller.dir/depend
 	$(MAKE) -f franka_ros_1/franka_control/CMakeFiles/franka_state_controller.dir/build.make franka_ros_1/franka_control/CMakeFiles/franka_state_controller.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=92 "Built target franka_state_controller"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=91 "Built target franka_state_controller"
 .PHONY : franka_ros_1/franka_control/CMakeFiles/franka_state_controller.dir/all
 
 # Include target in all.
@@ -6316,12 +6371,12 @@ franka_ros_1/franka_control/CMakeFiles/franka_control_generate_messages_py.dir/a
 franka_ros_1/franka_control/CMakeFiles/franka_control_generate_messages_py.dir/all: franka_ros_1/franka_control/CMakeFiles/_franka_control_generate_messages_check_deps_ErrorRecoveryActionFeedback.dir/all
 	$(MAKE) -f franka_ros_1/franka_control/CMakeFiles/franka_control_generate_messages_py.dir/build.make franka_ros_1/franka_control/CMakeFiles/franka_control_generate_messages_py.dir/depend
 	$(MAKE) -f franka_ros_1/franka_control/CMakeFiles/franka_control_generate_messages_py.dir/build.make franka_ros_1/franka_control/CMakeFiles/franka_control_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=21,22,23,24,25,26 "Built target franka_control_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=21,22,23,24,25 "Built target franka_control_generate_messages_py"
 .PHONY : franka_ros_1/franka_control/CMakeFiles/franka_control_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 franka_ros_1/franka_control/CMakeFiles/franka_control_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 franka_ros_1/franka_control/CMakeFiles/franka_control_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : franka_ros_1/franka_control/CMakeFiles/franka_control_generate_messages_py.dir/rule
@@ -6394,7 +6449,7 @@ all: franka_ros_1/franka_control/CMakeFiles/franka_control_generate_messages.dir
 
 # Build rule for subdir invocation for target.
 franka_ros_1/franka_control/CMakeFiles/franka_control_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 26
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 25
 	$(MAKE) -f CMakeFiles/Makefile2 franka_ros_1/franka_control/CMakeFiles/franka_control_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : franka_ros_1/franka_control/CMakeFiles/franka_control_generate_messages.dir/rule
@@ -6647,7 +6702,7 @@ all: franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_controlle
 
 # Build rule for subdir invocation for target.
 franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/rule
@@ -6674,7 +6729,7 @@ clean: franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_control
 franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_controllers_gencfg.dir/all:
 	$(MAKE) -f franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_controllers_gencfg.dir/build.make franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_controllers_gencfg.dir/depend
 	$(MAKE) -f franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_controllers_gencfg.dir/build.make franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_controllers_gencfg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=29 "Built target franka_example_controllers_gencfg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num= "Built target franka_example_controllers_gencfg"
 .PHONY : franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_controllers_gencfg.dir/all
 
 # Include target in all.
@@ -6684,7 +6739,7 @@ all: franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_controlle
 
 # Build rule for subdir invocation for target.
 franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_controllers_gencfg.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_controllers_gencfg.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_controllers_gencfg.dir/rule
@@ -6999,12 +7054,12 @@ clean: franka_ros_1/franka_example_controllers/CMakeFiles/dynamic_reconfigure_ge
 franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_cpp.dir/all: franka_ros_1/franka_example_controllers/CMakeFiles/_franka_example_controllers_generate_messages_check_deps_JointTorqueComparison.dir/all
 	$(MAKE) -f franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_cpp.dir/build.make franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_cpp.dir/depend
 	$(MAKE) -f franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_cpp.dir/build.make franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num= "Built target franka_example_controllers_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=29 "Built target franka_example_controllers_generate_messages_cpp"
 .PHONY : franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages_cpp.dir/rule
@@ -7031,7 +7086,7 @@ clean: franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_control
 franka_ros_1/franka_example_controllers/CMakeFiles/test_move_node.dir/all: franka_ros_1/franka_hw/CMakeFiles/franka_hw.dir/all
 	$(MAKE) -f franka_ros_1/franka_example_controllers/CMakeFiles/test_move_node.dir/build.make franka_ros_1/franka_example_controllers/CMakeFiles/test_move_node.dir/depend
 	$(MAKE) -f franka_ros_1/franka_example_controllers/CMakeFiles/test_move_node.dir/build.make franka_ros_1/franka_example_controllers/CMakeFiles/test_move_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=100 "Built target test_move_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=99 "Built target test_move_node"
 .PHONY : franka_ros_1/franka_example_controllers/CMakeFiles/test_move_node.dir/all
 
 # Include target in all.
@@ -7041,7 +7096,7 @@ all: franka_ros_1/franka_example_controllers/CMakeFiles/test_move_node.dir/all
 
 # Build rule for subdir invocation for target.
 franka_ros_1/franka_example_controllers/CMakeFiles/test_move_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 franka_ros_1/franka_example_controllers/CMakeFiles/test_move_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : franka_ros_1/franka_example_controllers/CMakeFiles/test_move_node.dir/rule
@@ -7073,7 +7128,7 @@ franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_controllers_ge
 
 # Build rule for subdir invocation for target.
 franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_controllers_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_controllers_gencpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_controllers_gencpp.dir/rule
@@ -7146,7 +7201,7 @@ all: franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_controlle
 
 # Build rule for subdir invocation for target.
 franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
 .PHONY : franka_ros_1/franka_example_controllers/CMakeFiles/franka_example_controllers_generate_messages.dir/rule

@@ -332,14 +332,9 @@ int main(int argc, char** argv)
   ros::init(argc, argv, "inverseKinematics");
   ros::NodeHandle nh;
   InverseKinematics inKinObj;
-  ros::Rate loop_rate(10);
-  while (ros::ok())
-  {
-      ros::Subscriber sub = nh.subscribe("/target_Cordinate", 1, jointStateCallback);
-      loop_rate.sleep();
-      ros::spinOnce();
-  }
-
+  ros::Subscriber sub = nh.subscribe("/target_Cordinate", 1, jointStateCallback);
+  ros::spin();
+  
   return 0;
 }
 

@@ -1741,6 +1741,19 @@ pathP_CC/fast:
 .PHONY : pathP_CC/fast
 
 #=============================================================================
+# Target rules for targets named trajectory_planning
+
+# Build rule for target.
+trajectory_planning: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 trajectory_planning
+.PHONY : trajectory_planning
+
+# fast build rule for target.
+trajectory_planning/fast:
+	$(MAKE) -f trajectory_planning_cc/CMakeFiles/trajectory_planning.dir/build.make trajectory_planning_cc/CMakeFiles/trajectory_planning.dir/build
+.PHONY : trajectory_planning/fast
+
+#=============================================================================
 # Target rules for targets named franka_hw
 
 # Build rule for target.
@@ -2758,6 +2771,7 @@ help:
 	@echo "... inverseKinematics"
 	@echo "... panda_joint_reader_node"
 	@echo "... pathP_CC"
+	@echo "... trajectory_planning"
 	@echo "... franka_hw"
 	@echo "... clean_test_results_franka_hw"
 	@echo "... _run_tests_franka_hw_rostest_test_launch_franka_hw_test.test"

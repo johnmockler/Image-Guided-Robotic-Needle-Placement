@@ -27,7 +27,7 @@ class PathPlanningCC
     }
     void getJointAngles()
     {
-        //std::cout<<"entered get joint Angles"<<std::endl;
+        std::cout<<"entered get joint Angles"<<std::endl;
         for(int i=0;i<2;i++)
         {
             for(int j=0;j<15;j++)
@@ -46,11 +46,11 @@ class PathPlanningCC
                 //inverseSubscriber = n.subscribe("/joint_AnglesIK", 1, &PathPlanningCC::TargetAngCallback,this);
             }
         }
-        if(jointAngleSet.size()>29)
+        /*if(jointAngleSet.size()>29)
         {
             std::cout<<"Size greater than 30"<<std::endl;
             executePP();
-        }
+        }*/
         
     }
     void TargetAngCallback(const std_msgs::Float64MultiArray::ConstPtr& msg)

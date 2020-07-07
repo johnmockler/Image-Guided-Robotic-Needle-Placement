@@ -217,6 +217,14 @@
 /home/rnm/rnm_group_2/build/pathPlanning_cc/CMakeFiles/edit_cache.dir
 /home/rnm/rnm_group_2/build/pathPlanning_cc/CMakeFiles/rebuild_cache.dir
 /home/rnm/rnm_group_2/build/pathPlanning_cc/CMakeFiles/install.dir
+/home/rnm/rnm_group_2/build/trajectory_planning_cc/CMakeFiles/install/strip.dir
+/home/rnm/rnm_group_2/build/trajectory_planning_cc/CMakeFiles/install/local.dir
+/home/rnm/rnm_group_2/build/trajectory_planning_cc/CMakeFiles/test.dir
+/home/rnm/rnm_group_2/build/trajectory_planning_cc/CMakeFiles/list_install_components.dir
+/home/rnm/rnm_group_2/build/trajectory_planning_cc/CMakeFiles/trajectory_planning.dir
+/home/rnm/rnm_group_2/build/trajectory_planning_cc/CMakeFiles/edit_cache.dir
+/home/rnm/rnm_group_2/build/trajectory_planning_cc/CMakeFiles/rebuild_cache.dir
+/home/rnm/rnm_group_2/build/trajectory_planning_cc/CMakeFiles/install.dir
 /home/rnm/rnm_group_2/build/franka_ros_1/franka_hw/CMakeFiles/install/strip.dir
 /home/rnm/rnm_group_2/build/franka_ros_1/franka_hw/CMakeFiles/install/local.dir
 /home/rnm/rnm_group_2/build/franka_ros_1/franka_hw/CMakeFiles/test.dir

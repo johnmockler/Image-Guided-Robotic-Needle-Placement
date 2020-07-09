@@ -18,33 +18,36 @@ class TrajectoryPlanningCC
 
     TrajectoryPlanningCC(ros::NodeHandle nh):n(nh)
     {
-        jp_sub= n.subscribe("/joint_AnglesIK", 1, &TrajectoryPlanningCC::angleCallback,this);
+        
 
     }
     void angleCallback(const std_msgs::Float64MultiArray::ConstPtr& msg)
     {
-        if(jointAngleSet.size()<30)
+        std::cout<<"entered callback"<<std::endl;
+        if(jointAngleSet.size()>29)
         {
-            std::cout<<"entered call back"<<std::endl;
-        std::vector<float> jointAngle;
-        for(int i=0;i<7;i++)
-        {
-            jointAngle.push_back(msg->data[i]);
-            std::cout<<"joint Angles :"<<jointAngle[i] <<std::endl;
+            setAngles();
 
         }
-        jointAngleSet.push_back(jointAngle);
-
+        else if(jointAngleSet.size()<=29)
+        {
+            std::vector<float> jointAngle;
+            for(int i=0;i<7;i++)
+           {
+             jointAngle.push_back(msg->data[i]);
+             std::cout<<"joint Angles :"<<jointAngle[i] <<std::endl;
+            }
+             jointAngleSet.push_back(jointAngle);
+             std::cout<<"Joint set size :"<<jointAngleSet.size()<<std::endl;
         }
+    
         
-
     }
 
 
      void setAngles()
     {
-        if(jointAngleSet.size()>29)
-        {
+        
             std::cout<<"size of set achieved"<<std::endl;
             for(int i=0;i<30;i++)
            {
@@ -61,10 +64,25 @@ class TrajectoryPlanningCC
              traj_pub.publish(msg);
 
              ros::Duration(5.0).sleep();
-           }
+           }        
+
+    }
+    void setFlow()
+    {
+        std::cout<<"entered flow"<<std::endl;
+        if(jointAngleSet.size()>29)
+        {
+             std::cout<<"entered if"<<std::endl;
+            setAngles();
 
         }
-
+        else if(jointAngleSet.size()<29)
+        {
+            jp_sub= n.subscribe("/joint_AnglesIK", 1, &TrajectoryPlanningCC::angleCallback,this);
+            
+        }
+        
+        
     }
 
 };
@@ -75,8 +93,8 @@ int main(int argc, char** argv)
   ros::init(argc, argv, "trajectory_planning");
   ros::NodeHandle n;
   TrajectoryPlanningCC tpObj(n);
-   tpObj.setAngles();
-   ros::spin();
+  tpObj.setFlow();
+  ros::spin();
   
   return 0;
 }

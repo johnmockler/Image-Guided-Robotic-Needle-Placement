@@ -1,8 +1,8 @@
-# Install script for directory: /home/rnm/rnm_group_2/src/camera_calibration
+# Install script for directory: /home/suyashs/rnm_group_2/src/camera_calibration
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/rnm/rnm_group_2/install")
+  set(CMAKE_INSTALL_PREFIX "/home/suyashs/rnm_group_2/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,18 +38,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/rnm/rnm_group_2/build/camera_calibration/catkin_generated/installspace/camera_calibration.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/suyashs/rnm_group_2/build/camera_calibration/catkin_generated/installspace/camera_calibration.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/camera_calibration/cmake" TYPE FILE FILES
-    "/home/rnm/rnm_group_2/build/camera_calibration/catkin_generated/installspace/camera_calibrationConfig.cmake"
-    "/home/rnm/rnm_group_2/build/camera_calibration/catkin_generated/installspace/camera_calibrationConfig-version.cmake"
+    "/home/suyashs/rnm_group_2/build/camera_calibration/catkin_generated/installspace/camera_calibrationConfig.cmake"
+    "/home/suyashs/rnm_group_2/build/camera_calibration/catkin_generated/installspace/camera_calibrationConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/camera_calibration" TYPE FILE FILES "/home/rnm/rnm_group_2/src/camera_calibration/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/camera_calibration" TYPE FILE FILES "/home/suyashs/rnm_group_2/src/camera_calibration/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -59,12 +59,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/camera_calibration/camera_calibration_node"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/camera_calibration" TYPE EXECUTABLE FILES "/home/rnm/rnm_group_2/devel/lib/camera_calibration/camera_calibration_node")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/camera_calibration" TYPE EXECUTABLE FILES "/home/suyashs/rnm_group_2/devel/lib/camera_calibration/camera_calibration_node")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/camera_calibration/camera_calibration_node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/camera_calibration/camera_calibration_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/camera_calibration/camera_calibration_node"
-         OLD_RPATH "/home/rnm/rnm_group_2/devel/lib:/opt/ros/melodic/lib:"
+         OLD_RPATH "/home/suyashs/rnm_group_2/devel/lib:/opt/ros/melodic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/camera_calibration/camera_calibration_node")

@@ -57,8 +57,8 @@ struct DataType< ::franka_control::SetEEFrame > {
 };
 
 
-// service_traits::MD5Sum< ::franka_control::SetEEFrameRequest> should match 
-// service_traits::MD5Sum< ::franka_control::SetEEFrame > 
+// service_traits::MD5Sum< ::franka_control::SetEEFrameRequest> should match
+// service_traits::MD5Sum< ::franka_control::SetEEFrame >
 template<>
 struct MD5Sum< ::franka_control::SetEEFrameRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::franka_control::SetEEFrameRequest>
   }
 };
 
-// service_traits::DataType< ::franka_control::SetEEFrameRequest> should match 
-// service_traits::DataType< ::franka_control::SetEEFrame > 
+// service_traits::DataType< ::franka_control::SetEEFrameRequest> should match
+// service_traits::DataType< ::franka_control::SetEEFrame >
 template<>
 struct DataType< ::franka_control::SetEEFrameRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::franka_control::SetEEFrameRequest>
   }
 };
 
-// service_traits::MD5Sum< ::franka_control::SetEEFrameResponse> should match 
-// service_traits::MD5Sum< ::franka_control::SetEEFrame > 
+// service_traits::MD5Sum< ::franka_control::SetEEFrameResponse> should match
+// service_traits::MD5Sum< ::franka_control::SetEEFrame >
 template<>
 struct MD5Sum< ::franka_control::SetEEFrameResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::franka_control::SetEEFrameResponse>
   }
 };
 
-// service_traits::DataType< ::franka_control::SetEEFrameResponse> should match 
-// service_traits::DataType< ::franka_control::SetEEFrame > 
+// service_traits::DataType< ::franka_control::SetEEFrameResponse> should match
+// service_traits::DataType< ::franka_control::SetEEFrame >
 template<>
 struct DataType< ::franka_control::SetEEFrameResponse>
 {

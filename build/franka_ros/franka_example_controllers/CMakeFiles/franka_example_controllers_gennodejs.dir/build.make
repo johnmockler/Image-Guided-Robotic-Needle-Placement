@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rnm/rnm_group_2/src
+CMAKE_SOURCE_DIR = /home/suyashs/rnm_group_2/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rnm/rnm_group_2/build
+CMAKE_BINARY_DIR = /home/suyashs/rnm_group_2/build
 
 # Utility rule file for franka_example_controllers_gennodejs.
 
@@ -63,10 +63,10 @@ franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_genn
 .PHONY : franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_gennodejs.dir/build
 
 franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_gennodejs.dir/clean:
-	cd /home/rnm/rnm_group_2/build/franka_ros/franka_example_controllers && $(CMAKE_COMMAND) -P CMakeFiles/franka_example_controllers_gennodejs.dir/cmake_clean.cmake
+	cd /home/suyashs/rnm_group_2/build/franka_ros/franka_example_controllers && $(CMAKE_COMMAND) -P CMakeFiles/franka_example_controllers_gennodejs.dir/cmake_clean.cmake
 .PHONY : franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_gennodejs.dir/clean
 
 franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_gennodejs.dir/depend:
-	cd /home/rnm/rnm_group_2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rnm/rnm_group_2/src /home/rnm/rnm_group_2/src/franka_ros/franka_example_controllers /home/rnm/rnm_group_2/build /home/rnm/rnm_group_2/build/franka_ros/franka_example_controllers /home/rnm/rnm_group_2/build/franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_gennodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/suyashs/rnm_group_2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/suyashs/rnm_group_2/src /home/suyashs/rnm_group_2/src/franka_ros/franka_example_controllers /home/suyashs/rnm_group_2/build /home/suyashs/rnm_group_2/build/franka_ros/franka_example_controllers /home/suyashs/rnm_group_2/build/franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_gennodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_gennodejs.dir/depend
 

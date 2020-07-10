@@ -1,8 +1,8 @@
-# Install script for directory: /home/rnm/rnm_group_2/src/franka_ros/franka_hw/test
+# Install script for directory: /home/suyashs/rnm_group_2/src/franka_ros/franka_hw/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/rnm/rnm_group_2/install")
+  set(CMAKE_INSTALL_PREFIX "/home/suyashs/rnm_group_2/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

@@ -9,7 +9,7 @@ import struct
 class JointTorqueComparison(genpy.Message):
   _md5sum = "6c09db90263c92a2e4e4d736f67bc033"
   _type = "franka_example_controllers/JointTorqueComparison"
-  _has_header = False #flag to mark the presence of a Header object
+  _has_header = False  # flag to mark the presence of a Header object
   _full_text = """float64[7] tau_error
 float64[7] tau_commanded
 float64[7] tau_measured
@@ -34,7 +34,7 @@ float64 root_mean_square_error
     """
     if args or kwds:
       super(JointTorqueComparison, self).__init__(*args, **kwds)
-      #message fields cannot be None, assign default values for those that are
+      # message fields cannot be None, assign default values for those that are
       if self.tau_error is None:
         self.tau_error = [0.] * 7
       if self.tau_commanded is None:
@@ -64,7 +64,8 @@ float64 root_mean_square_error
       buff.write(_get_struct_7d().pack(*self.tau_error))
       buff.write(_get_struct_7d().pack(*self.tau_commanded))
       buff.write(_get_struct_7d().pack(*self.tau_measured))
-      buff.write(_get_struct_d().pack(self.root_mean_square_error))
+      _x = self.root_mean_square_error
+      buff.write(_get_struct_d().pack(_x))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -89,7 +90,7 @@ float64 root_mean_square_error
       (self.root_mean_square_error,) = _get_struct_d().unpack(str[start:end])
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e) #most likely buffer underfill
+      raise genpy.DeserializationError(e)  # most likely buffer underfill
 
 
   def serialize_numpy(self, buff, numpy):
@@ -102,7 +103,8 @@ float64 root_mean_square_error
       buff.write(self.tau_error.tostring())
       buff.write(self.tau_commanded.tostring())
       buff.write(self.tau_measured.tostring())
-      buff.write(_get_struct_d().pack(self.root_mean_square_error))
+      _x = self.root_mean_square_error
+      buff.write(_get_struct_d().pack(_x))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -128,7 +130,7 @@ float64 root_mean_square_error
       (self.root_mean_square_error,) = _get_struct_d().unpack(str[start:end])
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e) #most likely buffer underfill
+      raise genpy.DeserializationError(e)  # most likely buffer underfill
 
 _struct_I = genpy.struct_I
 def _get_struct_I():

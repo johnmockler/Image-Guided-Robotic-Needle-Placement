@@ -1,4 +1,4 @@
-prefix=/home/rnm/rnm_group_2/install
+prefix=/home/suyashs/rnm_group_2/install
 
 Name: point_cloud_generator
 Description: Description of point_cloud_generator

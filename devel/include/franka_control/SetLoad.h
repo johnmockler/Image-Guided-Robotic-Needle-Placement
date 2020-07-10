@@ -57,8 +57,8 @@ struct DataType< ::franka_control::SetLoad > {
 };
 
 
-// service_traits::MD5Sum< ::franka_control::SetLoadRequest> should match 
-// service_traits::MD5Sum< ::franka_control::SetLoad > 
+// service_traits::MD5Sum< ::franka_control::SetLoadRequest> should match
+// service_traits::MD5Sum< ::franka_control::SetLoad >
 template<>
 struct MD5Sum< ::franka_control::SetLoadRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::franka_control::SetLoadRequest>
   }
 };
 
-// service_traits::DataType< ::franka_control::SetLoadRequest> should match 
-// service_traits::DataType< ::franka_control::SetLoad > 
+// service_traits::DataType< ::franka_control::SetLoadRequest> should match
+// service_traits::DataType< ::franka_control::SetLoad >
 template<>
 struct DataType< ::franka_control::SetLoadRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::franka_control::SetLoadRequest>
   }
 };
 
-// service_traits::MD5Sum< ::franka_control::SetLoadResponse> should match 
-// service_traits::MD5Sum< ::franka_control::SetLoad > 
+// service_traits::MD5Sum< ::franka_control::SetLoadResponse> should match
+// service_traits::MD5Sum< ::franka_control::SetLoad >
 template<>
 struct MD5Sum< ::franka_control::SetLoadResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::franka_control::SetLoadResponse>
   }
 };
 
-// service_traits::DataType< ::franka_control::SetLoadResponse> should match 
-// service_traits::DataType< ::franka_control::SetLoad > 
+// service_traits::DataType< ::franka_control::SetLoadResponse> should match
+// service_traits::DataType< ::franka_control::SetLoad >
 template<>
 struct DataType< ::franka_control::SetLoadResponse>
 {

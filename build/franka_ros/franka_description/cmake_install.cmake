@@ -1,8 +1,8 @@
-# Install script for directory: /home/rnm/rnm_group_2/src/franka_ros/franka_description
+# Install script for directory: /home/suyashs/rnm_group_2/src/franka_ros/franka_description
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/rnm/rnm_group_2/install")
+  set(CMAKE_INSTALL_PREFIX "/home/suyashs/rnm_group_2/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,25 +38,25 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/rnm/rnm_group_2/build/franka_ros/franka_description/catkin_generated/installspace/franka_description.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/suyashs/rnm_group_2/build/franka_ros/franka_description/catkin_generated/installspace/franka_description.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/franka_description/cmake" TYPE FILE FILES
-    "/home/rnm/rnm_group_2/build/franka_ros/franka_description/catkin_generated/installspace/franka_descriptionConfig.cmake"
-    "/home/rnm/rnm_group_2/build/franka_ros/franka_description/catkin_generated/installspace/franka_descriptionConfig-version.cmake"
+    "/home/suyashs/rnm_group_2/build/franka_ros/franka_description/catkin_generated/installspace/franka_descriptionConfig.cmake"
+    "/home/suyashs/rnm_group_2/build/franka_ros/franka_description/catkin_generated/installspace/franka_descriptionConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/franka_description" TYPE FILE FILES "/home/rnm/rnm_group_2/src/franka_ros/franka_description/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/franka_description" TYPE FILE FILES "/home/suyashs/rnm_group_2/src/franka_ros/franka_description/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/franka_description" TYPE DIRECTORY FILES "/home/rnm/rnm_group_2/src/franka_ros/franka_description/meshes")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/franka_description" TYPE DIRECTORY FILES "/home/suyashs/rnm_group_2/src/franka_ros/franka_description/meshes")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/franka_description" TYPE DIRECTORY FILES "/home/rnm/rnm_group_2/src/franka_ros/franka_description/robots")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/franka_description" TYPE DIRECTORY FILES "/home/suyashs/rnm_group_2/src/franka_ros/franka_description/robots")
 endif()
 

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rnm/rnm_group_2/src
+CMAKE_SOURCE_DIR = /home/suyashs/rnm_group_2/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rnm/rnm_group_2/build
+CMAKE_BINARY_DIR = /home/suyashs/rnm_group_2/build
 
 # Utility rule file for messages_generate_messages.
 
@@ -63,10 +63,10 @@ messages/CMakeFiles/messages_generate_messages.dir/build: messages_generate_mess
 .PHONY : messages/CMakeFiles/messages_generate_messages.dir/build
 
 messages/CMakeFiles/messages_generate_messages.dir/clean:
-	cd /home/rnm/rnm_group_2/build/messages && $(CMAKE_COMMAND) -P CMakeFiles/messages_generate_messages.dir/cmake_clean.cmake
+	cd /home/suyashs/rnm_group_2/build/messages && $(CMAKE_COMMAND) -P CMakeFiles/messages_generate_messages.dir/cmake_clean.cmake
 .PHONY : messages/CMakeFiles/messages_generate_messages.dir/clean
 
 messages/CMakeFiles/messages_generate_messages.dir/depend:
-	cd /home/rnm/rnm_group_2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rnm/rnm_group_2/src /home/rnm/rnm_group_2/src/messages /home/rnm/rnm_group_2/build /home/rnm/rnm_group_2/build/messages /home/rnm/rnm_group_2/build/messages/CMakeFiles/messages_generate_messages.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/suyashs/rnm_group_2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/suyashs/rnm_group_2/src /home/suyashs/rnm_group_2/src/messages /home/suyashs/rnm_group_2/build /home/suyashs/rnm_group_2/build/messages /home/suyashs/rnm_group_2/build/messages/CMakeFiles/messages_generate_messages.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : messages/CMakeFiles/messages_generate_messages.dir/depend
 

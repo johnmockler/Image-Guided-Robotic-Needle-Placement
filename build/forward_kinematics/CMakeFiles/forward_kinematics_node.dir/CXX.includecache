@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/rnm/rnm_group_2/src/forward_kinematics/src/forward_kinematics_node.cpp
+/home/suyashs/rnm_group_2/src/forward_kinematics/src/forward_kinematics_node.cpp
 ros/ros.h
 -
 sensor_msgs/JointState.h

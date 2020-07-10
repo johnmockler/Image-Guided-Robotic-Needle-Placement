@@ -97,7 +97,7 @@ void PCGenNode::stitchClouds()
 
     ROS_INFO("here 2");
 
-    for (int i = 0; i < cloudList.size(); i++)
+    for (int i = 1; i < cloudList.size(); i++)
     {
         Eigen::Matrix4f pairTransform;
         pcl::transformPointCloud(*cloudList[i], *source, cloudTransforms[i]);

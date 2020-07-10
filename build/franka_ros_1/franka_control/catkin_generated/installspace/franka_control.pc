@@ -1,8 +1,0 @@
-prefix=/home/rnm/rnm_group_2/install
-
-Name: franka_control
-Description: Description of franka_control
-Version: 0.7.0
-Cflags: -I${prefix}/include -I/opt/ros/melodic/include/libfranka
-Libs: -L${prefix}/lib -lfranka_state_controller -lfranka_control_services /opt/ros/melodic/lib/libfranka.so.0.7.1
-Requires: actionlib controller_interface franka_hw franka_msgs geometry_msgs message_runtime pluginlib realtime_tools roscpp sensor_msgs tf2_msgs

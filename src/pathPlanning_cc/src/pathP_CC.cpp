@@ -27,14 +27,14 @@ class PathPlanningCC
     }
     void getJointAngles()
     {
-        std::cout<<"entered get joint Angles"<<std::endl;
-        for(int i=0;i<2;i++)
+        //std::cout<<"entered get joint Angles"<<std::endl;
+        for(int i=0;i<Cvec.size();i++)
         {
-            for(int j=0;j<15;j++)
+            for(int j=0;j<Avec.size();j++)
             {
                 std::vector<float> cord;
                 cord.push_back(Avec[j]);
-                cord.push_back(Bvec[j]);
+                cord.push_back(Bvec[i]);
                 cord.push_back(Cvec[i]);
 
                 std_msgs::Float64MultiArray msg;
@@ -55,12 +55,12 @@ class PathPlanningCC
     }
     void TargetAngCallback(const std_msgs::Float64MultiArray::ConstPtr& msg)
     {
-        std::cout<<"entered call back"<<std::endl;
+        //std::cout<<"entered call back"<<std::endl;
         std::vector<float> jointAngle;
         for(int i=0;i<7;i++)
         {
             jointAngle.push_back(msg->data[i]);
-            std::cout<<"joint Angles :"<<jointAngle[i] <<std::endl;
+            //std::cout<<"joint Angles :"<<jointAngle[i] <<std::endl;
 
         }
         jointAngleSet.push_back(jointAngle);
@@ -69,13 +69,13 @@ class PathPlanningCC
     void executePP()
     {
 
-        std::cout<<"PP entered"<<std::endl;
+        //std::cout<<"PP entered"<<std::endl;
         for(int i=0;i<30;i++)
         {
             std::vector<float> goal_position;
             for(int j=0;j<7;j++)
             {
-                std::cout<<"goal pos :"<<jointAngleSet[i][j]<<std::endl;
+                //std::cout<<"goal pos :"<<jointAngleSet[i][j]<<std::endl;
                 goal_position.push_back(jointAngleSet[i][j]);
                 
 

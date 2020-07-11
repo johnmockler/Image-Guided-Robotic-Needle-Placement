@@ -9,41 +9,47 @@ class RobotArm
 
 private:
     ros::NodeHandle nh_;
-    std::vector<std::vector<float>> jointAngleSet;
+    std::vector<std::vector<double>> jointAngleSet;
     std::vector<std::string> joint_names_;
     unsigned int num_joints_;
     double joint_move_dist_;
     int counter = 0;
-    ros::Subscriber inSub;
     ros::Publisher command_pub = nh_.advertise<std_msgs::Float64MultiArray>("/joint_position_example_controller_sim/joint_command", 1000);
     std::vector<double> init_position = {0,-0.5,0,-2.5,0,2,0};
     
 public:
 
     // Initialize
-    RobotArm(ros::NodeHandle nh, double joint_move_dist): nh_(nh), num_joints_(7), joint_move_dist_(joint_move_dist),inSub(nh_.subscribe("/joint_AnglesIK", 1, &RobotArm::AngleCallback,this))
+    RobotArm(ros::NodeHandle nh, double joint_move_dist): nh_(nh), num_joints_(7), joint_move_dist_(joint_move_dist)
     {
+        std::vector<double> position1 = {1.5,0.0,0,-0.5,0.0,0.0,0.0};
+        jointAngleSet.push_back(position1);
 
-    }
-    void AngleCallback(const std_msgs::Float64MultiArray::ConstPtr& msg)
-    {
-        std::cout<<"entered call back"<<std::endl;
-        std::vector<float> jointAngle;
-        for(int i=0;i<7;i++)
-        {
-            jointAngle.push_back(msg->data[i]);
-            std::cout<<"joint Angles :"<<jointAngle[i] <<std::endl;
+        std::vector<double> position2 = {0.0,1.0,0.0,-0.5,-0,-0.0,0};
+        jointAngleSet.push_back(position2);
 
-        }
-        jointAngleSet.push_back(jointAngle);
+       /* std::vector<double> position3 = {0,0,1.6,-0.5,0,0,0};
+        jointAngleSet.push_back(position3);
+
+        std::vector<double> position4 = {0,0,0,-2.3,0,0,0};
+        jointAngleSet.push_back(position4);
+
+        std::vector<double> position5 = {0,-0,0,-2.3,1.6,0,0};
+        jointAngleSet.push_back(position5);
+
+        std::vector<double> position6 = {0,-0,-0,-0.5,0,2.0,0};
+        jointAngleSet.push_back(position6);
+
+        std::vector<double> position7 = {0,0,0,-2.3,0,0,1.3};
+        jointAngleSet.push_back(position7);*/
+     
 
     }
 
     void sendStepCommand()
     {
-        if(jointAngleSet.size()>29)
-        {
-            for(int i=0;i<30;i++)
+        
+           for(int i=0;i<2;i++)
            {
              std::vector<float> goal_position;
              for(int j=0;j<7;j++)
@@ -51,7 +57,6 @@ public:
                 std::cout<<"goal pos :"<<jointAngleSet[i][j]<<std::endl;
                 goal_position.push_back(jointAngleSet[i][j]);
                 
-
              }
              std_msgs::Float64MultiArray msg;
              msg.data.clear();
@@ -60,8 +65,6 @@ public:
 
              ros::Duration(5.0).sleep();
            }
-
-        }
  // create message and publish it
     }
 };

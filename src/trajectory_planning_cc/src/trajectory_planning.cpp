@@ -51,10 +51,11 @@ class TrajectoryPlanningCC
             std::cout<<"size of set achieved"<<std::endl;
             for(int i=0;i<30;i++)
            {
+               std::cout<<"set :"<<i<<std::endl;
              std::vector<float> goal_position;
              for(int j=0;j<7;j++)
              {
-                std::cout<<"goal pos :"<<jointAngleSet[i][j]<<std::endl;
+                std::cout<<jointAngleSet[i][j]<<std::endl;
                 goal_position.push_back(jointAngleSet[i][j]);
                 
              }
@@ -76,7 +77,7 @@ class TrajectoryPlanningCC
             setAngles();
 
         }
-        else if(jointAngleSet.size()<29)
+        else if(jointAngleSet.size()<=29)
         {
             jp_sub= n.subscribe("/joint_AnglesIK", 1, &TrajectoryPlanningCC::angleCallback,this);
             

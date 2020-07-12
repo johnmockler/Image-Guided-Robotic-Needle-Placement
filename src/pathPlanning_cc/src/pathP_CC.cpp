@@ -34,13 +34,14 @@ class PathPlanningCC
             {
                 std::vector<float> cord;
                 cord.push_back(Avec[j]);
-                cord.push_back(Bvec[i]);
+                cord.push_back(Bvec[j]);
                 cord.push_back(Cvec[i]);
 
                 std_msgs::Float64MultiArray msg;
                 msg.data.clear();
                 msg.data.insert(msg.data.end(), cord.begin(), cord.end());
                 cordinate_pub.publish(msg);
+                ros::Duration(1.0).sleep();
                 
 
                 //inverseSubscriber = n.subscribe("/joint_AnglesIK", 1, &PathPlanningCC::TargetAngCallback,this);
@@ -84,7 +85,7 @@ class PathPlanningCC
             msg.data.clear();
             msg.data.insert(msg.data.end(), goal_position.begin(), goal_position.end());
             angles_pub.publish(msg);
-            ros::Duration(5.0).sleep();
+            //ros::Duration(5.0).sleep();
 
         }
 
@@ -98,13 +99,12 @@ int main(int argc, char** argv)
   ros::init(argc, argv, "pathP_CC");
   ros::NodeHandle n;
   PathPlanningCC obj(n);
-   ros::Rate loop_rate(10);
+  ros::Rate loop_rate(10);
   while (ros::ok())
   {
       obj.getJointAngles();
       loop_rate.sleep();
       ros::spinOnce();
-  }
-  
+  } 
   return 0;
 }

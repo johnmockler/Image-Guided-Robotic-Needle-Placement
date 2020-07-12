@@ -43,305 +43,305 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rnm/rnm_group_2/src
+CMAKE_SOURCE_DIR = /home/suyashs/rnm_group_2/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rnm/rnm_group_2/build
+CMAKE_BINARY_DIR = /home/suyashs/rnm_group_2/build
 
 # Utility rule file for franka_gripper_generate_messages_nodejs.
 
 # Include the progress variables for this target.
 include franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs.dir/progress.make
 
-franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveFeedback.js
-franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionFeedback.js
-franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionGoal.js
-franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionResult.js
-franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionGoal.js
-franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspAction.js
-franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspGoal.js
-franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingResult.js
-franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspResult.js
-franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingFeedback.js
-franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionResult.js
-franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionFeedback.js
-franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopResult.js
-franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveAction.js
-franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopFeedback.js
-franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveResult.js
-franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionGoal.js
-franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionFeedback.js
-franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionFeedback.js
-franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopGoal.js
-franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspFeedback.js
-franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopAction.js
-franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingGoal.js
-franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingAction.js
-franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionGoal.js
-franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveGoal.js
-franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspEpsilon.js
-franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionResult.js
-franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionResult.js
+franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingResult.js
+franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveGoal.js
+franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopResult.js
+franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionResult.js
+franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionResult.js
+franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveFeedback.js
+franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionResult.js
+franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionGoal.js
+franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspEpsilon.js
+franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionFeedback.js
+franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopFeedback.js
+franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionGoal.js
+franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionFeedback.js
+franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspFeedback.js
+franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspGoal.js
+franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspResult.js
+franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspAction.js
+franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopAction.js
+franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingFeedback.js
+franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveAction.js
+franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveResult.js
+franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionFeedback.js
+franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingAction.js
+franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionGoal.js
+franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopGoal.js
+franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionGoal.js
+franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionResult.js
+franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingGoal.js
+franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionFeedback.js
 
 
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveFeedback.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveFeedback.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveFeedback.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from franka_gripper/MoveFeedback.msg"
-	cd /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveFeedback.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingResult.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingResult.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingResult.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from franka_gripper/HomingResult.msg"
+	cd /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingResult.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
 
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionFeedback.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionFeedback.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingActionFeedback.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionFeedback.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionFeedback.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionFeedback.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingFeedback.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionFeedback.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from franka_gripper/HomingActionFeedback.msg"
-	cd /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingActionFeedback.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveGoal.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveGoal.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveGoal.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from franka_gripper/MoveGoal.msg"
+	cd /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveGoal.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
 
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionGoal.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionGoal.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveActionGoal.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionGoal.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionGoal.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveGoal.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionGoal.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from franka_gripper/MoveActionGoal.msg"
-	cd /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveActionGoal.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopResult.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopResult.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopResult.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from franka_gripper/StopResult.msg"
+	cd /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopResult.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
 
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionResult.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionResult.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingActionResult.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionResult.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingResult.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionResult.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionResult.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionResult.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from franka_gripper/HomingActionResult.msg"
-	cd /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingActionResult.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionResult.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionResult.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveActionResult.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionResult.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionResult.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveResult.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionResult.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionResult.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from franka_gripper/MoveActionResult.msg"
+	cd /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveActionResult.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
 
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionGoal.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionGoal.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopActionGoal.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionGoal.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionGoal.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopGoal.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionGoal.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Javascript code from franka_gripper/StopActionGoal.msg"
-	cd /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopActionGoal.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionResult.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionResult.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingActionResult.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionResult.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionResult.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionResult.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingResult.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionResult.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Javascript code from franka_gripper/HomingActionResult.msg"
+	cd /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingActionResult.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
 
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspAction.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspAction.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspAction.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspAction.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspAction.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspResult.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspAction.js: /home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg/GraspEpsilon.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspAction.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspActionGoal.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspAction.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspActionResult.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspAction.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspActionFeedback.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspAction.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspAction.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspFeedback.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspAction.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspAction.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspGoal.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Javascript code from franka_gripper/GraspAction.msg"
-	cd /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspAction.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveFeedback.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveFeedback.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveFeedback.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Javascript code from franka_gripper/MoveFeedback.msg"
+	cd /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveFeedback.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
 
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspGoal.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspGoal.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspGoal.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspGoal.js: /home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg/GraspEpsilon.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Javascript code from franka_gripper/GraspGoal.msg"
-	cd /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspGoal.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionResult.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionResult.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspActionResult.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionResult.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionResult.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionResult.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspResult.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionResult.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Javascript code from franka_gripper/GraspActionResult.msg"
+	cd /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspActionResult.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
 
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingResult.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingResult.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingResult.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating Javascript code from franka_gripper/HomingResult.msg"
-	cd /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingResult.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionGoal.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionGoal.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopActionGoal.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionGoal.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionGoal.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopGoal.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionGoal.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating Javascript code from franka_gripper/StopActionGoal.msg"
+	cd /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopActionGoal.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
 
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspResult.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspResult.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspResult.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating Javascript code from franka_gripper/GraspResult.msg"
-	cd /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspResult.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspEpsilon.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspEpsilon.js: /home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg/GraspEpsilon.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating Javascript code from franka_gripper/GraspEpsilon.msg"
+	cd /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg/GraspEpsilon.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
 
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingFeedback.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingFeedback.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingFeedback.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating Javascript code from franka_gripper/HomingFeedback.msg"
-	cd /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingFeedback.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionFeedback.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionFeedback.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveActionFeedback.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionFeedback.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionFeedback.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionFeedback.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveFeedback.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionFeedback.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating Javascript code from franka_gripper/MoveActionFeedback.msg"
+	cd /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveActionFeedback.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
 
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionResult.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionResult.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveActionResult.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionResult.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionResult.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionResult.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveResult.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionResult.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating Javascript code from franka_gripper/MoveActionResult.msg"
-	cd /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveActionResult.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopFeedback.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopFeedback.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopFeedback.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating Javascript code from franka_gripper/StopFeedback.msg"
+	cd /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopFeedback.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
 
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionFeedback.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionFeedback.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopActionFeedback.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionFeedback.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionFeedback.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionFeedback.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopFeedback.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionFeedback.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Generating Javascript code from franka_gripper/StopActionFeedback.msg"
-	cd /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopActionFeedback.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionGoal.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionGoal.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveActionGoal.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionGoal.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionGoal.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveGoal.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionGoal.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Generating Javascript code from franka_gripper/MoveActionGoal.msg"
+	cd /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveActionGoal.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
 
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopResult.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopResult.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopResult.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Generating Javascript code from franka_gripper/StopResult.msg"
-	cd /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopResult.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionFeedback.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionFeedback.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingActionFeedback.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionFeedback.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingFeedback.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionFeedback.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionFeedback.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionFeedback.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Generating Javascript code from franka_gripper/HomingActionFeedback.msg"
+	cd /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingActionFeedback.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
 
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveAction.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveAction.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveAction.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveAction.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveAction.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveGoal.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveAction.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveAction.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveActionFeedback.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveAction.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveActionResult.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveAction.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveResult.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveAction.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveAction.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveActionGoal.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveAction.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveFeedback.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Generating Javascript code from franka_gripper/MoveAction.msg"
-	cd /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveAction.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspFeedback.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspFeedback.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspFeedback.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Generating Javascript code from franka_gripper/GraspFeedback.msg"
+	cd /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspFeedback.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
 
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopFeedback.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopFeedback.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopFeedback.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Generating Javascript code from franka_gripper/StopFeedback.msg"
-	cd /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopFeedback.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspGoal.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspGoal.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspGoal.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspGoal.js: /home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg/GraspEpsilon.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Generating Javascript code from franka_gripper/GraspGoal.msg"
+	cd /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspGoal.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
 
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveResult.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveResult.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveResult.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Generating Javascript code from franka_gripper/MoveResult.msg"
-	cd /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveResult.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspResult.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspResult.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspResult.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Generating Javascript code from franka_gripper/GraspResult.msg"
+	cd /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspResult.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
 
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionGoal.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionGoal.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingActionGoal.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionGoal.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingGoal.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionGoal.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionGoal.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Generating Javascript code from franka_gripper/HomingActionGoal.msg"
-	cd /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingActionGoal.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspAction.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspAction.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspAction.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspAction.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspActionGoal.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspAction.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspAction.js: /home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg/GraspEpsilon.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspAction.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspAction.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspFeedback.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspAction.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspActionFeedback.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspAction.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspActionResult.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspAction.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspAction.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspGoal.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspAction.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspResult.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Generating Javascript code from franka_gripper/GraspAction.msg"
+	cd /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspAction.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
 
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionFeedback.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionFeedback.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveActionFeedback.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionFeedback.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionFeedback.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionFeedback.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveFeedback.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionFeedback.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Generating Javascript code from franka_gripper/MoveActionFeedback.msg"
-	cd /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveActionFeedback.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopAction.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopAction.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopAction.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopAction.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopResult.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopAction.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopAction.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopAction.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopActionGoal.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopAction.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopFeedback.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopAction.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopGoal.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopAction.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopAction.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopActionResult.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopAction.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopActionFeedback.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Generating Javascript code from franka_gripper/StopAction.msg"
+	cd /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopAction.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
 
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionFeedback.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionFeedback.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspActionFeedback.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionFeedback.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspFeedback.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionFeedback.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionFeedback.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionFeedback.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Generating Javascript code from franka_gripper/GraspActionFeedback.msg"
-	cd /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspActionFeedback.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingFeedback.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingFeedback.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingFeedback.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Generating Javascript code from franka_gripper/HomingFeedback.msg"
+	cd /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingFeedback.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
 
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopGoal.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopGoal.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopGoal.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Generating Javascript code from franka_gripper/StopGoal.msg"
-	cd /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopGoal.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveAction.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveAction.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveAction.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveAction.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveAction.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveFeedback.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveAction.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveAction.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveActionResult.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveAction.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveGoal.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveAction.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveActionFeedback.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveAction.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveActionGoal.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveAction.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveAction.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveResult.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Generating Javascript code from franka_gripper/MoveAction.msg"
+	cd /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveAction.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
 
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspFeedback.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspFeedback.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspFeedback.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Generating Javascript code from franka_gripper/GraspFeedback.msg"
-	cd /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspFeedback.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveResult.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveResult.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveResult.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Generating Javascript code from franka_gripper/MoveResult.msg"
+	cd /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveResult.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
 
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopAction.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopAction.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopAction.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopAction.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopAction.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopAction.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopResult.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopAction.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopActionGoal.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopAction.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopFeedback.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopAction.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopActionFeedback.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopAction.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopActionResult.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopAction.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopAction.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopGoal.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Generating Javascript code from franka_gripper/StopAction.msg"
-	cd /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopAction.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionFeedback.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionFeedback.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspActionFeedback.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionFeedback.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspFeedback.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionFeedback.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionFeedback.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionFeedback.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Generating Javascript code from franka_gripper/GraspActionFeedback.msg"
+	cd /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspActionFeedback.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
 
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingGoal.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingGoal.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingGoal.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Generating Javascript code from franka_gripper/HomingGoal.msg"
-	cd /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingGoal.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingAction.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingAction.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingAction.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingAction.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingActionFeedback.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingAction.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingAction.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingAction.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingActionGoal.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingAction.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingFeedback.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingAction.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingActionResult.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingAction.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingAction.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingGoal.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingAction.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingResult.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Generating Javascript code from franka_gripper/HomingAction.msg"
+	cd /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingAction.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
 
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingAction.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingAction.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingAction.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingAction.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingAction.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingActionGoal.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingAction.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingAction.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingFeedback.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingAction.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingActionResult.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingAction.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingActionFeedback.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingAction.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingGoal.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingAction.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingAction.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingResult.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Generating Javascript code from franka_gripper/HomingAction.msg"
-	cd /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingAction.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionGoal.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionGoal.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingActionGoal.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionGoal.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingGoal.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionGoal.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionGoal.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Generating Javascript code from franka_gripper/HomingActionGoal.msg"
+	cd /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingActionGoal.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
 
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionGoal.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionGoal.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspActionGoal.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionGoal.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionGoal.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspGoal.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionGoal.js: /home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg/GraspEpsilon.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionGoal.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Generating Javascript code from franka_gripper/GraspActionGoal.msg"
-	cd /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspActionGoal.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopGoal.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopGoal.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopGoal.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Generating Javascript code from franka_gripper/StopGoal.msg"
+	cd /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopGoal.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
 
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveGoal.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveGoal.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveGoal.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Generating Javascript code from franka_gripper/MoveGoal.msg"
-	cd /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveGoal.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionGoal.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionGoal.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspActionGoal.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionGoal.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspGoal.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionGoal.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionGoal.js: /home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg/GraspEpsilon.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionGoal.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Generating Javascript code from franka_gripper/GraspActionGoal.msg"
+	cd /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspActionGoal.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
 
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspEpsilon.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspEpsilon.js: /home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg/GraspEpsilon.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Generating Javascript code from franka_gripper/GraspEpsilon.msg"
-	cd /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg/GraspEpsilon.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionResult.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionResult.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopActionResult.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionResult.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopResult.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionResult.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionResult.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionResult.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Generating Javascript code from franka_gripper/StopActionResult.msg"
+	cd /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopActionResult.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
 
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionResult.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionResult.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspActionResult.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionResult.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionResult.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspResult.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionResult.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionResult.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Generating Javascript code from franka_gripper/GraspActionResult.msg"
-	cd /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspActionResult.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingGoal.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingGoal.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingGoal.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Generating Javascript code from franka_gripper/HomingGoal.msg"
+	cd /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingGoal.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
 
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionResult.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionResult.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopActionResult.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionResult.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionResult.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionResult.js: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopResult.msg
-/home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionResult.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Generating Javascript code from franka_gripper/StopActionResult.msg"
-	cd /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopActionResult.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionFeedback.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionFeedback.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopActionFeedback.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionFeedback.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionFeedback.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionFeedback.js: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopFeedback.msg
+/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionFeedback.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Generating Javascript code from franka_gripper/StopActionFeedback.msg"
+	cd /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopActionFeedback.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg
 
 franka_gripper_generate_messages_nodejs: franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs
-franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveFeedback.js
-franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionFeedback.js
-franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionGoal.js
-franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionResult.js
-franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionGoal.js
-franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspAction.js
-franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspGoal.js
-franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingResult.js
-franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspResult.js
-franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingFeedback.js
-franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionResult.js
-franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionFeedback.js
-franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopResult.js
-franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveAction.js
-franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopFeedback.js
-franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveResult.js
-franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionGoal.js
-franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionFeedback.js
-franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionFeedback.js
-franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopGoal.js
-franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspFeedback.js
-franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopAction.js
-franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingGoal.js
-franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingAction.js
-franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionGoal.js
-franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveGoal.js
-franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspEpsilon.js
-franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionResult.js
-franka_gripper_generate_messages_nodejs: /home/rnm/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionResult.js
+franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingResult.js
+franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveGoal.js
+franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopResult.js
+franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionResult.js
+franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionResult.js
+franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveFeedback.js
+franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionResult.js
+franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionGoal.js
+franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspEpsilon.js
+franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionFeedback.js
+franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopFeedback.js
+franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveActionGoal.js
+franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionFeedback.js
+franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspFeedback.js
+franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspGoal.js
+franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspResult.js
+franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspAction.js
+franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopAction.js
+franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingFeedback.js
+franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveAction.js
+franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/MoveResult.js
+franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionFeedback.js
+franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingAction.js
+franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingActionGoal.js
+franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopGoal.js
+franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/GraspActionGoal.js
+franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionResult.js
+franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/HomingGoal.js
+franka_gripper_generate_messages_nodejs: /home/suyashs/rnm_group_2/devel/share/gennodejs/ros/franka_gripper/msg/StopActionFeedback.js
 franka_gripper_generate_messages_nodejs: franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs.dir/build.make
 
 .PHONY : franka_gripper_generate_messages_nodejs
@@ -352,10 +352,10 @@ franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs.d
 .PHONY : franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs.dir/build
 
 franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs.dir/clean:
-	cd /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper && $(CMAKE_COMMAND) -P CMakeFiles/franka_gripper_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper && $(CMAKE_COMMAND) -P CMakeFiles/franka_gripper_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs.dir/clean
 
 franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs.dir/depend:
-	cd /home/rnm/rnm_group_2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rnm/rnm_group_2/src /home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper /home/rnm/rnm_group_2/build /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/suyashs/rnm_group_2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/suyashs/rnm_group_2/src /home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper /home/suyashs/rnm_group_2/build /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_generate_messages_nodejs.dir/depend
 

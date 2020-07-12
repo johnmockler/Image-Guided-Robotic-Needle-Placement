@@ -1,2 +1,2 @@
 basic_node_python:forward_kinematics:franka_ros_1/franka_control:franka_ros_1/franka_description:franka_ros_1/franka_example_controllers:franka_ros_1/franka_gripper:franka_ros_1/franka_hw:franka_ros_1/franka_msgs:franka_ros_1/franka_ros:franka_ros_1/franka_visualization:inverse_kinematics:panda_joint_reader:pathPlanning_cc:trajectory_planning_cc
--DCATKIN_DEVEL_PREFIX=/home/rnm/rnm_group_2/devel -DCMAKE_INSTALL_PREFIX=/home/rnm/rnm_group_2/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/suyashs/rnm_group_2/devel -DCMAKE_INSTALL_PREFIX=/home/suyashs/rnm_group_2/install -G Unix Makefiles

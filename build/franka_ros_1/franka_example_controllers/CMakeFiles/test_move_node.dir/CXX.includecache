@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/rnm/rnm_group_2/src/franka_ros_1/franka_example_controllers/src/test_move.cpp
+/home/suyashs/rnm_group_2/src/franka_ros_1/franka_example_controllers/src/test_move.cpp
 ros/ros.h
 -
 std_msgs/String.h

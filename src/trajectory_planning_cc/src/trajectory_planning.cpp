@@ -18,27 +18,29 @@ class TrajectoryPlanningCC
 
     TrajectoryPlanningCC(ros::NodeHandle nh):n(nh)
     {
-        
+        jp_sub= n.subscribe("/joint_AnglesIK", 1, &TrajectoryPlanningCC::angleCallback,this);
 
     }
     void angleCallback(const std_msgs::Float64MultiArray::ConstPtr& msg)
     {
-        std::cout<<"entered callback"<<std::endl;
+        
+        std::cout<<"entered CB"<<std::endl;
         if(jointAngleSet.size()>29)
         {
+            std::cout<<"entered if"<<std::endl;
             setAngles();
-
         }
         else if(jointAngleSet.size()<=29)
         {
+            std::cout<<"entered sub cb"<<std::endl;
             std::vector<float> jointAngle;
             for(int i=0;i<7;i++)
-           {
-             jointAngle.push_back(msg->data[i]);
-             std::cout<<"joint Angles :"<<jointAngle[i] <<std::endl;
+            {
+                jointAngle.push_back(msg->data[i]);
+                std::cout<<"joint Angles :"<<jointAngle[i] <<std::endl;
             }
-             jointAngleSet.push_back(jointAngle);
-             std::cout<<"Joint set size :"<<jointAngleSet.size()<<std::endl;
+            jointAngleSet.push_back(jointAngle);
+            std::cout<<"Joint set size :"<<jointAngleSet.size()<<std::endl;
         }
     
         
@@ -64,6 +66,7 @@ class TrajectoryPlanningCC
              msg.data.insert(msg.data.end(), goal_position.begin(), goal_position.end());
              traj_pub.publish(msg);
 
+
              ros::Duration(5.0).sleep();
            }        
 
@@ -79,7 +82,7 @@ class TrajectoryPlanningCC
         }
         else if(jointAngleSet.size()<=29)
         {
-            jp_sub= n.subscribe("/joint_AnglesIK", 1, &TrajectoryPlanningCC::angleCallback,this);
+            
             
         }
         
@@ -94,8 +97,12 @@ int main(int argc, char** argv)
   ros::init(argc, argv, "trajectory_planning");
   ros::NodeHandle n;
   TrajectoryPlanningCC tpObj(n);
-  tpObj.setFlow();
-  ros::spin();
-  
+  ros::Rate loop(1000);
+  while(ros::ok())
+  {
+    //tpObj.setFlow();
+    ros::spinOnce();
+    loop.sleep();
+  }
   return 0;
 }

@@ -1,4 +1,4 @@
-prefix=/home/rnm/rnm_group_2/devel
+prefix=/home/suyashs/rnm_group_2/devel
 
 Name: inverse_kinematics
 Description: Description of inverse_kinematics

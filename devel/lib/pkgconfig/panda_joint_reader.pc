@@ -1,8 +1,8 @@
-prefix=/home/rnm/rnm_group_2/devel
+prefix=/home/suyashs/rnm_group_2/devel
 
 Name: panda_joint_reader
 Description: Description of panda_joint_reader
 Version: 0.0.0
-Cflags: -I/home/rnm/rnm_group_2/src/panda_joint_reader/include
+Cflags: -I/home/suyashs/rnm_group_2/src/panda_joint_reader/include
 Libs: -L${prefix}/lib 
 Requires: roscpp sensor_msgs

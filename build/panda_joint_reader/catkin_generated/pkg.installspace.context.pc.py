@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "${prefix}/include".split(';') if "${prefix}/i
 PROJECT_CATKIN_DEPENDS = "roscpp;sensor_msgs".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "panda_joint_reader"
-PROJECT_SPACE_DIR = "/home/rnm/rnm_group_2/install"
+PROJECT_SPACE_DIR = "/home/suyashs/rnm_group_2/install"
 PROJECT_VERSION = "0.0.0"

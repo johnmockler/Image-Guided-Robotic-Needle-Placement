@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rnm/rnm_group_2/src
+CMAKE_SOURCE_DIR = /home/suyashs/rnm_group_2/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rnm/rnm_group_2/build
+CMAKE_BINARY_DIR = /home/suyashs/rnm_group_2/build
 
 # Utility rule file for run_tests.
 
@@ -67,6 +67,6 @@ CMakeFiles/run_tests.dir/clean:
 .PHONY : CMakeFiles/run_tests.dir/clean
 
 CMakeFiles/run_tests.dir/depend:
-	cd /home/rnm/rnm_group_2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rnm/rnm_group_2/src /home/rnm/rnm_group_2/src /home/rnm/rnm_group_2/build /home/rnm/rnm_group_2/build /home/rnm/rnm_group_2/build/CMakeFiles/run_tests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/suyashs/rnm_group_2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/suyashs/rnm_group_2/src /home/suyashs/rnm_group_2/src /home/suyashs/rnm_group_2/build /home/suyashs/rnm_group_2/build /home/suyashs/rnm_group_2/build/CMakeFiles/run_tests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/run_tests.dir/depend
 

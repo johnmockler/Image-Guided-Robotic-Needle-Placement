@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/rnm/rnm_group_2/src/trajectory_planning_cc/src/trajectory_planning.cpp
+/home/suyashs/rnm_group_2/src/trajectory_planning_cc/src/trajectory_planning.cpp
 ros/ros.h
 -
 vector

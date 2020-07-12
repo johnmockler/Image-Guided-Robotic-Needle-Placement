@@ -1,8 +1,8 @@
-# Install script for directory: /home/rnm/rnm_group_2/src/panda_joint_reader
+# Install script for directory: /home/suyashs/rnm_group_2/src/panda_joint_reader
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/rnm/rnm_group_2/install")
+  set(CMAKE_INSTALL_PREFIX "/home/suyashs/rnm_group_2/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/rnm/rnm_group_2/build/panda_joint_reader/catkin_generated/installspace/panda_joint_reader.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/suyashs/rnm_group_2/build/panda_joint_reader/catkin_generated/installspace/panda_joint_reader.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_joint_reader/cmake" TYPE FILE FILES
-    "/home/rnm/rnm_group_2/build/panda_joint_reader/catkin_generated/installspace/panda_joint_readerConfig.cmake"
-    "/home/rnm/rnm_group_2/build/panda_joint_reader/catkin_generated/installspace/panda_joint_readerConfig-version.cmake"
+    "/home/suyashs/rnm_group_2/build/panda_joint_reader/catkin_generated/installspace/panda_joint_readerConfig.cmake"
+    "/home/suyashs/rnm_group_2/build/panda_joint_reader/catkin_generated/installspace/panda_joint_readerConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_joint_reader" TYPE FILE FILES "/home/rnm/rnm_group_2/src/panda_joint_reader/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_joint_reader" TYPE FILE FILES "/home/suyashs/rnm_group_2/src/panda_joint_reader/package.xml")
 endif()
 

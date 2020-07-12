@@ -67,14 +67,14 @@ set(franka_gripper_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(franka_gripper_SOURCE_PREFIX /home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper)
-  set(franka_gripper_DEVEL_PREFIX /home/rnm/rnm_group_2/devel)
+  set(franka_gripper_SOURCE_PREFIX /home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper)
+  set(franka_gripper_DEVEL_PREFIX /home/suyashs/rnm_group_2/devel)
   set(franka_gripper_INSTALL_PREFIX "")
   set(franka_gripper_PREFIX ${franka_gripper_DEVEL_PREFIX})
 else()
   set(franka_gripper_SOURCE_PREFIX "")
   set(franka_gripper_DEVEL_PREFIX "")
-  set(franka_gripper_INSTALL_PREFIX /home/rnm/rnm_group_2/install)
+  set(franka_gripper_INSTALL_PREFIX /home/suyashs/rnm_group_2/install)
   set(franka_gripper_PREFIX ${franka_gripper_INSTALL_PREFIX})
 endif()
 
@@ -116,7 +116,7 @@ if(NOT "include;/opt/ros/melodic/include/libfranka " STREQUAL " ")
   endforeach()
 endif()
 
-set(libraries "franka_gripper;/opt/ros/melodic/lib/libfranka.so.0.7.1")
+set(libraries "franka_gripper;/opt/ros/melodic/lib/libfranka.so.0.8.0")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/rnm/rnm_group_2/install/lib;/home/rnm/rnm_group_2/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/suyashs/rnm_group_2/install/lib;/home/suyashs/rnm_group_2/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

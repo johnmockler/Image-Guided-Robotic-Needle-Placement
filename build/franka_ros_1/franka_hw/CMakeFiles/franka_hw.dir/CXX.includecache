@@ -6,13 +6,65 @@
 
 #IncludeRegexTransform: 
 
-/home/rnm/rnm_group_2/src/franka_ros_1/franka_hw/include/franka_hw/control_mode.h
+/home/suyashs/rnm_group_2/src/franka_ros_1/franka_hw/src/control_mode.cpp
+franka_hw/control_mode.h
+-
+algorithm
+-
+iterator
+-
+string
+-
+vector
+-
+
+/home/suyashs/rnm_group_2/src/franka_ros_1/franka_hw/src/franka_hw.cpp
+franka_hw/franka_hw.h
+-
+cstdint
+-
+ostream
+-
+utility
+-
+franka/rate_limiting.h
+-
+joint_limits_interface/joint_limits_urdf.h
+-
+resource_helpers.h
+/home/suyashs/rnm_group_2/src/franka_ros_1/franka_hw/src/resource_helpers.h
+
+/home/suyashs/rnm_group_2/src/franka_ros_1/franka_hw/src/resource_helpers.cpp
+resource_helpers.h
+/home/suyashs/rnm_group_2/src/franka_ros_1/franka_hw/src/resource_helpers.h
+ros/console.h
+-
+
+/home/suyashs/rnm_group_2/src/franka_ros_1/franka_hw/src/resource_helpers.h
+list
+-
+map
+-
+string
+-
+vector
+-
+hardware_interface/controller_info.h
+-
+franka_hw/control_mode.h
+-
+
+/home/suyashs/rnm_group_2/src/franka_ros_1/franka_hw/src/trigger_rate.cpp
+franka_hw/trigger_rate.h
+-
+
+/opt/ros/melodic/include/franka_hw/control_mode.h
 ostream
 -
 type_traits
 -
 
-/home/rnm/rnm_group_2/src/franka_ros_1/franka_hw/include/franka_hw/franka_cartesian_command_interface.h
+/opt/ros/melodic/include/franka_hw/franka_cartesian_command_interface.h
 array
 -
 franka_hw/franka_state_interface.h
@@ -20,7 +72,7 @@ franka_hw/franka_state_interface.h
 hardware_interface/internal/hardware_resource_manager.h
 -
 
-/home/rnm/rnm_group_2/src/franka_ros_1/franka_hw/include/franka_hw/franka_hw.h
+/opt/ros/melodic/include/franka_hw/franka_hw.h
 array
 -
 atomic
@@ -58,7 +110,7 @@ ros/time.h
 urdf/model.h
 -
 
-/home/rnm/rnm_group_2/src/franka_ros_1/franka_hw/include/franka_hw/franka_model_interface.h
+/opt/ros/melodic/include/franka_hw/franka_model_interface.h
 array
 -
 string
@@ -70,7 +122,7 @@ franka/robot_state.h
 hardware_interface/internal/hardware_resource_manager.h
 -
 
-/home/rnm/rnm_group_2/src/franka_ros_1/franka_hw/include/franka_hw/franka_state_interface.h
+/opt/ros/melodic/include/franka_hw/franka_state_interface.h
 string
 -
 franka/robot_state.h
@@ -78,60 +130,8 @@ franka/robot_state.h
 hardware_interface/internal/hardware_resource_manager.h
 -
 
-/home/rnm/rnm_group_2/src/franka_ros_1/franka_hw/include/franka_hw/trigger_rate.h
+/opt/ros/melodic/include/franka_hw/trigger_rate.h
 ros/time.h
--
-
-/home/rnm/rnm_group_2/src/franka_ros_1/franka_hw/src/control_mode.cpp
-franka_hw/control_mode.h
--
-algorithm
--
-iterator
--
-string
--
-vector
--
-
-/home/rnm/rnm_group_2/src/franka_ros_1/franka_hw/src/franka_hw.cpp
-franka_hw/franka_hw.h
--
-cstdint
--
-ostream
--
-utility
--
-franka/rate_limiting.h
--
-joint_limits_interface/joint_limits_urdf.h
--
-resource_helpers.h
-/home/rnm/rnm_group_2/src/franka_ros_1/franka_hw/src/resource_helpers.h
-
-/home/rnm/rnm_group_2/src/franka_ros_1/franka_hw/src/resource_helpers.cpp
-resource_helpers.h
-/home/rnm/rnm_group_2/src/franka_ros_1/franka_hw/src/resource_helpers.h
-ros/console.h
--
-
-/home/rnm/rnm_group_2/src/franka_ros_1/franka_hw/src/resource_helpers.h
-list
--
-map
--
-string
--
-vector
--
-hardware_interface/controller_info.h
--
-franka_hw/control_mode.h
--
-
-/home/rnm/rnm_group_2/src/franka_ros_1/franka_hw/src/trigger_rate.cpp
-franka_hw/trigger_rate.h
 -
 
 /opt/ros/melodic/include/hardware_interface/controller_info.h
@@ -269,6 +269,10 @@ joint_limits_interface/joint_limits_interface_exception.h
 -
 
 /opt/ros/melodic/include/joint_limits_interface/joint_limits_interface_exception.h
+exception
+-
+string
+-
 
 /opt/ros/melodic/include/joint_limits_interface/joint_limits_urdf.h
 ros/common.h

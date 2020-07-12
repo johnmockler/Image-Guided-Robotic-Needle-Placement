@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/rnm/rnm_group_2/src/panda_joint_reader/src/panda_joint_reader.cpp
+/home/suyashs/rnm_group_2/src/panda_joint_reader/src/panda_joint_reader.cpp
 ros/ros.h
-/home/rnm/rnm_group_2/src/panda_joint_reader/src/ros/ros.h
+/home/suyashs/rnm_group_2/src/panda_joint_reader/src/ros/ros.h
 sensor_msgs/JointState.h
-/home/rnm/rnm_group_2/src/panda_joint_reader/src/sensor_msgs/JointState.h
+/home/suyashs/rnm_group_2/src/panda_joint_reader/src/sensor_msgs/JointState.h
 string
-/home/rnm/rnm_group_2/src/panda_joint_reader/src/string
+/home/suyashs/rnm_group_2/src/panda_joint_reader/src/string
 
 /opt/ros/melodic/include/ros/advertise_options.h
 ros/forwards.h

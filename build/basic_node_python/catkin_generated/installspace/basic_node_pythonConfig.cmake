@@ -67,14 +67,14 @@ set(basic_node_python_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(basic_node_python_SOURCE_PREFIX /home/rnm/rnm_group_2/src/basic_node_python)
-  set(basic_node_python_DEVEL_PREFIX /home/rnm/rnm_group_2/devel)
+  set(basic_node_python_SOURCE_PREFIX /home/suyashs/rnm_group_2/src/basic_node_python)
+  set(basic_node_python_DEVEL_PREFIX /home/suyashs/rnm_group_2/devel)
   set(basic_node_python_INSTALL_PREFIX "")
   set(basic_node_python_PREFIX ${basic_node_python_DEVEL_PREFIX})
 else()
   set(basic_node_python_SOURCE_PREFIX "")
   set(basic_node_python_DEVEL_PREFIX "")
-  set(basic_node_python_INSTALL_PREFIX /home/rnm/rnm_group_2/install)
+  set(basic_node_python_INSTALL_PREFIX /home/suyashs/rnm_group_2/install)
   set(basic_node_python_PREFIX ${basic_node_python_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/rnm/rnm_group_2/install/lib;/home/rnm/rnm_group_2/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/suyashs/rnm_group_2/install/lib;/home/suyashs/rnm_group_2/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

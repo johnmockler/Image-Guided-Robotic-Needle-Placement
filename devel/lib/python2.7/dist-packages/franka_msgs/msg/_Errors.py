@@ -9,7 +9,7 @@ import struct
 class Errors(genpy.Message):
   _md5sum = "420c43ed3349b66b110f24531e7b53e5"
   _type = "franka_msgs/Errors"
-  _has_header = False #flag to mark the presence of a Header object
+  _has_header = False  # flag to mark the presence of a Header object
   _full_text = """bool joint_position_limits_violation
 bool cartesian_position_limits_violation
 bool self_collision_avoidance_violation
@@ -66,7 +66,7 @@ bool instability_detected
     """
     if args or kwds:
       super(Errors, self).__init__(*args, **kwds)
-      #message fields cannot be None, assign default values for those that are
+      # message fields cannot be None, assign default values for those that are
       if self.joint_position_limits_violation is None:
         self.joint_position_limits_violation = False
       if self.cartesian_position_limits_violation is None:
@@ -243,7 +243,7 @@ bool instability_detected
       self.instability_detected = bool(self.instability_detected)
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e) #most likely buffer underfill
+      raise genpy.DeserializationError(e)  # most likely buffer underfill
 
 
   def serialize_numpy(self, buff, numpy):
@@ -308,7 +308,7 @@ bool instability_detected
       self.instability_detected = bool(self.instability_detected)
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e) #most likely buffer underfill
+      raise genpy.DeserializationError(e)  # most likely buffer underfill
 
 _struct_I = genpy.struct_I
 def _get_struct_I():

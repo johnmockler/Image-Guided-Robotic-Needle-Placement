@@ -1,4 +1,4 @@
-prefix=/home/rnm/rnm_group_2/devel
+prefix=/home/suyashs/rnm_group_2/devel
 
 Name: basic_node_python
 Description: Description of basic_node_python

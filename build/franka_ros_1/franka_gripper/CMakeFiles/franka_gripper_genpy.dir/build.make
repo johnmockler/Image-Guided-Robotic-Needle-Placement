@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rnm/rnm_group_2/src
+CMAKE_SOURCE_DIR = /home/suyashs/rnm_group_2/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rnm/rnm_group_2/build
+CMAKE_BINARY_DIR = /home/suyashs/rnm_group_2/build
 
 # Utility rule file for franka_gripper_genpy.
 
@@ -63,10 +63,10 @@ franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_genpy.dir/build: franka_gr
 .PHONY : franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_genpy.dir/build
 
 franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_genpy.dir/clean:
-	cd /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper && $(CMAKE_COMMAND) -P CMakeFiles/franka_gripper_genpy.dir/cmake_clean.cmake
+	cd /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper && $(CMAKE_COMMAND) -P CMakeFiles/franka_gripper_genpy.dir/cmake_clean.cmake
 .PHONY : franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_genpy.dir/clean
 
 franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_genpy.dir/depend:
-	cd /home/rnm/rnm_group_2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rnm/rnm_group_2/src /home/rnm/rnm_group_2/src/franka_ros_1/franka_gripper /home/rnm/rnm_group_2/build /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper /home/rnm/rnm_group_2/build/franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_genpy.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/suyashs/rnm_group_2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/suyashs/rnm_group_2/src /home/suyashs/rnm_group_2/src/franka_ros_1/franka_gripper /home/suyashs/rnm_group_2/build /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper /home/suyashs/rnm_group_2/build/franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_genpy.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : franka_ros_1/franka_gripper/CMakeFiles/franka_gripper_genpy.dir/depend
 

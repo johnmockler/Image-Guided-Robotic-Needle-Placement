@@ -10,8 +10,13 @@ class TrajectoryPlanningCC
     private:
     std::vector<std::vector<float>> jointAngleSet;
     ros::NodeHandle n;
+    ros::NodeHandle nc;
     ros::Publisher traj_pub= n.advertise<std_msgs::Float64MultiArray>("/joint_position_example_controller_sim/joint_command", 1000);
+    ros::Publisher cam_pub =nc.advertise<std_msgs::Float64MultiArray>("/goal_position",1000);
     ros::Subscriber jp_sub;
+    std::vector<float> currentAngle;
+    std::vector<float> pastAngle;
+
 
 
     public:
@@ -39,7 +44,21 @@ class TrajectoryPlanningCC
                 jointAngle.push_back(msg->data[i]);
                 std::cout<<"joint Angles :"<<jointAngle[i] <<std::endl;
             }
+            if(jointAngle == pastAngle)
+            {
+                std::cout<<"reject"<<std::endl;
+            }
+            else
+            {
             jointAngleSet.push_back(jointAngle);
+            pastAngle = jointAngle;
+
+            }
+            if(jointAngleSet.size() == 1)
+            {
+                pastAngle = jointAngle;
+                currentAngle = jointAngle;
+            }
             std::cout<<"Joint set size :"<<jointAngleSet.size()<<std::endl;
         }
     
@@ -65,10 +84,12 @@ class TrajectoryPlanningCC
              msg.data.clear();
              msg.data.insert(msg.data.end(), goal_position.begin(), goal_position.end());
              traj_pub.publish(msg);
+            cam_pub.publish(msg);
 
 
-             ros::Duration(5.0).sleep();
-           }        
+             ros::Duration(3.0).sleep();
+           }
+           ros::shutdown();        
 
     }
     void setFlow()

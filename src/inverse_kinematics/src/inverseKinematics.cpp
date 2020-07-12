@@ -329,6 +329,8 @@ void jointStateCallback(const std_msgs::Float64MultiArray::ConstPtr& msg)
     cordinates.push_back(msg->data[i]);
     std::cout<<msg->data[i]<<std::endl;
   }
+
+  
   InverseKinematics inKinObj;
   ja=inKinObj.getInversK(cordinates);
 

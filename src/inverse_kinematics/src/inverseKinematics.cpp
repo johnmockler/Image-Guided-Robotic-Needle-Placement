@@ -239,12 +239,12 @@ class InverseKinematics
         pGoalPos.push_back(Tf_1g.at<float>(0,3));
         pGoalPos.push_back(Tf_1g.at<float>(1,3));
         pGoalPos.push_back(Tf_1g.at<float>(2,3));
-        gamma=aTan(a[2],-d[2]);
-        alph=aTan(pGoalPos[0],-pGoalPos[1]);
+        gamma=atan2(a[2],-d[2]);
+        alph=atan2(pGoalPos[0],-pGoalPos[1]);
         l3=sqrt(pow(d[2],2)+pow(a[2],2));
         l5=sqrt(pow(d[4],2)+pow(a[3],2));
-        zeta=aTan(-d[2],a[2]);
-        epsilon=aTan(-d[4],-a[3]);
+        zeta=atan2(-d[2],a[2]);
+        epsilon=atan2(-d[4],-a[3]);
         l35=sqrt(pGoalPos[0]*pGoalPos[0]+pGoalPos[1]*pGoalPos[1]);
         float num=pow(l3,2)+pow(l35,2)-pow(l5,2);
         //std::cout<<"num :"<<num<<std::endl;
@@ -259,12 +259,13 @@ class InverseKinematics
         //std::cout<<"l3 :"<<l3<<" l5 :"<<l5<<" l_35 :"<<l35<<std::endl; 
 
     }
-    std::vector<float> getAngles(std::vector<float> JAinv)
+    std::vector<float> getAngles(float JAinv[7])
     {
         std::vector<float> angles;
         for(int i=0;i<7;i++)
         {
             angles.push_back(-JAinv[6-i]);
+            //angles.push_back(i);
         }
         return angles;
     }
@@ -272,30 +273,50 @@ class InverseKinematics
     {
         //std::cout<<"entered getInverseK"<<std::endl;
         float j1,j2,j3,j4,j5,j6,j7;
-        std::vector<float> jointAngles;
+        float jointAngles [7];
         std::vector<float> orientation= {0,M_PI,0};
         InitialTransformation(posVector,orientation);
-        j1= aTan(-Tf_0g.at<float>(1,3),-Tf_0g.at<float>(0,3));
+        jointAngles[0]= atan2(-Tf_0g.at<float>(1,3),-Tf_0g.at<float>(0,3));
 
-        ComputeAngles(j1);
-        jointAngles.push_back(j1);
-        j2=alph-beta-gamma;
-        jointAngles.push_back(j2);
-        j3=0;
-        jointAngles.push_back(j3);
-        j4=2.0*M_PI-delta-epsilon-zeta;
-        jointAngles.push_back(j4);
+        ComputeAngles( jointAngles[0]);
+        //jointAngles.push_back(j1);
+        jointAngles[1]=alph-beta-gamma;
+        //jointAngles.push_back(j2);
+       jointAngles[2]=0;
+        //jointAngles.push_back(j3);
+       jointAngles[3]=2.0*M_PI-delta-epsilon-zeta;
+        
+        //jointAngles.push_back(j4);
 
-        CalculateRotationMatrix(j1, j2, j3, j4);
-        j5= aTan(Rf_47.at<float>(1,2),Rf_47.at<float>(0,3));
-        jointAngles.push_back(j5);
+        CalculateRotationMatrix(jointAngles[0], jointAngles[1], jointAngles[2], jointAngles[3]);
+       jointAngles[4]= atan2(Rf_47.at<float>(1,2),Rf_47.at<float>(0,3));
+       if(jointAngles[4]>3,14)
+       {
+           jointAngles[4]=0.0;
+       }
+        //jointAngles.push_back(j5);
         float temp = sqrt(1- pow(Rf_47.at<float>(2,2),2));
-        j6= aTan(-temp,Rf_47.at<float>(2,2));
-        jointAngles.push_back(j6);
-        j7= aTan(Rf_47.at<float>(2,1),-Rf_47.at<float>(2,0));
-        jointAngles.push_back(j7);
+        jointAngles[5]= atan2(-temp,Rf_47.at<float>(2,2));
+       
+       // jointAngles.push_back(j6);
+        jointAngles[6]= atan2(Rf_47.at<float>(2,1),-Rf_47.at<float>(2,0));
+        //jointAngles.push_back(j7);
+        jointAngles[1]=jointAngles[1]+0.423;
+        jointAngles[3]=jointAngles[3]-0.934;
+        jointAngles[5]=-(jointAngles[5]+0.5108);
+        if(jointAngles[6]>0.0)
+        {
+            jointAngles[6]=jointAngles[6]-1.5707;
+        }
+        else if(jointAngles[6]<0.0)
+        {
+            jointAngles[6]=jointAngles[6]+1.5707;
+        }
+        
+        jointAngles[0]=0.0;
 
         std::vector<float> jointAn= getAngles(jointAngles);
+        //std::cout<<jointAngles[0]<<" "<<jointAngles[1]<<" "<<jointAngles[2]<<" "<<jointAngles[3]<<" "<<jointAngles[4]<<" "<<jointAngles[5]<<" "<<jointAngles[6]<<std::endl;
 
         std_msgs::Float64MultiArray msg;
         msg.data.clear();
@@ -307,20 +328,17 @@ class InverseKinematics
 };
 void jointStateCallback(const std_msgs::Float64MultiArray::ConstPtr& msg)
 {
-   // std::cout<<"entered callback"<<std::endl;
-    std::vector<float> cordinates{0.180,0.1,0.618};
+    //std::cout<<"Entered IK callback"<<std::endl;
+    std::vector<float> cordinates;
     std::vector<float> ja;
 
-  /*for (size_t i = 0; i < msg.size(); i++)
+  for (size_t i = 0; i <3; i++)
   {
-    cordinates.push_back(msg[i]);
-  } */
+    cordinates.push_back(msg->data[i]);
+    //std::cout<<msg->data[i]<<std::endl;
+  }
   InverseKinematics inKinObj;
   ja=inKinObj.getInversK(cordinates);
-  for (int i = 0; i < 7; i++)
-  {
-    //std::cout<<ja[i]<<std::endl;
-  }
 
 }
 
@@ -329,10 +347,10 @@ int main(int argc, char** argv)
 
   ros::init(argc, argv, "inverseKinematics");
   ros::NodeHandle nh;
-  InverseKinematics inKinObj;
-  ros::Subscriber sub = nh.subscribe("/endeffector_Cord", 1, jointStateCallback);
+  InverseKinematics inKinObj; 
+  ros::Subscriber sub = nh.subscribe("/target_Cordinate", 1, jointStateCallback);
   ros::spin();
-
+  
   return 0;
 }
 

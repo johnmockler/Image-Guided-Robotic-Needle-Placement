@@ -84,10 +84,12 @@ bool CameraCalibrationNode::captureImage(messages::ImageCapture::Request &req, m
             {
                 alreadyHandEyeCalibrated =true;
                 computeHandeyeTransform();
+                /*
                 std::cout << "R= " << std::endl;
                 std::cout << cam2endEffectorR << std::endl;
                 std::cout << "T" << std::endl;
                 std::cout << cam2endEffectorT << std::endl;
+                */
             }
 
 

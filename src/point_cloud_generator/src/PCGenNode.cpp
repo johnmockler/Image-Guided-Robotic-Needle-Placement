@@ -52,15 +52,40 @@ bool PCGenNode::captureCloud(messages::ImageCapture::Request& req, messages::Ima
     if (req.x == false)
     {
         ROS_INFO("capturing point cloud [%ld]", (int) cloudList.size());
-        //pcViewer(mostRecentCloud);
-        pcl::PointCloud<pcl::PointXYZ>::Ptr filteredCloud(new PointCloud<pcl::PointXYZ>);
-        
+        //FILTERING STAGE (PRE PROCESSING)
+        //pcl::PointCloud<pcl::PointXYZ>::Ptr filteredCloud(new PointCloud<pcl::PointXYZ>);
+        pcl::PointCloud<pcl::PointXYZ>::Ptr filter_NaN(new PointCloud<pcl::PointXYZ>);
+
         std::vector< int > indices;
         //here we can use most recent cloud as output probably, to avoid creating a new variable
-        pcl::removeNaNFromPointCloud(*mostRecentCloud, *filteredCloud, indices);
+        pcl::removeNaNFromPointCloud(*mostRecentCloud, *filter_NaN, indices);
 
+        //Outler removal (lonely points that are spread here and there in the cloud, like annoying mosquitoes
+        //There are pthe product of sensors inaccuracy (noise) which registers measrements where there should be any.
+        //Filter object (RadiusBased)
+        pcl::PointCloud<pcl::PointXYZ>::Ptr filtered_outler(new pcl::PointCloud<pcl::PointXYZ>);
+        RadiusOutlierRemoval<pcl::PointXYZ> filter_outler;
+        filter_outler.setInputCloud(filter_NaN);
+        //Every point must have 10 neighbors within 15cm, or it will be removed
+        filter_outler.setRadiusSearch(0.15);
+        filter_outler.setMinNeighborsInRadius(10);
+        filter_outler.filter(*filtered_outler);
+
+        //Resampling -Downsampling
+        pcl::PointCloud<pcl::PointXYZ>::Ptr filteredCloud(new pcl::PointCloud<pcl::PointXYZ>);
+        pcl::VoxelGrid<pcl::PointXYZ> filter_voxel;
+        filter_voxel.setInputCloud(filtered_outler);
+        // We set the size of every voxel to be 1x1x1cm
+        // (only one point per every cubic centimeter will survive).
+        filter_voxel.setLeafSize(0.01f,0.01f,0.01f);
+        filter_voxel.filter(*filteredCloud);
+
+
+        //pcViewer(filteredCloud);
+
+        //Normal_Estimation(filteredCloud,normals);
         cloudList.push_back(filteredCloud);
-
+        ROS_INFO("After pcViewer function");
         
         tf::StampedTransform base2gripper;
         listener.lookupTransform("panda_link7", "panda_link0", ros::Time(0), base2gripper);
@@ -139,6 +164,10 @@ void PCGenNode::pairAlign(const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_src, c
     // Perform the alignment
     icp.align (cloud_source_registered);
 
+    std::cout << "has converged:" << icp.hasConverged() << " score: " <<
+              icp.getFitnessScore() << std::endl;
+    std::cout << icp.getFinalTransformation() << std::endl;
+
     final_transform = icp.getFinalTransformation();
 
     *output = cloud_source_registered + *cloud_tgt;
@@ -184,5 +213,38 @@ void PCGenNode::pcViewer(const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_src)
     //viewer.showCloud (cloud_src);
 
 
+
+}
+
+
+void PCGenNode::Normal_Estimation(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud, pcl::PointCloud<pcl::Normal>::Ptr& normals)
+{
+    ROS_INFO("I am in Normal Estimation Function");
+    pcl::IntegralImageNormalEstimation<pcl::PointXYZ, pcl::Normal> normalEstimation;
+    normalEstimation.setInputCloud(cloud);
+    // Other estimation methods: COVARIANCE_MATRIX, AVERAGE_DEPTH_CHANGE, SIMPLE_3D_GRADIENT
+    // They determine the smoothness of the result, and the running time
+    normalEstimation.setNormalEstimationMethod(normalEstimation.AVERAGE_3D_GRADIENT);
+    //Depth threshold for computing object borders based on depth changes, in meters.
+    normalEstimation.setMaxDepthChangeFactor(0.02f);
+    //Factor that influences the size of the area used to smooth the normals.
+    normalEstimation.setNormalSmoothingSize(10.0f);
+    //Calculatethe normals.
+    normalEstimation.compute(*normals);
+
+    /*
+    ROS_INFO("Trying to plot ");
+    // IN CASE iF WANTED TO VISUALIZE THEM (DOES NOT WORK? )
+    boost::shared_ptr<pcl::visualization::PCLVisualizer> viewer (new pcl::visualization::PCLVisualizer("Normals"));
+    viewer->addPointCloud<pcl::PointXYZ>(cloud, "cloud");
+    viewer->addPointCloudNormals<pcl::PointXYZ,pcl::Normal>(cloud,normals,20,0.03, "normals");
+
+    while(!viewer->wasStopped())
+    {
+        ROS_INFO("Plotting...");
+        viewer->spinOnce(100);
+        boost::this_thread::sleep(boost::posix_time::microseconds(100000));
+    }
+     */
 
 }

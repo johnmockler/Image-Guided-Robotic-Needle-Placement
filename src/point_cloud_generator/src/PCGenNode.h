@@ -8,6 +8,7 @@
 
 #include <boost/make_shared.hpp>
 
+// PCL specific includes
 #include <pcl/point_types.h>
 #include <pcl/point_cloud.h>
 #include <pcl/point_representation.h>
@@ -26,6 +27,14 @@
 
 #include <messages/ImageCapture.h>
 #include <tf/transform_listener.h>
+
+//Asan Added
+#include <pcl/filters/radius_outlier_removal.h>
+
+// Features extracting
+#include <pcl/features/integral_image_normal.h>
+#include <boost/thread/thread.hpp>
+
 
 //convenient typedefs
 //typedef pcl::PointXYZ PointT;
@@ -51,6 +60,7 @@ private:
     void formatTransform(tf::StampedTransform tfTransform, Eigen::Matrix4f &eigenTransform);
     void registerModel();
     void pcViewer(const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_src);
+    void Normal_Estimation(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud, pcl::PointCloud<pcl::Normal>::Ptr& normals);
 
 
 
@@ -62,6 +72,7 @@ private:
     pcl::PointCloud<pcl::PointXYZ>::Ptr  mostRecentCloud;
     pcl::PointCloud<pcl::PointXYZ>::Ptr scanResults;
 
+    pcl::PointCloud<pcl::Normal>::Ptr normals;
     tf::StampedTransform mostRecentTransform;
     tf::TransformListener listener;
 

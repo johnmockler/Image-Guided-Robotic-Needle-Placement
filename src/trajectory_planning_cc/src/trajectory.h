@@ -8,7 +8,7 @@
 class Trajectory
 {
     private:
-    float T_g = 1.0;
+    float T_g = 2.0;
     float V_MAX = 2.00 ;
     float A_MAX = 7.0;
     float T_i = 0.1;
@@ -26,7 +26,8 @@ class Trajectory
             std::vector<float> temp;
             if(initialA[i] == finalA[i])
             {
-                temp.assign(7,initialA[i]);
+                int n=(T_g/T_i)+1;
+                temp.assign(n,initialA[i]);
                 AngleSet.push_back(temp);
             }
             else

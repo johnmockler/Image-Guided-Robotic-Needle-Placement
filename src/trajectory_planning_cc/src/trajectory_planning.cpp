@@ -54,25 +54,31 @@ class TrajectoryPlanningCC
        Trajectory traj;
        for(int i=0;i<31;i++)
         {
+            //std::cout<<"Set :"<<i<<std::endl;
             std::vector<std::vector<float>> trajectory = traj.computeTrajectory(jointAngleSet[i],jointAngleSet[i+1]);
             for(int j=0; j< trajectory[0].size(); j++)
             {
                 std::vector<float> goal_position;
                 for(int k=0; k<7; k++)
                 {
-                    
                     goal_position.push_back(trajectory[k][j]);
+                    //std::cout<<trajectory[k][j]<<" ";
 
                 }
+                //std::cout<<std::endl;
                 std_msgs::Float64MultiArray msg;
                 msg.data.clear();
                 msg.data.insert(msg.data.end(), goal_position.begin(), goal_position.end());
                 traj_pub.publish(msg);
 
             }
+
+
             std_msgs::Float64MultiArray msgs;
             msgs.data.clear();
             msgs.data.insert(msgs.data.end(), jointAngleSet[i+1].begin(), jointAngleSet[i+1].end());
+            //msgs.data.insert(msgs.data.end(), jointAngleSet[i].begin(), jointAngleSet[i].end());
+            //traj_pub.publish(msgs);
             goal_pos_pub.publish(msgs);
             ros::Duration(2).sleep();
         } 
@@ -88,7 +94,7 @@ int main(int argc, char** argv)
   ros::init(argc, argv, "trajectory_planning");
   ros::NodeHandle n;
   TrajectoryPlanningCC tpObj(n);
-  ros::Rate loop(1000);
+  ros::Rate loop(500);
   while(ros::ok())
   {
     ros::spinOnce();

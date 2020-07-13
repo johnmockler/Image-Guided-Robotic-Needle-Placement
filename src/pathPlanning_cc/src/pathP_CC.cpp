@@ -13,6 +13,8 @@ class PathPlanningCC
     std::vector<std::vector<float>> jointAngleSet;
     std::vector <float> Bvec = {0.560,0.560,0.560,0.560,0.560,0.400,0.400,0.400,0.400,0.400,0.240,0.240,0.240,0.240,0.240};
     std::vector <float> Avec = {0.160,0.080,0.0,-0.080,-0.160,0.160,0.080,0.0,-0.080,-0.160,0.160,0.080,0.0,-0.080,-0.160};
+    //std::vector <float> Avec = {0.160,0.080,0.0};
+    //std::vector <float> Bvec = {0.560,0.560,0.560};
     std::vector <float> Cvec = {0.450,0.400};
     ros::NodeHandle n;
     ros::Subscriber inverseSubscriber;

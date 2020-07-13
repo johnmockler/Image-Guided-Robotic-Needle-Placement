@@ -304,11 +304,19 @@ class InverseKinematics
         jointAngles[1]=jointAngles[1]+0.423;
         jointAngles[3]=jointAngles[3]-0.934;
         jointAngles[5]=-(jointAngles[5]+0.5108);
-        jointAngles[6]=jointAngles[6]-1.5707;
+        if(jointAngles[6]>0.0)
+        {
+            jointAngles[6]=jointAngles[6]-1.5707;
+        }
+        else if(jointAngles[6]<0.0)
+        {
+            jointAngles[6]=jointAngles[6]+1.5707;
+        }
+        
         jointAngles[0]=0.0;
 
         std::vector<float> jointAn= getAngles(jointAngles);
-        std::cout<<jointAngles[0]<<" "<<jointAngles[1]<<" "<<jointAngles[2]<<" "<<jointAngles[3]<<" "<<jointAngles[4]<<" "<<jointAngles[5]<<" "<<jointAngles[6]<<std::endl;
+        //std::cout<<jointAngles[0]<<" "<<jointAngles[1]<<" "<<jointAngles[2]<<" "<<jointAngles[3]<<" "<<jointAngles[4]<<" "<<jointAngles[5]<<" "<<jointAngles[6]<<std::endl;
 
         std_msgs::Float64MultiArray msg;
         msg.data.clear();
@@ -320,14 +328,14 @@ class InverseKinematics
 };
 void jointStateCallback(const std_msgs::Float64MultiArray::ConstPtr& msg)
 {
-    std::cout<<"Entered IK callback"<<std::endl;
+    //std::cout<<"Entered IK callback"<<std::endl;
     std::vector<float> cordinates;
     std::vector<float> ja;
 
   for (size_t i = 0; i <3; i++)
   {
     cordinates.push_back(msg->data[i]);
-    std::cout<<msg->data[i]<<std::endl;
+    //std::cout<<msg->data[i]<<std::endl;
   }
   InverseKinematics inKinObj;
   ja=inKinObj.getInversK(cordinates);

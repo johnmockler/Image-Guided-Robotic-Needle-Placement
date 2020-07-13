@@ -41,7 +41,7 @@ class PathPlanningCC
                 msg.data.clear();
                 msg.data.insert(msg.data.end(), cord.begin(), cord.end());
                 cordinate_pub.publish(msg);
-                ros::Duration(1.0).sleep();
+                ros::Duration(0.2).sleep();
                 
 
                 //inverseSubscriber = n.subscribe("/joint_AnglesIK", 1, &PathPlanningCC::TargetAngCallback,this);

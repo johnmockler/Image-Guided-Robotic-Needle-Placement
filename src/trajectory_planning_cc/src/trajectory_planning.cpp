@@ -4,6 +4,7 @@
 #include <std_msgs/Float64MultiArray.h>
 #include <stdlib.h>
 #include <math.h>
+#include "trajectory.h"
 
 class TrajectoryPlanningCC
 {
@@ -11,83 +12,72 @@ class TrajectoryPlanningCC
     std::vector<std::vector<float>> jointAngleSet;
     ros::NodeHandle n;
     ros::Publisher traj_pub= n.advertise<std_msgs::Float64MultiArray>("/joint_position_example_controller_sim/joint_command", 1000);
+    ros::Publisher goal_pos_pub= n.advertise<std_msgs::Float64MultiArray>("/goal_position", 1000);
     ros::Subscriber jp_sub;
+    int count=1;
+    std::vector<float> init_position = {0,0,0,-0.08,0,0.0,0};
 
 
     public:
 
    TrajectoryPlanningCC(ros::NodeHandle nh):n(nh)
     {
+        jointAngleSet.push_back(init_position);
         jp_sub= n.subscribe("/joint_AnglesIK", 1, &TrajectoryPlanningCC::angleCallback,this);
 
     }
     void angleCallback(const std_msgs::Float64MultiArray::ConstPtr& msg)
     {
         
-        std::cout<<"entered CB"<<std::endl;
-        if(jointAngleSet.size()>29)
+        if(jointAngleSet.size()>30)
         {
-            std::cout<<"entered if"<<std::endl;
+            jointAngleSet.push_back(init_position);
             setAngles();
         }
-        else if(jointAngleSet.size()<=29)
+        else if(jointAngleSet.size()<=30)
         {
-            std::cout<<"entered sub cb"<<std::endl;
             std::vector<float> jointAngle;
             for(int i=0;i<7;i++)
             {
                 jointAngle.push_back(msg->data[i]);
-                std::cout<<"joint Angles :"<<jointAngle[i] <<std::endl;
+                
             }
             jointAngleSet.push_back(jointAngle);
-            std::cout<<"Joint set size :"<<jointAngleSet.size()<<std::endl;
-        }
-    
+            
+        } 
         
     }
 
 
      void setAngles()
     {
-        
-            std::cout<<"size of set achieved"<<std::endl;
-            for(int i=0;i<30;i++)
-           {
-               std::cout<<"set :"<<i<<std::endl;
-             std::vector<float> goal_position;
-             for(int j=0;j<7;j++)
-             {
-                std::cout<<jointAngleSet[i][j]<<std::endl;
-                goal_position.push_back(jointAngleSet[i][j]);
-                
-             }
-             std_msgs::Float64MultiArray msg;
-             msg.data.clear();
-             msg.data.insert(msg.data.end(), goal_position.begin(), goal_position.end());
-             traj_pub.publish(msg);
-
-
-             ros::Duration(5.0).sleep();
-           } 
-           ros::shutdown();       
-
-    }
-    void setFlow()
-    {
-        std::cout<<"entered flow"<<std::endl;
-        if(jointAngleSet.size()>29)
+       Trajectory traj;
+       for(int i=0;i<31;i++)
         {
-             std::cout<<"entered if"<<std::endl;
-            setAngles();
+            std::vector<std::vector<float>> trajectory = traj.computeTrajectory(jointAngleSet[i],jointAngleSet[i+1]);
+            for(int j=0; j< trajectory[0].size(); j++)
+            {
+                std::vector<float> goal_position;
+                for(int k=0; k<7; k++)
+                {
+                    
+                    goal_position.push_back(trajectory[k][j]);
 
-        }
-        else if(jointAngleSet.size()<=29)
-        {
-            
-            
-        }
-        
-        
+                }
+                std_msgs::Float64MultiArray msg;
+                msg.data.clear();
+                msg.data.insert(msg.data.end(), goal_position.begin(), goal_position.end());
+                traj_pub.publish(msg);
+
+            }
+            std_msgs::Float64MultiArray msgs;
+            msgs.data.clear();
+            msgs.data.insert(msgs.data.end(), jointAngleSet[i+1].begin(), jointAngleSet[i+1].end());
+            goal_pos_pub.publish(msgs);
+            ros::Duration(2).sleep();
+        } 
+        ros::shutdown();       
+
     }
 
 };
@@ -101,7 +91,6 @@ int main(int argc, char** argv)
   ros::Rate loop(1000);
   while(ros::ok())
   {
-    //tpObj.setFlow();
     ros::spinOnce();
     loop.sleep();
   }

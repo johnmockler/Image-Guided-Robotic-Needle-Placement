@@ -1,19 +1,24 @@
+
+
+
 #include <vector>
 #include <stdlib.h>
 #include <math.h>
 
 class Trajectory
 {
-    float T_g;
-    float V_MAX;
-    float A_MAX;
-    float T_i;
+    private:
+    float T_g = 1.0;
+    float V_MAX = 2.00 ;
+    float A_MAX = 7.0;
+    float T_i = 0.1;
 
+    public:
     Trajectory()
     {
 
     }
-    void computeTrajectory(std::vector<float>initialA, std::vector<float>finalA)
+    std::vector<std::vector<float>> computeTrajectory(std::vector<float>initialA, std::vector<float>finalA)
     {
         std::vector<std::vector<float>> AngleSet;
         for(int i=0;i<7;i++)
@@ -32,6 +37,7 @@ class Trajectory
             }
 
         }
+        return AngleSet;
 
     }
     std::vector<float> getAngles(float thetaS, float thetaG)
@@ -71,8 +77,7 @@ class Trajectory
         }
 
         float t_gm = T_g/T_i;
-        float
-        t_gm=t_gm - fmod(t_gm,1);
+        t_gm= t_gm - fmod(t_gm,1);
         interSet = AcDc(t_gm, v_sw, t_sw, thetaS, thetaG);
 
         return interSet;
@@ -111,3 +116,4 @@ class Trajectory
     }
 
 };
+

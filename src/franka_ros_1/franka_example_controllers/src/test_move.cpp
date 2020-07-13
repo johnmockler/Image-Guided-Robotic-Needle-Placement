@@ -15,18 +15,18 @@ private:
     double joint_move_dist_;
     int counter = 0;
     ros::Publisher command_pub = nh_.advertise<std_msgs::Float64MultiArray>("/joint_position_example_controller_sim/joint_command", 1000);
-    std::vector<double> init_position = {0,-0.5,0,-2.5,0,2,0};
+    std::vector<double> init_position = {0,0,0,-0.08,0,0.0,0};
     
 public:
 
     // Initialize
     RobotArm(ros::NodeHandle nh, double joint_move_dist): nh_(nh), num_joints_(7), joint_move_dist_(joint_move_dist)
     {
-        std::vector<double> position1 = {1.5,0.0,0,-0.5,0.0,0.0,0.0};
-        jointAngleSet.push_back(position1);
+        std::vector<double> position1 = {0.0,0.0,0,-0.5,0.0,0.0,0.0};
+        jointAngleSet.push_back(init_position);
 
         std::vector<double> position2 = {0.0,1.0,0.0,-0.5,-0,-0.0,0};
-        jointAngleSet.push_back(position2);
+        jointAngleSet.push_back(init_position);
 
        /* std::vector<double> position3 = {0,0,1.6,-0.5,0,0,0};
         jointAngleSet.push_back(position3);
@@ -49,7 +49,7 @@ public:
     void sendStepCommand()
     {
         
-           for(int i=0;i<2;i++)
+           for(int i=0;i<1;i++)
            {
              std::vector<float> goal_position;
              for(int j=0;j<7;j++)

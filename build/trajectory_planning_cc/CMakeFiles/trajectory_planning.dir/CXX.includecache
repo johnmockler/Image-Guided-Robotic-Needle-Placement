@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/home/rnm/rnm_group_2/src/trajectory_planning_cc/src/trajectory.h
+vector
+-
+stdlib.h
+-
+math.h
+-
+
 /home/rnm/rnm_group_2/src/trajectory_planning_cc/src/trajectory_planning.cpp
 ros/ros.h
 -
@@ -19,6 +27,8 @@ stdlib.h
 -
 math.h
 -
+trajectory.h
+/home/rnm/rnm_group_2/src/trajectory_planning_cc/src/trajectory.h
 
 /opt/ros/melodic/include/ros/advertise_options.h
 ros/forwards.h

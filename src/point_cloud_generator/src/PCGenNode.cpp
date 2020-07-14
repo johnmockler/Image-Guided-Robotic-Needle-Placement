@@ -102,7 +102,7 @@ bool PCGenNode::captureCloud(messages::ImageCapture::Request& req, messages::Ima
     {
         ROS_INFO("stitching point clouds...");
         stitchClouds();
-        registerModel();
+        //registerModel(cloud);
 
     }
 
@@ -139,10 +139,185 @@ void PCGenNode::stitchClouds()
 }
 
 //To do. Convert Stl model to a point cloud, then use the ICP method to find transformation. finally find the target in base coords.
-void PCGenNode::registerModel()
+void PCGenNode::registerModel(const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud)
 {
-    return;
+    //Segmentation part. Extract planes and prism data from cloud.
+    pcl::PointCloud<pcl::PointXYZ>::Ptr plane(new pcl::PointCloud<pcl::PointXYZ>);
+    pcl::PointCloud<pcl::PointXYZ>::Ptr convexHull(new pcl::PointCloud<pcl::PointXYZ>);
+    pcl::PointCloud<pcl::PointXYZ>::Ptr objects(new pcl::PointCloud<pcl::PointXYZ>);
+
+    /////SEGMENTATION
+    //Get the plane model, if present (cylinders could be also extracted
+    pcl::ModelCoefficients::Ptr coefficients (new pcl::ModelCoefficients);
+
+    pcl::SACSegmentation<pcl::PointXYZ> segmentation;
+    segmentation.setInputCloud(cloud);
+    segmentation.setModelType(pcl::SACMODEL_PLANE); // you can detect anyother types of segmentations
+    segmentation.setMethodType(pcl::SAC_RANSAC);
+    segmentation.setDistanceThreshold(0.01);
+    segmentation.setOptimizeCoefficients(true);
+    pcl::PointIndices::Ptr planeIndices (new pcl::PointIndices);
+    segmentation.segment(*planeIndices, *coefficients); //return Indices and Coefficients of detected plane
+
+    if (planeIndices->indices.size() ==0)
+        std::cout<< "Could not find a plane in the scene, try out Cylinder Model "<<std::endl;
+    else
+        {
+        //Copy the points of the plane to a new cloud
+        //Extract planes from cloud and save a "plane"
+        pcl::ExtractIndices<pcl::PointXYZ> extract;
+        extract.setInputCloud(cloud);
+        extract.setIndices(planeIndices);
+        extract.filter(*plane);
+
+        // Retrieve the convex hull (draw a convex hull box around plane)
+        pcl::ConvexHull<pcl::PointXYZ> hull;
+        hull.setInputCloud(plane);
+        //Make sure that the resulting hull is bidemensional
+        hull.setDimension(2);
+        hull.reconstruct(*convexHull);
+
+        //Redunant check.
+        if (hull.getDimension() == 2)
+        {
+            //Prism object.
+            pcl::ExtractPolygonalPrismData<pcl::PointXYZ> prism;
+            prism.setInputCloud(cloud);
+            prism.setInputPlanarHull(convexHull);
+            //first parameter: minimum Z value. Set the 0, segmets lying on the plane (can be negative)
+            ////second paremter: maximum Z value, set to 10 cm. ////Tune it according to the height of the objects you expect/
+            prism.setHeightLimits(0.0f,0.1f);
+            pcl::PointIndices::Ptr objectIndices( new pcl::PointIndices);
+            prism.segment(*objectIndices); // find object indices of prism
+
+            //Get and show all points retrieved by the hull.
+
+            extract.setIndices(objectIndices);
+            extract.filter(*objects);
+
+            // Visualization of the segmented out.
+
+            pcl::visualization::CloudViewer viewerObjects("Objects on table");
+            viewerObjects.showCloud(objects);
+            while(!viewerObjects.wasStopped())
+            {
+                // Do nothings but wait
+            }
+        }
+        else
+            std::cout<< "The chosen hull is not planar." <<std::endl;
+        }
+
+    ////COMPUTING DESCRIPTORS
+    //// OUR - CVFH
+    //// Input: Points (cluster), Normals, Search method, Angle threshold, Curvature threshold, [Normalize bins], [Cluster tolerance], [Minimum points], [Axis ratio]
+    //// Output OUR-CVFH descriptors
+    // Cloud for storing the object.
+    //pcl::PointCloud<pcl::PointXYZ>::Ptr object(new pcl::PointCloud<pcl::PointXYZ>);
+    //Object for storing the normals.
+    pcl::PointCloud<pcl::Normal>::Ptr normals(new pcl::PointCloud<pcl::Normal>);
+    //Object for storing the OUR-CVFH Descriptors.
+    pcl::PointCloud<pcl::VFHSignature308>::Ptr descriptors( new pcl::PointCloud<pcl::VFHSignature308>);
+
+    //Estimate the normals;
+    pcl::NormalEstimation<pcl::PointXYZ,pcl::Normal> normalEstimation;
+    normalEstimation.setInputCloud(objects);
+    normalEstimation.setRadiusSearch(0.03);
+    pcl::search::KdTree<pcl::PointXYZ>::Ptr kdtree(new pcl::search::KdTree<pcl::PointXYZ>);
+    normalEstimation.setSearchMethod(kdtree);
+    normalEstimation.compute(*normals);
+
+    //OUR-CVFH Estimation object.
+    pcl::OURCVFHEstimation<pcl::PointXYZ, pcl::Normal, pcl::VFHSignature308>  ourcvfh;
+    ourcvfh.setInputCloud(objects);
+    ourcvfh.setInputNormals(normals);
+    ourcvfh.setSearchMethod(kdtree);
+    ourcvfh.setEPSAngleThreshold(5.0/180.0 * M_PI); // 5 degree;
+    ourcvfh.setCurvatureThreshold(1.0);
+    ourcvfh.setNormalizeBins(false);
+    //Set the minimum axis ration between the SGURF axes. At the disambiguation phase;
+    //this will decide if additional Reference Frames need to be created, if ambiguos.
+    ourcvfh.setAxisRatio(0.8);
+
+    ourcvfh.compute(*descriptors);
+
+    /*
+    ////PCLHistogramVisualizer
+    // Plotter object.
+    pcl::visualization::PCLHistogramVisualizer viewer;
+    // We need to set the size of the descriptor beforehand.
+    viewer.addFeatureHistogram(*descriptors, 308);
+
+    //PCLPlotter
+    // Plotter object.
+    pcl::visualization::PCLPlotter plotter;
+    // We need to set the size of the descriptor beforehand.
+    plotter.addFeatureHistogram(*descriptors, 308);
+    viewer.spin();
+    */
+
+    ////CRH (Camera Roll Histogram)
+    // A handy typedef.
+    //typedef pcl::Histogram<90> CRH90;
+
+    // Object for storing the CRH.
+    pcl::PointCloud<pcl::Histogram<90>>::Ptr histogram(new pcl::PointCloud<pcl::Histogram<90> >);
+
+    // CRH estimation object.
+    pcl::CRHEstimation<pcl::PointXYZ,pcl::Normal, pcl::Histogram<90>> crh;
+    crh.setInputCloud(objects);
+    crh.setInputNormals(normals);
+    Eigen::Vector4f centroid;
+    pcl::compute3DCentroid(*objects, centroid);
+    crh.setCentroid(centroid);
+
+    //Compute the CRH.
+    crh.compute(*histogram);
+
+    /*
+    ////MATCHING
+    // Object for storing the SHOT descriptors for the model.
+    pcl::PointCloud<pcl::SHOT352>::Ptr modelDescriptors(new pcl::PointCloud<pcl::SHOT352>());
+
+    if (pcl::io::loadPCDFile<pcl::SHOT352>("skeleton.pcd", *modelDescriptors) != 0)
+    {
+        std::cout<<"Could load skeleton.pcd" <<std::endl;
+        std::cout<<"Matching with skeleton could not be done"<<std::endl;
+        //// maybe I should write some code for pre processing and downsampling???
+    }
+
+    // A kd-tree object that uses the FLANN libary for fast search of Nearest neighbors
+
+    pcl::KdTreeFLANN<pcl::SHOT352> matching;
+    matching.setInputCloud(modelDescriptors);
+    // A Correspondence object stores the indices of the query and the match,
+    // and the distance/weight.
+    pcl::CorrespondencesPtr correspondences(new pcl::Correspondences());
+
+    // Check every descriptor computed for the scene.
+    for (size_t i=0; i <objects->size(); ++i)
+    {
+        std::vector<int> neighbors(1);
+        std::vector<float> squaredDistances(1);
+        // Ignore NaNs.
+        if (pcl_isfinite(descriptors->at(i).descriptor[0]))
+        {
+            // Find the nearest neighbor (in descriptor space)...
+            int neighborCount = matching.nearestKSearch(objects->at(i), 1, neighbors, squaredDistances);
+            // ...and add a new correspondence if the distance is less than a threshold
+            // (SHOT distances are between 0 and 1, other descriptors use different metrics).
+            if (neighborCount == 1 && squaredDistances[0] < 0.25f)
+            {
+                pcl::Correspondence correspondence(neighbors[0], static_cast<int>(i), squaredDistances[0]);
+                correspondences->push_back(correspondence);
+            }
+        }
+    }
+    std::cout << "Found " << correspondences->size() << " correspondences." << std::endl;
+     */
+
 }
+
 
 //Take two point clouds, and find the transformation between them. Output is the merged point cloud. 
 void PCGenNode::pairAlign(const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_src, const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_tgt, pcl::PointCloud<pcl::PointXYZ>::Ptr output, Eigen::Matrix4f &final_transform)
@@ -204,16 +379,6 @@ void PCGenNode::formatTransform(tf::StampedTransform tfTransform, Eigen::Matrix4
 //Cloud viewer gives a library error when used. Perhaps try the pcl::Visualizer or w/e?
 void PCGenNode::pcViewer(const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_src)
 {
-    //pcl::visualization::CloudViewer viewer("Simple Cloud Viewer");
-
-
-    //pcl::PointCloud<pcl::PointXYZRGB>::Ptr ptrCloud(&cloud_src);
-
-
-    //viewer.showCloud (cloud_src);
-
-
-
 }
 
 

@@ -30,6 +30,27 @@
 
 //Asan Added
 #include <pcl/filters/radius_outlier_removal.h>
+#include <pcl/io/pcd_io.h>
+#include <pcl/sample_consensus/method_types.h>
+#include <pcl/sample_consensus/model_types.h>
+#include <pcl/segmentation/sac_segmentation.h>
+#include <pcl/filters/extract_indices.h>
+#include <pcl/surface/convex_hull.h>
+#include <pcl/segmentation/extract_polygonal_prism_data.h>
+#include <pcl/visualization/cloud_viewer.h>
+
+#include <pcl/io/pcd_io.h>
+#include <pcl/features/normal_3d.h>
+#include <pcl/features/our_cvfh.h>
+#include <pcl/visualization/histogram_visualizer.h>
+#include <pcl/visualization/pcl_plotter.h>
+#include <pcl/common/centroid.h>
+#include <pcl/features/crh.h>
+#include <pcl/io/pcd_io.h>
+
+#include <pcl/features/shot.h>
+#include <pcl/registration/sample_consensus_prerejective.h>
+
 
 // Features extracting
 #include <pcl/features/integral_image_normal.h>
@@ -58,7 +79,7 @@ private:
     void pairAlign(const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_src, const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_tgt, pcl::PointCloud<pcl::PointXYZ>::Ptr output, Eigen::Matrix4f &final_transform);
     void listenTransform();
     void formatTransform(tf::StampedTransform tfTransform, Eigen::Matrix4f &eigenTransform);
-    void registerModel();
+    void registerModel(const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud);
     void pcViewer(const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_src);
     void Normal_Estimation(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud, pcl::PointCloud<pcl::Normal>::Ptr& normals);
 
@@ -69,7 +90,7 @@ private:
 
     //Variables here
     bool cloudProcessed;
-    pcl::PointCloud<pcl::PointXYZ>::Ptr  mostRecentCloud;
+    pcl::PointCloud<pcl::PointXYZ>::Ptr mostRecentCloud;
     pcl::PointCloud<pcl::PointXYZ>::Ptr scanResults;
 
     pcl::PointCloud<pcl::Normal>::Ptr normals;

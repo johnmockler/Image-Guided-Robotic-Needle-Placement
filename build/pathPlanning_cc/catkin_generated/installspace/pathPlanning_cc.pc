@@ -1,0 +1,8 @@
+prefix=/home/rnm/rnm_group_2/install
+
+Name: pathPlanning_cc
+Description: Description of pathPlanning_cc
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -381,7 +381,7 @@ OPENNI_INCLUDE_DIRS:PATH=/usr/include/ni
 OPENNI_LIBRARY:FILEPATH=/usr/lib/libOpenNI.so
 
 //The directory containing a CMake configuration file for OpenCV.
-OpenCV_DIR:PATH=/usr/local/lib/cmake/opencv4
+OpenCV_DIR:PATH=/usr/share/OpenCV
 
 //path to 2d headers
 PCL_2D_INCLUDE_DIR:PATH=/usr/include/pcl-1.8
@@ -807,7 +807,7 @@ geometry_msgs_DIR:PATH=/opt/ros/melodic/share/geometry_msgs/cmake
 gmock_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/gtest/googlemock
 
 //Dependencies for the target
-gmock_LIB_DEPENDS:STATIC=general;-lpthread;
+gmock_LIB_DEPENDS:STATIC=general;-pthread;
 
 //Value Computed by CMake
 gmock_SOURCE_DIR:STATIC=/usr/src/googletest/googlemock
@@ -816,7 +816,7 @@ gmock_SOURCE_DIR:STATIC=/usr/src/googletest/googlemock
 gmock_build_tests:BOOL=OFF
 
 //Dependencies for the target
-gmock_main_LIB_DEPENDS:STATIC=general;-lpthread;
+gmock_main_LIB_DEPENDS:STATIC=general;-pthread;
 
 //Value Computed by CMake
 googletest-distribution_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/gtest
@@ -828,7 +828,7 @@ googletest-distribution_SOURCE_DIR:STATIC=/usr/src/googletest
 gtest_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/gtest/googlemock/gtest
 
 //Dependencies for the target
-gtest_LIB_DEPENDS:STATIC=general;-lpthread;
+gtest_LIB_DEPENDS:STATIC=general;-pthread;
 
 //Value Computed by CMake
 gtest_SOURCE_DIR:STATIC=/usr/src/googletest/googletest
@@ -850,7 +850,7 @@ gtest_force_shared_crt:BOOL=OFF
 gtest_hide_internal_symbols:BOOL=OFF
 
 //Dependencies for the target
-gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
+gtest_main_LIB_DEPENDS:STATIC=general;-pthread;general;gtest;
 
 //The directory containing a CMake configuration file for hardware_interface.
 hardware_interface_DIR:PATH=/opt/ros/melodic/share/hardware_interface/cmake
@@ -1212,7 +1212,7 @@ DSSDK_LIBRARY_turbojpeg-ADVANCED:INTERNAL=1
 //Details about finding Flann
 FIND_PACKAGE_MESSAGE_DETAILS_Flann:INTERNAL=[/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a][/usr/include][v()]
 //Details about finding OpenCV
-FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr/local][v4.4.0()]
+FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr][v3.2.0()]
 //Details about finding OpenNI2
 FIND_PACKAGE_MESSAGE_DETAILS_OpenNI2:INTERNAL=[/usr/lib/libOpenNI2.so][/usr/include/openni2][v()]
 //Details about finding PCL

@@ -101,6 +101,7 @@ bool PCGenNode::captureCloud(messages::ImageCapture::Request& req, messages::Ima
     else if (req.x == true && cloudProcessed == false)
     {
         ROS_INFO("stitching point clouds...");
+        cloudProcessed = true;
         stitchClouds();
         registerModel();
 
@@ -135,6 +136,11 @@ void PCGenNode::stitchClouds()
     }
 
     scanResults = target;
+
+    pcl::visualization::CloudViewer viewer ("Simple Cloud Viewer");
+    viewer.showCloud (scanResults);
+    //pcl::io::savePCDFile ("test_pcd.pcd", *scanResults);
+
 
 }
 

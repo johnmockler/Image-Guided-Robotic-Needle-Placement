@@ -11,11 +11,11 @@ class PathPlanningCC
     private:
 
     std::vector<std::vector<float>> jointAngleSet;
-    std::vector <float> Bvec = {0.560,0.560,0.560,0.560,0.560,0.400,0.400,0.400,0.400,0.400,0.240,0.240,0.240,0.240,0.240};
-    std::vector <float> Avec = {0.160,0.080,0.0,-0.080,-0.160,0.160,0.080,0.0,-0.080,-0.160,0.160,0.080,0.0,-0.080,-0.160};
-    //std::vector <float> Avec = {0.160,0.080,0.0};
-    //std::vector <float> Bvec = {0.560,0.560,0.560};
-    std::vector <float> Cvec = {0.450,0.400};
+    //std::vector <float> Bvec = {0.560,0.560,0.560,0.560,0.560,0.400,0.400,0.400,0.400,0.400,0.240,0.240,0.240,0.240,0.240};
+    //std::vector <float> Avec = {0.160,0.080,0.0,-0.080,-0.160,0.160,0.080,0.0,-0.080,-0.160,0.160,0.080,0.0,-0.080,-0.160};
+    std::vector <float> Avec = {0.0,0.080,0.160};
+    std::vector <float> Bvec = {0.560,0.560,0.560};
+    std::vector <float> Cvec = {0.450};
     ros::NodeHandle n;
     ros::Subscriber inverseSubscriber;
     ros::Publisher cordinate_pub = n.advertise<std_msgs::Float64MultiArray>("/target_Cordinate", 1000);
@@ -29,7 +29,7 @@ class PathPlanningCC
     }
     void getJointAngles()
     {
-        //std::cout<<"entered get joint Angles"<<std::endl;
+        
         for(int i=0;i<Cvec.size();i++)
         {
             for(int j=0;j<Avec.size();j++)
@@ -42,18 +42,12 @@ class PathPlanningCC
                 std_msgs::Float64MultiArray msg;
                 msg.data.clear();
                 msg.data.insert(msg.data.end(), cord.begin(), cord.end());
-                cordinate_pub.publish(msg);
                 ros::Duration(0.2).sleep();
+                cordinate_pub.publish(msg);
                 
-
-                //inverseSubscriber = n.subscribe("/joint_AnglesIK", 1, &PathPlanningCC::TargetAngCallback,this);
+                
             }
         }
-        /*if(jointAngleSet.size()>29)
-        {
-            std::cout<<"Size greater than 30"<<std::endl;
-            executePP();
-        }*/
         
     }
     void TargetAngCallback(const std_msgs::Float64MultiArray::ConstPtr& msg)

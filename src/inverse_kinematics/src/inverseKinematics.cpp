@@ -38,12 +38,30 @@ class InverseKinematics
      cv::Mat Tf_04;
      cv::Mat T_7;
      cv::Mat T_F;
+     ros::Subscriber sub;
      ros::NodeHandle nh;
      ros::Publisher command_pub = nh.advertise<std_msgs::Float64MultiArray>("/joint_AnglesIK", 1000);
     
     public: 
-    InverseKinematics()
+    InverseKinematics(ros::NodeHandle n):nh(n)
     {
+        sub = nh.subscribe("/target_Cordinate", 1, &InverseKinematics::jointStateCallback,this);
+
+    }
+    
+    void jointStateCallback(const std_msgs::Float64MultiArray::ConstPtr& msg)
+    {
+        //std::cout<<"Entered IK callback"<<std::endl;
+        std::vector<float> cordinates;
+        std::vector<float> ja;
+
+        for (size_t i = 0; i <3; i++)
+        {
+            cordinates.push_back(msg->data[i]);
+            //std::cout<<msg->data[i]<<std::endl;
+        }
+  
+        ja=getInversK(cordinates);
 
     }
 
@@ -304,13 +322,41 @@ class InverseKinematics
         jointAngles[1]=jointAngles[1]+0.423;
         jointAngles[3]=jointAngles[3]-0.934;
         jointAngles[5]=-(jointAngles[5]+0.5108);
-        if(jointAngles[6]>0.0)
+        if(jointAngles[6]>0)
         {
-            jointAngles[6]=jointAngles[6]-1.5707;
+           
+            if(jointAngles[6] > 0.0001)
+            {
+                
+                jointAngles[6]=jointAngles[6]-1.5707;
+                if(jointAngles[6]<0.001)
+                {
+                    jointAngles[6] = 0.0;
+                }
+            }
+            else
+            {
+                jointAngles[6] = 0.0;
+                
+            }
+            
         }
-        else if(jointAngles[6]<0.0)
+        if(jointAngles[6]<0)
         {
-            jointAngles[6]=jointAngles[6]+1.5707;
+
+             if(jointAngles[6] > -0.001)
+            {
+
+                jointAngles[6]= 1.5707;
+            }
+            else
+            {
+                jointAngles[6]=jointAngles[6]+1.5707;
+                if(jointAngles[6]> -0.001)
+                {
+                    jointAngles[6] = 0.0;
+                }
+            }
         }
         
         jointAngles[0]=0.0;
@@ -325,32 +371,22 @@ class InverseKinematics
         return jointAn;
 
     }
+
+
 };
-void jointStateCallback(const std_msgs::Float64MultiArray::ConstPtr& msg)
-{
-    //std::cout<<"Entered IK callback"<<std::endl;
-    std::vector<float> cordinates;
-    std::vector<float> ja;
-
-  for (size_t i = 0; i <3; i++)
-  {
-    cordinates.push_back(msg->data[i]);
-    //std::cout<<msg->data[i]<<std::endl;
-  }
-  InverseKinematics inKinObj;
-  ja=inKinObj.getInversK(cordinates);
-
-}
 
 int main(int argc, char** argv)
 {
 
   ros::init(argc, argv, "inverseKinematics");
-  ros::NodeHandle nh;
-  InverseKinematics inKinObj; 
-  ros::Subscriber sub = nh.subscribe("/target_Cordinate", 1, jointStateCallback);
-  ros::spin();
-  
+  ros::NodeHandle n;
+  InverseKinematics inKinObj(n); 
+  ros::Rate loop_rate(10);
+    while (ros::ok())
+  {
+      loop_rate.sleep();
+      ros::spinOnce();
+  } 
   return 0;
 }
 

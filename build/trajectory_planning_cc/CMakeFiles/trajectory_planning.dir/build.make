@@ -98,8 +98,8 @@ trajectory_planning_EXTERNAL_OBJECTS =
 /home/rnm/rnm_group_2/devel/lib/trajectory_planning_cc/trajectory_planning: /opt/ros/melodic/lib/librosconsole_backend_interface.so
 /home/rnm/rnm_group_2/devel/lib/trajectory_planning_cc/trajectory_planning: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
 /home/rnm/rnm_group_2/devel/lib/trajectory_planning_cc/trajectory_planning: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/rnm/rnm_group_2/devel/lib/trajectory_planning_cc/trajectory_planning: /opt/ros/melodic/lib/libroscpp_serialization.so
 /home/rnm/rnm_group_2/devel/lib/trajectory_planning_cc/trajectory_planning: /opt/ros/melodic/lib/libxmlrpcpp.so
+/home/rnm/rnm_group_2/devel/lib/trajectory_planning_cc/trajectory_planning: /opt/ros/melodic/lib/libroscpp_serialization.so
 /home/rnm/rnm_group_2/devel/lib/trajectory_planning_cc/trajectory_planning: /opt/ros/melodic/lib/librostime.so
 /home/rnm/rnm_group_2/devel/lib/trajectory_planning_cc/trajectory_planning: /opt/ros/melodic/lib/libcpp_common.so
 /home/rnm/rnm_group_2/devel/lib/trajectory_planning_cc/trajectory_planning: /usr/lib/x86_64-linux-gnu/libboost_system.so

@@ -9,9 +9,9 @@ PCGenNode::PCGenNode()
 {
 
     cloudProcessed = true;
-   /*
+   
     pcl::PointCloud<pcl::PointXYZ>::Ptr scanned_scene(new PointCloud<pcl::PointXYZ>);
-    pcl::io::loadPCDFile<pcl::PointXYZ>("test_pcd.pcd", *scanned_scene);
+    pcl::io::loadPCDFile<pcl::PointXYZ>("/home/rnm/Documents/test_pcd.pcd", *scanned_scene);
      
     pcl::PointCloud<pcl::PointXYZ>::Ptr model_Skeleton(new PointCloud<pcl::PointXYZ>);
 
@@ -20,10 +20,11 @@ PCGenNode::PCGenNode()
    
     scaleCloud(model_Skeleton);
 
+    alignTemplate(scanned_scene, model_skeleton);
 
-    registerModel(scanned_scene, model_Skeleton);
-    localRegistration(model_Skeleton, scanned_scene);
-    */
+    //registerModel(scanned_scene, model_Skeleton);
+    //localRegistration(model_Skeleton, scanned_scene);
+    
 
 
     
@@ -826,6 +827,70 @@ void PCGenNode::Normal_Estimation(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud, pcl
 
 }
  */
+    void PPCGenNode::computeSurfaceNormals(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud, pcl::PointCloud<pcl::Normal>::Ptr normals)
+    {
+        search_method = new pcl::search::KdTree<pcl::PointXYZ>;
+        normal_radius = 0.02f;
+        pcl::NormalEstimation<pcl::PointXYZ, pcl::Normal> norm_est;
+        norm_est.setInputCloud(cloud);
+        norm_est.setSearchMethod(search_method);
+        norm_est.setRadiusSearch(normal_radius);
+        norm_est.compute(*normals)
+    }
+
+    void PCGenNode::computeLocalFeatures(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud,pcl::PointCloud<pcl::Normal>::Ptr normals, pcl::PointCloud<pcl::FPFHSignature33>::Ptr features)
+    {
+        search_method = new pcl::search::KdTree<pcl::PointXYZ>;
+        feature_radius = 0.02f;
+        pcl::FPFHEstimation<pcl::PointXYZ, pcl::Normal, pcl::FPFHSignature33> fpfh_est;
+        fpfh_est.setInputCloud (cloud);
+        fpfh_est.setInputNormals (normals);
+        fpfh_est.setSearchMethod (search_method_xyz);
+        fpfh_est.setRadiusSearch (feature_radius);
+        fpfh_est.compute (*features);
+
+    }
+    void PCGenNode::alignTemplate(pcl::PointCloud<pcl::PointXYZ>::Ptr input_cloud, pcl::PointCloud<pcl::PointXYZ>::Ptr model_cloud)
+    {
+        min_sample_distance = 0.05f;
+        max_correspondence_distance = 0.01f*0.01f;
+        nr_iterations = 500;
+        pcl::SampleConsensusInitialAlignment<pcl::PointXYZ, pcl::PointXYZ, pcl::FPFHSignature33> sac_ia;
+        sac_ia.setMinSampleDistance(min_sample_distance);
+        sac_ia_.setMaxCorrespondenceDistance (max_correspondence_distance);
+        sac_ia_.setMaximumIterations (nr_iterations);       
+
+        //Process and set input cloud
+        pcl::PointCloud<pcl::Normal>::Ptr input_normals = (new pcl::PointCloud<pcl::Normal>);
+        pcl::PointCloud<pcl::FPFHSignature33>::Ptr input_features = (new pcl::PointCloud<pcl::FPFHSignature33>);
+        
+        computeSurfaceNormals(input_cloud, input_normals);
+        computeLocalFeatures(input_cloud, input_normals, input_features);
+
+        sac_ia.setInputTarget(input_cloud);
+        sac_ia.setTargetFeatures(input_features);
+
+        //Process and set target cloud
+        pcl::PointCloud<pcl::Normal>::Ptr model_normals = (new pcl::PointCloud<pcl::Normal>);
+        pcl::PointCloud<pcl::FPFHSignature33>::Ptr model_features = (new pcl::PointCloud<pcl::FPFHSignature33>);
+        
+        computeSurfaceNormals(model_cloud, model_normals);
+        computeLocalFeatures(model_cloud, model_normals, model_features);
+
+        sac_ia.setInputSource(model_cloud);
+        sac_ia.setSourceFeatures(model_features);
+
+        pcl::PointCloud<pcl::PointXYZ> registration_output;
+        sac_ia_.align (registration_output);
+
+        ROS_INFO("aligned with fitness score" + sac_ia.getFitnessScore(max_correspondence_distance));
+
+        pcl::PointCloud<pcl::PointXYZ> transformed_cloud;
+
+        pcl::transformPointCloud(*model_cloud, transformed_cloud, sac_ia.getFinalTransformation());
+        transformed_cloud += *input_cloud;
+        pcl::io::savePCDFileBinary ("/home/rnm/Desktop/alignment_output.pcd", transformed_cloud);
+    }
 
 
 

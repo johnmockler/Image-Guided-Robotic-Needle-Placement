@@ -8,6 +8,7 @@
 #include <std_msgs/Float64MultiArray.h>
 #include <stdlib.h>
 #include <math.h>
+#include <string>
 #include <tf/transform_listener.h>
 #include <tf/transform_broadcaster.h>
 #include <geometry_msgs/Point.h>
@@ -22,6 +23,7 @@ class InverseKinematics
      std::vector<float> alpha={-M_PI/2,-M_PI/2,M_PI/2,-M_PI/2,-M_PI/2,M_PI/2,0};
      std::vector<float> a={-0.088,0,0.0825,-0.0825,0,0,0};
      float mat_dat[16]={0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0};
+     std::string id;
      float gamma;
      float alph;
      float zeta;
@@ -38,12 +40,37 @@ class InverseKinematics
      cv::Mat Tf_04;
      cv::Mat T_7;
      cv::Mat T_F;
+     ros::Subscriber sub;
+     ros::Subscriber type_sub;
      ros::NodeHandle nh;
      ros::Publisher command_pub = nh.advertise<std_msgs::Float64MultiArray>("/joint_AnglesIK", 1000);
     
     public: 
-    InverseKinematics()
+    InverseKinematics(ros::NodeHandle n):nh(n)
     {
+        type_sub = nh.subscribe("/execution_type",1,&InverseKinematics::executionCallback,this);
+        sub = nh.subscribe("/target_Cordinate", 1, &InverseKinematics::jointStateCallback,this);
+
+    }
+    void executionCallback(const std_msgs::String::ConstPtr &msg)
+    {
+        id= msg->data.c_str();
+
+    }
+    
+    void jointStateCallback(const std_msgs::Float64MultiArray::ConstPtr& msg)
+    {
+        //std::cout<<"Entered IK callback"<<std::endl;
+        std::vector<float> cordinates;
+        std::vector<float> ja;
+
+        for (size_t i = 0; i <3; i++)
+        {
+            cordinates.push_back(msg->data[i]);
+            //std::cout<<msg->data[i]<<std::endl;
+        }
+  
+        ja=getInversK(cordinates);
 
     }
 
@@ -250,24 +277,23 @@ class InverseKinematics
         //std::cout<<"num :"<<num<<std::endl;
         
         float den=2.0*l3*l35;
-       // std::cout<<"den :"<<den<<std::endl;
         beta=aCos(num/den);
         num=pow(l3,2)+pow(l5,2)-pow(l35,2);
         den= 2.0*l3*l5;
         delta=aCos(num/den);
-        //std::cout<<"alpha :"<<alph<<" beta :"<<beta<<" gamma :"<<gamma<<" zeta :"<<zeta<<" delta :"<<delta<<" epsilon :"<<epsilon<<std::endl;
-        //std::cout<<"l3 :"<<l3<<" l5 :"<<l5<<" l_35 :"<<l35<<std::endl; 
+
 
     }
-    std::vector<float> getAngles(float JAinv[7])
+    std::vector<float> getAngles(float JAinv[7],std::vector<float> pos)
     {
         std::vector<float> angles;
+        std::vector<float> newAngles;
         for(int i=0;i<7;i++)
         {
             angles.push_back(-JAinv[6-i]);
-            //angles.push_back(i);
         }
-        return angles;
+        newAngles= getnewAngles(pos,angles,id);
+        return newAngles;
     }
     std::vector<float> getInversK(std::vector<float> posVector)
     {
@@ -304,19 +330,47 @@ class InverseKinematics
         jointAngles[1]=jointAngles[1]+0.423;
         jointAngles[3]=jointAngles[3]-0.934;
         jointAngles[5]=-(jointAngles[5]+0.5108);
-        if(jointAngles[6]>0.0)
+        if(jointAngles[6]>0)
         {
-            jointAngles[6]=jointAngles[6]-1.5707;
+           
+            if(jointAngles[6] > 0.0001)
+            {
+                
+                jointAngles[6]=jointAngles[6]-1.5707;
+                if(jointAngles[6]<0.001)
+                {
+                    jointAngles[6] = 0.0;
+                }
+            }
+            else
+            {
+                jointAngles[6] = 0.0;
+                
+            }
+            
         }
-        else if(jointAngles[6]<0.0)
+        if(jointAngles[6]<0)
         {
-            jointAngles[6]=jointAngles[6]+1.5707;
+
+             if(jointAngles[6] > -0.001)
+            {
+
+                jointAngles[6]= 1.5707;
+            }
+            else
+            {
+                jointAngles[6]=jointAngles[6]+1.5707;
+                if(jointAngles[6]> -0.001)
+                {
+                    jointAngles[6] = 0.0;
+                }
+            }
         }
         
         jointAngles[0]=0.0;
 
-        std::vector<float> jointAn= getAngles(jointAngles);
-        //std::cout<<jointAngles[0]<<" "<<jointAngles[1]<<" "<<jointAngles[2]<<" "<<jointAngles[3]<<" "<<jointAngles[4]<<" "<<jointAngles[5]<<" "<<jointAngles[6]<<std::endl;
+        std::vector<float> jointAn= getAngles(jointAngles, posVector);
+        //std::cout<<jointAn[0]<<" "<<jointAn[1]<<" "<<jointAn[2]<<" "<<jointAn[3]<<" "<<jointAn[4]<<" "<<jointAn[5]<<" "<<jointAn[6]<<std::endl;
 
         std_msgs::Float64MultiArray msg;
         msg.data.clear();
@@ -325,32 +379,50 @@ class InverseKinematics
         return jointAn;
 
     }
+        std::vector<float> getnewAngles(std::vector<float> cord, std::vector<float> angles,std::string id )
+    {
+        if(id=="camCalib")
+        {
+            angles[4]= -(M_PI/2) + (0.34906)*(cord[0]/0.160);
+            angles[6]=  (-0.785398 * (cord[1]-0.400)/0.160) - angles[0];
+            
+            return angles;
+
+        }
+        else if(id=="modScan")
+        {
+            angles[4] = -(M_PI/2) + 1.3962*(0.500-cord[2])/0.200;
+           
+            angles[6] = -angles[0]+ (0.78539*(cord[1]-0.325)/0.325);
+             if(cord[0]==-400)
+            {
+                angles[6]= angles[6] + 1.5707*(cord[1]-0.325)/0.325;
+            }
+            return angles;
+
+        }
+        else
+        {
+            return angles;
+        }
+        
+
+    }
+
 };
-void jointStateCallback(const std_msgs::Float64MultiArray::ConstPtr& msg)
-{
-    //std::cout<<"Entered IK callback"<<std::endl;
-    std::vector<float> cordinates;
-    std::vector<float> ja;
-
-  for (size_t i = 0; i <3; i++)
-  {
-    cordinates.push_back(msg->data[i]);
-    //std::cout<<msg->data[i]<<std::endl;
-  }
-  InverseKinematics inKinObj;
-  ja=inKinObj.getInversK(cordinates);
-
-}
 
 int main(int argc, char** argv)
 {
 
   ros::init(argc, argv, "inverseKinematics");
-  ros::NodeHandle nh;
-  InverseKinematics inKinObj; 
-  ros::Subscriber sub = nh.subscribe("/target_Cordinate", 1, jointStateCallback);
-  ros::spin();
-  
+  ros::NodeHandle n;
+  InverseKinematics inKinObj(n); 
+  ros::Rate loop_rate(10);
+    while (ros::ok())
+  {
+      loop_rate.sleep();
+      ros::spinOnce();
+  } 
   return 0;
 }
 

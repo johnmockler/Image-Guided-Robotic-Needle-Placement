@@ -59,7 +59,9 @@ trajectory_planning_cc/CMakeFiles/trajectory_planning.dir/src/trajectory_plannin
 trajectory_planning_cc/CMakeFiles/trajectory_planning.dir/src/trajectory_planning.cpp.o: /opt/ros/melodic/include/ros/wall_timer.h
 trajectory_planning_cc/CMakeFiles/trajectory_planning.dir/src/trajectory_planning.cpp.o: /opt/ros/melodic/include/ros/wall_timer_options.h
 trajectory_planning_cc/CMakeFiles/trajectory_planning.dir/src/trajectory_planning.cpp.o: /opt/ros/melodic/include/rosconsole/macros_generated.h
+trajectory_planning_cc/CMakeFiles/trajectory_planning.dir/src/trajectory_planning.cpp.o: /opt/ros/melodic/include/sensor_msgs/JointState.h
 trajectory_planning_cc/CMakeFiles/trajectory_planning.dir/src/trajectory_planning.cpp.o: /opt/ros/melodic/include/std_msgs/Float64MultiArray.h
+trajectory_planning_cc/CMakeFiles/trajectory_planning.dir/src/trajectory_planning.cpp.o: /opt/ros/melodic/include/std_msgs/Header.h
 trajectory_planning_cc/CMakeFiles/trajectory_planning.dir/src/trajectory_planning.cpp.o: /opt/ros/melodic/include/std_msgs/MultiArrayDimension.h
 trajectory_planning_cc/CMakeFiles/trajectory_planning.dir/src/trajectory_planning.cpp.o: /opt/ros/melodic/include/std_msgs/MultiArrayLayout.h
 trajectory_planning_cc/CMakeFiles/trajectory_planning.dir/src/trajectory_planning.cpp.o: /opt/ros/melodic/include/std_msgs/String.h

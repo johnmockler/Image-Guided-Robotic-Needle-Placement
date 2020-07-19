@@ -1,7 +1,0 @@
-<launch>
-
-    <node name="pathPlanning_Ca" pkg="pathPlanning_cc" type= "pathP_CC" output="screen" >
-    </node>
-
-
-</launch>

@@ -11,15 +11,15 @@ class PathPlanningCC
     private:
 
     std::vector<std::vector<float>> jointAngleSet;
-    std::vector <float> Bvec = {0.560,0.560,0.560,0.560,0.560,0.400,0.400,0.400,0.400,0.400,0.240,0.240,0.240,0.240,0.240};
-    std::vector <float> Avec = {0.160,0.080,0.0,-0.080,-0.160,0.160,0.080,0.0,-0.080,-0.160,0.160,0.080,0.0,-0.080,-0.160};
-    //std::vector <float> Avec = {0.160,0.080,0.0};
-    //std::vector <float> Bvec = {0.560,0.560,0.560};
-    std::vector <float> Cvec = {0.450,0.400};
+    //std::vector <float> Bvec = {0.560,0.560,0.560,0.560,0.560,0.400,0.400,0.400,0.400,0.400,0.240,0.240,0.240,0.240,0.240};
+    //std::vector <float> Avec = {0.160,0.080,0.0,-0.080,-0.160,-0.160,-0.080,0.0,0.080,0.160,0.160,0.080,0.0,-0.080,-0.160};
+    std::vector <float> Avec = {0.0,0.0,-0.080,-0.160};
+    std::vector <float> Bvec = {0.560,0.560,0.560,0.560};
+    std::vector <float> Cvec = {0.400};
     ros::NodeHandle n;
     ros::Subscriber inverseSubscriber;
     ros::Publisher cordinate_pub = n.advertise<std_msgs::Float64MultiArray>("/target_Cordinate", 1000);
-    ros::Publisher angles_pub = n.advertise<std_msgs::Float64MultiArray>("/joint_position_example_controller_sim/joint_command", 1000);
+    ros::Publisher type_pub = n.advertise<std_msgs::String>("/execution_type", 1000);
 
     public:
 
@@ -29,7 +29,7 @@ class PathPlanningCC
     }
     void getJointAngles()
     {
-        //std::cout<<"entered get joint Angles"<<std::endl;
+        
         for(int i=0;i<Cvec.size();i++)
         {
             for(int j=0;j<Avec.size();j++)
@@ -38,16 +38,23 @@ class PathPlanningCC
                 cord.push_back(Avec[j]);
                 cord.push_back(Bvec[j]);
                 cord.push_back(Cvec[i]);
+                
+                std_msgs::String id;
+                std::stringstream ss;
+                ss<<"camCalib";
+                id.data = ss.str();
+                type_pub.publish(id);
 
                 std_msgs::Float64MultiArray msg;
                 msg.data.clear();
                 msg.data.insert(msg.data.end(), cord.begin(), cord.end());
+                ros::Duration(0.3).sleep();
                 cordinate_pub.publish(msg);
-                ros::Duration(0.2).sleep();
+                
                 
             }
         }
-  
+        
     }
 
 };

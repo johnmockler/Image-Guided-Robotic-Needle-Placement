@@ -27,6 +27,8 @@ stdlib.h
 -
 math.h
 -
+string
+-
 tf/transform_listener.h
 -
 tf/transform_broadcaster.h

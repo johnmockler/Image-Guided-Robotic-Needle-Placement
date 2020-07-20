@@ -6,7 +6,7 @@
     </node>
     <node name="trajectory_planning" pkg="trajectory_planning_cc" type= "trajectory_planning" output="screen" >
     
-    <param name="setSize" type="int" value="3" />
+    <param name="setSize" type="int" value="29" />
     </node>
 
 

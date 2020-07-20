@@ -337,7 +337,7 @@ class InverseKinematics
             {
                 
                 jointAngles[6]=jointAngles[6]-1.5707;
-                if(jointAngles[6]<0.001)
+                if(jointAngles[6]<0.0001 && jointAngles[6] > -0.0001)
                 {
                     jointAngles[6] = 0.0;
                 }
@@ -349,10 +349,10 @@ class InverseKinematics
             }
             
         }
-        if(jointAngles[6]<0)
+        else if(jointAngles[6]<0)
         {
 
-             if(jointAngles[6] > -0.001)
+             if(jointAngles[6] > -0.0001)
             {
 
                 jointAngles[6]= 1.5707;
@@ -360,7 +360,7 @@ class InverseKinematics
             else
             {
                 jointAngles[6]=jointAngles[6]+1.5707;
-                if(jointAngles[6]> -0.001)
+                if(jointAngles[6]> -0.0001 && jointAngles[6] < 0.0001)
                 {
                     jointAngles[6] = 0.0;
                 }

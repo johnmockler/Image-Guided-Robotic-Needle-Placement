@@ -318,6 +318,7 @@ class InverseKinematics
        
        // jointAngles.push_back(j6);
         jointAngles[6]= atan2(Rf_47.at<float>(2,1),-Rf_47.at<float>(2,0));
+        
         //jointAngles.push_back(j7);
         jointAngles[1]=jointAngles[1]+0.423;
         jointAngles[3]=jointAngles[3]-0.934;
@@ -329,10 +330,12 @@ class InverseKinematics
             {
                 
                 jointAngles[6]=jointAngles[6]-1.5707;
-                if(jointAngles[6]<0.001)
+                if(jointAngles[6]<0.0001 && jointAngles[6]> -0.0001)
                 {
+                    
                     jointAngles[6] = 0.0;
                 }
+                
             }
             else
             {
@@ -341,10 +344,10 @@ class InverseKinematics
             }
             
         }
-        if(jointAngles[6]<0)
+        else if(jointAngles[6]<0)
         {
 
-             if(jointAngles[6] > -0.001)
+             if(jointAngles[6] > -0.0001)
             {
 
                 jointAngles[6]= 1.5707;
@@ -352,7 +355,7 @@ class InverseKinematics
             else
             {
                 jointAngles[6]=jointAngles[6]+1.5707;
-                if(jointAngles[6]> -0.001)
+                if(jointAngles[6]> -0.0001 && jointAngles[6] < 0.0001)
                 {
                     jointAngles[6] = 0.0;
                 }
@@ -362,7 +365,7 @@ class InverseKinematics
         jointAngles[0]=0.0;
 
         std::vector<float> jointAn= getAngles(jointAngles);
-        //std::cout<<jointAngles[0]<<" "<<jointAngles[1]<<" "<<jointAngles[2]<<" "<<jointAngles[3]<<" "<<jointAngles[4]<<" "<<jointAngles[5]<<" "<<jointAngles[6]<<std::endl;
+        //std::cout<<jointAn[0]<<" "<<jointAn[1]<<" "<<jointAn[2]<<" "<<jointAn[3]<<" "<<jointAn[4]<<" "<<jointAn[5]<<" "<<jointAn[6]<<std::endl;
 
         std_msgs::Float64MultiArray msg;
         msg.data.clear();

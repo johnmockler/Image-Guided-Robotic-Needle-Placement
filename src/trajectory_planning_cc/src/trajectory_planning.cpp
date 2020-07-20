@@ -33,12 +33,12 @@ class TrajectoryPlanningCC
     void angleCallback(const std_msgs::Float64MultiArray::ConstPtr& msg)
     {
         
-        if(jointAngleSet.size()>2)
+        if(jointAngleSet.size()>14)
         {
             //jointAngleSet.push_back(init_position);
             setAngles();
         }
-        else if(jointAngleSet.size()<=2)
+        else if(jointAngleSet.size()<=14)
         {
             //std::cout<<"Set :"<<std::endl;
             std::vector<float> jointAngle;
@@ -74,7 +74,7 @@ class TrajectoryPlanningCC
        if(pos<jointAngleSet.size())
         {
            // std::cout<<"Set Time :"<<ros::Time::now().toSec()<<std::endl;
-           //std::cout<<"Set :"<<i<<std::endl;
+           std::cout<<"Set :"<<pos<<std::endl;
             std::vector<std::vector<float>> trajectory = traj.computeTrajectory(jointStates,jointAngleSet[pos]);
             for(int j=0; j< trajectory[0].size(); j++)
             {

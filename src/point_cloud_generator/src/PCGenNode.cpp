@@ -11,18 +11,18 @@ PCGenNode::PCGenNode()
     cloudProcessed = true;
 
     
-   
+   /*
     pcl::PointCloud<pcl::PointXYZ>::Ptr scanned_scene(new PointCloud<pcl::PointXYZ>);
     pcl::io::loadPCDFile<pcl::PointXYZ>("/home/rnm/Documents/scan1.pcd", *scanned_scene);
     pcl::PointCloud<pcl::PointXYZ>::Ptr filtered_scene(new PointCloud<pcl::PointXYZ>);
 
-/*
+
     pcl::PassThrough<pcl::PointXYZ> filter;
 	filter.setInputCloud(scanned_scene);
 	// Filter out all points with Z values not in the [0-2] range.
 	filter.setFilterFieldName("z");
 	filter.setFilterLimits(0.0, 2.5);
-    */
+    
 	//filter.filter(*filtered_scene);
 
     pcl::PointCloud<pcl::PointXYZ>::Ptr model_skeleton(new PointCloud<pcl::PointXYZ>);
@@ -42,7 +42,7 @@ PCGenNode::PCGenNode()
     
     pcl::io::savePCDFile ("/home/rnm/Documents/plswork.pcd", *temp);
 
-
+    */
 
     
 }
@@ -80,72 +80,13 @@ bool PCGenNode::captureCloud(messages::ImageCapture::Request& req, messages::Ima
         {
             ROS_INFO("cloud has size 0...");
         }
-
-        /*
-        pcl::PointCloud<pcl::PointXYZ>::Ptr filteredCloud(new PointCloud<pcl::PointXYZ>);
-        pcl::PointCloud<pcl::PointXYZ>::Ptr filter_NaN(new PointCloud<pcl::PointXYZ>);
-
-        std::vector< int > indices;
-        //here we can use most recent cloud as output probably, to avoid creating a new variable
-        pcl::removeNaNFromPointCloud(*mostRecentCloud, *filter_NaN, indices);
-
-        //Outler removal (lonely points that are spread here and there in the cloud, like annoying mosquitoes
-        //There are pthe product of sensors inaccuracy (noise) which registers measrements where there should be any.
-        //Filter object (RadiusBased)
-        pcl::PointCloud<pcl::PointXYZ>::Ptr filtered_outler(new pcl::PointCloud<pcl::PointXYZ>);
-        RadiusOutlierRemoval<pcl::PointXYZ> filter_outler;
-        filter_outler.setInputCloud(filter_NaN);
-        //Every point must have 10 neighbors within 15cm, or it will be removed
-        filter_outler.setRadiusSearch(0.15);
-        filter_outler.setMinNeighborsInRadius(10);
-        filter_outler.filter(*filtered_outler);
-
-        pcl::PointCloud<pcl::PointXYZ>::Ptr filteredCloud(new pcl::PointCloud<pcl::PointXYZ>);
-
-        pcl::PassThrough<pcl::PointXYZ> filter;
-        filter.setInputCloud(filtered_outler);
-        // Filter out all points with Z values not in the [0-2] range.
-        filter.setFilterFieldName("z");
-        filter.setFilterLimits(0.0, 2.5);
-        filter.filter(*filteredCloud);
-
-        /*
-        //Resampling -Downsampling
-        pcl::PointCloud<pcl::PointXYZ>::Ptr filteredCloud(new pcl::PointCloud<pcl::PointXYZ>);
-        pcl::VoxelGrid<pcl::PointXYZ> filter_voxel;
-        filter_voxel.setInputCloud(filtered_outler);
-        // We set the size of every voxel to be 1x1x1cm
-        // (only one point per every cubic centimeter will survive).
-        filter_voxel.setLeafSize(0.001f,0.001f,0.001f);
-        filter_voxel.filter(*filteredCloud);
-        */
-        /*
-
-        //pcViewer(filteredCloud);
-
-        //Normal_Estimation(filteredCloud,normals);
-        cloudList.push_back(filteredCloud);
-        ROS_INFO("After pcViewer function");
-        
-        tf::StampedTransform base2gripper;
-        listener.lookupTransform("panda_link7", "panda_link0", ros::Time(0), base2gripper);
-        mostRecentTransform = base2gripper;
-        
-
-        
-        Eigen::Matrix4f convertedTransform;
-        formatTransform(mostRecentTransform, convertedTransform);
-        cloudTransforms.push_back(convertedTransform);
-        */
         
     }
     else if (req.x == true && cloudProcessed == true)
     {
 
         pcl::PointCloud<pcl::PointXYZ>::Ptr model_Skeleton(new PointCloud<pcl::PointXYZ>);
-
         pcl::io::loadPCDFile<pcl::PointXYZ>("/home/rnm/Documents/Skeleton.pcd", *model_Skeleton);
-        ROS_INFO("stitching point clouds...");
         stitchClouds();
 
         scaleCloud(model_Skeleton);
@@ -225,8 +166,9 @@ void PCGenNode::processCloud(MyCloud inputCloud, pcl::PointCloud<pcl::PointXYZ>:
 //Loop through all point clouds, and find correspondences between them. Output should be the 'Full' point cloud merged from all of the views.
 void PCGenNode::stitchClouds()
 {
-    //visualize cloud?
-    pcl::PointCloud<pcl::PointXYZ>::Ptr source(new PointCloud<pcl::PointXYZ>), target(new PointCloud<pcl::PointXYZ>),scanResults(new PointCloud<pcl::PointXYZ>);
+    ROS_INFO("stitching point clouds...");
+
+    pcl::PointCloud<pcl::PointXYZ>::Ptr source(new PointCloud<pcl::PointXYZ>), target(new PointCloud<pcl::PointXYZ>);
 
     //first target is the first point in the cloud. Transform to base frame
     //pcl::transformPointCloud(*cloudList[0], *target, cloudTransforms[0]);
@@ -250,6 +192,8 @@ void PCGenNode::stitchClouds()
         *target = *temp;
 
     }
+
+    *scanResults = *target;
     ROS_INFO("saving this scan..");
 
     pcl::io::savePCDFile ("/home/rnm/Documents/dense_scan.pcd", *target);
@@ -835,13 +779,6 @@ void PCGenNode::localRegistration(pcl::PointCloud<pcl::PointXYZ>::Ptr model ,pcl
     }
 
 
-
-
-
-    
-
-
-
 //Take two point clouds, and find the transformation between them. Output is the merged point cloud. 
 void PCGenNode::pairAlign(const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_src, const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_tgt, pcl::PointCloud<pcl::PointXYZ>::Ptr output, Eigen::Matrix4f &final_transform)
 {
@@ -895,7 +832,6 @@ void PCGenNode::formatTransform(tf::StampedTransform tfTransform, Eigen::Matrix4
     std::cout<<Trans<<std::endl;
 
     eigenTransform = Trans.cast<float> ();
-    ROS_INFO("i've been here");
 
 }
 
@@ -915,26 +851,6 @@ void PCGenNode::scaleCloud(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud, float scal
     *cloud = temp;
 }
 
-//Cloud viewer gives a library error when used. Perhaps try the pcl::Visualizer or w/e?
-
-/*
-void PCGenNode::Normal_Estimation(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud, pcl::PointCloud<pcl::Normal>::Ptr& normals)
-{
-    ROS_INFO("I am in Normal Estimation Function");
-    pcl::IntegralImageNormalEstimation<pcl::PointXYZ, pcl::Normal> normalEstimation;
-    normalEstimation.setInputCloud(cloud);
-    // Other estimation methods: COVARIANCE_MATRIX, AVERAGE_DEPTH_CHANGE, SIMPLE_3D_GRADIENT
-    // They determine the smoothness of the result, and the running time
-    normalEstimation.setNormalEstimationMethod(normalEstimation.AVERAGE_3D_GRADIENT);
-    //Depth threshold for computing object borders based on depth changes, in meters.
-    normalEstimation.setMaxDepthChangeFactor(0.02f);
-    //Factor that influences the size of the area used to smooth the normals.
-    normalEstimation.setNormalSmoothingSize(10.0f);
-    //Calculatethe normals.
-    normalEstimation.compute(*normals);
-
-
-}
  */
     void PCGenNode::computeSurfaceNormals(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud, pcl::PointCloud<pcl::Normal>::Ptr normals)
     {

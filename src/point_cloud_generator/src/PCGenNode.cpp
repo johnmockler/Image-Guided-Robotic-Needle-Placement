@@ -87,6 +87,12 @@ bool PCGenNode::captureCloud(messages::ImageCapture::Request& req, messages::Ima
 
         pcl::PointCloud<pcl::PointXYZ>::Ptr model_Skeleton(new PointCloud<pcl::PointXYZ>);
         pcl::io::loadPCDFile<pcl::PointXYZ>("/home/rnm/Documents/Skeleton.pcd", *model_Skeleton);
+        
+        for (int i=0; i < cloudList.size(); i++)
+        {
+            pcl::io::savePCDFile ("/home/rnm/Documents/capture" + std::to_string(i) + ".pcd", cloudList[i].cloud);
+        }
+        
         stitchClouds();
 
         scaleCloud(model_Skeleton);
@@ -851,7 +857,7 @@ void PCGenNode::scaleCloud(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud, float scal
     *cloud = temp;
 }
 
- */
+ 
     void PCGenNode::computeSurfaceNormals(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud, pcl::PointCloud<pcl::Normal>::Ptr normals)
     {
         pcl::search::KdTree<pcl::PointXYZ>::Ptr search_method = pcl::search::KdTree<pcl::PointXYZ>::Ptr (new pcl::search::KdTree<pcl::PointXYZ>);

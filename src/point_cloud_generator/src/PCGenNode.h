@@ -5,6 +5,7 @@
 //#include <pcl/memory.h>  // for pcl::make_shared
 #include <pcl_conversions/pcl_conversions.h>
 #include <tf_conversions/tf_eigen.h>
+//#include <tf2_msgs/TFMessage.msg>
 
 #include <messages/ImageCapture.h>
 #include <tf/transform_listener.h>
@@ -72,10 +73,10 @@ private:
     struct MyCloud
     {
         pcl::PointCloud<pcl::PointXYZ> cloud; 
-        tf::StampedTransform transform;
+        geometry_msgs::TransformStamped transform;
 
         MyCloud (pcl::PointCloud<pcl::PointXYZ>::Ptr cloud,
-                    tf::StampedTransform  transform
+                    geometry_msgs::TransformStamped  transform
                     ) :
             cloud (*cloud),
             transform (transform)
@@ -85,17 +86,25 @@ private:
     //ROS objects here
     ros::NodeHandle nh;
     ros::Subscriber cloudSub;
+    ros::Subscriber poseSub;
+
     ros::ServiceServer captureService;
 
     //Class Methods here
     void cloudCallback(const sensor_msgs::PointCloud2ConstPtr& cloud_msg);
+    void poseCallback(const tf2_msgs::TFMessage::ConstPtr& pose);
+
     //need to add data type here
     void transformCallback();
     bool captureCloud(messages::ImageCapture::Request& req, messages::ImageCapture::Response& res);
     void stitchClouds();
     void pairAlign(const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_src, const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_tgt, pcl::PointCloud<pcl::PointXYZ>::Ptr output, Eigen::Matrix4f &final_transform);
+<<<<<<< HEAD
     void formatTransform(tf::StampedTransform tfTransform, Eigen::Matrix4f &eigenTransform);
     /**FIRST TRY REGISTRATION**/
+=======
+    void formatTransform(geometry_msgs::TransformStamped tfTransform, Eigen::Matrix4f &eigenTransform);
+>>>>>>> pc_test
     void registerModel(const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud,   const pcl::PointCloud<pcl::PointXYZ>::Ptr modelSkeleton);
 
 
@@ -127,7 +136,7 @@ private:
     pcl::PointCloud<pcl::PointXYZ>::Ptr mostRecentCloud;
     pcl::PointCloud<pcl::PointXYZ>::Ptr scanResults;
 
-    tf::StampedTransform mostRecentTransform;
+    geometry_msgs::TransformStamped mostRecentTransform;
     tf::TransformListener listener;
 
     std::vector<MyCloud> cloudList;

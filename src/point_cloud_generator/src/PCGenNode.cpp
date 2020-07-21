@@ -5,6 +5,7 @@ using namespace pcl;
 PCGenNode::PCGenNode()
 : cloudSub(nh.subscribe("/points2", 1, &PCGenNode::cloudCallback, this))
 , captureService(nh.advertiseService("capture_cloud", &PCGenNode::captureCloud, this))
+, poseSub(nh.subscribe("/toPointCloud",1, &PCGenNode::poseCallback,this))
 , mostRecentCloud(new pcl::PointCloud<pcl::PointXYZ>)
 {
 
@@ -47,6 +48,22 @@ PCGenNode::PCGenNode()
     
 }
 
+void PCGenNode::poseCallback(const tf2_msgs::TFMessage::ConstPtr& pose)
+{
+    mostRecentTransform = pose->transforms[0];
+    /*
+    //ROS_INFO("I heard: [%s]", pose->transforms.data());
+    
+    mostRecentPoseT[0] = pose->transforms[0].transform.translation.x;
+    mostRecentPoseT[1] = pose->transforms[0].transform.translation.y;
+    mostRecentPoseT[2] = pose->transforms[0].transform.translation.z;
+    mostRecentPoseR[0] = pose->transforms[0].transform.rotation.x;
+    mostRecentPoseR[1] = pose->transforms[0].transform.rotation.y;
+    mostRecentPoseR[2] = pose->transforms[0].transform.rotation.z;
+    //std::cout<<mostRecentPoseT[0]<<std::endl;
+    */
+
+}
 //Receive most recent cloud and convert it to PCL message (this is apparently slow, perhaps we can do another way)
 void PCGenNode::cloudCallback(const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
 {
@@ -69,11 +86,11 @@ bool PCGenNode::captureCloud(messages::ImageCapture::Request& req, messages::Ima
     {
         ROS_INFO("capturing point cloud [%ld]", (int) cloudList.size()+1);
 
-        tf::StampedTransform base2gripper;
-        listener.lookupTransform("panda_link7", "panda_link0", ros::Time(0), base2gripper);
+       // tf::StampedTransform base2gripper;
+        //slistener.lookupTransform("panda_link7", "panda_link0", ros::Time(0), base2gripper);
         
         if (mostRecentCloud->size() > 0){
-            MyCloud newCloud(mostRecentCloud, base2gripper);
+            MyCloud newCloud(mostRecentCloud, mostRecentTransform);
             cloudList.push_back(newCloud);
         }
         else 
@@ -108,7 +125,7 @@ bool PCGenNode::captureCloud(messages::ImageCapture::Request& req, messages::Ima
 void PCGenNode::processCloud(MyCloud inputCloud, pcl::PointCloud<pcl::PointXYZ>::Ptr outputCloud)
 {
         pcl::PointCloud<pcl::PointXYZ> raw_cloud = inputCloud.cloud;
-        tf::StampedTransform raw_tf = inputCloud.transform;
+        geometry_msgs::TransformStamped raw_tf = inputCloud.transform;
         
         pcl::PointCloud<pcl::PointXYZ>::Ptr filter_NaN(new PointCloud<pcl::PointXYZ>);
         pcl::PointCloud<pcl::PointXYZ>::Ptr filteredCloud(new PointCloud<pcl::PointXYZ>);
@@ -132,7 +149,7 @@ void PCGenNode::processCloud(MyCloud inputCloud, pcl::PointCloud<pcl::PointXYZ>:
         filter_outlier.filter(*filtered_outlier);
         std::cout<<"size: "<<filtered_outlier->size()<<std::endl;
 
-
+        /*
         pcl::PassThrough<pcl::PointXYZ> passfilter;
         passfilter.setInputCloud(filtered_outlier);
         // Filter out all points with Z values not in the [0-2] range.
@@ -153,6 +170,7 @@ void PCGenNode::processCloud(MyCloud inputCloud, pcl::PointCloud<pcl::PointXYZ>:
 
         std::cout<<"size: "<<downsampleCloud->size()<<std::endl;
 
+        */
 
         
 
@@ -161,7 +179,7 @@ void PCGenNode::processCloud(MyCloud inputCloud, pcl::PointCloud<pcl::PointXYZ>:
         formatTransform(raw_tf, convertedTransform);
 
 
-        pcl::transformPointCloud(*downsampleCloud, *finalCloud, convertedTransform);
+        pcl::transformPointCloud(*filtered_outlier, *finalCloud, convertedTransform);
         std::cout<<"final size: "<<finalCloud->size()<<std::endl;
 
         *outputCloud = *finalCloud;
@@ -816,20 +834,18 @@ void PCGenNode::pairAlign(const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_src, c
 }
 
 //Converts a Tf::StampedTransform to an Eigen::Matrix4f
-void PCGenNode::formatTransform(tf::StampedTransform tfTransform, Eigen::Matrix4f &eigenTransform)
+void PCGenNode::formatTransform(geometry_msgs::TransformStamped tfTransform, Eigen::Matrix4f &eigenTransform)
 {
-    tf::Matrix3x3 rotTF;
-    tf::Vector3 transTF;
 
     Eigen::Matrix3d R;
-    Eigen::Vector3d T;
 
-    rotTF = tfTransform.getBasis();
-    transTF = tfTransform.getOrigin();
-    ROS_INFO_STREAM(" tfTransform: " << tfTransform.getOrigin().x() << ", " << tfTransform.getOrigin().y() << ", " <<tfTransform.getOrigin().z() << ", "
-                                              << tfTransform.getRotation().x() << ", " << tfTransform.getRotation().y() << ", " << tfTransform.getRotation().z());
-    tf::matrixTFToEigen(rotTF, R);
-    tf::vectorTFToEigen(transTF,T);
+    geometry_msgs::Transform trans = tfTransform.transform;
+
+    Eigen::Quaterniond rotquat (trans.rotation.w, trans.rotation.x, trans.rotation.y, trans.rotation.z);
+    Eigen::Vector3d   T(trans.translation.x, trans.translation.y, trans.translation.z);
+
+    R = rotquat.toRotationMatrix();
+
 
     Eigen::Matrix4d Trans;
     Trans.setIdentity();

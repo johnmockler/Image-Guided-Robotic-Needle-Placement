@@ -389,7 +389,7 @@ class InverseKinematics
             return angles;
 
         }
-        else if(id=="modScan")
+        /*else if(id=="modScan")
         {
             angles[4] = -(M_PI/2) + 1.3962*(0.500-cord[2])/0.200;
            
@@ -400,7 +400,7 @@ class InverseKinematics
             }
             return angles;
 
-        }
+        }*/
         else
         {
             return angles;

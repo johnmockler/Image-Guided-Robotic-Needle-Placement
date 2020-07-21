@@ -12,21 +12,27 @@ private:
   ros::NodeHandle nh;
   std::vector<std::string> joint_names_;
   ros::Subscriber jointSubscriber;
+  ros::Subscriber goalSubscriber;
   ros::ServiceClient client;
   //ros::ServiceClient *clientPtr;
   //messages::ImageCapture srv;
   std::vector<std::vector<double>> positionSet;
   double currentPos[7]={0};
+  double goalPos[7];
+  double pastGoalPos[7];
   int count = 1;
   bool reached = false;
   double error;
   bool imagesCollected = false;
+  bool goalPosRecorded = false;
+  std::vector<std::vector<float>> jointAngleSet;
 
 public:
 MasterSim(ros::NodeHandle n):nh(n)
 {
   jointSet();
-  jointSubscriber = nh.subscribe("/joint_states",10,&MasterSim::checkPosition,this);
+  goalSubscriber =  nh.subscribe("/joint_AnglesIK", 1, &MasterSim::angleCallback,this);
+  jointSubscriber = nh.subscribe("/joint_states",1,&MasterSim::checkPosition,this);
   //client = nh.serviceClient<messages::ImageCapture>("capture_image",this);
   //clientPtr = &client;
   ROS_INFO("sUSCRIBED"); 
@@ -58,45 +64,69 @@ void jointSet()
         
     }
 
+void angleCallback(const std_msgs::Float64MultiArray::ConstPtr& msg)
+  {
+        
+        if(jointAngleSet.size()>=31)
+        {
+            //jointAngleSet.push_back(init_position);
+            //setAngles();
+          ROS_INFO("All goal pos recieved.");
+          goalSubscriber.shutdown();
+        }
+        else if(jointAngleSet.size()<=30)
+        {
+            //std::cout<<"Set :"<<std::endl;
+            std::vector<float> jointAngle;
+            for(int i=0;i<7;i++)
+            {
+                jointAngle.push_back(msg->data[i]);
+                //std::cout<<jointAngle[i]<<std::endl;
+                            
+            }
+            jointAngleSet.push_back(jointAngle);       
+            
+        } 
+        
+    }
+
 void checkPosition(const sensor_msgs::JointStateConstPtr& msg)
 {
-//  ROS_INFO("In sub callback");
+  //ROS_INFO("In sub callback");
   //ros::ServiceClient client = (ros::ServiceClient)*clientPtr;
-  
-  if(count < positionSet.size())
+  if(jointAngleSet.size() == 31)
   {
-    error = 0.0;
-    for(int i =0;i<7;i++)
+    if(count < jointAngleSet.size())
     {
-    currentPos[i] = msg->position[i];
-    double temp = currentPos[i]- positionSet[count][i];
- //   std::cout<<"posSet: "<<positionSet[count][i]<<"         currentPos: "<<currentPos[i]<<std::endl;
-    error = error + std::pow(temp,2);
-    
-    }
-    
-    error = std::sqrt(error);
- //   ROS_INFO("Count inside: %ld; Error: %f",count,error);
-    if(error < 0.01)
-    {
-      reached = true;
-      //count++;
-      //ros::Duration(3.0).sleep();
+      error = 0.0;
+      for(int i =0;i<7;i++)
+      {
+      currentPos[i] = msg->position[i];
+      double temp = currentPos[i]- jointAngleSet[count][i];
+      std::cout<<"posSet: "<<jointAngleSet[count][i]<<"         currentPos: "<<currentPos[i]<<std::endl;
+      error = error + std::pow(temp,2);
+      }
+      error = std::sqrt(error);
+    ROS_INFO("Count inside: %ld; Error: %f",count,error);
+      if(error < 0.005)
+      {
+        reached = true;
+        //count++;
+        //ros::Duration(3.0).sleep();
+      }
+      else
+      {
+        
+        reached = false;
+      }
+
     }
     else
     {
-      reached = false;
+      ROS_INFO("In sub callback");
+      imagesCollected = true;
     }
-
-  }
-  else
-  {
-    imagesCollected = true;
-  }
-
-
-
-
+}
 }
 
 void setCount(bool var)
@@ -135,13 +165,13 @@ int main(int argc, char** argv)
   messages::ImageCapture srv;
   MasterSim obj(n);
   //obj.run();
-  ros::Rate r(2);
+  ros::Rate r(10);
   while(ros::ok())
   {
     if(!obj.getStatus() && !obj.getImagesCollected())
     {
       ros::spinOnce();
-      r.sleep();
+      //r.sleep();
     }
     else if(obj.getStatus() && !obj.getImagesCollected()) 
     {
@@ -149,6 +179,7 @@ int main(int argc, char** argv)
       bool result;
       ROS_INFO("Bot Reached position");
       srv.request.x = false;
+      ros::Duration(0,5).sleep();
       if(client.call(srv))
         {
           //count++;

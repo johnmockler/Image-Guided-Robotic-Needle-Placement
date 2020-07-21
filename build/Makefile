@@ -909,6 +909,19 @@ geometry_msgs_generate_messages_py/fast:
 .PHONY : geometry_msgs_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named pathplan_mod
+
+# Build rule for target.
+pathplan_mod: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pathplan_mod
+.PHONY : pathplan_mod
+
+# fast build rule for target.
+pathplan_mod/fast:
+	$(MAKE) -f pathplanning_model/CMakeFiles/pathplan_mod.dir/build.make pathplanning_model/CMakeFiles/pathplan_mod.dir/build
+.PHONY : pathplan_mod/fast
+
+#=============================================================================
 # Target rules for targets named geometry_msgs_generate_messages_lisp
 
 # Build rule for target.
@@ -2889,6 +2902,7 @@ help:
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_py"
+	@echo "... pathplan_mod"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_eus"

@@ -49,6 +49,7 @@ class TrajectoryPlanningCC
             {
                 jointAngle.push_back(msg->data[i]);                           
             }
+            //std::cout<<jointAngle[0]<<" "<<jointAngle[1]<<" "<<jointAngle[2]<<" "<<jointAngle[3]<<" "<<jointAngle[4]<<" "<<jointAngle[5]<<" "<<jointAngle[6]<<std::endl;
             jointAngleSet.push_back(jointAngle);       
             
         } 
@@ -111,7 +112,7 @@ class TrajectoryPlanningCC
             //msgs.data.insert(msgs.data.end(), jointAngleSet[i].begin(), jointAngleSet[i].end());
             //traj_pub.publish(msgs);
             goal_pos_pub.publish(msgs);
-            ros::Duration(2).sleep();
+            ros::Duration(1).sleep();
             pos++;
         } 
         else

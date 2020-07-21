@@ -619,16 +619,12 @@ point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: 
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/pcl-1.8/pcl/visualization/common/ren_win_interact_map.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/pcl-1.8/pcl/visualization/common/shapes.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/pcl-1.8/pcl/visualization/eigen.h
-point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/pcl-1.8/pcl/visualization/histogram_visualizer.h
-point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/pcl-1.8/pcl/visualization/impl/histogram_visualizer.hpp
-point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/pcl-1.8/pcl/visualization/impl/pcl_plotter.hpp
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/pcl-1.8/pcl/visualization/impl/pcl_visualizer.hpp
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/pcl-1.8/pcl/visualization/impl/point_cloud_color_handlers.hpp
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/pcl-1.8/pcl/visualization/impl/point_cloud_geometry_handlers.hpp
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/pcl-1.8/pcl/visualization/interactor_style.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/pcl-1.8/pcl/visualization/keyboard_event.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/pcl-1.8/pcl/visualization/mouse_event.h
-point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/pcl-1.8/pcl/visualization/pcl_plotter.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/pcl-1.8/pcl/visualization/pcl_visualizer.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/pcl-1.8/pcl/visualization/point_cloud_color_handlers.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/pcl-1.8/pcl/visualization/point_cloud_geometry_handlers.h
@@ -636,7 +632,6 @@ point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: 
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/pcl-1.8/pcl/visualization/point_picking_event.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkABI.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkAbstractArray.h
-point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkAbstractContextItem.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkAbstractMapper.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkAbstractMapper3D.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkActor.h
@@ -659,8 +654,6 @@ point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: 
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkCellLinks.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkCellType.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkCellTypes.h
-point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkChart.h
-point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkChartsCoreModule.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkCollection.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkCommand.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkCommonCoreModule.h
@@ -669,7 +662,6 @@ point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: 
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkCommonInformationKeyManager.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkCommonMathModule.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkConfigure.h
-point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkContextItem.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkCoordinate.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkDataArray.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkDataArrayTemplate.h
@@ -682,7 +674,6 @@ point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: 
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkDataSetMapper.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkDataSetSurfaceFilter.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkDebugLeaksManager.h
-point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkDoubleArray.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkFieldData.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkFiltersCoreModule.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkFiltersGeneralModule.h
@@ -735,11 +726,9 @@ point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: 
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkPropCollection.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkProperty.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkProperty2D.h
-point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkRect.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkRenderer.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkRendererCollection.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkRenderingAnnotationModule.h
-point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkRenderingContext2DModule.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkRenderingCoreModule.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkRenderingFreeTypeModule.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkRenderingLODModule.h
@@ -754,7 +743,6 @@ point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: 
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkTextProperty.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkTexture.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkTimeStamp.h
-point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkTuple.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkType.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkTypeTemplate.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkTypeTraits.h
@@ -768,7 +756,6 @@ point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: 
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkVariant.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkVariantCast.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkVariantInlineOperators.h
-point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkVector.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkVectorText.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkVersion.h
 point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o: /usr/include/vtk-6.3/vtkVersionMacros.h

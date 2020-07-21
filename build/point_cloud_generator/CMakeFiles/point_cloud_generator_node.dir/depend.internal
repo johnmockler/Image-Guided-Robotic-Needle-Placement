@@ -620,16 +620,12 @@ point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o
  /usr/include/pcl-1.8/pcl/visualization/common/ren_win_interact_map.h
  /usr/include/pcl-1.8/pcl/visualization/common/shapes.h
  /usr/include/pcl-1.8/pcl/visualization/eigen.h
- /usr/include/pcl-1.8/pcl/visualization/histogram_visualizer.h
- /usr/include/pcl-1.8/pcl/visualization/impl/histogram_visualizer.hpp
- /usr/include/pcl-1.8/pcl/visualization/impl/pcl_plotter.hpp
  /usr/include/pcl-1.8/pcl/visualization/impl/pcl_visualizer.hpp
  /usr/include/pcl-1.8/pcl/visualization/impl/point_cloud_color_handlers.hpp
  /usr/include/pcl-1.8/pcl/visualization/impl/point_cloud_geometry_handlers.hpp
  /usr/include/pcl-1.8/pcl/visualization/interactor_style.h
  /usr/include/pcl-1.8/pcl/visualization/keyboard_event.h
  /usr/include/pcl-1.8/pcl/visualization/mouse_event.h
- /usr/include/pcl-1.8/pcl/visualization/pcl_plotter.h
  /usr/include/pcl-1.8/pcl/visualization/pcl_visualizer.h
  /usr/include/pcl-1.8/pcl/visualization/point_cloud_color_handlers.h
  /usr/include/pcl-1.8/pcl/visualization/point_cloud_geometry_handlers.h
@@ -637,7 +633,6 @@ point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o
  /usr/include/pcl-1.8/pcl/visualization/point_picking_event.h
  /usr/include/vtk-6.3/vtkABI.h
  /usr/include/vtk-6.3/vtkAbstractArray.h
- /usr/include/vtk-6.3/vtkAbstractContextItem.h
  /usr/include/vtk-6.3/vtkAbstractMapper.h
  /usr/include/vtk-6.3/vtkAbstractMapper3D.h
  /usr/include/vtk-6.3/vtkActor.h
@@ -660,8 +655,6 @@ point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o
  /usr/include/vtk-6.3/vtkCellLinks.h
  /usr/include/vtk-6.3/vtkCellType.h
  /usr/include/vtk-6.3/vtkCellTypes.h
- /usr/include/vtk-6.3/vtkChart.h
- /usr/include/vtk-6.3/vtkChartsCoreModule.h
  /usr/include/vtk-6.3/vtkCollection.h
  /usr/include/vtk-6.3/vtkCommand.h
  /usr/include/vtk-6.3/vtkCommonCoreModule.h
@@ -670,7 +663,6 @@ point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o
  /usr/include/vtk-6.3/vtkCommonInformationKeyManager.h
  /usr/include/vtk-6.3/vtkCommonMathModule.h
  /usr/include/vtk-6.3/vtkConfigure.h
- /usr/include/vtk-6.3/vtkContextItem.h
  /usr/include/vtk-6.3/vtkCoordinate.h
  /usr/include/vtk-6.3/vtkDataArray.h
  /usr/include/vtk-6.3/vtkDataArrayTemplate.h
@@ -683,7 +675,6 @@ point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o
  /usr/include/vtk-6.3/vtkDataSetMapper.h
  /usr/include/vtk-6.3/vtkDataSetSurfaceFilter.h
  /usr/include/vtk-6.3/vtkDebugLeaksManager.h
- /usr/include/vtk-6.3/vtkDoubleArray.h
  /usr/include/vtk-6.3/vtkFieldData.h
  /usr/include/vtk-6.3/vtkFiltersCoreModule.h
  /usr/include/vtk-6.3/vtkFiltersGeneralModule.h
@@ -736,11 +727,9 @@ point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o
  /usr/include/vtk-6.3/vtkPropCollection.h
  /usr/include/vtk-6.3/vtkProperty.h
  /usr/include/vtk-6.3/vtkProperty2D.h
- /usr/include/vtk-6.3/vtkRect.h
  /usr/include/vtk-6.3/vtkRenderer.h
  /usr/include/vtk-6.3/vtkRendererCollection.h
  /usr/include/vtk-6.3/vtkRenderingAnnotationModule.h
- /usr/include/vtk-6.3/vtkRenderingContext2DModule.h
  /usr/include/vtk-6.3/vtkRenderingCoreModule.h
  /usr/include/vtk-6.3/vtkRenderingFreeTypeModule.h
  /usr/include/vtk-6.3/vtkRenderingLODModule.h
@@ -755,7 +744,6 @@ point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o
  /usr/include/vtk-6.3/vtkTextProperty.h
  /usr/include/vtk-6.3/vtkTexture.h
  /usr/include/vtk-6.3/vtkTimeStamp.h
- /usr/include/vtk-6.3/vtkTuple.h
  /usr/include/vtk-6.3/vtkType.h
  /usr/include/vtk-6.3/vtkTypeTemplate.h
  /usr/include/vtk-6.3/vtkTypeTraits.h
@@ -769,7 +757,6 @@ point_cloud_generator/CMakeFiles/point_cloud_generator_node.dir/src/main.cpp.o
  /usr/include/vtk-6.3/vtkVariant.h
  /usr/include/vtk-6.3/vtkVariantCast.h
  /usr/include/vtk-6.3/vtkVariantInlineOperators.h
- /usr/include/vtk-6.3/vtkVector.h
  /usr/include/vtk-6.3/vtkVectorText.h
  /usr/include/vtk-6.3/vtkVersion.h
  /usr/include/vtk-6.3/vtkVersionMacros.h

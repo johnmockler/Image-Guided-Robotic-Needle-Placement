@@ -12,7 +12,17 @@ int main(int argc, char **argv)
 
     ROS_INFO("Calibration node initiated!");
 
-    ros::spin();
+    while(ros::ok())
+    {
+        if(node.alreadyHandEyeCalibrated == true)
+        {
+            node.broadcastTransform();
+
+        }
+    
+        ros::spinOnce();
+
+    }
 
     return EXIT_SUCCESS;
 

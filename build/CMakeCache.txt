@@ -576,6 +576,12 @@ pathPlanning_cc_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/pathPlanning_cc
 //Value Computed by CMake
 pathPlanning_cc_SOURCE_DIR:STATIC=/home/rnm/rnm_group_2/src/pathPlanning_cc
 
+//Value Computed by CMake
+pathplanning_model_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/pathplanning_model
+
+//Value Computed by CMake
+pathplanning_model_SOURCE_DIR:STATIC=/home/rnm/rnm_group_2/src/pathplanning_model
+
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/melodic/share/pluginlib/cmake
 
@@ -630,6 +636,9 @@ sensor_msgs_DIR:PATH=/opt/ros/melodic/share/sensor_msgs/cmake
 //The directory containing a CMake configuration file for smclib.
 smclib_DIR:PATH=/opt/ros/melodic/share/smclib/cmake
 
+//The directory containing a CMake configuration file for snesor_msgs.
+snesor_msgs_DIR:PATH=snesor_msgs_DIR-NOTFOUND
+
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/melodic/share/std_msgs/cmake
 
@@ -650,6 +659,12 @@ tf2_ros_DIR:PATH=/opt/ros/melodic/share/tf2_ros/cmake
 
 //The directory containing a CMake configuration file for tf.
 tf_DIR:PATH=/opt/ros/melodic/share/tf/cmake
+
+//Value Computed by CMake
+trajectory_model_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/trajectory_model
+
+//Value Computed by CMake
+trajectory_model_SOURCE_DIR:STATIC=/home/rnm/rnm_group_2/src/trajectory_model
 
 //The directory containing a CMake configuration file for trajectory_msgs.
 trajectory_msgs_DIR:PATH=/opt/ros/melodic/share/trajectory_msgs/cmake
@@ -776,7 +791,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=20
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=22
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

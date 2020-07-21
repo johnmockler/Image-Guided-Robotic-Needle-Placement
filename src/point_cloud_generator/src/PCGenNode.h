@@ -30,12 +30,17 @@
 #include <pcl/features/board.h>
 #include <pcl/features/normal_3d.h>
 #include <pcl/features/fpfh.h>
+#include <pcl/features/cvfh.h>
+#include <pcl/features/range_image_border_extractor.h>
 #include <pcl/kdtree/kdtree_flann.h>
 #include <pcl/kdtree/impl/kdtree_flann.hpp>
+#include <pcl/keypoints/narf_keypoint.h>
+#include <pcl/keypoints/iss_3d.h>
 #include <pcl/registration/icp.h>
 #include <pcl/registration/icp_nl.h>
 #include <pcl/features/integral_image_normal.h>
 #include <pcl/features/shot.h>
+#include <pcl/range_image/range_image_planar.h>
 #include <pcl/recognition/cg/hough_3d.h>
 #include <pcl/recognition/cg/geometric_consistency.h>
 #include <pcl/recognition/hv/hv_go.h>
@@ -44,6 +49,7 @@
 #include <pcl/registration/transforms.h>
 #include <pcl/visualization/pcl_visualizer.h>
 #include <pcl/visualization/cloud_viewer.h>
+#include <pcl/visualization/range_image_visualizer.h>
 #include <pcl/common/common_headers.h>
 #include <pcl/console/parse.h>
 #include <pcl/common/centroid.h>
@@ -89,17 +95,28 @@ private:
     void stitchClouds();
     void pairAlign(const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_src, const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_tgt, pcl::PointCloud<pcl::PointXYZ>::Ptr output, Eigen::Matrix4f &final_transform);
     void formatTransform(tf::StampedTransform tfTransform, Eigen::Matrix4f &eigenTransform);
+    /**FIRST TRY REGISTRATION**/
     void registerModel(const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud,   const pcl::PointCloud<pcl::PointXYZ>::Ptr modelSkeleton);
- 
-    void scaleCloud(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud, float scalingFactor=0.001);
 
+
+    void scaleCloud(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud, float scalingFactor=0.001);
     void processCloud(MyCloud inputCloud, pcl::PointCloud<pcl::PointXYZ>::Ptr outputCloud);
 
+    /**LOCAL PIPELINE FOR REGISTRATION**/
     void localRegistration(pcl::PointCloud<pcl::PointXYZ>::Ptr model ,pcl::PointCloud<pcl::PointXYZ>::Ptr scene);
 
+    /**ALIGNMENT**/
     void computeSurfaceNormals(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud, pcl::PointCloud<pcl::Normal>::Ptr normals);
     void computeLocalFeatures(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud,pcl::PointCloud<pcl::Normal>::Ptr normals, pcl::PointCloud<pcl::FPFHSignature33>::Ptr features);
     void alignTemplate(pcl::PointCloud<pcl::PointXYZ>::Ptr input_cloud, pcl::PointCloud<pcl::PointXYZ>::Ptr model_cloud);
+
+    /**GLOBAL PIPELINE FOR REGISTRATION**/
+    void globalRegistration(pcl::PointCloud<pcl::PointXYZ>::Ptr scene ,pcl::PointCloud<pcl::PointXYZ>::Ptr model);
+    void computeDescriptors(pcl::PointCloud<pcl::PointXYZ>::Ptr scene, pcl::PointCloud<pcl::VFHSignature308>::Ptr& sceneDescriptors);
+    void clusterAndPose(pcl::PointCloud<pcl::PointXYZ>::Ptr scene ,pcl::PointCloud<pcl::PointXYZ>::Ptr model,pcl::CorrespondencesPtr correspondences, bool verifyHypothesis );
+    void keyPoints(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud,pcl::PointCloud<pcl::PointXYZ>::Ptr& keypoints);
+    double computeCloudResolution(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr& cloud);
+    void hypotesisVerification(pcl::PointCloud<pcl::PointXYZ>::Ptr scene, std::vector<pcl::PointCloud<pcl::PointXYZ>::ConstPtr> registered_instances);
 
 
 
@@ -121,13 +138,8 @@ private:
 
 
 
-
-
-
 public:
 
     PCGenNode();
-    
-
 
 };

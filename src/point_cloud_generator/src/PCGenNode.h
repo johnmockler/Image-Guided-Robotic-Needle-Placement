@@ -6,7 +6,11 @@
 #include <pcl_conversions/pcl_conversions.h>
 #include <tf_conversions/tf_eigen.h>
 
+#include <messages/ImageCapture.h>
+#include <tf/transform_listener.h>
 #include <boost/make_shared.hpp>
+
+#include <boost/thread/thread.hpp>
 
 // PCL specific includes
 #include <pcl/point_types.h>
@@ -15,73 +19,44 @@
 #include <pcl/io/pcd_io.h>
 #include <pcl/filters/voxel_grid.h>
 #include <pcl/filters/filter.h>
+#include <pcl/filters/uniform_sampling.h>
+#include <pcl/filters/passthrough.h>
+#include <pcl/filters/radius_outlier_removal.h>
+#include <pcl/filters/extract_indices.h>
+#include <pcl/features/our_cvfh.h>
+#include <pcl/features/crh.h>
+#include <pcl/features/normal_3d_omp.h>
+#include <pcl/features/shot_omp.h>
+#include <pcl/features/board.h>
 #include <pcl/features/normal_3d.h>
+#include <pcl/features/fpfh.h>
+#include <pcl/kdtree/kdtree_flann.h>
+#include <pcl/kdtree/impl/kdtree_flann.hpp>
 #include <pcl/registration/icp.h>
 #include <pcl/registration/icp_nl.h>
+#include <pcl/features/integral_image_normal.h>
+#include <pcl/features/shot.h>
+#include <pcl/recognition/cg/hough_3d.h>
+#include <pcl/recognition/cg/geometric_consistency.h>
+#include <pcl/recognition/hv/hv_go.h>
+#include <pcl/registration/sample_consensus_prerejective.h>
+#include <pcl/registration/ia_ransac.h>
 #include <pcl/registration/transforms.h>
 #include <pcl/visualization/pcl_visualizer.h>
 #include <pcl/visualization/cloud_viewer.h>
 #include <pcl/common/common_headers.h>
 #include <pcl/console/parse.h>
-
-
-#include <messages/ImageCapture.h>
-#include <tf/transform_listener.h>
-
-//Asan Added
-#include <pcl/filters/radius_outlier_removal.h>
-#include <pcl/io/pcd_io.h>
+#include <pcl/common/centroid.h>
+#include <pcl/correspondence.h>
+#include <pcl/common/transforms.h> 
 #include <pcl/sample_consensus/method_types.h>
 #include <pcl/sample_consensus/model_types.h>
 #include <pcl/segmentation/sac_segmentation.h>
-#include <pcl/filters/extract_indices.h>
-#include <pcl/surface/convex_hull.h>
 #include <pcl/segmentation/extract_polygonal_prism_data.h>
-#include <pcl/visualization/cloud_viewer.h>
-
-#include <pcl/io/pcd_io.h>
-#include <pcl/features/normal_3d.h>
-#include <pcl/features/our_cvfh.h>
-#include <pcl/visualization/histogram_visualizer.h>
-#include <pcl/visualization/pcl_plotter.h>
-#include <pcl/common/centroid.h>
-#include <pcl/features/crh.h>
-#include <pcl/io/pcd_io.h>
-
-#include <pcl/features/shot.h>
-#include <pcl/registration/sample_consensus_prerejective.h>
-
-#include <pcl/io/pcd_io.h>
-#include <pcl/point_cloud.h>
-#include <pcl/correspondence.h>
-#include <pcl/features/normal_3d_omp.h>
-#include <pcl/features/shot_omp.h>
-#include <pcl/features/board.h>
-#include <pcl/filters/uniform_sampling.h>
-#include <pcl/recognition/cg/hough_3d.h>
-#include <pcl/recognition/cg/geometric_consistency.h>
-#include <pcl/recognition/hv/hv_go.h>
-#include <pcl/registration/icp.h>
-#include <pcl/visualization/pcl_visualizer.h>
-#include <pcl/kdtree/kdtree_flann.h>
-#include <pcl/kdtree/impl/kdtree_flann.hpp>
-#include <pcl/common/transforms.h> 
-#include <pcl/console/parse.h>
-
-// Features extracting
-#include <pcl/features/integral_image_normal.h>
-#include <boost/thread/thread.hpp>
-
-#include <pcl/features/normal_3d.h>
-#include <pcl/features/fpfh.h>
-#include <pcl/registration/ia_ransac.h>
-
-#include <pcl/filters/passthrough.h>
+#include <pcl/surface/convex_hull.h>
 
 
-//convenient typedefs
-//typedef pcl::PointXYZ PointT;
-//typedef pcl::PointCloud<PointT> PointCloud;
+
 
 
 

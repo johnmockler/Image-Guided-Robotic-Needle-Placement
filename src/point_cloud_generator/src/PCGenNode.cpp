@@ -242,8 +242,7 @@ void PCGenNode::stitchClouds()
         ROS_INFO("matching scans..");
         Eigen::Matrix4f pairTransform;
         processCloud(cloudList[i], source);
-        //pcl::io::savePCDFile ("/home/rnm/Documents/scan" + std::to_string(i) + ".pcd", *source);
-       //pcl::transformPointCloud(*cloudList[i], *source, cloudTransforms[i]);
+        pcl::io::savePCDFile ("/home/rnm/Documents/scan" + std::to_string(i) + ".pcd", *source);
         pcl::PointCloud<pcl::PointXYZ>::Ptr temp (new PointCloud<pcl::PointXYZ>);
         
         pairAlign(source,target,temp, pairTransform);

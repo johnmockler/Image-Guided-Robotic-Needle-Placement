@@ -1,7 +1,7 @@
 <launch>
     <node name="master_sim" pkg="master_sim" type="master_sim_node" output="screen">
     </node>
-    <node pkg="rosbag" type="play" name="player" output="screen" args="/home/rnm/scanning.bag">
+    <node pkg="rosbag" type="play" name="player" args="/home/rnm/scanning.bag">
     </node>
 
     <node name="point_cloud_generator" pkg="point_cloud_generator" type="point_cloud_generator_node" output="screen">

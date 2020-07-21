@@ -72,15 +72,35 @@
 #include <pcl/features/integral_image_normal.h>
 #include <boost/thread/thread.hpp>
 
+#include <pcl/features/normal_3d.h>
+#include <pcl/features/fpfh.h>
+#include <pcl/registration/ia_ransac.h>
+
+#include <pcl/filters/passthrough.h>
+
 
 //convenient typedefs
 //typedef pcl::PointXYZ PointT;
 //typedef pcl::PointCloud<PointT> PointCloud;
 
 
+
 class PCGenNode
 {
 private:
+    struct MyCloud
+    {
+        pcl::PointCloud<pcl::PointXYZ> cloud; 
+        tf::StampedTransform transform;
+
+        MyCloud (pcl::PointCloud<pcl::PointXYZ>::Ptr cloud,
+                    tf::StampedTransform  transform
+                    ) :
+            cloud (*cloud),
+            transform (transform)
+        {
+        }
+    };
     //ROS objects here
     ros::NodeHandle nh;
     ros::Subscriber cloudSub;
@@ -97,6 +117,8 @@ private:
     void registerModel(const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud,   const pcl::PointCloud<pcl::PointXYZ>::Ptr modelSkeleton);
  
     void scaleCloud(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud, float scalingFactor=0.001);
+
+    void processCloud(MyCloud inputCloud, pcl::PointCloud<pcl::PointXYZ>::Ptr outputCloud);
 
     void localRegistration(pcl::PointCloud<pcl::PointXYZ>::Ptr model ,pcl::PointCloud<pcl::PointXYZ>::Ptr scene);
 
@@ -116,8 +138,11 @@ private:
     tf::StampedTransform mostRecentTransform;
     tf::TransformListener listener;
 
+    std::vector<MyCloud> cloudList;
+    /*
     std::vector<pcl::PointCloud<pcl::PointXYZ>::Ptr> cloudList;
     std::vector<Eigen::Matrix4f> cloudTransforms;
+    */
 
 
 

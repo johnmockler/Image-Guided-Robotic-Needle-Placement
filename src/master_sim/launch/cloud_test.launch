@@ -1,0 +1,5 @@
+<launch>
+    <node name="point_cloud_generator" pkg="point_cloud_generator" type="point_cloud_generator_node" output="screen">
+    </node>
+
+</launch>

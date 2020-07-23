@@ -5,6 +5,7 @@
 #include <array>
 #include <string>
 #include <vector>
+#include <mutex> 
 
 #include <controller_interface/multi_interface_controller.h>
 #include <hardware_interface/joint_command_interface.h>
@@ -12,6 +13,7 @@
 #include <ros/node_handle.h>
 #include <ros/time.h>
 #include <std_msgs/Float64MultiArray.h>
+
 
 namespace franka_example_controllers {
 
@@ -31,6 +33,7 @@ class JointPositionExampleController : public controller_interface::MultiInterfa
   ros::Subscriber command_sub_;
   std::vector<double> command_;
   void setCommandCallback(const std_msgs::Float64MultiArrayConstPtr &msg);
+  std::mutex mutex;
 };
 
 }  // namespace franka_example_controllers

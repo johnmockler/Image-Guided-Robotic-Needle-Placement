@@ -4,6 +4,17 @@
 
 See the [Franka Control Interface (FCI) documentation][fci-docs] for more information.
 
+## Startup simulation
+
+    roslaunch franka_example_controllers joint_position_example_controller_sim.launch
+    rosrun franka_example_controllers test_move_node _command_topic:=/joint_position_example_controller_sim/joint_command
+
+## Startup real Panda
+
+    roslaunch franka_example_controllers joint_position_example_controller.launch
+    rosrun franka_example_controllers test_move_node _command_topic:=/joint_position_example_controller/joint_command
+
+
 ## License
 
 All packages of `franka_ros` are licensed under the [Apache 2.0 license][apache-2.0].

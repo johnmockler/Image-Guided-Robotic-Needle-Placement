@@ -69,7 +69,7 @@ namespace franka_example_controllers
         field(a_f)
       {}
 
-      T (desired_mass_paramConfig::* field);
+      T desired_mass_paramConfig::* field;
 
       virtual void clamp(desired_mass_paramConfig &config, const desired_mass_paramConfig &max, const desired_mass_paramConfig &min) const
       {
@@ -216,7 +216,7 @@ namespace franka_example_controllers
         }
       }
 
-      T (PT::* field);
+      T PT::* field;
       std::vector<desired_mass_paramConfig::AbstractGroupDescriptionConstPtr> groups;
     };
 

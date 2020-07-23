@@ -3,11 +3,7 @@
     </node>
 
     <include file="$(find franka_example_controllers)/launch/joint_position_example_controller.launch" />
-
-    <include file="$(find forward_kinematics)/launch/forward_kinematics.launch" />
-    <include file="$(find inverse_kinematics)/launch/inverse_kin.launch" />
     <include file="$(find pathPlanning_cc)/launch/pathPlanning.launch" />
-    <include file="$(find trajectory_planning_cc)/launch/traj_planCC.launch" />
         
    <include file="$(find azure_kinect_ros_driver)/launch/driver.launch" />
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/rnm/rnm_group_2/src/pathPlanning_cc
+# Install script for directory: /home/suyashs/rnm_group_2/src/pathPlanning_cc
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/rnm/rnm_group_2/install")
+  set(CMAKE_INSTALL_PREFIX "/home/suyashs/rnm_group_2/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "")
+    set(CMAKE_INSTALL_CONFIG_NAME "Release")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/rnm/rnm_group_2/build/pathPlanning_cc/catkin_generated/installspace/pathPlanning_cc.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/suyashs/rnm_group_2/build/pathPlanning_cc/catkin_generated/installspace/pathPlanning_cc.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pathPlanning_cc/cmake" TYPE FILE FILES
-    "/home/rnm/rnm_group_2/build/pathPlanning_cc/catkin_generated/installspace/pathPlanning_ccConfig.cmake"
-    "/home/rnm/rnm_group_2/build/pathPlanning_cc/catkin_generated/installspace/pathPlanning_ccConfig-version.cmake"
+    "/home/suyashs/rnm_group_2/build/pathPlanning_cc/catkin_generated/installspace/pathPlanning_ccConfig.cmake"
+    "/home/suyashs/rnm_group_2/build/pathPlanning_cc/catkin_generated/installspace/pathPlanning_ccConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pathPlanning_cc" TYPE FILE FILES "/home/rnm/rnm_group_2/src/pathPlanning_cc/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pathPlanning_cc" TYPE FILE FILES "/home/suyashs/rnm_group_2/src/pathPlanning_cc/package.xml")
 endif()
 

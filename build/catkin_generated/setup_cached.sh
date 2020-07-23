@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD="/home/rnm/rnm_group_2/build"
+export PWD="/home/suyashs/rnm_group_2/build"

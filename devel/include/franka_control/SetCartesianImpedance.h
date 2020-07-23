@@ -57,8 +57,8 @@ struct DataType< ::franka_control::SetCartesianImpedance > {
 };
 
 
-// service_traits::MD5Sum< ::franka_control::SetCartesianImpedanceRequest> should match 
-// service_traits::MD5Sum< ::franka_control::SetCartesianImpedance > 
+// service_traits::MD5Sum< ::franka_control::SetCartesianImpedanceRequest> should match
+// service_traits::MD5Sum< ::franka_control::SetCartesianImpedance >
 template<>
 struct MD5Sum< ::franka_control::SetCartesianImpedanceRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::franka_control::SetCartesianImpedanceRequest>
   }
 };
 
-// service_traits::DataType< ::franka_control::SetCartesianImpedanceRequest> should match 
-// service_traits::DataType< ::franka_control::SetCartesianImpedance > 
+// service_traits::DataType< ::franka_control::SetCartesianImpedanceRequest> should match
+// service_traits::DataType< ::franka_control::SetCartesianImpedance >
 template<>
 struct DataType< ::franka_control::SetCartesianImpedanceRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::franka_control::SetCartesianImpedanceRequest>
   }
 };
 
-// service_traits::MD5Sum< ::franka_control::SetCartesianImpedanceResponse> should match 
-// service_traits::MD5Sum< ::franka_control::SetCartesianImpedance > 
+// service_traits::MD5Sum< ::franka_control::SetCartesianImpedanceResponse> should match
+// service_traits::MD5Sum< ::franka_control::SetCartesianImpedance >
 template<>
 struct MD5Sum< ::franka_control::SetCartesianImpedanceResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::franka_control::SetCartesianImpedanceResponse>
   }
 };
 
-// service_traits::DataType< ::franka_control::SetCartesianImpedanceResponse> should match 
-// service_traits::DataType< ::franka_control::SetCartesianImpedance > 
+// service_traits::DataType< ::franka_control::SetCartesianImpedanceResponse> should match
+// service_traits::DataType< ::franka_control::SetCartesianImpedance >
 template<>
 struct DataType< ::franka_control::SetCartesianImpedanceResponse>
 {

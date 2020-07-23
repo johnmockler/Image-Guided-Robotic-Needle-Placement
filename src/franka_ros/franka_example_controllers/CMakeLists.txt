@@ -51,7 +51,8 @@ catkin_package(
 add_library(franka_example_controllers
   src/joint_position_example_controller.cpp
   src/joint_position_example_controller_sim.cpp
-        )
+)
+
 add_dependencies(franka_example_controllers
   ${${PROJECT_NAME}_EXPORTED_TARGETS}
   ${catkin_EXPORTED_TARGETS}

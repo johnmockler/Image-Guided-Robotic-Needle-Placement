@@ -1,4 +1,4 @@
-prefix=/home/rnm/rnm_group_2/install
+prefix=/home/suyashs/rnm_group_2/install
 
 Name: trajectory_planning_cc
 Description: Description of trajectory_planning_cc

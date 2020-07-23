@@ -3,69 +3,64 @@
 #include <std_msgs/Float64MultiArray.h>
 #include <stdlib.h>
 #include <math.h>
+#include <sensor_msgs/JointState.h>
 
 class RobotArm
 {
 
 private:
     ros::NodeHandle nh_;
-    std::vector<std::vector<double>> jointAngleSet;
     std::vector<std::string> joint_names_;
     unsigned int num_joints_;
     double joint_move_dist_;
-    int counter = 0;
-    ros::Publisher command_pub = nh_.advertise<std_msgs::Float64MultiArray>("/joint_position_example_controller_sim/joint_command", 1000);
-    std::vector<double> init_position = {0,0,0,-0.08,0,0.0,0};
-    
+    std::string command_topic_;
+    long counter = 0;
+    std::array<double, 7> init_position{};
+    ros::Publisher command_pub; 
+
 public:
 
     // Initialize
-    RobotArm(ros::NodeHandle nh, double joint_move_dist): nh_(nh), num_joints_(7), joint_move_dist_(joint_move_dist)
+    RobotArm(ros::NodeHandle nh, double joint_move_dist, std::string command_topic): nh_(nh), num_joints_(7), joint_move_dist_(joint_move_dist), command_topic_(command_topic_)
     {
-        std::vector<double> position1 = {0.0,0.0,0,-0.5,0.0,0.0,0.0};
-        jointAngleSet.push_back(init_position);
+	sensor_msgs::JointState joint_state_msg;
 
-        std::vector<double> position2 = {0.0,1.0,0.0,-0.5,-0,-0.0,0};
-        jointAngleSet.push_back(init_position);
+        if (command_topic.find("sim") != std::string::npos) {
+	    for (size_t i = 0; i < 7; ++i) {
+	        init_position[i] = 0.;
+	    }
+        } 
+        else {
+	    joint_state_msg  = *(ros::topic::waitForMessage<sensor_msgs::JointState>("/franka_state_controller/joint_states_desired",ros::Duration(10)));
+	    for (size_t i = 0; i < 7; ++i) {
+	        init_position[i] = joint_state_msg.position[i];
+	    }
+        }
 
-       /* std::vector<double> position3 = {0,0,1.6,-0.5,0,0,0};
-        jointAngleSet.push_back(position3);
-
-        std::vector<double> position4 = {0,0,0,-2.3,0,0,0};
-        jointAngleSet.push_back(position4);
-
-        std::vector<double> position5 = {0,-0,0,-2.3,1.6,0,0};
-        jointAngleSet.push_back(position5);
-
-        std::vector<double> position6 = {0,-0,-0,-0.5,0,2.0,0};
-        jointAngleSet.push_back(position6);
-
-        std::vector<double> position7 = {0,0,0,-2.3,0,0,1.3};
-        jointAngleSet.push_back(position7);*/
-     
-
+	command_pub = nh_.advertise<std_msgs::Float64MultiArray>(command_topic, 1);
     }
 
     void sendStepCommand()
     {
-        
-           for(int i=0;i<1;i++)
-           {
-             std::vector<float> goal_position;
-             for(int j=0;j<7;j++)
-             {
-                std::cout<<"goal pos :"<<jointAngleSet[i][j]<<std::endl;
-                goal_position.push_back(jointAngleSet[i][j]);
-                
-             }
-             std_msgs::Float64MultiArray msg;
-             msg.data.clear();
-             msg.data.insert(msg.data.end(), goal_position.begin(), goal_position.end());
-             command_pub.publish(msg);
+        // calculate new joint angles
+        std::vector<double> goal_position;
+        //double delta_angle = joint_move_dist_/180.*M_PI * (std::sin(counter/1000.));
+        double delta_angle = M_PI / 16 * (1 - std::cos(M_PI / 5.0 * counter/1000.)) * 0.2;
+        for (size_t i = 0; i < 7; ++i) {
+          if (i == 4) {
+              goal_position.push_back(init_position[i] - delta_angle);
+          } else {
+              goal_position.push_back(init_position[i] + delta_angle);
+          }
+        }
+        counter++;
 
-             ros::Duration(5.0).sleep();
-           }
- // create message and publish it
+        // create message and publish it
+        std_msgs::Float64MultiArray msg;
+        msg.data.clear();
+        msg.data.insert(msg.data.end(), goal_position.begin(), goal_position.end());
+        command_pub.publish(msg);
+
     }
 };
 
@@ -76,15 +71,20 @@ int main(int argc, char** argv)
   ros::NodeHandle nh;
 
   // Amount of movement in each joint
-  double joint_move_dist = 15.0;
+  double joint_move_dist = 5;
   ros::param::get("~joint_move_dist", joint_move_dist);
   ROS_INFO_STREAM("joint_move_dist: " << joint_move_dist << " degrees.");
 
+  // Amount of movement in each joint
+  std::string command_topic = "/joint_position_example_controller_sim/joint_command";
+  ros::param::get("~command_topic", command_topic);
+  ROS_INFO_STREAM("command_topic: " << command_topic);
+
   // create RobotArm object
-  RobotArm arm(nh, joint_move_dist);
+  RobotArm arm(nh, joint_move_dist,command_topic);
 
   // loop infinitely with a fixed frequency and send our commands
-  ros::Rate loop_rate(10);
+  ros::Rate loop_rate(1000);
   while (ros::ok())
   {
       arm.sendStepCommand();

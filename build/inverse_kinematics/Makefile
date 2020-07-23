@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rnm/rnm_group_2/src
+CMAKE_SOURCE_DIR = /home/suyashs/rnm_group_2/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rnm/rnm_group_2/build
+CMAKE_BINARY_DIR = /home/suyashs/rnm_group_2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/rnm/rnm_group_2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles /home/rnm/rnm_group_2/build/inverse_kinematics/CMakeFiles/progress.marks
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 inverse_kinematics/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rnm/rnm_group_2/build/CMakeFiles 0
+	cd /home/suyashs/rnm_group_2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/suyashs/rnm_group_2/build/CMakeFiles /home/suyashs/rnm_group_2/build/inverse_kinematics/CMakeFiles/progress.marks
+	cd /home/suyashs/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 inverse_kinematics/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/suyashs/rnm_group_2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 inverse_kinematics/clean
+	cd /home/suyashs/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 inverse_kinematics/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 inverse_kinematics/preinstall
+	cd /home/suyashs/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 inverse_kinematics/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 inverse_kinematics/preinstall
+	cd /home/suyashs/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 inverse_kinematics/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/rnm/rnm_group_2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/suyashs/rnm_group_2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 inverse_kinematics/CMakeFiles/inverseKinematics.dir/rule:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 inverse_kinematics/CMakeFiles/inverseKinematics.dir/rule
+	cd /home/suyashs/rnm_group_2/build && $(MAKE) -f CMakeFiles/Makefile2 inverse_kinematics/CMakeFiles/inverseKinematics.dir/rule
 .PHONY : inverse_kinematics/CMakeFiles/inverseKinematics.dir/rule
 
 # Convenience name for target.
@@ -179,7 +179,7 @@ inverseKinematics: inverse_kinematics/CMakeFiles/inverseKinematics.dir/rule
 
 # fast build rule for target.
 inverseKinematics/fast:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f inverse_kinematics/CMakeFiles/inverseKinematics.dir/build.make inverse_kinematics/CMakeFiles/inverseKinematics.dir/build
+	cd /home/suyashs/rnm_group_2/build && $(MAKE) -f inverse_kinematics/CMakeFiles/inverseKinematics.dir/build.make inverse_kinematics/CMakeFiles/inverseKinematics.dir/build
 .PHONY : inverseKinematics/fast
 
 src/inverseKinematics.o: src/inverseKinematics.cpp.o
@@ -188,7 +188,7 @@ src/inverseKinematics.o: src/inverseKinematics.cpp.o
 
 # target to build an object file
 src/inverseKinematics.cpp.o:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f inverse_kinematics/CMakeFiles/inverseKinematics.dir/build.make inverse_kinematics/CMakeFiles/inverseKinematics.dir/src/inverseKinematics.cpp.o
+	cd /home/suyashs/rnm_group_2/build && $(MAKE) -f inverse_kinematics/CMakeFiles/inverseKinematics.dir/build.make inverse_kinematics/CMakeFiles/inverseKinematics.dir/src/inverseKinematics.cpp.o
 .PHONY : src/inverseKinematics.cpp.o
 
 src/inverseKinematics.i: src/inverseKinematics.cpp.i
@@ -197,7 +197,7 @@ src/inverseKinematics.i: src/inverseKinematics.cpp.i
 
 # target to preprocess a source file
 src/inverseKinematics.cpp.i:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f inverse_kinematics/CMakeFiles/inverseKinematics.dir/build.make inverse_kinematics/CMakeFiles/inverseKinematics.dir/src/inverseKinematics.cpp.i
+	cd /home/suyashs/rnm_group_2/build && $(MAKE) -f inverse_kinematics/CMakeFiles/inverseKinematics.dir/build.make inverse_kinematics/CMakeFiles/inverseKinematics.dir/src/inverseKinematics.cpp.i
 .PHONY : src/inverseKinematics.cpp.i
 
 src/inverseKinematics.s: src/inverseKinematics.cpp.s
@@ -206,7 +206,7 @@ src/inverseKinematics.s: src/inverseKinematics.cpp.s
 
 # target to generate assembly for a file
 src/inverseKinematics.cpp.s:
-	cd /home/rnm/rnm_group_2/build && $(MAKE) -f inverse_kinematics/CMakeFiles/inverseKinematics.dir/build.make inverse_kinematics/CMakeFiles/inverseKinematics.dir/src/inverseKinematics.cpp.s
+	cd /home/suyashs/rnm_group_2/build && $(MAKE) -f inverse_kinematics/CMakeFiles/inverseKinematics.dir/build.make inverse_kinematics/CMakeFiles/inverseKinematics.dir/src/inverseKinematics.cpp.s
 .PHONY : src/inverseKinematics.cpp.s
 
 # Help Target
@@ -237,6 +237,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/rnm/rnm_group_2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/suyashs/rnm_group_2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

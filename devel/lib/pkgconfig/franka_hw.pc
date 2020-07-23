@@ -1,8 +1,8 @@
-prefix=/home/rnm/rnm_group_2/devel
+prefix=/home/suyashs/rnm_group_2/devel
 
 Name: franka_hw
 Description: Description of franka_hw
 Version: 0.7.0
-Cflags: -I/home/rnm/rnm_group_2/src/franka_ros/franka_hw/include -I/opt/ros/melodic/include/libfranka
-Libs: -L${prefix}/lib -lfranka_hw /opt/ros/melodic/lib/libfranka.so.0.7.1
+Cflags: -I/home/suyashs/rnm_group_2/src/franka_ros/franka_hw/include -I/opt/ros/melodic/include/libfranka
+Libs: -L${prefix}/lib -lfranka_hw /opt/ros/melodic/lib/libfranka.so.0.8.0
 Requires: controller_interface hardware_interface joint_limits_interface roscpp urdf

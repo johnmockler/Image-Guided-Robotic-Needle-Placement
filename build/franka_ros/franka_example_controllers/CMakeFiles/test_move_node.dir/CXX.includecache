@@ -17,6 +17,8 @@ stdlib.h
 -
 math.h
 -
+sensor_msgs/JointState.h
+-
 
 /opt/ros/melodic/include/ros/advertise_options.h
 ros/forwards.h
@@ -664,6 +666,24 @@ ros/forwards.h
 
 /opt/ros/melodic/include/rosconsole/macros_generated.h
 
+/opt/ros/melodic/include/sensor_msgs/JointState.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
+-
+
 /opt/ros/melodic/include/std_msgs/Float64MultiArray.h
 string
 -
@@ -680,6 +700,22 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 std_msgs/MultiArrayLayout.h
+-
+
+/opt/ros/melodic/include/std_msgs/Header.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
 -
 
 /opt/ros/melodic/include/std_msgs/MultiArrayDimension.h

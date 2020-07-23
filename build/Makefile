@@ -2001,6 +2001,19 @@ pathP_CC/fast:
 .PHONY : pathP_CC/fast
 
 #=============================================================================
+# Target rules for targets named pc_sim_node
+
+# Build rule for target.
+pc_sim_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pc_sim_node
+.PHONY : pc_sim_node
+
+# fast build rule for target.
+pc_sim_node/fast:
+	$(MAKE) -f pc_sim/CMakeFiles/pc_sim_node.dir/build.make pc_sim/CMakeFiles/pc_sim_node.dir/build
+.PHONY : pc_sim_node/fast
+
+#=============================================================================
 # Target rules for targets named trajectory_planning
 
 # Build rule for target.
@@ -2986,6 +2999,7 @@ help:
 	@echo "... inverseKinematics"
 	@echo "... master_sim_node"
 	@echo "... pathP_CC"
+	@echo "... pc_sim_node"
 	@echo "... trajectory_planning"
 	@echo "... franka_hw"
 	@echo "... clean_test_results_franka_hw"

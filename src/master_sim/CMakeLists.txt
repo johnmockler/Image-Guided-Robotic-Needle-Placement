@@ -106,7 +106,7 @@ catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES master_sim
 #  CATKIN_DEPENDS roscpp sensor_msgs
-#  DEPENDS system_lib
+  DEPENDS messages
 )
 
 ###########
@@ -121,19 +121,22 @@ include_directories(
 )
 
 ## Declare a C++ library
-# add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/master_sim.cpp
-# )
+ ##add_library(pc_sim
+ ##  src/pc_sim.cpp
+ ##)
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure
 # add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-
+##add_dependencies(messages messages/ImageCapture.srv)
+	
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
- add_executable(${PROJECT_NAME}_node src/master_sim.cpp)
+ add_executable(master_sim_node src/master_sim.cpp)
+ ##add_executable(pc_sim_node src/pc_sim.cpp)
+
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -147,7 +150,7 @@ include_directories(
 
 ## Specify libraries to link a library or executable target against
  target_link_libraries(${PROJECT_NAME}_node
-   ${catkin_LIBRARIES}
+   ${catkin_LIBRARIES} 
  )
 
 #############

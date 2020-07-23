@@ -58,7 +58,9 @@ franka_ros/franka_example_controllers/CMakeFiles/test_move_node.dir/src/test_mov
 franka_ros/franka_example_controllers/CMakeFiles/test_move_node.dir/src/test_move.cpp.o: /opt/ros/melodic/include/ros/wall_timer.h
 franka_ros/franka_example_controllers/CMakeFiles/test_move_node.dir/src/test_move.cpp.o: /opt/ros/melodic/include/ros/wall_timer_options.h
 franka_ros/franka_example_controllers/CMakeFiles/test_move_node.dir/src/test_move.cpp.o: /opt/ros/melodic/include/rosconsole/macros_generated.h
+franka_ros/franka_example_controllers/CMakeFiles/test_move_node.dir/src/test_move.cpp.o: /opt/ros/melodic/include/sensor_msgs/JointState.h
 franka_ros/franka_example_controllers/CMakeFiles/test_move_node.dir/src/test_move.cpp.o: /opt/ros/melodic/include/std_msgs/Float64MultiArray.h
+franka_ros/franka_example_controllers/CMakeFiles/test_move_node.dir/src/test_move.cpp.o: /opt/ros/melodic/include/std_msgs/Header.h
 franka_ros/franka_example_controllers/CMakeFiles/test_move_node.dir/src/test_move.cpp.o: /opt/ros/melodic/include/std_msgs/MultiArrayDimension.h
 franka_ros/franka_example_controllers/CMakeFiles/test_move_node.dir/src/test_move.cpp.o: /opt/ros/melodic/include/std_msgs/MultiArrayLayout.h
 franka_ros/franka_example_controllers/CMakeFiles/test_move_node.dir/src/test_move.cpp.o: /opt/ros/melodic/include/std_msgs/String.h

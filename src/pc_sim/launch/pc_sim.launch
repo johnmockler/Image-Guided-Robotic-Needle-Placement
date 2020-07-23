@@ -1,0 +1,12 @@
+<launch>
+    <node name="pc_sim" pkg="master_sim" type="pc_sim_node" output="screen"/>
+   
+   
+   
+    <!---include file="$(find franka_example_controllers)/launch/joint_position_example_controller_sim.launch" /-->
+    <include file="$(find pathplanning_model)/launch/mod_gen_pp.launch" />
+   
+
+    <node name="camera_calibration" pkg="camera_calibration" type="camera_calibration_node" output = "screen"/>
+    
+</launch>

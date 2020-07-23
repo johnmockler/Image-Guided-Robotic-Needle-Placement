@@ -53,7 +53,7 @@ CMAKE_AR:FILEPATH=/usr/bin/ar
 
 //Choose the type of build, options are: None(CMAKE_CXX_FLAGS or
 // CMAKE_C_FLAGS used) Debug Release RelWithDebInfo MinSizeRel.
-CMAKE_BUILD_TYPE:STRING=Release
+CMAKE_BUILD_TYPE:STRING=
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -507,6 +507,9 @@ lib:FILEPATH=/opt/ros/melodic/lib/librealtime_tools.so
 //Value Computed by CMake
 master_sim_BINARY_DIR:STATIC=/home/suyashs/rnm_group_2/build/master_sim
 
+//Dependencies for target
+master_sim_LIB_DEPENDS:STATIC=
+
 //Value Computed by CMake
 master_sim_SOURCE_DIR:STATIC=/home/suyashs/rnm_group_2/src/master_sim
 
@@ -539,6 +542,15 @@ pathplanning_model_BINARY_DIR:STATIC=/home/suyashs/rnm_group_2/build/pathplannin
 
 //Value Computed by CMake
 pathplanning_model_SOURCE_DIR:STATIC=/home/suyashs/rnm_group_2/src/pathplanning_model
+
+//Value Computed by CMake
+pc_sim_BINARY_DIR:STATIC=/home/suyashs/rnm_group_2/build/pc_sim
+
+//Dependencies for target
+pc_sim_LIB_DEPENDS:STATIC=
+
+//Value Computed by CMake
+pc_sim_SOURCE_DIR:STATIC=/home/suyashs/rnm_group_2/src/pc_sim
 
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/melodic/share/pluginlib/cmake
@@ -728,7 +740,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=21
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=22
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

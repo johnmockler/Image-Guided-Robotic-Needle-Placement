@@ -251,6 +251,14 @@
 /home/suyashs/rnm_group_2/build/pathPlanning_cc/CMakeFiles/edit_cache.dir
 /home/suyashs/rnm_group_2/build/pathPlanning_cc/CMakeFiles/rebuild_cache.dir
 /home/suyashs/rnm_group_2/build/pathPlanning_cc/CMakeFiles/install.dir
+/home/suyashs/rnm_group_2/build/pc_sim/CMakeFiles/install/strip.dir
+/home/suyashs/rnm_group_2/build/pc_sim/CMakeFiles/install/local.dir
+/home/suyashs/rnm_group_2/build/pc_sim/CMakeFiles/test.dir
+/home/suyashs/rnm_group_2/build/pc_sim/CMakeFiles/list_install_components.dir
+/home/suyashs/rnm_group_2/build/pc_sim/CMakeFiles/edit_cache.dir
+/home/suyashs/rnm_group_2/build/pc_sim/CMakeFiles/pc_sim_node.dir
+/home/suyashs/rnm_group_2/build/pc_sim/CMakeFiles/rebuild_cache.dir
+/home/suyashs/rnm_group_2/build/pc_sim/CMakeFiles/install.dir
 /home/suyashs/rnm_group_2/build/trajectory_planning_cc/CMakeFiles/install/strip.dir
 /home/suyashs/rnm_group_2/build/trajectory_planning_cc/CMakeFiles/install/local.dir
 /home/suyashs/rnm_group_2/build/trajectory_planning_cc/CMakeFiles/test.dir

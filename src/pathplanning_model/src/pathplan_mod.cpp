@@ -19,42 +19,48 @@ class PathPlanningM
     std::vector <float> Cvec = {0.500,0.500,0.500,0.500,0.300};
     ros::NodeHandle n;
     ros::Subscriber inverseSubscriber;
-    ros::Publisher cordinate_pub = n.advertise<std_msgs::Float64MultiArray>("/target_Cordinate", 1000);
+    ros::Publisher cordinate_pub = n.advertise<std_msgs::Float64MultiArray>("/joint_AnglesIK", 1000);
     ros::Publisher type_pub = n.advertise<std_msgs::String>("/execution_type", 1000);
 
     public:
 
     PathPlanningM(ros::NodeHandle nh): n(nh)
     {
+        setJointAngles();
 
     }
     void getJointAngles()
     {
-        //std::cout<<"entered get joint Angles"<<std::endl;
-        //for(int i=0;i<Bvec.size();i++)
-        //{
-            for(int j=0;j<Avec.size();j++)
+            for(int i=0;i<jointAngleSet.size();i++)
             {
-                std::vector<float> cord;
-                cord.push_back(Avec[j]);
-                cord.push_back(Bvec[j]);
-                cord.push_back(Cvec[j]);
-
-                std_msgs::String id;
-                std::stringstream ss;
-                ss<<"modScan";
-                id.data = ss.str();
-                type_pub.publish(id);
+                
 
                 std_msgs::Float64MultiArray msg;
                 msg.data.clear();
-                msg.data.insert(msg.data.end(), cord.begin(), cord.end());
+                msg.data.insert(msg.data.end(), jointAngleSet[i].begin(), jointAngleSet[i].end());
                 cordinate_pub.publish(msg);
                 ros::Duration(0.2).sleep();
                 
             }
-       // }
+       
   
+    }
+      void setJointAngles()
+    {
+        std::cout<<"Angle Set"<<std::endl;
+         std::vector <float> pos1 = {0.030525, -0.1569, 0.00543, -2.04827, -1.511428, 1.50407, -1.263967};
+         jointAngleSet.push_back(pos1);
+         std::vector <float> pos2 = {-0.11194, 0.185898, -0.951134, -2.47058, -0.5011734, 2.7499887, -1.840970};
+         jointAngleSet.push_back(pos2);
+         std::vector <float> pos3 = {-0.127346, -0.89997, 0.7862128, -2.430445, -0.833805, 1.23556, -0.84614679};
+         jointAngleSet.push_back(pos3);
+         std::vector <float> pos4 = {-0.8479007, -1.089440, 1.81952, -2.0095914, 1.421915, 1.8340413, 1.410234};
+         jointAngleSet.push_back(pos4);
+         std::vector <float> pos5 = {-2.864878, -0.4638232, 2.6686572, -1.520757, 1.5852838, 1.599405, 1.765395};
+         jointAngleSet.push_back(pos5);
+         std::vector <float> pos6 = {-2.8250744, -0.678798, 2.207051, -1.9668214, 0.4210820, 2.7636913, -2.4785283};
+         jointAngleSet.push_back(pos6);
+
     }
 
 };

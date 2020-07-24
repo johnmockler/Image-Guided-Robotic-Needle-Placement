@@ -5,7 +5,7 @@
 class Trajectory
 {
     private:
-    float T_g = 5;
+    float T_g = 8;
     float V_MAX = 120.0;
     float A_MAX = 430.0;
     float T_i = 0.001;
@@ -45,7 +45,7 @@ class Trajectory
         std::vector<float> interSet;
 
         //Time considerations
-        if(T_g/d <0.02 && T_g/d > -0.02)
+        if(T_g/d <0.01 && T_g/d > -0.01)
         {
             T_g = (d/T_g)/30;
         }

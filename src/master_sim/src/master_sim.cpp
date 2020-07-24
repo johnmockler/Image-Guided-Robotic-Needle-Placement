@@ -67,14 +67,14 @@ void jointSet()
 void angleCallback(const std_msgs::Float64MultiArray::ConstPtr& msg)
   {
         
-        if(jointAngleSet.size()>=32)
+        if(jointAngleSet.size()>=31)
         {
             //jointAngleSet.push_back(init_position);
             //setAngles();
           ROS_INFO("All goal pos recieved.");
           goalSubscriber.shutdown();
         }
-        else if(jointAngleSet.size()<=31)
+        else if(jointAngleSet.size()<=30)
         {
             //std::cout<<"Set :"<<std::endl;
             std::vector<float> jointAngle;

@@ -2,11 +2,11 @@
 
     <node name="pathplan_mod" pkg="pathplanning_model" type= "pathplan_mod" output="screen" >
     </node>
-   <node name="inverse_kinematics" pkg="inverse_kinematics" type= "inverseKinematics" output="screen" >
-    </node>
+   <!--node name="inverse_kinematics" pkg="inverse_kinematics" type= "inverseKinematics" output="screen" >
+    </node-->
     <node name="trajectory_planning" pkg="trajectory_planning_cc" type= "trajectory_planning" output="screen" >
     
-    <param name="setSize" type="int" value="4" />
+    <param name="setSize" type="int" value="5" />
     </node>
 
 

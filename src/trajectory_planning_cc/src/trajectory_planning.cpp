@@ -15,7 +15,7 @@ class TrajectoryPlanningCC
     int pos=0;
     int setSize;
     ros::NodeHandle n;
-    ros::Publisher traj_pub= n.advertise<std_msgs::Float64MultiArray>("/joint_position_example_controller/joint_command", 1000);
+    ros::Publisher traj_pub= n.advertise<std_msgs::Float64MultiArray>("/joint_position_example_controller_sim/joint_command", 1000);
     ros::Publisher goal_pos_pub= n.advertise<std_msgs::Float64MultiArray>("/goal_position", 1000);
     ros::Subscriber jp_sub;
     ros::Subscriber js_sub;

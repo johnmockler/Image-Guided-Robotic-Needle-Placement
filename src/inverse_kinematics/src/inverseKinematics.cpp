@@ -384,7 +384,7 @@ class InverseKinematics
         if(id=="camCalib")
         {
             angles[4]= -(M_PI/2) + (0.34906)*(cord[0]/0.160);
-            angles[6]=  -1.57 + (-0.785398 * (cord[1]-0.400)/0.160) - angles[0];
+            angles[6]=  -1.57 + (-0.34906 * (cord[1]-0.400)/0.160) - angles[0];
             
             return angles;
 

@@ -153,6 +153,19 @@ void CameraCalibrationNode::computeHandeyeTransform()
     calibrateHandEye(endEffectorPosesR,endEffectorPosesT,Target2CamPosesR_Matrix,cameraPosesT,cam2endEffectorR,cam2endEffectorT);
 }
 
+void listenTransform()
+{
+    if(alreadyHandEyeCalibrated)
+    {
+        //replace panda_link7, and panda_link0 with the names of end effector and base, respectively
+        tf::StampedTransform base2gripper;
+        listener.lookupTransform("panda_link7", "panda_link0", ros::Time(0), base2gripper);
+
+        formatTransform(base2gripper, mostRecentPoseR, mostRecentPoseT);
+    }
+}
+
+
 void CameraCalibrationNode::broadcastTransform()
 {
     if(alreadyHandEyeCalibrated)
@@ -196,11 +209,17 @@ void CameraCalibrationNode::broadcastTransform()
         tf2_msgs::TFMessage mesg;
         mesg.transforms.push_back(trans);
         PubRotationCam2Base.publish(mesg);
-
+        
+        std::cout<<"cam2endeffectorR: "<<std::endl;
+        std::cout<<cam2endEffectorR<<std::endl;
+        std::cout<<"cam2endeffectorT: "<<std::endl;
+        std::cout<<cam2endEffectorT<<std::endl;
+        /*
         printf ("\n");
         printf ("R = | %6.3f %6.3f %6.3f  %6.3f| \n", trans.transform.rotation.x, trans.transform.rotation.y, trans.transform.rotation.z, trans.transform.rotation.w);
         printf ("\n");
         printf ("t = < %0.3f, %0.3f, %0.3f >\n", trans.transform.translation.x, trans.transform.translation.y, trans.transform.translation.z);
+    */
     }
 }
 

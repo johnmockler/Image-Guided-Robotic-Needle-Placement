@@ -36,6 +36,7 @@ void CameraCalibrationNode::cameraCallback(const sensor_msgs::ImageConstPtr& msg
 
 void CameraCalibrationNode::poseCallback(const tf2_msgs::TFMessage::ConstPtr& pose)
 {
+    /*
     //ROS_INFO("I heard: [%s]", pose->transforms.data());
     
     mostRecentPoseT[0] = pose->transforms[0].transform.translation.x;
@@ -47,6 +48,7 @@ void CameraCalibrationNode::poseCallback(const tf2_msgs::TFMessage::ConstPtr& po
     mostRecentPoseR[2] = pose->transforms[0].transform.rotation.z;
 
     //std::cout<<mostRecentPoseT[0]<<std::endl;
+    */
 
 }
 
@@ -60,9 +62,15 @@ bool CameraCalibrationNode::captureImage(messages::ImageCapture::Request &req, m
         calibrationImages.push_back(mostRecentImage);
         ROS_INFO("capturing image number [%ld]", (long) calibrationImages.size());
 
+        //replace panda_link7, and panda_link0 with the names of end effector and base, respectively
+        tf::StampedTransform base2gripper;
+        listener.lookupTransform("panda_link7", "panda_link0", ros::Time(0), base2gripper);
+
+        formatTransform(base2gripper, mostRecentPoseR, mostRecentPoseT);
 
         endEffectorPosesT.push_back(mostRecentPoseT);
         endEffectorPosesR.push_back(mostRecentPoseR);
+
     }
         //if true, process images and computer K matrix and Hand-eye Calibration
     else if (req.x == true)
@@ -82,8 +90,9 @@ bool CameraCalibrationNode::captureImage(messages::ImageCapture::Request &req, m
 
             if(!alreadyHandEyeCalibrated)
             {
-                alreadyHandEyeCalibrated =true;
                 computeHandeyeTransform();
+                alreadyHandEyeCalibrated =true;
+
                 /*
                 std::cout << "R= " << std::endl;
                 std::cout << cam2endEffectorR << std::endl;
@@ -164,7 +173,7 @@ void CameraCalibrationNode::calibrateAndPoseEstimation()
 
 void CameraCalibrationNode::computeHandeyeTransform()
 {
-
+    
     for (int i = 0; i < cameraPosesR.size(); i++)
     {
 
@@ -175,12 +184,15 @@ void CameraCalibrationNode::computeHandeyeTransform()
 
         // Creating a endEffector2Base rotation matrix, later will be passed into HandEyeCalibration
 
+        /*
         Mat endEffector2Base;
         cv::Rodrigues(endEffectorPosesR[i],endEffector2Base);
         endEffector2BasePosesR_Matrix.push_back(endEffector2Base.inv());
+        */
     }
+    
 
-    calibrateHandEye(endEffector2BasePosesR_Matrix,endEffectorPosesT,Target2CamPosesR_Matrix,cameraPosesT,cam2endEffectorR,cam2endEffectorT);
+    calibrateHandEye(endEffectorPosesR,endEffectorPosesT,Target2CamPosesR_Matrix,cameraPosesT,cam2endEffectorR,cam2endEffectorT);
     //cv::calibrateHandEye(endEffector2BasePosesR_Matrix,endEffectorPosesT,Target2CamPosesR_Matrix,cameraPosesT,cam2endEffectorR,cam2endEffectorT,method=CALIB_HAND_EYE_TSAI);
 
 
@@ -237,6 +249,12 @@ void CameraCalibrationNode::broadcastTransform()
     tf2_msgs::TFMessage mesg;
     mesg.transforms.push_back(trans);
     PubRotationCam2Base.publish(mesg);
+
+    printf ("\n");
+    printf ("R = | %6.3f %6.3f %6.3f  %6.3f| \n", trans.transform.rotation.x, trans.transform.rotation.y, trans.transform.rotation.z, trans.transform.rotation.w);
+    printf ("\n");
+    printf ("t = < %0.3f, %0.3f, %0.3f >\n", trans.transform.translation.x, trans.transform.translation.y, trans.transform.translation.z);
+
 
     /*
     //fill matrices with correct vectors
@@ -593,6 +611,37 @@ void CameraCalibrationNode::readTextFiles()
     }
 
 
+
+}
+void CameraCalibrationNode::formatTransform(tf::StampedTransform tfTransform, cv::Mat &R, cv::Mat &T)
+{
+    tf::Matrix3x3 rotTF;
+    tf::Vector3 transTF;
+
+    rotTF = tfTransform.getBasis();
+    transTF = tfTransform.getOrigin();
+    ROS_INFO_STREAM(" tfTransform: " << tfTransform.getOrigin().x() << ", " << tfTransform.getOrigin().y() << ", " <<tfTransform.getOrigin().z() << ", "
+                                              << tfTransform.getRotation().x() << ", " << tfTransform.getRotation().y() << ", " << tfTransform.getRotation().z());
+
+    cv::Mat Rot(3,1, CV_64FC1);
+    cv::Mat trans(3,1,CV_64FC1);
+
+    float x_col = tfTransform.getRotation().x();
+    float y_col = tfTransform.getRotation().y();
+    float z_col = tfTransform.getRotation().z();
+    float x = tfTransform.getOrigin().x();
+    float y = tfTransform.getOrigin().y();
+    float z = tfTransform.getOrigin().z();
+
+    Rot.at<float>(0,0) = x_col;
+    Rot.at<float>(1,0) = y_col;
+    Rot.at<float>(2,0) = z_col;
+    trans.at<float>(0,0) = x;
+    trans.at<float>(1,0) = y;
+    trans.at<float>(2,0) = z;
+
+    cv::Rodrigues(Rot, R);
+    T = trans;
 
 }
 //Reference:

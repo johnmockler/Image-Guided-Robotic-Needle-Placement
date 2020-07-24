@@ -67,6 +67,7 @@ private:
     void computeHandeyeTransform();
     void readTextFiles();
     void drawFrameAxes(InputOutputArray image, InputArray cameraMatrix, InputArray distCoeffs,InputArray rvec, InputArray tvec, float length, int thickness);
+    void formatTransform(tf::StampedTransform tfTransform, cv::Mat &R, cv::Mat &T);
 
     //baseline methods
     void calibrateHandEyeTsai(const std::vector<Mat>& Hg, const std::vector<Mat>& Hc, Mat& R_cam2gripper, Mat& t_cam2gripper);
@@ -93,13 +94,13 @@ private:
     // Hand-Eye Calibration varaibales
     void poseCallback(const tf2_msgs::TFMessage::ConstPtr& pose);
     tf::StampedTransform base2gripper;
-    cv::Vec3d mostRecentPoseT;
-    cv::Vec3d mostRecentPoseR;
+    cv::Mat mostRecentPoseT;
+    cv::Mat mostRecentPoseR;
 
     Matx41d aa2quaternion(const Matx31d& aa);
 
-    std::vector<cv::Vec3d> endEffectorPosesR;
-    std::vector<cv::Vec3d> endEffectorPosesT;
+    std::vector<cv::Mat> endEffectorPosesR;
+    std::vector<cv::Mat> endEffectorPosesT;
 
     std::vector<Mat> Target2CamPosesR_Matrix;
     std::vector<Mat> endEffector2BasePosesR_Matrix;
@@ -117,10 +118,11 @@ private:
 
 
     bool alreadyCalibrated;
-    bool alreadyHandEyeCalibrated;
 
 
 public:
+
+    bool alreadyHandEyeCalibrated;
 
     CameraCalibrationNode();
     void broadcastTransform();

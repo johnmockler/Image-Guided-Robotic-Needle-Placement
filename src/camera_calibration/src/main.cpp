@@ -8,10 +8,10 @@ int main(int argc, char **argv)
 
     CameraCalibrationNode node;
     //node.listenTransform();
-    //node.broadcastTransform();
+    node.broadcastTransform();
 
     ROS_INFO("Calibration node initiated!");
-
+    /*
     while(ros::ok())
     {
         if(node.alreadyHandEyeCalibrated == true)
@@ -23,6 +23,9 @@ int main(int argc, char **argv)
         ros::spinOnce();
 
     }
+    */
+
+    ros::spin();
 
     return EXIT_SUCCESS;
 

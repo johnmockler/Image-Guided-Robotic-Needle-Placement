@@ -11,7 +11,7 @@ PCGenNode::PCGenNode()
 
     cloudProcessed = true;
 
-    
+    /*
     pcl::PointCloud<pcl::PointXYZ>::Ptr scanned_scene(new PointCloud<pcl::PointXYZ>);
     pcl::io::loadPCDFile<pcl::PointXYZ>("/home/rnm/Documents/scan1.pcd", *scanned_scene);
    // pcl::PointCloud<pcl::PointXYZ>::Ptr filtered_scene(new PointCloud<pcl::PointXYZ>);
@@ -24,7 +24,7 @@ PCGenNode::PCGenNode()
 	filter.setFilterLimits(0.0, 2.5);
     
 	//filter.filter(*filtered_scene);
-    */
+   
     pcl::PointCloud<pcl::PointXYZ>::Ptr model_skeleton(new PointCloud<pcl::PointXYZ>);
 
     pcl::io::loadPCDFile<pcl::PointXYZ>("/home/rnm/Documents/Skeleton.pcd", *model_skeleton);
@@ -45,6 +45,7 @@ PCGenNode::PCGenNode()
 
     globalRegistration(scanned_scene, model_skeleton);
     //localRegistration(model_skeleton, scanned_scene);
+     */
 
     
 }
@@ -102,9 +103,9 @@ bool PCGenNode::captureCloud(messages::ImageCapture::Request& req, messages::Ima
     }
     else if (req.x == true && cloudProcessed == true)
     {
-
-        pcl::PointCloud<pcl::PointXYZ>::Ptr model_Skeleton(new PointCloud<pcl::PointXYZ>);
-        pcl::io::loadPCDFile<pcl::PointXYZ>("/home/rnm/Documents/Skeleton.pcd", *model_Skeleton);
+        //update directory locations
+        pcl::PointCloud<pcl::PointXYZ>::Ptr model_skeleton(new PointCloud<pcl::PointXYZ>);
+        pcl::io::loadPCDFile<pcl::PointXYZ>("/home/rnm/Documents/Skeleton.pcd", *model_skeleton);
         
         for (int i=0; i < cloudList.size(); i++)
         {
@@ -113,10 +114,10 @@ bool PCGenNode::captureCloud(messages::ImageCapture::Request& req, messages::Ima
         
         stitchClouds();
 
-        scaleCloud(model_Skeleton);
+        scaleCloud(model_skeleton);
 
-        registerModel(scanResults,model_Skeleton);
-
+        //registerModel(scanResults,model_skeleton);
+        globalRegistration(scanResults, model_skeleton);
     }
 
     res.y = true;
@@ -135,12 +136,13 @@ void PCGenNode::processCloud(MyCloud inputCloud, pcl::PointCloud<pcl::PointXYZ>:
         std::vector< int > indices;
         //here we can use most recent cloud as output probably, to avoid creating a new variable
         pcl::removeNaNFromPointCloud(raw_cloud, *filter_NaN, indices);
-        std::cout<<"size: "<<filter_NaN->size()<<std::endl;
+       // std::cout<<"size: "<<filter_NaN->size()<<std::endl;
 
         //Outler removal (lonely points that are spread here and there in the cloud, like annoying mosquitoes
         //There are pthe product of sensors inaccuracy (noise) which registers measrements where there should be any.
         //Filter object (RadiusBased)
 
+        /*
         pcl::PointCloud<pcl::PointXYZ>::Ptr filtered_outlier(new pcl::PointCloud<pcl::PointXYZ>);
         RadiusOutlierRemoval<pcl::PointXYZ> filter_outlier;
         filter_outlier.setInputCloud(filter_NaN);
@@ -149,6 +151,7 @@ void PCGenNode::processCloud(MyCloud inputCloud, pcl::PointCloud<pcl::PointXYZ>:
         filter_outlier.setMinNeighborsInRadius(10);
         filter_outlier.filter(*filtered_outlier);
         std::cout<<"size: "<<filtered_outlier->size()<<std::endl;
+        */
 
         /*
         pcl::PassThrough<pcl::PointXYZ> passfilter;
@@ -180,8 +183,8 @@ void PCGenNode::processCloud(MyCloud inputCloud, pcl::PointCloud<pcl::PointXYZ>:
         formatTransform(raw_tf, convertedTransform);
 
 
-        pcl::transformPointCloud(*filtered_outlier, *finalCloud, convertedTransform);
-        std::cout<<"final size: "<<finalCloud->size()<<std::endl;
+        pcl::transformPointCloud(*filter_NaN, *finalCloud, convertedTransform);
+        //std::cout<<"final size: "<<finalCloud->size()<<std::endl;
 
         *outputCloud = *finalCloud;
 

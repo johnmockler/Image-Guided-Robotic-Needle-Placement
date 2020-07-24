@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/src/franka_gripper.cpp" "/home/suyashs/rnm_group_2/build/franka_ros/franka_gripper/CMakeFiles/franka_gripper.dir/src/franka_gripper.cpp.o"
+  "/home/rnm/rnm_group_2/src/franka_ros/franka_gripper/src/franka_gripper.cpp" "/home/rnm/rnm_group_2/build/franka_ros/franka_gripper/CMakeFiles/franka_gripper.dir/src/franka_gripper.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,11 +17,11 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/suyashs/rnm_group_2/devel/include"
+  "/home/rnm/rnm_group_2/devel/include"
   "/opt/ros/melodic/include/libfranka"
   "/opt/ros/melodic/include"
   "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
-  "/home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/include"
+  "/home/rnm/rnm_group_2/src/franka_ros/franka_gripper/include"
   )
 
 # Targets to which this target links.

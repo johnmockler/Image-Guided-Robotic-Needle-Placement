@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/suyashs/rnm_group_2/src
+CMAKE_SOURCE_DIR = /home/rnm/rnm_group_2/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/suyashs/rnm_group_2/build
+CMAKE_BINARY_DIR = /home/rnm/rnm_group_2/build
 
 # Utility rule file for std_msgs_generate_messages_py.
 
@@ -63,10 +63,10 @@ franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build: std_m
 .PHONY : franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build
 
 franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/clean:
-	cd /home/suyashs/rnm_group_2/build/franka_ros/franka_msgs && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/rnm/rnm_group_2/build/franka_ros/franka_msgs && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 
 franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/depend:
-	cd /home/suyashs/rnm_group_2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/suyashs/rnm_group_2/src /home/suyashs/rnm_group_2/src/franka_ros/franka_msgs /home/suyashs/rnm_group_2/build /home/suyashs/rnm_group_2/build/franka_ros/franka_msgs /home/suyashs/rnm_group_2/build/franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/rnm/rnm_group_2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rnm/rnm_group_2/src /home/rnm/rnm_group_2/src/franka_ros/franka_msgs /home/rnm/rnm_group_2/build /home/rnm/rnm_group_2/build/franka_ros/franka_msgs /home/rnm/rnm_group_2/build/franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : franka_ros/franka_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/depend
 

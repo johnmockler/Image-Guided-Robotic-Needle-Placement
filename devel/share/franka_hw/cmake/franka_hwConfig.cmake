@@ -67,14 +67,14 @@ set(franka_hw_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(franka_hw_SOURCE_PREFIX /home/suyashs/rnm_group_2/src/franka_ros/franka_hw)
-  set(franka_hw_DEVEL_PREFIX /home/suyashs/rnm_group_2/devel)
+  set(franka_hw_SOURCE_PREFIX /home/rnm/rnm_group_2/src/franka_ros/franka_hw)
+  set(franka_hw_DEVEL_PREFIX /home/rnm/rnm_group_2/devel)
   set(franka_hw_INSTALL_PREFIX "")
   set(franka_hw_PREFIX ${franka_hw_DEVEL_PREFIX})
 else()
   set(franka_hw_SOURCE_PREFIX "")
   set(franka_hw_DEVEL_PREFIX "")
-  set(franka_hw_INSTALL_PREFIX /home/suyashs/rnm_group_2/install)
+  set(franka_hw_INSTALL_PREFIX /home/rnm/rnm_group_2/install)
   set(franka_hw_PREFIX ${franka_hw_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(franka_hw_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/suyashs/rnm_group_2/src/franka_ros/franka_hw/include;/opt/ros/melodic/include/libfranka " STREQUAL " ")
+if(NOT "/home/rnm/rnm_group_2/src/franka_ros/franka_hw/include;/opt/ros/melodic/include/libfranka " STREQUAL " ")
   set(franka_hw_INCLUDE_DIRS "")
-  set(_include_dirs "/home/suyashs/rnm_group_2/src/franka_ros/franka_hw/include;/opt/ros/melodic/include/libfranka")
+  set(_include_dirs "/home/rnm/rnm_group_2/src/franka_ros/franka_hw/include;/opt/ros/melodic/include/libfranka")
   if(NOT "https://github.com/frankaemika/franka_ros/issues " STREQUAL " ")
     set(_report "Check the issue tracker 'https://github.com/frankaemika/franka_ros/issues' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://wiki.ros.org/franka_hw " STREQUAL " ")
@@ -110,13 +110,13 @@ if(NOT "/home/suyashs/rnm_group_2/src/franka_ros/franka_hw/include;/opt/ros/melo
         message(FATAL_ERROR "Project 'franka_hw' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'franka_hw' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/suyashs/rnm_group_2/src/franka_ros/franka_hw/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'franka_hw' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/rnm/rnm_group_2/src/franka_ros/franka_hw/${idir}'.  ${_report}")
     endif()
     _list_append_unique(franka_hw_INCLUDE_DIRS ${include})
   endforeach()
 endif()
 
-set(libraries "franka_hw;/opt/ros/melodic/lib/libfranka.so.0.8.0")
+set(libraries "franka_hw;/opt/ros/melodic/lib/libfranka.so.0.7.1")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/suyashs/rnm_group_2/devel/lib;/home/suyashs/rnm_group_2/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/rnm/rnm_group_2/devel/lib;/home/rnm/rnm_group_2/devel/lib;/home/rnm/catkin_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

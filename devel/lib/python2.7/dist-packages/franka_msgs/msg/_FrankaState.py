@@ -11,7 +11,7 @@ import std_msgs.msg
 class FrankaState(genpy.Message):
   _md5sum = "7782ef1d208d3efc42f6a4cc3c41c065"
   _type = "franka_msgs/FrankaState"
-  _has_header = True  # flag to mark the presence of a Header object
+  _has_header = True #flag to mark the presence of a Header object
   _full_text = """std_msgs/Header header
 float64[6] cartesian_collision
 float64[6] cartesian_contact
@@ -139,7 +139,7 @@ bool instability_detected
     """
     if args or kwds:
       super(FrankaState, self).__init__(*args, **kwds)
-      # message fields cannot be None, assign default values for those that are
+      #message fields cannot be None, assign default values for those that are
       if self.header is None:
         self.header = std_msgs.msg.Header()
       if self.cartesian_collision is None:
@@ -288,16 +288,13 @@ bool instability_detected
       buff.write(_get_struct_7d().pack(*self.joint_contact))
       buff.write(_get_struct_6d().pack(*self.O_F_ext_hat_K))
       buff.write(_get_struct_7d().pack(*self.tau_ext_hat_filtered))
-      _x = self.m_ee
-      buff.write(_get_struct_d().pack(_x))
+      buff.write(_get_struct_d().pack(self.m_ee))
       buff.write(_get_struct_3d().pack(*self.F_x_Cee))
       buff.write(_get_struct_9d().pack(*self.I_ee))
-      _x = self.m_load
-      buff.write(_get_struct_d().pack(_x))
+      buff.write(_get_struct_d().pack(self.m_load))
       buff.write(_get_struct_3d().pack(*self.F_x_Cload))
       buff.write(_get_struct_9d().pack(*self.I_load))
-      _x = self.m_total
-      buff.write(_get_struct_d().pack(_x))
+      buff.write(_get_struct_d().pack(self.m_total))
       buff.write(_get_struct_3d().pack(*self.F_x_Ctotal))
       buff.write(_get_struct_9d().pack(*self.I_total))
       buff.write(_get_struct_16d().pack(*self.O_T_EE))
@@ -506,7 +503,7 @@ bool instability_detected
       self.last_motion_errors.instability_detected = bool(self.last_motion_errors.instability_detected)
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e)  # most likely buffer underfill
+      raise genpy.DeserializationError(e) #most likely buffer underfill
 
 
   def serialize_numpy(self, buff, numpy):
@@ -542,16 +539,13 @@ bool instability_detected
       buff.write(self.joint_contact.tostring())
       buff.write(self.O_F_ext_hat_K.tostring())
       buff.write(self.tau_ext_hat_filtered.tostring())
-      _x = self.m_ee
-      buff.write(_get_struct_d().pack(_x))
+      buff.write(_get_struct_d().pack(self.m_ee))
       buff.write(self.F_x_Cee.tostring())
       buff.write(self.I_ee.tostring())
-      _x = self.m_load
-      buff.write(_get_struct_d().pack(_x))
+      buff.write(_get_struct_d().pack(self.m_load))
       buff.write(self.F_x_Cload.tostring())
       buff.write(self.I_load.tostring())
-      _x = self.m_total
-      buff.write(_get_struct_d().pack(_x))
+      buff.write(_get_struct_d().pack(self.m_total))
       buff.write(self.F_x_Ctotal.tostring())
       buff.write(self.I_total.tostring())
       buff.write(self.O_T_EE.tostring())
@@ -761,18 +755,48 @@ bool instability_detected
       self.last_motion_errors.instability_detected = bool(self.last_motion_errors.instability_detected)
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e)  # most likely buffer underfill
+      raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
+_struct_d73B = None
+def _get_struct_d73B():
+    global _struct_d73B
+    if _struct_d73B is None:
+        _struct_d73B = struct.Struct("<d73B")
+    return _struct_d73B
+_struct_7d = None
+def _get_struct_7d():
+    global _struct_7d
+    if _struct_7d is None:
+        _struct_7d = struct.Struct("<7d")
+    return _struct_7d
+_struct_6d = None
+def _get_struct_6d():
+    global _struct_6d
+    if _struct_6d is None:
+        _struct_6d = struct.Struct("<6d")
+    return _struct_6d
+_struct_d = None
+def _get_struct_d():
+    global _struct_d
+    if _struct_d is None:
+        _struct_d = struct.Struct("<d")
+    return _struct_d
 _struct_16d = None
 def _get_struct_16d():
     global _struct_16d
     if _struct_16d is None:
         _struct_16d = struct.Struct("<16d")
     return _struct_16d
+_struct_9d = None
+def _get_struct_9d():
+    global _struct_9d
+    if _struct_9d is None:
+        _struct_9d = struct.Struct("<9d")
+    return _struct_9d
 _struct_2d = None
 def _get_struct_2d():
     global _struct_2d
@@ -791,33 +815,3 @@ def _get_struct_3d():
     if _struct_3d is None:
         _struct_3d = struct.Struct("<3d")
     return _struct_3d
-_struct_6d = None
-def _get_struct_6d():
-    global _struct_6d
-    if _struct_6d is None:
-        _struct_6d = struct.Struct("<6d")
-    return _struct_6d
-_struct_7d = None
-def _get_struct_7d():
-    global _struct_7d
-    if _struct_7d is None:
-        _struct_7d = struct.Struct("<7d")
-    return _struct_7d
-_struct_9d = None
-def _get_struct_9d():
-    global _struct_9d
-    if _struct_9d is None:
-        _struct_9d = struct.Struct("<9d")
-    return _struct_9d
-_struct_d = None
-def _get_struct_d():
-    global _struct_d
-    if _struct_d is None:
-        _struct_d = struct.Struct("<d")
-    return _struct_d
-_struct_d73B = None
-def _get_struct_d73B():
-    global _struct_d73B
-    if _struct_d73B is None:
-        _struct_d73B = struct.Struct("<d73B")
-    return _struct_d73B

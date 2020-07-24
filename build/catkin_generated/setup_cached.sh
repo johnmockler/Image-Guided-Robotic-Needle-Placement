@@ -7,4 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export PWD="/home/suyashs/rnm_group_2/build"
+export LD_LIBRARY_PATH="/home/rnm/catkin_ws/devel/lib:/opt/ros/melodic/lib"
+export PKG_CONFIG_PATH="/home/rnm/catkin_ws/devel/lib/pkgconfig:/opt/ros/melodic/lib/pkgconfig"
+export PWD="/home/rnm/rnm_group_2/build"
+export PYTHONPATH="/home/rnm/catkin_ws/devel/lib/python2.7/dist-packages:/opt/ros/melodic/lib/python2.7/dist-packages"

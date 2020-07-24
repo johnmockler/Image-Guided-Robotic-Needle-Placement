@@ -67,14 +67,14 @@ set(pathPlanning_cc_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(pathPlanning_cc_SOURCE_PREFIX /home/suyashs/rnm_group_2/src/pathPlanning_cc)
-  set(pathPlanning_cc_DEVEL_PREFIX /home/suyashs/rnm_group_2/devel)
+  set(pathPlanning_cc_SOURCE_PREFIX /home/rnm/rnm_group_2/src/pathPlanning_cc)
+  set(pathPlanning_cc_DEVEL_PREFIX /home/rnm/rnm_group_2/devel)
   set(pathPlanning_cc_INSTALL_PREFIX "")
   set(pathPlanning_cc_PREFIX ${pathPlanning_cc_DEVEL_PREFIX})
 else()
   set(pathPlanning_cc_SOURCE_PREFIX "")
   set(pathPlanning_cc_DEVEL_PREFIX "")
-  set(pathPlanning_cc_INSTALL_PREFIX /home/suyashs/rnm_group_2/install)
+  set(pathPlanning_cc_INSTALL_PREFIX /home/rnm/rnm_group_2/install)
   set(pathPlanning_cc_PREFIX ${pathPlanning_cc_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/suyashs/rnm_group_2/install/lib;/home/suyashs/rnm_group_2/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/rnm/rnm_group_2/install/lib;/home/rnm/rnm_group_2/devel/lib;/home/rnm/catkin_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

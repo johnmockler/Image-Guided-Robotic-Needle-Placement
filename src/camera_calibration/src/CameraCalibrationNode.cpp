@@ -12,7 +12,7 @@ CameraCalibrationNode::CameraCalibrationNode()
     alreadyCalibrated = false;
     alreadyHandEyeCalibrated = false;
     //testing
-    cv::namedWindow("Display window", cv::WINDOW_AUTOSIZE);
+    //cv::namedWindow("Display window", cv::WINDOW_AUTOSIZE);
 }
 
 void CameraCalibrationNode::cameraCallback(const sensor_msgs::ImageConstPtr& msg)
@@ -77,9 +77,7 @@ bool CameraCalibrationNode::captureImage(messages::ImageCapture::Request &req, m
     {
         if (!alreadyCalibrated)
         {
-
             alreadyCalibrated = true;
-
             calibrateAndPoseEstimation();
 
             //For Testing
@@ -92,17 +90,7 @@ bool CameraCalibrationNode::captureImage(messages::ImageCapture::Request &req, m
             {
                 computeHandeyeTransform();
                 alreadyHandEyeCalibrated =true;
-
-                /*
-                std::cout << "R= " << std::endl;
-                std::cout << cam2endEffectorR << std::endl;
-                std::cout << "T" << std::endl;
-                std::cout << cam2endEffectorT << std::endl;
-                */
             }
-
-
-
         }
     }
     res.y = true;
@@ -122,8 +110,6 @@ void CameraCalibrationNode::calibrateAndPoseEstimation()
     std::vector<cv::Mat> rVectors,tVectors;
     cv::calibrateCamera(objectPoints, imagePoints, cv::Size(calibrationImages[0].rows,calibrationImages[0].cols), cameraMatrix, distCoeffs, rVectors, tVectors);
 
-
-
     ROS_INFO("Beginning Pose Estimation...");
     Mat rvec;
     Mat tvec;
@@ -135,23 +121,7 @@ void CameraCalibrationNode::calibrateAndPoseEstimation()
         cv::solvePnPRansac(objectPoints[i],  imagePoints[i],  cameraMatrix,  distCoeffs,  rvec,  tvec);
         cameraPosesR.push_back(rvec);
         cameraPosesT.push_back(tvec);
-
-        /*
-        cv::Mat img1_copy_pose = calibrationImages[i].clone();
-
-        namedWindow( "Display window", WINDOW_KEEPRATIO);
-        imshow("Display window", img1_copy_pose);
-        resizeWindow("Display window",img1_copy_pose.cols/2,img1_copy_pose.rows/2);
-        ROS_INFO("Hit a key to continue");
-        waitKey(0);
-
-        cv::Mat img_draw_poses;
-        cv::Mat Rrvec;
-        cv::Rodrigues(rvec,Rrvec);
-        drawFrameAxes(img1_copy_pose, cameraMatrix, distCoeffs, Rrvec, tvec, 0.1,2);
-        hconcat(img1_copy_pose, img_draw_poses);
-        imshow("Chessboard poses", img1_copy_pose);
-        */
+        
         ROS_INFO("Estimated error of picture no [%ld]", i);
         std::vector<Point2f> imagePoints2;
 
@@ -173,133 +143,67 @@ void CameraCalibrationNode::calibrateAndPoseEstimation()
 
 void CameraCalibrationNode::computeHandeyeTransform()
 {
-    
     for (int i = 0; i < cameraPosesR.size(); i++)
     {
-
         // Creating a target2cam rotation matrix, later will be passed into HandEyeCalibration
         Mat target2cam;
         cv::Rodrigues(cameraPosesR[i],target2cam);
         Target2CamPosesR_Matrix.push_back(target2cam.inv());
-
-        // Creating a endEffector2Base rotation matrix, later will be passed into HandEyeCalibration
-
-        /*
-        Mat endEffector2Base;
-        cv::Rodrigues(endEffectorPosesR[i],endEffector2Base);
-        endEffector2BasePosesR_Matrix.push_back(endEffector2Base.inv());
-        */
     }
-    
-
     calibrateHandEye(endEffectorPosesR,endEffectorPosesT,Target2CamPosesR_Matrix,cameraPosesT,cam2endEffectorR,cam2endEffectorT);
-    //cv::calibrateHandEye(endEffector2BasePosesR_Matrix,endEffectorPosesT,Target2CamPosesR_Matrix,cameraPosesT,cam2endEffectorR,cam2endEffectorT,method=CALIB_HAND_EYE_TSAI);
-
-
-    //convert R_cam2gripper and t_cam2gripper to Point3f or Vector3, and publish or something
-
-
 }
 
 void CameraCalibrationNode::broadcastTransform()
 {
-
-    // Camere2EndEffector Rotation Vector
-    cv::Mat came2endEffectorR_vec;
-    cv::Rodrigues(cam2endEffectorR,came2endEffectorR_vec);
-
-
-    //Base2EndEffector of mostRecentPoseT Vector
-
-    //Base2EndEffector of mostRecentPoseR Vector
-
-    cv::Mat Base2EndEffectorR_mat;
-    cv::Rodrigues(mostRecentPoseR,Base2EndEffectorR_mat);
-
-    //SVD of base2endEffector * camera2endEffector
-    cv::Vec3d w,u,vt;
-    // Pre-processing for SVD
-
-    cv::Matx31d Total_Rotation; cv::multiply(Base2EndEffectorR_mat.inv(),cam2endEffectorR,Total_Rotation);
-
-    cv::Matx31d temp; cv::multiply(Base2EndEffectorR_mat.inv(),cam2endEffectorT,temp);
-    cv::Matx31d Total_Translation; cv::add(temp,endEffectorPosesT,Total_Translation);
-
-    cv::SVD::compute(Total_Rotation,w,u,vt,DECOMP_SVD);
-
-
-    //Final rotation matrix from base to camera
-    cv::Mat R; cv::multiply(u,vt,R);
-    cv::Matx31d r;
-    cv::Rodrigues(R,r);
-    //Converge 3x1 Matrix  to quaternions 4x1
-    Matx41d q_cv = aa2quaternion(r);
-
-    geometry_msgs::TransformStamped trans;
-    // fill out a translation vector values of camera2base
-    trans.transform.translation.x = Total_Translation.val[0];
-    trans.transform.translation.y = Total_Translation.val[1];
-    trans.transform.translation.z = Total_Translation.val[2];
-
-    trans.transform.rotation.x = q_cv.val[0];
-    trans.transform.rotation.y = q_cv.val[1];
-    trans.transform.rotation.z = q_cv.val[2];
-    trans.transform.rotation.w = q_cv.val[3];
-
-    tf2_msgs::TFMessage mesg;
-    mesg.transforms.push_back(trans);
-    PubRotationCam2Base.publish(mesg);
-
-    printf ("\n");
-    printf ("R = | %6.3f %6.3f %6.3f  %6.3f| \n", trans.transform.rotation.x, trans.transform.rotation.y, trans.transform.rotation.z, trans.transform.rotation.w);
-    printf ("\n");
-    printf ("t = < %0.3f, %0.3f, %0.3f >\n", trans.transform.translation.x, trans.transform.translation.y, trans.transform.translation.z);
-
-
-    /*
-    //fill matrices with correct vectors
-
-    tf::Vector3 temp_for_set_Origin(cam2endEffectorT.at<double>()[0],cam2endEffectorT.at<double()[1],cam2endEffectorT.at<double>()[2]);
-    transform.setOrigin(temp_for_set_Origin);
-    transform.setOrigin(tf::Vector3(temp_for_set_Origin));
-
-
-    tf::Matrix3x3 temp; temp.getRPY(camera2endEffector_vec.val[0],camera2endEffector_vec.val[1],camera2endEffector_vec.val[2]);
-    transform.setBasis(temp);
-    //Or via Quaternion
-    transform.setRotation(tf::Quaternion(q_cv[0],q_cv[1],q_cv[2},q_cv[3]));
-
-
-    //br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), "end effector", "camera"));
-    br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), "base", "camera"));
-    */
-}
-/*
-void CameraCalibrationNode::listenTransform()    //std::vector<geometry_msgs::PoseStamped> PosEndEffector,std::vector<geometry_msgs::PoseStamped> OrEndEffector)
-{
-    tf::StampedTransform base2gripper;  //base2endeffector
-    //tf::Quaternion endEffectorPosesR = tf::createQuaternionFromRPY(0.0,0.0,0.0);
-    try
+    if(alreadyHandEyeCalibrated)
     {
-        listener.lookupTransform("end_effector", "base", ros::Time(0), base2gripper);
-        ROS_INFO_STREAM(" base2gripper: " << base2gripper.getOrigin().x() << ", " << base2gripper.getOrigin().y() << ", " <<base2gripper.getOrigin().z() << ", "
-                                       << base2gripper.getRotation().x() << ", " << base2gripper.getRotation().y() << ", " << base2gripper.getRotation().z());
-        endEffectorPosesT = base2gripper.getOrigin();
-        endEffectorPosesR = base2gripper.getRotation();
+        // Camere2EndEffector Rotation Vector
+        cv::Mat came2endEffectorR_vec;
+        cv::Rodrigues(cam2endEffectorR,came2endEffectorR_vec);
 
-        //cv::Mat temp, w , y, u , vt;
-        //cv::solve(base2gripper.getRotation(), Rrvec, temp ,DECOMP_SVD);
-        //cv::SVD::compute(temp ,  w,  u,  vt, DECOMP_SVD );
+        cv::Mat Base2EndEffectorR_mat;
+        cv::Rodrigues(mostRecentPoseR,Base2EndEffectorR_mat);
 
-        //add store transform to class variables
-    }
-    catch (tf::TransformException ex)
-    {
-        ROS_ERROR("%s", ex.what());
-        ros::Duration(1.0).sleep();
+        //SVD of base2endEffector * camera2endEffector
+        cv::Vec3d w,u,vt;
+        // Pre-processing for SVD
+
+        cv::Matx31d Total_Rotation; cv::multiply(Base2EndEffectorR_mat.inv(),cam2endEffectorR,Total_Rotation);
+
+        cv::Matx31d temp; cv::multiply(Base2EndEffectorR_mat.inv(),cam2endEffectorT,temp);
+        cv::Matx31d Total_Translation; cv::add(temp,endEffectorPosesT,Total_Translation);
+
+        cv::SVD::compute(Total_Rotation,w,u,vt,DECOMP_SVD);
+
+        //Final rotation matrix from base to camera
+        cv::Mat R; cv::multiply(u,vt,R);
+        cv::Matx31d r;
+        cv::Rodrigues(R,r);
+        //Converge 3x1 Matrix  to quaternions 4x1
+        Matx41d q_cv = aa2quaternion(r);
+
+        geometry_msgs::TransformStamped trans;
+        // fill out a translation vector values of camera2base
+        trans.transform.translation.x = Total_Translation.val[0];
+        trans.transform.translation.y = Total_Translation.val[1];
+        trans.transform.translation.z = Total_Translation.val[2];
+
+        trans.transform.rotation.x = q_cv.val[0];
+        trans.transform.rotation.y = q_cv.val[1];
+        trans.transform.rotation.z = q_cv.val[2];
+        trans.transform.rotation.w = q_cv.val[3];
+
+        tf2_msgs::TFMessage mesg;
+        mesg.transforms.push_back(trans);
+        PubRotationCam2Base.publish(mesg);
+
+        printf ("\n");
+        printf ("R = | %6.3f %6.3f %6.3f  %6.3f| \n", trans.transform.rotation.x, trans.transform.rotation.y, trans.transform.rotation.z, trans.transform.rotation.w);
+        printf ("\n");
+        printf ("t = < %0.3f, %0.3f, %0.3f >\n", trans.transform.translation.x, trans.transform.translation.y, trans.transform.translation.z);
     }
 }
-*/
+
 // Additional Function for camera calibration
 void CameraCalibrationNode::getChessboardCorners(std::vector<Mat> images, std::vector<std::vector<Point2f>>& allFoundCorners)
 {
@@ -470,9 +374,6 @@ void CameraCalibrationNode::calibrateHandEyeQR24(std::vector<Mat>& Hg, const std
     //Mat t = X(Rect(0,21,1,3));
     Mat t = X(Rect(0,9,1,3));
     t_cam2gripper = t;
-
-
-
 }
 Mat CameraCalibrationNode::homogeneousInverse(const Mat& T)
 {
@@ -494,8 +395,6 @@ void CameraCalibrationNode::readTextFiles()
     String  robot_poses  = "/home/rnm/robot_poses.txt";
     String  marker_poses = "/home/rnm/marker_poses.txt";
 
-
-
     std::ifstream myfile;
     myfile.open(robot_poses);
     std::cout << myfile.is_open() << std::endl;
@@ -503,7 +402,6 @@ void CameraCalibrationNode::readTextFiles()
     if (myfile.is_open())
     {
         std::string line;
-
         int i = 0;
         int j = 0;
         int n = 0;
@@ -511,15 +409,12 @@ void CameraCalibrationNode::readTextFiles()
         Mat Ttemp = Mat::zeros(3,1,CV_64F);
         while(std::getline(myfile,line))
         {
-
             if (j < 3)
             {
-
                 if (i < 3)
                 {
                     Rtemp.at<double>(i,j) = std::stod(line);
                 }
-
             }
             else
             {
@@ -527,13 +422,10 @@ void CameraCalibrationNode::readTextFiles()
                 {
                     Ttemp.at<double>(i,0) = std::stod(line);
                 }
-
             }
-
             if (i < 3)
             {
                 i++;
-
             }
             else if (i == 3 && j < 3)
             {

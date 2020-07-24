@@ -326,29 +326,6 @@ struct FrankaState_
 
 
 
-// reducing the odds to have name collisions with Windows.h 
-#if defined(_WIN32) && defined(ROBOT_MODE_OTHER)
-  #undef ROBOT_MODE_OTHER
-#endif
-#if defined(_WIN32) && defined(ROBOT_MODE_IDLE)
-  #undef ROBOT_MODE_IDLE
-#endif
-#if defined(_WIN32) && defined(ROBOT_MODE_MOVE)
-  #undef ROBOT_MODE_MOVE
-#endif
-#if defined(_WIN32) && defined(ROBOT_MODE_GUIDING)
-  #undef ROBOT_MODE_GUIDING
-#endif
-#if defined(_WIN32) && defined(ROBOT_MODE_REFLEX)
-  #undef ROBOT_MODE_REFLEX
-#endif
-#if defined(_WIN32) && defined(ROBOT_MODE_USER_STOPPED)
-  #undef ROBOT_MODE_USER_STOPPED
-#endif
-#if defined(_WIN32) && defined(ROBOT_MODE_AUTOMATIC_ERROR_RECOVERY)
-  #undef ROBOT_MODE_AUTOMATIC_ERROR_RECOVERY
-#endif
-
   enum {
     ROBOT_MODE_OTHER = 0u,
     ROBOT_MODE_IDLE = 1u,
@@ -395,55 +372,6 @@ ros::message_operations::Printer< ::franka_msgs::FrankaState_<ContainerAllocator
 return s;
 }
 
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator==(const ::franka_msgs::FrankaState_<ContainerAllocator1> & lhs, const ::franka_msgs::FrankaState_<ContainerAllocator2> & rhs)
-{
-  return lhs.header == rhs.header &&
-    lhs.cartesian_collision == rhs.cartesian_collision &&
-    lhs.cartesian_contact == rhs.cartesian_contact &&
-    lhs.q == rhs.q &&
-    lhs.q_d == rhs.q_d &&
-    lhs.dq == rhs.dq &&
-    lhs.dq_d == rhs.dq_d &&
-    lhs.theta == rhs.theta &&
-    lhs.dtheta == rhs.dtheta &&
-    lhs.tau_J == rhs.tau_J &&
-    lhs.dtau_J == rhs.dtau_J &&
-    lhs.tau_J_d == rhs.tau_J_d &&
-    lhs.K_F_ext_hat_K == rhs.K_F_ext_hat_K &&
-    lhs.elbow == rhs.elbow &&
-    lhs.elbow_d == rhs.elbow_d &&
-    lhs.joint_collision == rhs.joint_collision &&
-    lhs.joint_contact == rhs.joint_contact &&
-    lhs.O_F_ext_hat_K == rhs.O_F_ext_hat_K &&
-    lhs.tau_ext_hat_filtered == rhs.tau_ext_hat_filtered &&
-    lhs.m_ee == rhs.m_ee &&
-    lhs.F_x_Cee == rhs.F_x_Cee &&
-    lhs.I_ee == rhs.I_ee &&
-    lhs.m_load == rhs.m_load &&
-    lhs.F_x_Cload == rhs.F_x_Cload &&
-    lhs.I_load == rhs.I_load &&
-    lhs.m_total == rhs.m_total &&
-    lhs.F_x_Ctotal == rhs.F_x_Ctotal &&
-    lhs.I_total == rhs.I_total &&
-    lhs.O_T_EE == rhs.O_T_EE &&
-    lhs.O_T_EE_d == rhs.O_T_EE_d &&
-    lhs.F_T_EE == rhs.F_T_EE &&
-    lhs.EE_T_K == rhs.EE_T_K &&
-    lhs.time == rhs.time &&
-    lhs.robot_mode == rhs.robot_mode &&
-    lhs.current_errors == rhs.current_errors &&
-    lhs.last_motion_errors == rhs.last_motion_errors;
-}
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator!=(const ::franka_msgs::FrankaState_<ContainerAllocator1> & lhs, const ::franka_msgs::FrankaState_<ContainerAllocator2> & rhs)
-{
-  return !(lhs == rhs);
-}
-
-
 } // namespace franka_msgs
 
 namespace ros
@@ -451,6 +379,12 @@ namespace ros
 namespace message_traits
 {
 
+
+
+// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': True}
+// {'franka_msgs': ['/home/rnm/rnm_group_2/src/franka_ros/franka_msgs/msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg']}
+
+// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 

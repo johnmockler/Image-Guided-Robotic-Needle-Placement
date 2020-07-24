@@ -9,7 +9,7 @@ import struct
 class SetEEFrameRequest(genpy.Message):
   _md5sum = "ffa9d8a457d4fd59a3f69def5ded6d4d"
   _type = "franka_control/SetEEFrameRequest"
-  _has_header = False  # flag to mark the presence of a Header object
+  _has_header = False #flag to mark the presence of a Header object
   _full_text = """float64[16] F_T_EE
 """
   __slots__ = ['F_T_EE']
@@ -31,7 +31,7 @@ class SetEEFrameRequest(genpy.Message):
     """
     if args or kwds:
       super(SetEEFrameRequest, self).__init__(*args, **kwds)
-      # message fields cannot be None, assign default values for those that are
+      #message fields cannot be None, assign default values for those that are
       if self.F_T_EE is None:
         self.F_T_EE = [0.] * 16
     else:
@@ -65,7 +65,7 @@ class SetEEFrameRequest(genpy.Message):
       self.F_T_EE = _get_struct_16d().unpack(str[start:end])
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e)  # most likely buffer underfill
+      raise genpy.DeserializationError(e) #most likely buffer underfill
 
 
   def serialize_numpy(self, buff, numpy):
@@ -92,7 +92,7 @@ class SetEEFrameRequest(genpy.Message):
       self.F_T_EE = numpy.frombuffer(str[start:end], dtype=numpy.float64, count=16)
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e)  # most likely buffer underfill
+      raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
 def _get_struct_I():
@@ -115,7 +115,7 @@ import struct
 class SetEEFrameResponse(genpy.Message):
   _md5sum = "45872d25d65c97743cc71afc6d4e884d"
   _type = "franka_control/SetEEFrameResponse"
-  _has_header = False  # flag to mark the presence of a Header object
+  _has_header = False #flag to mark the presence of a Header object
   _full_text = """bool success
 string error
 
@@ -140,7 +140,7 @@ string error
     """
     if args or kwds:
       super(SetEEFrameResponse, self).__init__(*args, **kwds)
-      # message fields cannot be None, assign default values for those that are
+      #message fields cannot be None, assign default values for those that are
       if self.success is None:
         self.success = False
       if self.error is None:
@@ -161,8 +161,7 @@ string error
     :param buff: buffer, ``StringIO``
     """
     try:
-      _x = self.success
-      buff.write(_get_struct_B().pack(_x))
+      buff.write(_get_struct_B().pack(self.success))
       _x = self.error
       length = len(_x)
       if python3 or type(_x) == unicode:
@@ -194,7 +193,7 @@ string error
         self.error = str[start:end]
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e)  # most likely buffer underfill
+      raise genpy.DeserializationError(e) #most likely buffer underfill
 
 
   def serialize_numpy(self, buff, numpy):
@@ -204,8 +203,7 @@ string error
     :param numpy: numpy python module
     """
     try:
-      _x = self.success
-      buff.write(_get_struct_B().pack(_x))
+      buff.write(_get_struct_B().pack(self.success))
       _x = self.error
       length = len(_x)
       if python3 or type(_x) == unicode:
@@ -238,7 +236,7 @@ string error
         self.error = str[start:end]
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e)  # most likely buffer underfill
+      raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
 def _get_struct_I():

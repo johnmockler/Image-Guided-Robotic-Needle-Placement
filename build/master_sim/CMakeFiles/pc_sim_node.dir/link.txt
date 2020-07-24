@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/pc_sim_node.dir/src/pc_sim.cpp.o  -o /home/suyashs/rnm_group_2/devel/lib/master_sim/pc_sim_node 

@@ -57,8 +57,8 @@ struct DataType< ::franka_control::SetJointImpedance > {
 };
 
 
-// service_traits::MD5Sum< ::franka_control::SetJointImpedanceRequest> should match
-// service_traits::MD5Sum< ::franka_control::SetJointImpedance >
+// service_traits::MD5Sum< ::franka_control::SetJointImpedanceRequest> should match 
+// service_traits::MD5Sum< ::franka_control::SetJointImpedance > 
 template<>
 struct MD5Sum< ::franka_control::SetJointImpedanceRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::franka_control::SetJointImpedanceRequest>
   }
 };
 
-// service_traits::DataType< ::franka_control::SetJointImpedanceRequest> should match
-// service_traits::DataType< ::franka_control::SetJointImpedance >
+// service_traits::DataType< ::franka_control::SetJointImpedanceRequest> should match 
+// service_traits::DataType< ::franka_control::SetJointImpedance > 
 template<>
 struct DataType< ::franka_control::SetJointImpedanceRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::franka_control::SetJointImpedanceRequest>
   }
 };
 
-// service_traits::MD5Sum< ::franka_control::SetJointImpedanceResponse> should match
-// service_traits::MD5Sum< ::franka_control::SetJointImpedance >
+// service_traits::MD5Sum< ::franka_control::SetJointImpedanceResponse> should match 
+// service_traits::MD5Sum< ::franka_control::SetJointImpedance > 
 template<>
 struct MD5Sum< ::franka_control::SetJointImpedanceResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::franka_control::SetJointImpedanceResponse>
   }
 };
 
-// service_traits::DataType< ::franka_control::SetJointImpedanceResponse> should match
-// service_traits::DataType< ::franka_control::SetJointImpedance >
+// service_traits::DataType< ::franka_control::SetJointImpedanceResponse> should match 
+// service_traits::DataType< ::franka_control::SetJointImpedance > 
 template<>
 struct DataType< ::franka_control::SetJointImpedanceResponse>
 {

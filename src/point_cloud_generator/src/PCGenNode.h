@@ -99,12 +99,7 @@ private:
     bool captureCloud(messages::ImageCapture::Request& req, messages::ImageCapture::Response& res);
     void stitchClouds();
     void pairAlign(const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_src, const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_tgt, pcl::PointCloud<pcl::PointXYZ>::Ptr output, Eigen::Matrix4f &final_transform);
-<<<<<<< HEAD
-    void formatTransform(tf::StampedTransform tfTransform, Eigen::Matrix4f &eigenTransform);
-    /**FIRST TRY REGISTRATION**/
-=======
     void formatTransform(geometry_msgs::TransformStamped tfTransform, Eigen::Matrix4f &eigenTransform);
->>>>>>> pc_test
     void registerModel(const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud,   const pcl::PointCloud<pcl::PointXYZ>::Ptr modelSkeleton);
 
 

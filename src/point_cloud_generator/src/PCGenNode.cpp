@@ -12,38 +12,39 @@ PCGenNode::PCGenNode()
     cloudProcessed = true;
 
     
-   /*
     pcl::PointCloud<pcl::PointXYZ>::Ptr scanned_scene(new PointCloud<pcl::PointXYZ>);
     pcl::io::loadPCDFile<pcl::PointXYZ>("/home/rnm/Documents/scan1.pcd", *scanned_scene);
-    pcl::PointCloud<pcl::PointXYZ>::Ptr filtered_scene(new PointCloud<pcl::PointXYZ>);
+   // pcl::PointCloud<pcl::PointXYZ>::Ptr filtered_scene(new PointCloud<pcl::PointXYZ>);
 
-
-    pcl::PassThrough<pcl::PointXYZ> filter;
+    /*
+    //pcl::PassThrough<pcl::PointXYZ> filter;
 	filter.setInputCloud(scanned_scene);
 	// Filter out all points with Z values not in the [0-2] range.
 	filter.setFilterFieldName("z");
 	filter.setFilterLimits(0.0, 2.5);
     
 	//filter.filter(*filtered_scene);
-
+    */
     pcl::PointCloud<pcl::PointXYZ>::Ptr model_skeleton(new PointCloud<pcl::PointXYZ>);
 
     pcl::io::loadPCDFile<pcl::PointXYZ>("/home/rnm/Documents/Skeleton.pcd", *model_skeleton);
    
     scaleCloud(model_skeleton);
-    Eigen::Matrix4f pairTransform;
-    pcl::PointCloud<pcl::PointXYZ>::Ptr temp (new PointCloud<pcl::PointXYZ>);
+    //Eigen::Matrix4f pairTransform;
+    //pcl::PointCloud<pcl::PointXYZ>::Ptr temp (new PointCloud<pcl::PointXYZ>);
 
     //alignTemplate(scanned_scene, model_skeleton);
 
     //registerModel(filtered_scene, model_skeleton);
     //localRegistration(model_skeleton, filtered_scene);
 
-    pairAlign(model_skeleton,scanned_scene, temp, pairTransform );
+    //pairAlign(model_skeleton,scanned_scene, temp, pairTransform );
     
-    pcl::io::savePCDFile ("/home/rnm/Documents/plswork.pcd", *temp);
+    //pcl::io::savePCDFile ("/home/rnm/Documents/plswork.pcd", *temp);
+    ROS_INFO("registering model");
 
-    */
+    globalRegistration(scanned_scene, model_skeleton);
+    //localRegistration(model_skeleton, scanned_scene);
 
     
 }

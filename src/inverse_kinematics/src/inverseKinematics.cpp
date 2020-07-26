@@ -383,24 +383,15 @@ class InverseKinematics
     {
         if(id=="camCalib")
         {
-            angles[4]= -(M_PI/2) + (0.34906)*(cord[0]/0.160);
-            angles[6]=  -1.57 + (-0.34906 * (cord[1]-0.400)/0.160) - angles[0];
+            //angles[4]= -(M_PI/2) + (0.34906)*(cord[0]/0.160);
+            //angles[6]=  -1.57 + (-0.34906 * (cord[1]-0.400)/0.160) - angles[0];
+            angles[4]= -(M_PI/2);
+            angles[6]=  -1.57 ;
             
             return angles;
 
         }
-        /*else if(id=="modScan")
-        {
-            angles[4] = -(M_PI/2) + 1.3962*(0.500-cord[2])/0.200;
-           
-            angles[6] = -angles[0]+ (0.78539*(cord[1]-0.325)/0.325);
-             if(cord[0]==-400)
-            {
-                angles[6]= angles[6] + 1.5707*(cord[1]-0.325)/0.325;
-            }
-            return angles;
 
-        }*/
         else
         {
             return angles;

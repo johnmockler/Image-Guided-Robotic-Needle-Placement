@@ -38,7 +38,7 @@ class TrajectoryPlanningCC
     {       
         if(jointAngleSet.size()>setSize)
         {
-            jointAngleSet.push_back(init_position);
+            
             setAngles();
         }
         else if(jointAngleSet.size()<=setSize)

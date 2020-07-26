@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++14
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"franka_hw\"
 
-CXX_INCLUDES = -isystem /opt/ros/melodic/include -isystem /opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/src/googletest/googletest/include -isystem /opt/ros/melodic/include/libfranka -I/home/suyashs/rnm_group_2/src/franka_ros/franka_hw/include 
+CXX_INCLUDES = -isystem /opt/ros/melodic/include -isystem /opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/src/googletest/googletest/include -isystem /opt/ros/melodic/include/libfranka -I/home/rnm/rnm_group_2/src/franka_ros/franka_hw/include 
 

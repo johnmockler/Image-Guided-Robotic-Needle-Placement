@@ -1,8 +1,8 @@
-# Install script for directory: /home/suyashs/rnm_group_2/src/pc_sim
+# Install script for directory: /home/rnm/rnm_group_2/src/pc_sim
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/suyashs/rnm_group_2/install")
+  set(CMAKE_INSTALL_PREFIX "/home/rnm/rnm_group_2/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/suyashs/rnm_group_2/build/pc_sim/catkin_generated/installspace/pc_sim.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/rnm/rnm_group_2/build/pc_sim/catkin_generated/installspace/pc_sim.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pc_sim/cmake" TYPE FILE FILES
-    "/home/suyashs/rnm_group_2/build/pc_sim/catkin_generated/installspace/pc_simConfig.cmake"
-    "/home/suyashs/rnm_group_2/build/pc_sim/catkin_generated/installspace/pc_simConfig-version.cmake"
+    "/home/rnm/rnm_group_2/build/pc_sim/catkin_generated/installspace/pc_simConfig.cmake"
+    "/home/rnm/rnm_group_2/build/pc_sim/catkin_generated/installspace/pc_simConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pc_sim" TYPE FILE FILES "/home/suyashs/rnm_group_2/src/pc_sim/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pc_sim" TYPE FILE FILES "/home/rnm/rnm_group_2/src/pc_sim/package.xml")
 endif()
 

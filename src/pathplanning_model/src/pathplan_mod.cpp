@@ -47,19 +47,41 @@ class PathPlanningM
     }
       void setJointAngles()
     {
-        std::cout<<"Angle Set"<<std::endl;
-         std::vector <float> pos1 = {0.030525, -0.1569, 0.00543, -2.04827, -1.511428, 1.50407, -1.263967};
+        //std::cout<<"Angle Set"<<std::endl;
+        std::vector <float> pos0 = {-0.014764, -0.23170993, 0.05181498, -2.0479213, -1.54893, 1.52423744, -1.394813};
+         jointAngleSet.push_back(pos0);
+         std::vector <float> pos1 = {-0.014764, -0.23170993, 0.05181498, -2.0479213, -1.54893, 1.52423744, -1.394813};
          jointAngleSet.push_back(pos1);
-         std::vector <float> pos2 = {-0.11194, 0.185898, -0.951134, -2.47058, -0.5011734, 2.7499887, -1.840970};
+         std::vector <float> pos2 = {-0.0150432, 0.43006, 0.055734858, -1.3854573, -1.60207, 1.611574, -1.3840217};
          jointAngleSet.push_back(pos2);
-         std::vector <float> pos3 = {-0.127346, -0.89997, 0.7862128, -2.430445, -0.833805, 1.23556, -0.84614679};
+         std::vector <float> pos3 = {-0.55668, 0.568625, 0.021229, -1.378861, -1.385753, 2.82236, -1.639886};
          jointAngleSet.push_back(pos3);
-         std::vector <float> pos4 = {-0.8479007, -1.089440, 1.81952, -2.0095914, 1.421915, 1.8340413, 1.410234};
+         std::vector <float> pos4 = {-0.586156, 0.853643, 0.087543, -1.266348, -0.351233, 2.4096, -2.216692};
          jointAngleSet.push_back(pos4);
-         std::vector <float> pos5 = {-2.864878, -0.4638232, 2.6686572, -1.520757, 1.5852838, 1.599405, 1.765395};
+         std::vector <float> pos5 = {-0.380533, 0.44029644, 0.0871018, -1.454936, -1.401328, 1.84973, -1.63066};
          jointAngleSet.push_back(pos5);
-         std::vector <float> pos6 = {-2.8250744, -0.678798, 2.207051, -1.9668214, 0.4210820, 2.7636913, -2.4785283};
+         std::vector <float> pos6 = {0.0825584, 0.3584410, 0.1909656, -1.501195, -1.543632, 1.250717, -1.26781};
          jointAngleSet.push_back(pos6);
+         std::vector <float> pos7 = {0.47164828, 0.515796, 0.264389, -1.4167907, -1.552264, 1.4619798, -1.33512};
+         jointAngleSet.push_back(pos7);
+         //std::vector <float> pos8 = {0.44547582, 0.8054551, 0.219487, -1.3007, -1.94811624, 2.15483998, -1.881513};
+        // jointAngleSet.push_back(pos8);
+         std::vector <float> pos9 = {0.4313268, 0.649523, 0.265708, -1.30033723, -1.50686, 1.0903097, -1.2873703};
+         jointAngleSet.push_back(pos9);
+         std::vector <float> pos10 = {0.357717, -0.12328, 0.653339, -2.23910, -0.892351, 0.72340,-0.249114};
+         jointAngleSet.push_back(pos10);
+         std::vector <float> pos11 = {0.297000, 0.38255, 0.48123, -1.850917, 0.28702, 1.115946, 1.199580};
+         jointAngleSet.push_back(pos11);
+         jointAngleSet.push_back(pos10);
+         std::vector <float> pos12 = {-0.023895, -0.62279, 0.2634198, -2.6288, -1.270, 1.6044, -0.53794};
+         jointAngleSet.push_back(pos12);
+         std::vector <float> pos13 = {-0.2162787, -0.403832, -0.623468, -2.532035, -1.368462, 2.37080085, -0.9596436};
+         jointAngleSet.push_back(pos13);
+         std::vector <float> pos14 = {-0.3799923, 0.2602442, -0.494012, -2.1547895, -0.304500, 2.620299, -2.0891112};
+         jointAngleSet.push_back(pos14);
+         jointAngleSet.push_back(pos13);
+         //std::vector <float> pos15 = {-0.15038719, -0.41586273, 0.306434, -2.3228989, -1.384752, 1.5398367, -1.29059};
+         //jointAngleSet.push_back(pos15);
 
     }
 

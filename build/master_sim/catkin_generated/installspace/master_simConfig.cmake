@@ -67,14 +67,14 @@ set(master_sim_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(master_sim_SOURCE_PREFIX /home/suyashs/rnm_group_2/src/master_sim)
-  set(master_sim_DEVEL_PREFIX /home/suyashs/rnm_group_2/devel)
+  set(master_sim_SOURCE_PREFIX /home/rnm/rnm_group_2/src/master_sim)
+  set(master_sim_DEVEL_PREFIX /home/rnm/rnm_group_2/devel)
   set(master_sim_INSTALL_PREFIX "")
   set(master_sim_PREFIX ${master_sim_DEVEL_PREFIX})
 else()
   set(master_sim_SOURCE_PREFIX "")
   set(master_sim_DEVEL_PREFIX "")
-  set(master_sim_INSTALL_PREFIX /home/suyashs/rnm_group_2/install)
+  set(master_sim_INSTALL_PREFIX /home/rnm/rnm_group_2/install)
   set(master_sim_PREFIX ${master_sim_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/suyashs/rnm_group_2/install/lib;/home/suyashs/rnm_group_2/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/rnm/rnm_group_2/install/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

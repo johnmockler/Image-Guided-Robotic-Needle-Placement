@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/suyashs/rnm_group_2/src/franka_ros/franka_visualization/src/gripper_joint_state_publisher.cpp
+/home/rnm/rnm_group_2/src/franka_ros/franka_visualization/src/gripper_joint_state_publisher.cpp
 franka/exception.h
 -
 franka/gripper.h

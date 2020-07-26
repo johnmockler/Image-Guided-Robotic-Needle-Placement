@@ -57,8 +57,8 @@ struct DataType< ::franka_control::SetFullCollisionBehavior > {
 };
 
 
-// service_traits::MD5Sum< ::franka_control::SetFullCollisionBehaviorRequest> should match
-// service_traits::MD5Sum< ::franka_control::SetFullCollisionBehavior >
+// service_traits::MD5Sum< ::franka_control::SetFullCollisionBehaviorRequest> should match 
+// service_traits::MD5Sum< ::franka_control::SetFullCollisionBehavior > 
 template<>
 struct MD5Sum< ::franka_control::SetFullCollisionBehaviorRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::franka_control::SetFullCollisionBehaviorRequest>
   }
 };
 
-// service_traits::DataType< ::franka_control::SetFullCollisionBehaviorRequest> should match
-// service_traits::DataType< ::franka_control::SetFullCollisionBehavior >
+// service_traits::DataType< ::franka_control::SetFullCollisionBehaviorRequest> should match 
+// service_traits::DataType< ::franka_control::SetFullCollisionBehavior > 
 template<>
 struct DataType< ::franka_control::SetFullCollisionBehaviorRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::franka_control::SetFullCollisionBehaviorRequest>
   }
 };
 
-// service_traits::MD5Sum< ::franka_control::SetFullCollisionBehaviorResponse> should match
-// service_traits::MD5Sum< ::franka_control::SetFullCollisionBehavior >
+// service_traits::MD5Sum< ::franka_control::SetFullCollisionBehaviorResponse> should match 
+// service_traits::MD5Sum< ::franka_control::SetFullCollisionBehavior > 
 template<>
 struct MD5Sum< ::franka_control::SetFullCollisionBehaviorResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::franka_control::SetFullCollisionBehaviorResponse>
   }
 };
 
-// service_traits::DataType< ::franka_control::SetFullCollisionBehaviorResponse> should match
-// service_traits::DataType< ::franka_control::SetFullCollisionBehavior >
+// service_traits::DataType< ::franka_control::SetFullCollisionBehaviorResponse> should match 
+// service_traits::DataType< ::franka_control::SetFullCollisionBehavior > 
 template<>
 struct DataType< ::franka_control::SetFullCollisionBehaviorResponse>
 {

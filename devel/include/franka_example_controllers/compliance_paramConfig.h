@@ -69,7 +69,7 @@ namespace franka_example_controllers
         field(a_f)
       {}
 
-      T compliance_paramConfig::* field;
+      T (compliance_paramConfig::* field);
 
       virtual void clamp(compliance_paramConfig &config, const compliance_paramConfig &max, const compliance_paramConfig &min) const
       {
@@ -216,7 +216,7 @@ namespace franka_example_controllers
         }
       }
 
-      T PT::* field;
+      T (PT::* field);
       std::vector<compliance_paramConfig::AbstractGroupDescriptionConstPtr> groups;
     };
 

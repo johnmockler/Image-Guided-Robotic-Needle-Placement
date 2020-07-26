@@ -57,8 +57,8 @@ struct DataType< ::messages::ImageCapture > {
 };
 
 
-// service_traits::MD5Sum< ::messages::ImageCaptureRequest> should match
-// service_traits::MD5Sum< ::messages::ImageCapture >
+// service_traits::MD5Sum< ::messages::ImageCaptureRequest> should match 
+// service_traits::MD5Sum< ::messages::ImageCapture > 
 template<>
 struct MD5Sum< ::messages::ImageCaptureRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::messages::ImageCaptureRequest>
   }
 };
 
-// service_traits::DataType< ::messages::ImageCaptureRequest> should match
-// service_traits::DataType< ::messages::ImageCapture >
+// service_traits::DataType< ::messages::ImageCaptureRequest> should match 
+// service_traits::DataType< ::messages::ImageCapture > 
 template<>
 struct DataType< ::messages::ImageCaptureRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::messages::ImageCaptureRequest>
   }
 };
 
-// service_traits::MD5Sum< ::messages::ImageCaptureResponse> should match
-// service_traits::MD5Sum< ::messages::ImageCapture >
+// service_traits::MD5Sum< ::messages::ImageCaptureResponse> should match 
+// service_traits::MD5Sum< ::messages::ImageCapture > 
 template<>
 struct MD5Sum< ::messages::ImageCaptureResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::messages::ImageCaptureResponse>
   }
 };
 
-// service_traits::DataType< ::messages::ImageCaptureResponse> should match
-// service_traits::DataType< ::messages::ImageCapture >
+// service_traits::DataType< ::messages::ImageCaptureResponse> should match 
+// service_traits::DataType< ::messages::ImageCapture > 
 template<>
 struct DataType< ::messages::ImageCaptureResponse>
 {

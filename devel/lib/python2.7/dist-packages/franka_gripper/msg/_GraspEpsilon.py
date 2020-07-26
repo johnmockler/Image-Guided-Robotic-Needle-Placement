@@ -9,7 +9,7 @@ import struct
 class GraspEpsilon(genpy.Message):
   _md5sum = "95b2c5464a6f679bd1dacaf86414f095"
   _type = "franka_gripper/GraspEpsilon"
-  _has_header = False  # flag to mark the presence of a Header object
+  _has_header = False #flag to mark the presence of a Header object
   _full_text = """float64 inner # [m]
 float64 outer # [m]
 """
@@ -32,7 +32,7 @@ float64 outer # [m]
     """
     if args or kwds:
       super(GraspEpsilon, self).__init__(*args, **kwds)
-      # message fields cannot be None, assign default values for those that are
+      #message fields cannot be None, assign default values for those that are
       if self.inner is None:
         self.inner = 0.
       if self.outer is None:
@@ -71,7 +71,7 @@ float64 outer # [m]
       (_x.inner, _x.outer,) = _get_struct_2d().unpack(str[start:end])
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e)  # most likely buffer underfill
+      raise genpy.DeserializationError(e) #most likely buffer underfill
 
 
   def serialize_numpy(self, buff, numpy):
@@ -100,7 +100,7 @@ float64 outer # [m]
       (_x.inner, _x.outer,) = _get_struct_2d().unpack(str[start:end])
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e)  # most likely buffer underfill
+      raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
 def _get_struct_I():

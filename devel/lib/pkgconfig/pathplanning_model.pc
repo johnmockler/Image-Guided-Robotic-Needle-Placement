@@ -1,4 +1,4 @@
-prefix=/home/suyashs/rnm_group_2/devel
+prefix=/home/rnm/rnm_group_2/devel
 
 Name: pathplanning_model
 Description: Description of pathplanning_model

@@ -1,8 +1,8 @@
-# Install script for directory: /home/suyashs/rnm_group_2/src/franka_ros/franka_ros
+# Install script for directory: /home/rnm/rnm_group_2/src/franka_ros/franka_ros
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/suyashs/rnm_group_2/install")
+  set(CMAKE_INSTALL_PREFIX "/home/rnm/rnm_group_2/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,6 +38,6 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/franka_ros" TYPE FILE FILES "/home/suyashs/rnm_group_2/src/franka_ros/franka_ros/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/franka_ros" TYPE FILE FILES "/home/rnm/rnm_group_2/src/franka_ros/franka_ros/package.xml")
 endif()
 

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/suyashs/rnm_group_2/devel/include/messages/ImageCapture.h
+/home/rnm/rnm_group_2/devel/include/messages/ImageCapture.h
 ros/service_traits.h
 -
 messages/ImageCaptureRequest.h
@@ -14,7 +14,7 @@ messages/ImageCaptureRequest.h
 messages/ImageCaptureResponse.h
 -
 
-/home/suyashs/rnm_group_2/devel/include/messages/ImageCaptureRequest.h
+/home/rnm/rnm_group_2/devel/include/messages/ImageCaptureRequest.h
 string
 -
 vector
@@ -30,7 +30,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/suyashs/rnm_group_2/devel/include/messages/ImageCaptureResponse.h
+/home/rnm/rnm_group_2/devel/include/messages/ImageCaptureResponse.h
 string
 -
 vector
@@ -46,7 +46,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/suyashs/rnm_group_2/src/pc_sim/src/pc_sim.cpp
+/home/rnm/rnm_group_2/src/pc_sim/src/pc_sim.cpp
 ros/ros.h
 -
 sensor_msgs/JointState.h

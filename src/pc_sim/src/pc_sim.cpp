@@ -67,14 +67,14 @@ void jointSet()
 void angleCallback(const std_msgs::Float64MultiArray::ConstPtr& msg)
   {
         
-        if(jointAngleSet.size()>=7)
+        if(jointAngleSet.size()>=15)
         {
             //jointAngleSet.push_back(init_position);
             //setAngles();
           ROS_INFO("All goal pos recieved.");
           goalSubscriber.shutdown();
         }
-        else if(jointAngleSet.size()<=6)
+        else if(jointAngleSet.size()<=14)
         {
             //std::cout<<"Set :"<<std::endl;
             std::vector<float> jointAngle;
@@ -94,7 +94,7 @@ void checkPosition(const sensor_msgs::JointStateConstPtr& msg)
 {
   //ROS_INFO("In sub callback");
   //ros::ServiceClient client = (ros::ServiceClient)*clientPtr;
-  if(jointAngleSet.size() == 6)
+  if(jointAngleSet.size() == 15)
   {
     if(count < jointAngleSet.size())
     {
@@ -103,11 +103,11 @@ void checkPosition(const sensor_msgs::JointStateConstPtr& msg)
       {
       currentPos[i] = msg->position[i];
       double temp = currentPos[i]- jointAngleSet[count][i];
-      std::cout<<"posSet: "<<jointAngleSet[count][i]<<"         currentPos: "<<currentPos[i]<<std::endl;
+      //std::cout<<"posSet: "<<jointAngleSet[count][i]<<"         currentPos: "<<currentPos[i]<<std::endl;
       error = error + std::pow(temp,2);
       }
       error = std::sqrt(error);
-    ROS_INFO("Count inside: %ld; Error: %f",count,error);
+    //ROS_INFO("Count inside: %ld; Error: %f",count,error);
       if(error < 0.005)
       {
         reached = true;
@@ -151,7 +151,14 @@ bool getImagesCollected()
   return imagesCollected;
 }
 
+int getCount()
+{
+  return count;
+}
+
+
 };
+
 
 
 int main(int argc, char** argv)
@@ -178,20 +185,24 @@ int main(int argc, char** argv)
       //bool result = calibrate();
       bool result;
       ROS_INFO("Bot Reached position");
-      srv.request.x = false;
-      ros::Duration(0,5).sleep();
-      if(client.call(srv))
-        {
-          //count++;
-          ROS_INFO("Got response");
-          result = true;
-        }
-      else
-        {
-          ROS_INFO("Got no response"); 
-          result = false;
-        }
-      obj.setCount(result);
+      //int temp = obj.getCount();
+      //if(temp%2 != 0)
+      //{
+        srv.request.x = false;
+        //ros::Duration(1).sleep();
+        if(client.call(srv))
+          {
+            //count++;
+            ROS_INFO("Got response");
+            result = true;
+          }
+        else
+          {
+            ROS_INFO("Got no response"); 
+            result = false;
+          }
+        obj.setCount(result);
+      //}
     }
     else
     {

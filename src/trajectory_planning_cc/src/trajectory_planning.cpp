@@ -112,7 +112,7 @@ class TrajectoryPlanningCC
             //msgs.data.insert(msgs.data.end(), jointAngleSet[i].begin(), jointAngleSet[i].end());
             //traj_pub.publish(msgs);
             goal_pos_pub.publish(msgs);
-            ros::Duration(1).sleep();
+            ros::Duration(2).sleep();
             pos++;
         } 
         else

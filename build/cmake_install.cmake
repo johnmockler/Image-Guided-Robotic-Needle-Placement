@@ -130,6 +130,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+<<<<<<< Updated upstream
   include("/home/rnm/rnm_group_2/build/gtest/cmake_install.cmake")
   include("/home/rnm/rnm_group_2/build/franka_ros/franka_description/cmake_install.cmake")
   include("/home/rnm/rnm_group_2/build/franka_ros/franka_ros/cmake_install.cmake")
@@ -148,6 +149,28 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/rnm/rnm_group_2/build/franka_ros/franka_hw/cmake_install.cmake")
   include("/home/rnm/rnm_group_2/build/franka_ros/franka_control/cmake_install.cmake")
   include("/home/rnm/rnm_group_2/build/franka_ros/franka_example_controllers/cmake_install.cmake")
+=======
+  include("/home/suyashs/rnm_group_2/build/gtest/cmake_install.cmake")
+  include("/home/suyashs/rnm_group_2/build/franka_ros/franka_description/cmake_install.cmake")
+  include("/home/suyashs/rnm_group_2/build/franka_ros/franka_ros/cmake_install.cmake")
+  include("/home/suyashs/rnm_group_2/build/franka_ros/franka_msgs/cmake_install.cmake")
+  include("/home/suyashs/rnm_group_2/build/messages/cmake_install.cmake")
+  include("/home/suyashs/rnm_group_2/build/pathplanning_model/cmake_install.cmake")
+  include("/home/suyashs/rnm_group_2/build/camera_calibration/cmake_install.cmake")
+  include("/home/suyashs/rnm_group_2/build/forward_kinematics/cmake_install.cmake")
+  include("/home/suyashs/rnm_group_2/build/franka_ros/franka_gripper/cmake_install.cmake")
+  include("/home/suyashs/rnm_group_2/build/franka_ros/franka_visualization/cmake_install.cmake")
+  include("/home/suyashs/rnm_group_2/build/inverse_kinematics/cmake_install.cmake")
+  include("/home/suyashs/rnm_group_2/build/master_sim/cmake_install.cmake")
+  include("/home/suyashs/rnm_group_2/build/pathPlanning_cc/cmake_install.cmake")
+  include("/home/suyashs/rnm_group_2/build/pc_sim/cmake_install.cmake")
+  include("/home/suyashs/rnm_group_2/build/point_cloud_generator/cmake_install.cmake")
+  include("/home/suyashs/rnm_group_2/build/trajectory_planning_cc/cmake_install.cmake")
+  include("/home/suyashs/rnm_group_2/build/Azure_Kinect_ROS_Driver-melodic/cmake_install.cmake")
+  include("/home/suyashs/rnm_group_2/build/franka_ros/franka_hw/cmake_install.cmake")
+  include("/home/suyashs/rnm_group_2/build/franka_ros/franka_control/cmake_install.cmake")
+  include("/home/suyashs/rnm_group_2/build/franka_ros/franka_example_controllers/cmake_install.cmake")
+>>>>>>> Stashed changes
 
 endif()
 

@@ -105,11 +105,11 @@ private:
     std::vector<Mat> Target2CamPosesR_Matrix;
     std::vector<Mat> endEffector2BasePosesR_Matrix;
 
-    std::vector<cv::Vec3d> cameraPosesR;
-    std::vector<cv::Vec3d> cameraPosesT;
+    std::vector<cv::Mat> cameraPosesR;
+    std::vector<cv::Mat> cameraPosesT;
 
-    std::vector<Mat> cam2endEffectorR;
-    std::vector<Vec3d> cam2endEffectorT;
+    Mat cam2endEffectorR;
+    Mat cam2endEffectorT;
 
     //cv::Mat cameraPosesR;
     //cv::Mat cameraPosesT;
@@ -118,11 +118,11 @@ private:
 
 
     bool alreadyCalibrated;
+    bool alreadyHandEyeCalibrated;
 
 
 public:
 
-    bool alreadyHandEyeCalibrated;
 
     CameraCalibrationNode();
     void broadcastTransform();

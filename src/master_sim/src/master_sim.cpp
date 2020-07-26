@@ -67,14 +67,14 @@ void jointSet()
 void angleCallback(const std_msgs::Float64MultiArray::ConstPtr& msg)
   {
         
-        if(jointAngleSet.size()>=31)
+        if(jointAngleSet.size()>=11)
         {
             //jointAngleSet.push_back(init_position);
             //setAngles();
           ROS_INFO("All goal pos recieved.");
           goalSubscriber.shutdown();
         }
-        else if(jointAngleSet.size()<=30)
+        else if(jointAngleSet.size()<=10)
         {
             //std::cout<<"Set :"<<std::endl;
             std::vector<float> jointAngle;
@@ -94,7 +94,7 @@ void checkPosition(const sensor_msgs::JointStateConstPtr& msg)
 {
   //ROS_INFO("In sub callback");
   //ros::ServiceClient client = (ros::ServiceClient)*clientPtr;
-  if(jointAngleSet.size() == 31)
+  if(jointAngleSet.size() == 11)
   {
     if(count < jointAngleSet.size())
     {
@@ -103,11 +103,11 @@ void checkPosition(const sensor_msgs::JointStateConstPtr& msg)
       {
       currentPos[i] = msg->position[i];
       double temp = currentPos[i]- jointAngleSet[count][i];
-      std::cout<<"posSet: "<<jointAngleSet[count][i]<<"         currentPos: "<<currentPos[i]<<std::endl;
+      //std::cout<<"posSet: "<<jointAngleSet[count][i]<<"         currentPos: "<<currentPos[i]<<std::endl;
       error = error + std::pow(temp,2);
       }
       error = std::sqrt(error);
-    ROS_INFO("Count inside: %ld; Error: %f",count,error);
+    //ROS_INFO("Count inside: %ld; Error: %f",count,error);
       if(error < 0.005)
       {
         reached = true;
@@ -136,7 +136,7 @@ void setCount(bool var)
     {
       count++;
       reached = false;
-      ROS_INFO("Count: %ld",count);
+      //ROS_INFO("Count: %ld",count);
     }
 }
 

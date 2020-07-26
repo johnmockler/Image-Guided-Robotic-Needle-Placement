@@ -64,7 +64,7 @@ bool CameraCalibrationNode::captureImage(messages::ImageCapture::Request &req, m
 
         //replace panda_link7, and panda_link0 with the names of end effector and base, respectively
         tf::StampedTransform base2gripper;
-        listener.lookupTransform("panda_link7", "panda_link0", ros::Time(0), base2gripper);
+        listener.lookupTransform("panda_EE", "panda_link0", ros::Time(0), base2gripper);
 
         formatTransform(base2gripper, mostRecentPoseR, mostRecentPoseT);
 
@@ -118,6 +118,7 @@ void CameraCalibrationNode::calibrateAndPoseEstimation()
     double totalErr = 0, err;
     for (int i=0; i < calibrationImages.size(); i++)
     {
+        try {
         cv::solvePnPRansac(objectPoints[i],  imagePoints[i],  cameraMatrix,  distCoeffs,  rvec,  tvec);
         cameraPosesR.push_back(rvec);
         cameraPosesT.push_back(tvec);
@@ -132,11 +133,14 @@ void CameraCalibrationNode::calibrateAndPoseEstimation()
         err = norm(imagePoints[i], imagePoints2, NORM_L2);
         size_t n = objectPoints[i].size();
         perViewErrors[i] = (float) std::sqrt(err*err/n);
-        std::cout<< "Current Image Error [%ld]" <<perViewErrors[i]<<std::endl;
+        std::cout<< "Current Image Error [%d]" <<perViewErrors[i]<<std::endl;
         totalErr        += err*err;
         totalPoints     += n;
         std::cout<< "Total Error: " << std::sqrt(totalErr/totalPoints)<<std::endl;
-
+        }
+        catch (...) {
+            std::cout<<"pose estimation failed"<<std::endl;
+        }
     }
 }
 
@@ -153,10 +157,25 @@ void CameraCalibrationNode::computeHandeyeTransform()
     calibrateHandEye(endEffectorPosesR,endEffectorPosesT,Target2CamPosesR_Matrix,cameraPosesT,cam2endEffectorR,cam2endEffectorT);
 }
 
+void CameraCalibrationNode::listenTransform()
+{
+    if(alreadyHandEyeCalibrated)
+    {
+        //replace panda_link7, and panda_link0 with the names of end effector and base, respectively
+        tf::StampedTransform base2gripper;
+        listener.lookupTransform("panda_EE", "panda_link0", ros::Time(0), base2gripper);
+
+        formatTransform(base2gripper, mostRecentPoseR, mostRecentPoseT);
+    }
+}
 void CameraCalibrationNode::broadcastTransform()
 {
     if(alreadyHandEyeCalibrated)
     {
+        std::cout<<"cam2endeffectorR: "<<std::endl;
+        std::cout<<cam2endEffectorR<<std::endl;
+        std::cout<<"cam2endeffectorT: "<<std::endl;
+        std::cout<<cam2endEffectorT<<std::endl;
         // Camere2EndEffector Rotation Vector
         cv::Mat came2endEffectorR_vec;
         cv::Rodrigues(cam2endEffectorR,came2endEffectorR_vec);
@@ -197,10 +216,13 @@ void CameraCalibrationNode::broadcastTransform()
         mesg.transforms.push_back(trans);
         PubRotationCam2Base.publish(mesg);
 
+
+        /*
         printf ("\n");
         printf ("R = | %6.3f %6.3f %6.3f  %6.3f| \n", trans.transform.rotation.x, trans.transform.rotation.y, trans.transform.rotation.z, trans.transform.rotation.w);
         printf ("\n");
         printf ("t = < %0.3f, %0.3f, %0.3f >\n", trans.transform.translation.x, trans.transform.translation.y, trans.transform.translation.z);
+    */
     }
 }
 

@@ -6,209 +6,84 @@
 #include <math.h>
 
 
-class MasterSim
-{
-private:
-  ros::NodeHandle nh;
-  std::vector<std::string> joint_names_;
-  ros::Subscriber jointSubscriber;
-  ros::Subscriber goalSubscriber;
-  ros::ServiceClient client;
-  //ros::ServiceClient *clientPtr;
-  //messages::ImageCapture srv;
-  std::vector<std::vector<double>> positionSet;
-  double currentPos[7]={0};
-  double goalPos[7];
-  double pastGoalPos[7];
-  int count = 1;
-  bool reached = false;
-  double error;
-  bool imagesCollected = false;
-  bool goalPosRecorded = false;
-  std::vector<std::vector<float>> jointAngleSet;
-
-public:
-MasterSim(ros::NodeHandle n):nh(n)
-{
-  jointSet();
-  goalSubscriber =  nh.subscribe("/joint_AnglesIK", 1, &MasterSim::angleCallback,this);
-  jointSubscriber = nh.subscribe("/joint_states",1,&MasterSim::checkPosition,this);
-  //client = nh.serviceClient<messages::ImageCapture>("capture_image",this);
-  //clientPtr = &client;
-  ROS_INFO("sUSCRIBED"); 
-}
-
-void jointSet()
-    {
-        
-        std::vector<double> J1={-0.5,0,0,-0.8,0.7,1.5,0};
-        positionSet.push_back(J1);
-        std::vector<double> J2={0,0,0,-0.8,0,1.5,0};
-         positionSet.push_back(J2);
-        std::vector<double> J3={0.5,0,0,-0.8,-0.7,1.5,0};
-         positionSet.push_back(J3);
-        std::vector<double> J4={-0.5,-0.9,0,-1.5,0.7,1.2,0};
-        positionSet.push_back(J4);
-        std::vector<double> J5={0,-0.9,0,-1.5,0,1.2,0};
-         positionSet.push_back(J5);
-        std::vector<double> J6={0.5,-0.9,0,-1.5,-0.7,1.2,0};
-         positionSet.push_back(J6);
-        std::vector<double> J7={-0.5,0.5,0,-0.6,0.7,0.9,0};
-        positionSet.push_back(J7);
-        std::vector<double> J8={0,0.5,0,-0.6,0,0.9,0};
-         positionSet.push_back(J8);
-        std::vector<double> J9={0.5,0.5,0,-0.6,-0.7,0.9,0};
-         positionSet.push_back(J9);
-        
-
-        
-    }
-
-void angleCallback(const std_msgs::Float64MultiArray::ConstPtr& msg)
-  {
-        
-        if(jointAngleSet.size()>=11)
-        {
-            //jointAngleSet.push_back(init_position);
-            //setAngles();
-          ROS_INFO("All goal pos recieved.");
-          goalSubscriber.shutdown();
-        }
-        else if(jointAngleSet.size()<=10)
-        {
-            //std::cout<<"Set :"<<std::endl;
-            std::vector<float> jointAngle;
-            for(int i=0;i<7;i++)
-            {
-                jointAngle.push_back(msg->data[i]);
-                //std::cout<<jointAngle[i]<<std::endl;
-                            
-            }
-            jointAngleSet.push_back(jointAngle);       
-            
-        } 
-        
-    }
-
-void checkPosition(const sensor_msgs::JointStateConstPtr& msg)
-{
-  //ROS_INFO("In sub callback");
-  //ros::ServiceClient client = (ros::ServiceClient)*clientPtr;
-  if(jointAngleSet.size() == 11)
-  {
-    if(count < jointAngleSet.size())
-    {
-      error = 0.0;
-      for(int i =0;i<7;i++)
-      {
-      currentPos[i] = msg->position[i];
-      double temp = currentPos[i]- jointAngleSet[count][i];
-      //std::cout<<"posSet: "<<jointAngleSet[count][i]<<"         currentPos: "<<currentPos[i]<<std::endl;
-      error = error + std::pow(temp,2);
-      }
-      error = std::sqrt(error);
-    //ROS_INFO("Count inside: %ld; Error: %f",count,error);
-      if(error < 0.005)
-      {
-        reached = true;
-        //count++;
-        //ros::Duration(3.0).sleep();
-      }
-      else
-      {
-        
-        reached = false;
-      }
-
-    }
-    else
-    {
-      ROS_INFO("In sub callback");
-      imagesCollected = true;
-    }
-}
-}
-
-void setCount(bool var)
-{
-  
-  if(var)
-    {
-      count++;
-      reached = false;
-      //ROS_INFO("Count: %ld",count);
-    }
-}
-
-
-bool getStatus()
-{
-  return reached;
-}
-
-bool getImagesCollected()
-{
-  return imagesCollected;
-}
-
-};
-
 
 int main(int argc, char** argv)
 {
 
+  ROS_INFO("Master node initiated!");
   ros::init(argc, argv, "master_sim");
-  ROS_INFO("Master Sim node initiated"); 
+
+  /*
+  masterSim ms_node;
+  ros::Duration(1).sleep();
+  while (ros::ok()) {
+    ms_node.checkPosition();
+    ros::spinOnce();
+  }
+  //ros::spin();
+  return 0;
+  /
+*/
+  
   ros::NodeHandle n;
-  ros::NodeHandle ns;
-  ros::ServiceClient client = ns.serviceClient<messages::ImageCapture>("capture_image");
+  ros::ServiceClient client = n.serviceClient<messages::ImageCapture>("capture_cloud");
+  //ros::Subscriber jointSubscriber = n.subscribe("/joint_states",10, jointCallback,this);
+
   messages::ImageCapture srv;
-  MasterSim obj(n);
-  //obj.run();
-  ros::Rate r(10);
-  while(ros::ok())
-  {
-    if(!obj.getStatus() && !obj.getImagesCollected())
+  
+  //std::vector<float> times = {5.0,15.0,27.0,36.0,45.0,61.0,72.0,82.0,93.0,107.0,117.0,127.0,137.0,147.0,155.0,161.0,167.0,176.0,186.0,196.0,206.0,217.0,225.0,233.0,247.0,260.0,271.0,280.0,290.0,300.0};
+
+ // std::vector<float> times = {15.0,27.0,36.0,45.0,61.0,72.0,82.0,93.0,107.0,117.0,127.0,137.0,147.0,155.0,161.0,167.0,176.0,186.0,196.0,206.0,217.0,225.0,233.0,247.0,260.0,271.0,280.0,290.0,300.0};
+  std::vector<float> times = {2.0, 5.0, 10.0, 15.0, 20.0, 25.0, 30.0};
+  //std::vector<float> times = {5.0};
+
+
+  double begin = ros::Time::now().toSec();
+  double now;
+  double elapsedTime;
+  int i = 0;
+  bool doneSending = false;
+  double stopTime = times.at(times.size()-1) + 5.0;
+
+  
+  while (ros::ok()) {
+    
+    
+    now = ros::Time::now().toSec();
+    elapsedTime = now - begin;
+
+    float currentPt = times.at(i);
+
+    //if (i >= times.size() && !doneSending){
+
+    if (elapsedTime > currentPt && !doneSending)
     {
-      ros::spinOnce();
-      //r.sleep();
-    }
-    else if(obj.getStatus() && !obj.getImagesCollected()) 
-    {
-      //bool result = calibrate();
-      bool result;
-      ROS_INFO("Bot Reached position");
+      ROS_INFO("sending capture request.. [%ld]", (int) i);
       srv.request.x = false;
-      ros::Duration(0,5).sleep();
-      if(client.call(srv))
-        {
-          //count++;
-          ROS_INFO("Got response");
-          result = true;
-        }
-      else
-        {
-          ROS_INFO("Got no response"); 
-          result = false;
-        }
-      obj.setCount(result);
+      client.call(srv);
+      if (i < times.size() - 2)
+      {
+        i++;
+      }
+      else 
+      {
+        doneSending = true;
+      }
+
     }
-    else
+    if (elapsedTime > stopTime)
     {
-      
       srv.request.x = true;
-      if(client.call(srv))
-      {
-        ROS_INFO("Calibration Done");
-      }
-      else
-      {
-        ROS_INFO("Calibration Failed");
-      }
-      ros::shutdown(); 
+      client.call(srv);
+      doneSending = true;
     }
 
-    //r.sleep();
   }
+  
+
+ // ros::spin();
+
   return 0;
+
+  
 }

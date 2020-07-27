@@ -1,5 +1,6 @@
 #include <ros/ros.h>
 #include <sensor_msgs/PointCloud2.h>
+ #include <pcl_ros/point_cloud.h>
 #include <vector> 
 //PCL Includes
 //#include <pcl/memory.h>  // for pcl::make_shared
@@ -86,13 +87,13 @@ private:
     //ROS objects here
     ros::NodeHandle nh;
     ros::Subscriber cloudSub;
-    ros::Subscriber poseSub;
+    ros::Publisher transformPub;
+
 
     ros::ServiceServer captureService;
 
     //Class Methods here
-    void cloudCallback(const sensor_msgs::PointCloud2ConstPtr& cloud_msg);
-    void poseCallback(const tf2_msgs::TFMessage::ConstPtr& pose);
+    void cloudCallback(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr& msg);
 
     //need to add data type here
     void transformCallback();
@@ -100,19 +101,16 @@ private:
     void stitchClouds();
     void pairAlign(const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_src, const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_tgt, pcl::PointCloud<pcl::PointXYZ>::Ptr output, Eigen::Matrix4f &final_transform);
     void formatTransform(tf::StampedTransform tfTransform, Eigen::Matrix4f &eigenTransform);
-    void registerModel(const pcl::PointCloud<pcl::PointXYZ>::Ptr cloud,   const pcl::PointCloud<pcl::PointXYZ>::Ptr modelSkeleton);
 
 
     void scaleCloud(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud, float scalingFactor=0.001);
     void processCloud(MyCloud inputCloud, pcl::PointCloud<pcl::PointXYZ>::Ptr outputCloud);
+    void broadcastTransform();
 
     /**LOCAL PIPELINE FOR REGISTRATION**/
     void localRegistration(pcl::PointCloud<pcl::PointXYZ>::Ptr model ,pcl::PointCloud<pcl::PointXYZ>::Ptr scene);
 
-    /**ALIGNMENT**/
-    void computeSurfaceNormals(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud, pcl::PointCloud<pcl::Normal>::Ptr normals);
-    void computeLocalFeatures(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud,pcl::PointCloud<pcl::Normal>::Ptr normals, pcl::PointCloud<pcl::FPFHSignature33>::Ptr features);
-    void alignTemplate(pcl::PointCloud<pcl::PointXYZ>::Ptr input_cloud, pcl::PointCloud<pcl::PointXYZ>::Ptr model_cloud);
+
 
     /**GLOBAL PIPELINE FOR REGISTRATION**/
     void globalRegistration(pcl::PointCloud<pcl::PointXYZ>::Ptr scene ,pcl::PointCloud<pcl::PointXYZ>::Ptr model);
@@ -128,6 +126,7 @@ private:
 
     //Variables here
     bool cloudProcessed;
+    bool modelRegistered;
     pcl::PointCloud<pcl::PointXYZ>::Ptr mostRecentCloud;
     pcl::PointCloud<pcl::PointXYZ>::Ptr scanResults;
 
@@ -135,6 +134,12 @@ private:
     tf::TransformListener listener;
 
     std::vector<MyCloud> cloudList;
+
+
+    Eigen::Matrix4d handeye_transform;
+
+    Eigen::Matrix4f modelTransform;
+
     /*
     std::vector<pcl::PointCloud<pcl::PointXYZ>::Ptr> cloudList;
     std::vector<Eigen::Matrix4f> cloudTransforms;

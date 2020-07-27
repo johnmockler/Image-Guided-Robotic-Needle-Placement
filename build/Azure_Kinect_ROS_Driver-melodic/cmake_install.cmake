@@ -1,8 +1,8 @@
-# Install script for directory: /home/suyashs/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic
+# Install script for directory: /home/rnm/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/suyashs/rnm_group_2/install")
+  set(CMAKE_INSTALL_PREFIX "/home/rnm/rnm_group_2/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,18 +38,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/suyashs/rnm_group_2/build/Azure_Kinect_ROS_Driver-melodic/catkin_generated/installspace/azure_kinect_ros_driver.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/rnm/rnm_group_2/build/Azure_Kinect_ROS_Driver-melodic/catkin_generated/installspace/azure_kinect_ros_driver.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/azure_kinect_ros_driver/cmake" TYPE FILE FILES
-    "/home/suyashs/rnm_group_2/build/Azure_Kinect_ROS_Driver-melodic/catkin_generated/installspace/azure_kinect_ros_driverConfig.cmake"
-    "/home/suyashs/rnm_group_2/build/Azure_Kinect_ROS_Driver-melodic/catkin_generated/installspace/azure_kinect_ros_driverConfig-version.cmake"
+    "/home/rnm/rnm_group_2/build/Azure_Kinect_ROS_Driver-melodic/catkin_generated/installspace/azure_kinect_ros_driverConfig.cmake"
+    "/home/rnm/rnm_group_2/build/Azure_Kinect_ROS_Driver-melodic/catkin_generated/installspace/azure_kinect_ros_driverConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/azure_kinect_ros_driver" TYPE FILE FILES "/home/suyashs/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/azure_kinect_ros_driver" TYPE FILE FILES "/home/rnm/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -59,7 +59,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/azure_kinect_ros_driver/node"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/azure_kinect_ros_driver" TYPE EXECUTABLE FILES "/home/suyashs/rnm_group_2/devel/lib/azure_kinect_ros_driver/node")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/azure_kinect_ros_driver" TYPE EXECUTABLE FILES "/home/rnm/rnm_group_2/devel/lib/azure_kinect_ros_driver/node")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/azure_kinect_ros_driver/node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/azure_kinect_ros_driver/node")
     file(RPATH_CHANGE
@@ -79,7 +79,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libazure_kinect_ros_driver_nodelet.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/suyashs/rnm_group_2/devel/lib/libazure_kinect_ros_driver_nodelet.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/rnm/rnm_group_2/devel/lib/libazure_kinect_ros_driver_nodelet.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libazure_kinect_ros_driver_nodelet.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libazure_kinect_ros_driver_nodelet.so")
     file(RPATH_CHANGE
@@ -93,6 +93,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/azure_kinect_ros_driver" TYPE DIRECTORY FILES "/home/suyashs/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/launch")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/azure_kinect_ros_driver" TYPE DIRECTORY FILES "/home/rnm/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/launch")
 endif()
 

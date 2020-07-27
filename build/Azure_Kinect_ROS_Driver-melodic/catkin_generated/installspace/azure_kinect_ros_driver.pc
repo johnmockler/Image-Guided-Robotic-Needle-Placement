@@ -1,4 +1,4 @@
-prefix=/home/suyashs/rnm_group_2/install
+prefix=/home/rnm/rnm_group_2/install
 
 Name: azure_kinect_ros_driver
 Description: Description of azure_kinect_ros_driver

@@ -11,8 +11,13 @@ int main(int argc, char **argv)
 
 
     ROS_INFO("Point Cloud Generator node initiated!");
+    
+    while(ros::ok())
+    {
+        node.broadcastTransform();
+        ros::spinOnce();
+    }
 
-    ros::spin();
 
     return EXIT_SUCCESS;
 

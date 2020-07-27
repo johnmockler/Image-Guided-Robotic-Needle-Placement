@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/suyashs/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/include/azure_kinect_ros_driver/k4a_calibration_transform_data.h
+/home/rnm/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/include/azure_kinect_ros_driver/k4a_calibration_transform_data.h
 vector
 -
 k4a/k4a.h
@@ -28,17 +28,17 @@ tf2/LinearMath/Vector3.h
 sensor_msgs/CameraInfo.h
 -
 azure_kinect_ros_driver/k4a_ros_device_params.h
-/home/suyashs/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/include/azure_kinect_ros_driver/azure_kinect_ros_driver/k4a_ros_device_params.h
+/home/rnm/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/include/azure_kinect_ros_driver/azure_kinect_ros_driver/k4a_ros_device_params.h
 
-/home/suyashs/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/include/azure_kinect_ros_driver/k4a_ros_bridge_nodelet.h
+/home/rnm/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/include/azure_kinect_ros_driver/k4a_ros_bridge_nodelet.h
 ros/ros.h
 -
 nodelet/nodelet.h
 -
 azure_kinect_ros_driver/k4a_ros_device.h
-/home/suyashs/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/include/azure_kinect_ros_driver/azure_kinect_ros_driver/k4a_ros_device.h
+/home/rnm/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/include/azure_kinect_ros_driver/azure_kinect_ros_driver/k4a_ros_device.h
 
-/home/suyashs/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/include/azure_kinect_ros_driver/k4a_ros_device.h
+/home/rnm/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/include/azure_kinect_ros_driver/k4a_ros_device.h
 atomic
 -
 mutex
@@ -72,23 +72,23 @@ visualization_msgs/MarkerArray.h
 k4abt.hpp
 -
 azure_kinect_ros_driver/k4a_calibration_transform_data.h
-/home/suyashs/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/include/azure_kinect_ros_driver/azure_kinect_ros_driver/k4a_calibration_transform_data.h
+/home/rnm/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/include/azure_kinect_ros_driver/azure_kinect_ros_driver/k4a_calibration_transform_data.h
 azure_kinect_ros_driver/k4a_ros_device_params.h
-/home/suyashs/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/include/azure_kinect_ros_driver/azure_kinect_ros_driver/k4a_ros_device_params.h
+/home/rnm/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/include/azure_kinect_ros_driver/azure_kinect_ros_driver/k4a_ros_device_params.h
 
-/home/suyashs/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/include/azure_kinect_ros_driver/k4a_ros_device_params.h
+/home/rnm/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/include/azure_kinect_ros_driver/k4a_ros_device_params.h
 k4a/k4a.h
 -
 ros/ros.h
 -
 
-/home/suyashs/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/include/azure_kinect_ros_driver/k4a_ros_types.h
+/home/rnm/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/include/azure_kinect_ros_driver/k4a_ros_types.h
 k4a/k4atypes.h
 -
 
-/home/suyashs/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/src/k4a_calibration_transform_data.cpp
+/home/rnm/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/src/k4a_calibration_transform_data.cpp
 azure_kinect_ros_driver/k4a_calibration_transform_data.h
-/home/suyashs/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/src/azure_kinect_ros_driver/k4a_calibration_transform_data.h
+/home/rnm/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/src/azure_kinect_ros_driver/k4a_calibration_transform_data.h
 stdexcept
 -
 angles/angles.h
@@ -102,17 +102,17 @@ tf2/convert.h
 tf2_geometry_msgs/tf2_geometry_msgs.h
 -
 azure_kinect_ros_driver/k4a_ros_types.h
-/home/suyashs/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/src/azure_kinect_ros_driver/k4a_ros_types.h
+/home/rnm/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/src/azure_kinect_ros_driver/k4a_ros_types.h
 
-/home/suyashs/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/src/k4a_ros_bridge_nodelet.cpp
+/home/rnm/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/src/k4a_ros_bridge_nodelet.cpp
 azure_kinect_ros_driver/k4a_ros_bridge_nodelet.h
-/home/suyashs/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/src/azure_kinect_ros_driver/k4a_ros_bridge_nodelet.h
+/home/rnm/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/src/azure_kinect_ros_driver/k4a_ros_bridge_nodelet.h
 pluginlib/class_list_macros.h
 -
 
-/home/suyashs/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/src/k4a_ros_device.cpp
+/home/rnm/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/src/k4a_ros_device.cpp
 azure_kinect_ros_driver/k4a_ros_device.h
-/home/suyashs/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/src/azure_kinect_ros_driver/k4a_ros_device.h
+/home/rnm/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/src/azure_kinect_ros_driver/k4a_ros_device.h
 thread
 -
 angles/angles.h
@@ -130,11 +130,11 @@ sensor_msgs/point_cloud2_iterator.h
 k4a/k4a.hpp
 -
 azure_kinect_ros_driver/k4a_ros_types.h
-/home/suyashs/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/src/azure_kinect_ros_driver/k4a_ros_types.h
+/home/rnm/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/src/azure_kinect_ros_driver/k4a_ros_types.h
 
-/home/suyashs/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/src/k4a_ros_device_params.cpp
+/home/rnm/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/src/k4a_ros_device_params.cpp
 azure_kinect_ros_driver/k4a_ros_device_params.h
-/home/suyashs/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/src/azure_kinect_ros_driver/k4a_ros_device_params.h
+/home/rnm/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic/src/azure_kinect_ros_driver/k4a_ros_device_params.h
 k4a/k4a.h
 -
 

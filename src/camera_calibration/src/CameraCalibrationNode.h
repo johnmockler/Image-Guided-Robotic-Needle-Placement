@@ -43,7 +43,6 @@ private:
     //all subscribers here
     ros::NodeHandle nh;
     ros::Subscriber imageSub;
-    ros::Subscriber poseSub;
 
     //service advertisement
     ros::ServiceServer captureService;
@@ -92,7 +91,6 @@ private:
     std::vector<cv::Mat> calibrationImages;
 
     // Hand-Eye Calibration varaibales
-    void poseCallback(const tf2_msgs::TFMessage::ConstPtr& pose);
     tf::StampedTransform base2gripper;
     cv::Mat mostRecentPoseT;
     cv::Mat mostRecentPoseR;
@@ -102,7 +100,7 @@ private:
     std::vector<cv::Mat> endEffectorPosesR;
     std::vector<cv::Mat> endEffectorPosesT;
 
-    std::vector<Mat> Target2CamPosesR_Matrix;
+    std::vector<Mat> cameraPosesR_Mat;
     std::vector<Mat> endEffector2BasePosesR_Matrix;
 
     std::vector<cv::Mat> cameraPosesR;
@@ -118,12 +116,11 @@ private:
 
 
     bool alreadyCalibrated;
-    bool alreadyHandEyeCalibrated;
 
 
 public:
 
-
+    bool alreadyHandEyeCalibrated;
     CameraCalibrationNode();
     void broadcastTransform();
     void listenTransform();

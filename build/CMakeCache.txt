@@ -14,6 +14,8 @@
 # EXTERNAL cache entries
 ########################
 
+:UNINITIALIZED=======
+
 //The threading library used by boost-thread
 BOOST_THREAD_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpthread.so
 
@@ -663,16 +665,13 @@ actionlib_DIR:PATH=/opt/ros/melodic/share/actionlib/cmake
 actionlib_msgs_DIR:PATH=/opt/ros/melodic/share/actionlib_msgs/cmake
 
 //Value Computed by CMake
-<<<<<<< Updated upstream
-camera_calibration_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/camera_calibration
-=======
-azure_kinect_ros_driver_BINARY_DIR:STATIC=/home/suyashs/rnm_group_2/build/Azure_Kinect_ROS_Driver-melodic
+azure_kinect_ros_driver_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/Azure_Kinect_ROS_Driver-melodic
 
 //Value Computed by CMake
-azure_kinect_ros_driver_SOURCE_DIR:STATIC=/home/suyashs/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic
+azure_kinect_ros_driver_SOURCE_DIR:STATIC=/home/rnm/rnm_group_2/src/Azure_Kinect_ROS_Driver-melodic
 
 //Dependencies for the target
-azure_kinect_ros_driver_nodelet_LIB_DEPENDS:STATIC=general;k4a::k4a;general;k4a::k4arecord;general;/opt/ros/melodic/lib/libimage_transport.so;general;/opt/ros/melodic/lib/liborocos-kdl.so;general;/opt/ros/melodic/lib/liborocos-kdl.so.1.4.0;general;/opt/ros/melodic/lib/libtf2_ros.so;general;/opt/ros/melodic/lib/libactionlib.so;general;/opt/ros/melodic/lib/libmessage_filters.so;general;/opt/ros/melodic/lib/libtf2.so;general;/opt/ros/melodic/lib/libnodeletlib.so;general;/opt/ros/melodic/lib/libbondcpp.so;general;/usr/lib/x86_64-linux-gnu/libuuid.so;general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/libcv_bridge.so;general;/usr/lib/x86_64-linux-gnu/libopencv_core.so.3.2.0;general;/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.3.2.0;general;/usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.3.2.0;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;
+azure_kinect_ros_driver_nodelet_LIB_DEPENDS:STATIC=general;k4a::k4a;general;k4a::k4arecord;general;/opt/ros/melodic/lib/libimage_transport.so;general;/opt/ros/melodic/lib/liborocos-kdl.so;general;/opt/ros/melodic/lib/liborocos-kdl.so.1.4.0;general;/opt/ros/melodic/lib/libtf2_ros.so;general;/opt/ros/melodic/lib/libactionlib.so;general;/opt/ros/melodic/lib/libmessage_filters.so;general;/opt/ros/melodic/lib/libtf2.so;general;/opt/ros/melodic/lib/libnodeletlib.so;general;/opt/ros/melodic/lib/libbondcpp.so;general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/libcv_bridge.so;general;/usr/lib/x86_64-linux-gnu/libopencv_core.so.3.2.0;general;/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.3.2.0;general;/usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.3.2.0;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;
 
 //The directory containing a CMake configuration file for bond.
 bond_DIR:PATH=/opt/ros/melodic/share/bond/cmake
@@ -681,8 +680,7 @@ bond_DIR:PATH=/opt/ros/melodic/share/bond/cmake
 bondcpp_DIR:PATH=/opt/ros/melodic/share/bondcpp/cmake
 
 //Value Computed by CMake
-camera_calibration_BINARY_DIR:STATIC=/home/suyashs/rnm_group_2/build/camera_calibration
->>>>>>> Stashed changes
+camera_calibration_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/camera_calibration
 
 //Dependencies for target
 camera_calibration_LIB_DEPENDS:STATIC=
@@ -817,7 +815,7 @@ geometry_msgs_DIR:PATH=/opt/ros/melodic/share/geometry_msgs/cmake
 gmock_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/gtest/googlemock
 
 //Dependencies for the target
-gmock_LIB_DEPENDS:STATIC=general;-lpthread;
+gmock_LIB_DEPENDS:STATIC=general;-pthread;
 
 //Value Computed by CMake
 gmock_SOURCE_DIR:STATIC=/usr/src/googletest/googlemock
@@ -826,7 +824,7 @@ gmock_SOURCE_DIR:STATIC=/usr/src/googletest/googlemock
 gmock_build_tests:BOOL=OFF
 
 //Dependencies for the target
-gmock_main_LIB_DEPENDS:STATIC=general;-lpthread;
+gmock_main_LIB_DEPENDS:STATIC=general;-pthread;
 
 //Value Computed by CMake
 googletest-distribution_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/gtest
@@ -838,7 +836,7 @@ googletest-distribution_SOURCE_DIR:STATIC=/usr/src/googletest
 gtest_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/gtest/googlemock/gtest
 
 //Dependencies for the target
-gtest_LIB_DEPENDS:STATIC=general;-lpthread;
+gtest_LIB_DEPENDS:STATIC=general;-pthread;
 
 //Value Computed by CMake
 gtest_SOURCE_DIR:STATIC=/usr/src/googletest/googletest
@@ -860,7 +858,7 @@ gtest_force_shared_crt:BOOL=OFF
 gtest_hide_internal_symbols:BOOL=OFF
 
 //Dependencies for the target
-gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
+gtest_main_LIB_DEPENDS:STATIC=general;-pthread;general;gtest;
 
 //The directory containing a CMake configuration file for hardware_interface.
 hardware_interface_DIR:PATH=/opt/ros/melodic/share/hardware_interface/cmake
@@ -953,13 +951,13 @@ pcl_ros_DIR:PATH=/opt/ros/melodic/share/pcl_ros/cmake
 pluginlib_DIR:PATH=/opt/ros/melodic/share/pluginlib/cmake
 
 //Value Computed by CMake
-point_cloud_generator_BINARY_DIR:STATIC=/home/suyashs/rnm_group_2/build/point_cloud_generator
+point_cloud_generator_BINARY_DIR:STATIC=/home/rnm/rnm_group_2/build/point_cloud_generator
 
 //Dependencies for target
 point_cloud_generator_LIB_DEPENDS:STATIC=
 
 //Value Computed by CMake
-point_cloud_generator_SOURCE_DIR:STATIC=/home/suyashs/rnm_group_2/src/point_cloud_generator
+point_cloud_generator_SOURCE_DIR:STATIC=/home/rnm/rnm_group_2/src/point_cloud_generator
 
 //The directory containing a CMake configuration file for realtime_tools.
 realtime_tools_DIR:PATH=/opt/ros/melodic/share/realtime_tools/cmake

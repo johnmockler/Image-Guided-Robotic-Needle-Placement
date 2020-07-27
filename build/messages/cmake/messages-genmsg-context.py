@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
 messages_str = ""
-services_str = "/home/rnm/rnm_group_2/src/messages/srv/ImageCapture.srv"
+services_str = "/home/suyashs/rnm_group_2/src/messages/srv/ImageCapture.srv"
 pkg_name = "messages"
 dependencies_str = "std_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"

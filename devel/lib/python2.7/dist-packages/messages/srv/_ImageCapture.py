@@ -9,7 +9,7 @@ import struct
 class ImageCaptureRequest(genpy.Message):
   _md5sum = "6e7c7f7c11db7cc314e9efb95e17c2ed"
   _type = "messages/ImageCaptureRequest"
-  _has_header = False #flag to mark the presence of a Header object
+  _has_header = False  # flag to mark the presence of a Header object
   _full_text = """bool x
 """
   __slots__ = ['x']
@@ -31,7 +31,7 @@ class ImageCaptureRequest(genpy.Message):
     """
     if args or kwds:
       super(ImageCaptureRequest, self).__init__(*args, **kwds)
-      #message fields cannot be None, assign default values for those that are
+      # message fields cannot be None, assign default values for those that are
       if self.x is None:
         self.x = False
     else:
@@ -49,7 +49,8 @@ class ImageCaptureRequest(genpy.Message):
     :param buff: buffer, ``StringIO``
     """
     try:
-      buff.write(_get_struct_B().pack(self.x))
+      _x = self.x
+      buff.write(_get_struct_B().pack(_x))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -66,7 +67,7 @@ class ImageCaptureRequest(genpy.Message):
       self.x = bool(self.x)
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e) #most likely buffer underfill
+      raise genpy.DeserializationError(e)  # most likely buffer underfill
 
 
   def serialize_numpy(self, buff, numpy):
@@ -76,7 +77,8 @@ class ImageCaptureRequest(genpy.Message):
     :param numpy: numpy python module
     """
     try:
-      buff.write(_get_struct_B().pack(self.x))
+      _x = self.x
+      buff.write(_get_struct_B().pack(_x))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -94,7 +96,7 @@ class ImageCaptureRequest(genpy.Message):
       self.x = bool(self.x)
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e) #most likely buffer underfill
+      raise genpy.DeserializationError(e)  # most likely buffer underfill
 
 _struct_I = genpy.struct_I
 def _get_struct_I():
@@ -117,7 +119,7 @@ import struct
 class ImageCaptureResponse(genpy.Message):
   _md5sum = "0aa627fd156e9f77f006854bf1e783a2"
   _type = "messages/ImageCaptureResponse"
-  _has_header = False #flag to mark the presence of a Header object
+  _has_header = False  # flag to mark the presence of a Header object
   _full_text = """bool y
 """
   __slots__ = ['y']
@@ -139,7 +141,7 @@ class ImageCaptureResponse(genpy.Message):
     """
     if args or kwds:
       super(ImageCaptureResponse, self).__init__(*args, **kwds)
-      #message fields cannot be None, assign default values for those that are
+      # message fields cannot be None, assign default values for those that are
       if self.y is None:
         self.y = False
     else:
@@ -157,7 +159,8 @@ class ImageCaptureResponse(genpy.Message):
     :param buff: buffer, ``StringIO``
     """
     try:
-      buff.write(_get_struct_B().pack(self.y))
+      _x = self.y
+      buff.write(_get_struct_B().pack(_x))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -174,7 +177,7 @@ class ImageCaptureResponse(genpy.Message):
       self.y = bool(self.y)
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e) #most likely buffer underfill
+      raise genpy.DeserializationError(e)  # most likely buffer underfill
 
 
   def serialize_numpy(self, buff, numpy):
@@ -184,7 +187,8 @@ class ImageCaptureResponse(genpy.Message):
     :param numpy: numpy python module
     """
     try:
-      buff.write(_get_struct_B().pack(self.y))
+      _x = self.y
+      buff.write(_get_struct_B().pack(_x))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -202,7 +206,7 @@ class ImageCaptureResponse(genpy.Message):
       self.y = bool(self.y)
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e) #most likely buffer underfill
+      raise genpy.DeserializationError(e)  # most likely buffer underfill
 
 _struct_I = genpy.struct_I
 def _get_struct_I():

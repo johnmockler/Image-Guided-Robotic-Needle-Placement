@@ -67,14 +67,14 @@ set(messages_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(messages_SOURCE_PREFIX /home/rnm/rnm_group_2/src/messages)
-  set(messages_DEVEL_PREFIX /home/rnm/rnm_group_2/devel)
+  set(messages_SOURCE_PREFIX /home/suyashs/rnm_group_2/src/messages)
+  set(messages_DEVEL_PREFIX /home/suyashs/rnm_group_2/devel)
   set(messages_INSTALL_PREFIX "")
   set(messages_PREFIX ${messages_DEVEL_PREFIX})
 else()
   set(messages_SOURCE_PREFIX "")
   set(messages_DEVEL_PREFIX "")
-  set(messages_INSTALL_PREFIX /home/rnm/rnm_group_2/install)
+  set(messages_INSTALL_PREFIX /home/suyashs/rnm_group_2/install)
   set(messages_PREFIX ${messages_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/rnm/rnm_group_2/install/lib;/opt/ros/melodic/lib)
+    foreach(path /home/suyashs/rnm_group_2/install/lib;/home/suyashs/rnm_group_2/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

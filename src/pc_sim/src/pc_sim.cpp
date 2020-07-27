@@ -20,11 +20,12 @@ private:
   double currentPos[7]={0};
   double goalPos[7];
   double pastGoalPos[7];
-  int count = 1;
+  int count = 0; //was 1 previously
   bool reached = false;
   double error;
   bool imagesCollected = false;
   bool goalPosRecorded = false;
+  int clickCount = 0;
   std::vector<std::vector<float>> jointAngleSet;
 
 public:
@@ -67,14 +68,14 @@ void jointSet()
 void angleCallback(const std_msgs::Float64MultiArray::ConstPtr& msg)
   {
         
-        if(jointAngleSet.size()>=15)
+        if(jointAngleSet.size()>=16)
         {
             //jointAngleSet.push_back(init_position);
             //setAngles();
           ROS_INFO("All goal pos recieved.");
           goalSubscriber.shutdown();
         }
-        else if(jointAngleSet.size()<=14)
+        else if(jointAngleSet.size()<=15)
         {
             //std::cout<<"Set :"<<std::endl;
             std::vector<float> jointAngle;
@@ -94,7 +95,7 @@ void checkPosition(const sensor_msgs::JointStateConstPtr& msg)
 {
   //ROS_INFO("In sub callback");
   //ros::ServiceClient client = (ros::ServiceClient)*clientPtr;
-  if(jointAngleSet.size() == 15)
+  if(jointAngleSet.size() == 16)
   {
     if(count < jointAngleSet.size())
     {
@@ -107,11 +108,15 @@ void checkPosition(const sensor_msgs::JointStateConstPtr& msg)
       error = error + std::pow(temp,2);
       }
       error = std::sqrt(error);
-    //ROS_INFO("Count inside: %ld; Error: %f",count,error);
+      //ROS_INFO("Count inside: %ld; Error: %f",count,error);
       if(error < 0.005)
       {
-        reached = true;
-        //count++;
+        
+        if((count != 0) && (count %2 == 0))
+        {
+          reached = true;
+        }
+        count++;
         //ros::Duration(3.0).sleep();
       }
       else
@@ -134,9 +139,9 @@ void setCount(bool var)
   
   if(var)
     {
-      count++;
+      clickCount++;
       reached = false;
-      ROS_INFO("Count: %ld",count);
+      ROS_INFO("Click Count: %ld",clickCount);
     }
 }
 

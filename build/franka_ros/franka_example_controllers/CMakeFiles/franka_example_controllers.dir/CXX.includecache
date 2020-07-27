@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/rnm/rnm_group_2/src/franka_ros/franka_example_controllers/include/franka_example_controllers/joint_position_example_controller.h
+/home/suyashs/rnm_group_2/src/franka_ros/franka_example_controllers/include/franka_example_controllers/joint_position_example_controller.h
 array
 -
 string
@@ -28,7 +28,7 @@ ros/time.h
 std_msgs/Float64MultiArray.h
 -
 
-/home/rnm/rnm_group_2/src/franka_ros/franka_example_controllers/include/franka_example_controllers/joint_position_example_controller_sim.h
+/home/suyashs/rnm_group_2/src/franka_ros/franka_example_controllers/include/franka_example_controllers/joint_position_example_controller_sim.h
 array
 -
 string
@@ -46,7 +46,7 @@ ros/time.h
 std_msgs/Float64MultiArray.h
 -
 
-/home/rnm/rnm_group_2/src/franka_ros/franka_example_controllers/src/joint_position_example_controller.cpp
+/home/suyashs/rnm_group_2/src/franka_ros/franka_example_controllers/src/joint_position_example_controller.cpp
 franka_example_controllers/joint_position_example_controller.h
 -
 cmath
@@ -62,7 +62,7 @@ pluginlib/class_list_macros.h
 ros/ros.h
 -
 
-/home/rnm/rnm_group_2/src/franka_ros/franka_example_controllers/src/joint_position_example_controller_sim.cpp
+/home/suyashs/rnm_group_2/src/franka_ros/franka_example_controllers/src/joint_position_example_controller_sim.cpp
 franka_example_controllers/joint_position_example_controller_sim.h
 -
 cmath

@@ -1,8 +1,8 @@
-# Install script for directory: /home/rnm/rnm_group_2/src/franka_ros/franka_visualization
+# Install script for directory: /home/suyashs/rnm_group_2/src/franka_ros/franka_visualization
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/rnm/rnm_group_2/install")
+  set(CMAKE_INSTALL_PREFIX "/home/suyashs/rnm_group_2/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,18 +38,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/rnm/rnm_group_2/build/franka_ros/franka_visualization/catkin_generated/installspace/franka_visualization.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/suyashs/rnm_group_2/build/franka_ros/franka_visualization/catkin_generated/installspace/franka_visualization.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/franka_visualization/cmake" TYPE FILE FILES
-    "/home/rnm/rnm_group_2/build/franka_ros/franka_visualization/catkin_generated/installspace/franka_visualizationConfig.cmake"
-    "/home/rnm/rnm_group_2/build/franka_ros/franka_visualization/catkin_generated/installspace/franka_visualizationConfig-version.cmake"
+    "/home/suyashs/rnm_group_2/build/franka_ros/franka_visualization/catkin_generated/installspace/franka_visualizationConfig.cmake"
+    "/home/suyashs/rnm_group_2/build/franka_ros/franka_visualization/catkin_generated/installspace/franka_visualizationConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/franka_visualization" TYPE FILE FILES "/home/rnm/rnm_group_2/src/franka_ros/franka_visualization/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/franka_visualization" TYPE FILE FILES "/home/suyashs/rnm_group_2/src/franka_ros/franka_visualization/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -59,7 +59,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/franka_visualization/robot_joint_state_publisher"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/franka_visualization" TYPE EXECUTABLE FILES "/home/rnm/rnm_group_2/devel/lib/franka_visualization/robot_joint_state_publisher")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/franka_visualization" TYPE EXECUTABLE FILES "/home/suyashs/rnm_group_2/devel/lib/franka_visualization/robot_joint_state_publisher")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/franka_visualization/robot_joint_state_publisher" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/franka_visualization/robot_joint_state_publisher")
     file(RPATH_CHANGE
@@ -79,7 +79,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/franka_visualization/gripper_joint_state_publisher"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/franka_visualization" TYPE EXECUTABLE FILES "/home/rnm/rnm_group_2/devel/lib/franka_visualization/gripper_joint_state_publisher")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/franka_visualization" TYPE EXECUTABLE FILES "/home/suyashs/rnm_group_2/devel/lib/franka_visualization/gripper_joint_state_publisher")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/franka_visualization/gripper_joint_state_publisher" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/franka_visualization/gripper_joint_state_publisher")
     file(RPATH_CHANGE
@@ -93,10 +93,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/franka_visualization" TYPE DIRECTORY FILES "/home/rnm/rnm_group_2/src/franka_ros/franka_visualization/launch")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/franka_visualization" TYPE DIRECTORY FILES "/home/suyashs/rnm_group_2/src/franka_ros/franka_visualization/launch")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/franka_visualization" TYPE DIRECTORY FILES "/home/rnm/rnm_group_2/src/franka_ros/franka_visualization/config")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/franka_visualization" TYPE DIRECTORY FILES "/home/suyashs/rnm_group_2/src/franka_ros/franka_visualization/config")
 endif()
 

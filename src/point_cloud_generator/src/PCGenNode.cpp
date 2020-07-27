@@ -89,7 +89,7 @@ bool PCGenNode::captureCloud(messages::ImageCapture::Request& req, messages::Ima
         ROS_INFO("capturing point cloud [%ld]", (int) cloudList.size()+1);
 
         tf::StampedTransform base2gripper;
-        listener.lookupTransform("panda_EE", "panda_link0", ros::Time(0), base2gripper);
+        listener.lookupTransform("panda_link7", "panda_link0", ros::Time(0), base2gripper);
         
         if (mostRecentCloud->size() > 0){
             MyCloud newCloud(mostRecentCloud, base2gripper);
@@ -133,7 +133,7 @@ void PCGenNode::processCloud(MyCloud inputCloud, pcl::PointCloud<pcl::PointXYZ>:
         pcl::PointCloud<pcl::PointXYZ>::Ptr filter_NaN(new PointCloud<pcl::PointXYZ>);
         pcl::PointCloud<pcl::PointXYZ>::Ptr filteredCloud(new PointCloud<pcl::PointXYZ>);
         pcl::PointCloud<pcl::PointXYZ>::Ptr finalCloud(new PointCloud<pcl::PointXYZ>);
-        ROS_INFO("Filtering bad points out...")
+        ROS_INFO("Filtering bad points out...");
         std::vector< int > indices;
         //here we can use most recent cloud as output probably, to avoid creating a new variable
         pcl::removeNaNFromPointCloud(raw_cloud, *filter_NaN, indices);
@@ -182,7 +182,7 @@ void PCGenNode::processCloud(MyCloud inputCloud, pcl::PointCloud<pcl::PointXYZ>:
         
         Eigen::Matrix4f convertedTransform;
         formatTransform(raw_tf, convertedTransform);
-        ROS_INFO("transform formatted")
+        ROS_INFO("transform formatted");
 
         pcl::transformPointCloud(*filter_NaN, *finalCloud, convertedTransform);
         //std::cout<<"final size: "<<finalCloud->size()<<std::endl;
@@ -214,7 +214,7 @@ void PCGenNode::stitchClouds()
         Eigen::Matrix4f pairTransform;
 
         processCloud(cloudList[i], source);
-        ROS_INFO("CLoud processed...")
+        ROS_INFO("CLoud processed...");
         pcl::io::savePCDFile ("/home/suyashs/Desktop/scan" + std::to_string(i) + ".pcd", *source);
         pcl::PointCloud<pcl::PointXYZ>::Ptr temp (new PointCloud<pcl::PointXYZ>);
         

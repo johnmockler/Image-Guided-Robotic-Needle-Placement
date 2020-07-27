@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/rnm/rnm_group_2/src/pathplanning_model/src/pathplan_mod.cpp
+/home/suyashs/rnm_group_2/src/pathplanning_model/src/pathplan_mod.cpp
 ros/ros.h
 -
 sensor_msgs/JointState.h

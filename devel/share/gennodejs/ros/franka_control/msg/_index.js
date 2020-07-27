@@ -1,20 +1,20 @@
 
 "use strict";
 
-let ErrorRecoveryGoal = require('./ErrorRecoveryGoal.js');
-let ErrorRecoveryActionFeedback = require('./ErrorRecoveryActionFeedback.js');
-let ErrorRecoveryActionResult = require('./ErrorRecoveryActionResult.js');
-let ErrorRecoveryResult = require('./ErrorRecoveryResult.js');
-let ErrorRecoveryActionGoal = require('./ErrorRecoveryActionGoal.js');
-let ErrorRecoveryAction = require('./ErrorRecoveryAction.js');
 let ErrorRecoveryFeedback = require('./ErrorRecoveryFeedback.js');
+let ErrorRecoveryGoal = require('./ErrorRecoveryGoal.js');
+let ErrorRecoveryActionGoal = require('./ErrorRecoveryActionGoal.js');
+let ErrorRecoveryActionFeedback = require('./ErrorRecoveryActionFeedback.js');
+let ErrorRecoveryAction = require('./ErrorRecoveryAction.js');
+let ErrorRecoveryResult = require('./ErrorRecoveryResult.js');
+let ErrorRecoveryActionResult = require('./ErrorRecoveryActionResult.js');
 
 module.exports = {
-  ErrorRecoveryGoal: ErrorRecoveryGoal,
-  ErrorRecoveryActionFeedback: ErrorRecoveryActionFeedback,
-  ErrorRecoveryActionResult: ErrorRecoveryActionResult,
-  ErrorRecoveryResult: ErrorRecoveryResult,
-  ErrorRecoveryActionGoal: ErrorRecoveryActionGoal,
-  ErrorRecoveryAction: ErrorRecoveryAction,
   ErrorRecoveryFeedback: ErrorRecoveryFeedback,
+  ErrorRecoveryGoal: ErrorRecoveryGoal,
+  ErrorRecoveryActionGoal: ErrorRecoveryActionGoal,
+  ErrorRecoveryActionFeedback: ErrorRecoveryActionFeedback,
+  ErrorRecoveryAction: ErrorRecoveryAction,
+  ErrorRecoveryResult: ErrorRecoveryResult,
+  ErrorRecoveryActionResult: ErrorRecoveryActionResult,
 };

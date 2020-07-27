@@ -1,8 +1,8 @@
-prefix=/home/rnm/rnm_group_2/devel
+prefix=/home/suyashs/rnm_group_2/devel
 
 Name: franka_control
 Description: Description of franka_control
 Version: 0.7.0
-Cflags: -I/home/rnm/rnm_group_2/devel/include -I/home/rnm/rnm_group_2/src/franka_ros/franka_control/include -I/opt/ros/melodic/include/libfranka
-Libs: -L${prefix}/lib -lfranka_state_controller -lfranka_control_services /opt/ros/melodic/lib/libfranka.so.0.7.1
+Cflags: -I/home/suyashs/rnm_group_2/devel/include -I/home/suyashs/rnm_group_2/src/franka_ros/franka_control/include -I/opt/ros/melodic/include/libfranka
+Libs: -L${prefix}/lib -lfranka_state_controller -lfranka_control_services /opt/ros/melodic/lib/libfranka.so.0.8.0
 Requires: actionlib controller_interface franka_hw franka_msgs geometry_msgs message_runtime pluginlib realtime_tools roscpp sensor_msgs tf2_msgs

@@ -43,334 +43,334 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rnm/rnm_group_2/src
+CMAKE_SOURCE_DIR = /home/suyashs/rnm_group_2/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rnm/rnm_group_2/build
+CMAKE_BINARY_DIR = /home/suyashs/rnm_group_2/build
 
 # Utility rule file for franka_gripper_generate_messages_cpp.
 
 # Include the progress variables for this target.
 include franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp.dir/progress.make
 
-franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/MoveFeedback.h
-franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/HomingActionFeedback.h
-franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/MoveActionGoal.h
-franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/HomingActionResult.h
-franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/StopActionGoal.h
-franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/GraspAction.h
-franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/GraspGoal.h
-franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/HomingResult.h
-franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/GraspResult.h
-franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/HomingFeedback.h
-franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/MoveActionResult.h
-franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/StopActionFeedback.h
-franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/StopResult.h
-franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/MoveAction.h
-franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/StopFeedback.h
-franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/MoveResult.h
-franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/HomingActionGoal.h
-franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/MoveActionFeedback.h
-franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/GraspActionFeedback.h
-franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/StopGoal.h
-franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/GraspFeedback.h
-franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/StopAction.h
-franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/HomingGoal.h
-franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/HomingAction.h
-franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/GraspEpsilon.h
-franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/GraspActionGoal.h
-franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/MoveGoal.h
-franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/GraspActionResult.h
-franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/StopActionResult.h
+franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingResult.h
+franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveGoal.h
+franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/StopResult.h
+franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveActionResult.h
+franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspEpsilon.h
+franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingActionResult.h
+franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveFeedback.h
+franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspActionResult.h
+franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/StopActionGoal.h
+franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveActionFeedback.h
+franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/StopFeedback.h
+franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveActionGoal.h
+franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingActionFeedback.h
+franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspFeedback.h
+franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspGoal.h
+franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspResult.h
+franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspAction.h
+franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/StopAction.h
+franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingFeedback.h
+franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveAction.h
+franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveResult.h
+franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspActionFeedback.h
+franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingAction.h
+franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingActionGoal.h
+franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/StopGoal.h
+franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspActionGoal.h
+franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/StopActionResult.h
+franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingGoal.h
+franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/StopActionFeedback.h
 
 
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveFeedback.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveFeedback.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveFeedback.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveFeedback.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from franka_gripper/MoveFeedback.msg"
-	cd /home/rnm/rnm_group_2/src/franka_ros/franka_gripper && /home/rnm/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveFeedback.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingResult.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingResult.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingResult.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingResult.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from franka_gripper/HomingResult.msg"
+	cd /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper && /home/suyashs/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingResult.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
 
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingActionFeedback.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingActionFeedback.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingActionFeedback.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingActionFeedback.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingActionFeedback.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingActionFeedback.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingFeedback.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingActionFeedback.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingActionFeedback.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from franka_gripper/HomingActionFeedback.msg"
-	cd /home/rnm/rnm_group_2/src/franka_ros/franka_gripper && /home/rnm/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingActionFeedback.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveGoal.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveGoal.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveGoal.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveGoal.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from franka_gripper/MoveGoal.msg"
+	cd /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper && /home/suyashs/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveGoal.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
 
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveActionGoal.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveActionGoal.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveActionGoal.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveActionGoal.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveActionGoal.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveGoal.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveActionGoal.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveActionGoal.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from franka_gripper/MoveActionGoal.msg"
-	cd /home/rnm/rnm_group_2/src/franka_ros/franka_gripper && /home/rnm/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveActionGoal.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopResult.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopResult.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopResult.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopResult.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from franka_gripper/StopResult.msg"
+	cd /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper && /home/suyashs/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopResult.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
 
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingActionResult.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingActionResult.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingActionResult.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingActionResult.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingResult.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingActionResult.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingActionResult.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingActionResult.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingActionResult.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from franka_gripper/HomingActionResult.msg"
-	cd /home/rnm/rnm_group_2/src/franka_ros/franka_gripper && /home/rnm/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingActionResult.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveActionResult.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveActionResult.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveActionResult.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveActionResult.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveActionResult.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveResult.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveActionResult.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveActionResult.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveActionResult.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from franka_gripper/MoveActionResult.msg"
+	cd /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper && /home/suyashs/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveActionResult.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
 
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopActionGoal.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopActionGoal.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopActionGoal.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopActionGoal.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopActionGoal.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopGoal.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopActionGoal.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopActionGoal.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating C++ code from franka_gripper/StopActionGoal.msg"
-	cd /home/rnm/rnm_group_2/src/franka_ros/franka_gripper && /home/rnm/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopActionGoal.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspEpsilon.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspEpsilon.h: /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg/GraspEpsilon.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspEpsilon.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating C++ code from franka_gripper/GraspEpsilon.msg"
+	cd /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper && /home/suyashs/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg/GraspEpsilon.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
 
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspAction.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspAction.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspAction.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspAction.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspAction.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspActionGoal.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspAction.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspAction.h: /home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg/GraspEpsilon.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspAction.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspActionResult.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspAction.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspResult.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspAction.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspAction.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspFeedback.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspAction.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspActionFeedback.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspAction.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspGoal.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspAction.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating C++ code from franka_gripper/GraspAction.msg"
-	cd /home/rnm/rnm_group_2/src/franka_ros/franka_gripper && /home/rnm/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspAction.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingActionResult.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingActionResult.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingActionResult.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingActionResult.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingActionResult.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingActionResult.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingResult.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingActionResult.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingActionResult.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating C++ code from franka_gripper/HomingActionResult.msg"
+	cd /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper && /home/suyashs/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingActionResult.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
 
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspGoal.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspGoal.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspGoal.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspGoal.h: /home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg/GraspEpsilon.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspGoal.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating C++ code from franka_gripper/GraspGoal.msg"
-	cd /home/rnm/rnm_group_2/src/franka_ros/franka_gripper && /home/rnm/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspGoal.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveFeedback.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveFeedback.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveFeedback.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveFeedback.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating C++ code from franka_gripper/MoveFeedback.msg"
+	cd /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper && /home/suyashs/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveFeedback.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
 
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingResult.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingResult.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingResult.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingResult.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating C++ code from franka_gripper/HomingResult.msg"
-	cd /home/rnm/rnm_group_2/src/franka_ros/franka_gripper && /home/rnm/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingResult.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspActionResult.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspActionResult.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspActionResult.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspActionResult.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspActionResult.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspActionResult.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspResult.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspActionResult.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspActionResult.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating C++ code from franka_gripper/GraspActionResult.msg"
+	cd /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper && /home/suyashs/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspActionResult.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
 
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspResult.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspResult.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspResult.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspResult.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating C++ code from franka_gripper/GraspResult.msg"
-	cd /home/rnm/rnm_group_2/src/franka_ros/franka_gripper && /home/rnm/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspResult.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopActionGoal.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopActionGoal.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopActionGoal.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopActionGoal.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopActionGoal.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopGoal.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopActionGoal.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopActionGoal.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating C++ code from franka_gripper/StopActionGoal.msg"
+	cd /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper && /home/suyashs/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopActionGoal.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
 
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingFeedback.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingFeedback.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingFeedback.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingFeedback.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating C++ code from franka_gripper/HomingFeedback.msg"
-	cd /home/rnm/rnm_group_2/src/franka_ros/franka_gripper && /home/rnm/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingFeedback.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveActionFeedback.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveActionFeedback.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveActionFeedback.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveActionFeedback.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveActionFeedback.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveActionFeedback.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveFeedback.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveActionFeedback.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveActionFeedback.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating C++ code from franka_gripper/MoveActionFeedback.msg"
+	cd /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper && /home/suyashs/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveActionFeedback.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
 
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveActionResult.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveActionResult.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveActionResult.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveActionResult.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveActionResult.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveActionResult.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveResult.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveActionResult.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveActionResult.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating C++ code from franka_gripper/MoveActionResult.msg"
-	cd /home/rnm/rnm_group_2/src/franka_ros/franka_gripper && /home/rnm/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveActionResult.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopFeedback.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopFeedback.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopFeedback.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopFeedback.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating C++ code from franka_gripper/StopFeedback.msg"
+	cd /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper && /home/suyashs/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopFeedback.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
 
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopActionFeedback.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopActionFeedback.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopActionFeedback.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopActionFeedback.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopActionFeedback.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopActionFeedback.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopFeedback.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopActionFeedback.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopActionFeedback.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Generating C++ code from franka_gripper/StopActionFeedback.msg"
-	cd /home/rnm/rnm_group_2/src/franka_ros/franka_gripper && /home/rnm/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopActionFeedback.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveActionGoal.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveActionGoal.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveActionGoal.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveActionGoal.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveActionGoal.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveGoal.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveActionGoal.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveActionGoal.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Generating C++ code from franka_gripper/MoveActionGoal.msg"
+	cd /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper && /home/suyashs/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveActionGoal.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
 
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopResult.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopResult.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopResult.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopResult.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Generating C++ code from franka_gripper/StopResult.msg"
-	cd /home/rnm/rnm_group_2/src/franka_ros/franka_gripper && /home/rnm/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopResult.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingActionFeedback.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingActionFeedback.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingActionFeedback.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingActionFeedback.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingFeedback.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingActionFeedback.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingActionFeedback.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingActionFeedback.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingActionFeedback.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Generating C++ code from franka_gripper/HomingActionFeedback.msg"
+	cd /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper && /home/suyashs/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingActionFeedback.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
 
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveAction.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveAction.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveAction.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveAction.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveAction.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveGoal.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveAction.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveAction.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveActionFeedback.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveAction.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveActionResult.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveAction.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveResult.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveAction.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveAction.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveActionGoal.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveAction.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveFeedback.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveAction.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Generating C++ code from franka_gripper/MoveAction.msg"
-	cd /home/rnm/rnm_group_2/src/franka_ros/franka_gripper && /home/rnm/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveAction.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspFeedback.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspFeedback.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspFeedback.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspFeedback.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Generating C++ code from franka_gripper/GraspFeedback.msg"
+	cd /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper && /home/suyashs/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspFeedback.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
 
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopFeedback.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopFeedback.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopFeedback.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopFeedback.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Generating C++ code from franka_gripper/StopFeedback.msg"
-	cd /home/rnm/rnm_group_2/src/franka_ros/franka_gripper && /home/rnm/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopFeedback.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspGoal.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspGoal.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspGoal.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspGoal.h: /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg/GraspEpsilon.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspGoal.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Generating C++ code from franka_gripper/GraspGoal.msg"
+	cd /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper && /home/suyashs/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspGoal.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
 
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveResult.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveResult.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveResult.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveResult.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Generating C++ code from franka_gripper/MoveResult.msg"
-	cd /home/rnm/rnm_group_2/src/franka_ros/franka_gripper && /home/rnm/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveResult.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspResult.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspResult.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspResult.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspResult.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Generating C++ code from franka_gripper/GraspResult.msg"
+	cd /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper && /home/suyashs/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspResult.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
 
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingActionGoal.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingActionGoal.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingActionGoal.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingActionGoal.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingGoal.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingActionGoal.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingActionGoal.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingActionGoal.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Generating C++ code from franka_gripper/HomingActionGoal.msg"
-	cd /home/rnm/rnm_group_2/src/franka_ros/franka_gripper && /home/rnm/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingActionGoal.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspAction.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspAction.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspAction.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspAction.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspActionGoal.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspAction.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspAction.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspAction.h: /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg/GraspEpsilon.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspAction.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspActionFeedback.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspAction.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspActionResult.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspAction.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspAction.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspGoal.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspAction.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspResult.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspAction.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspFeedback.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspAction.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Generating C++ code from franka_gripper/GraspAction.msg"
+	cd /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper && /home/suyashs/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspAction.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
 
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveActionFeedback.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveActionFeedback.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveActionFeedback.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveActionFeedback.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveActionFeedback.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveActionFeedback.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveFeedback.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveActionFeedback.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveActionFeedback.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Generating C++ code from franka_gripper/MoveActionFeedback.msg"
-	cd /home/rnm/rnm_group_2/src/franka_ros/franka_gripper && /home/rnm/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveActionFeedback.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopAction.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopAction.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopAction.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopAction.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopResult.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopAction.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopAction.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopAction.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopActionGoal.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopAction.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopFeedback.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopAction.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopGoal.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopAction.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopAction.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopActionResult.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopAction.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopActionFeedback.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopAction.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Generating C++ code from franka_gripper/StopAction.msg"
+	cd /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper && /home/suyashs/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopAction.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
 
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspActionFeedback.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspActionFeedback.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspActionFeedback.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspActionFeedback.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspFeedback.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspActionFeedback.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspActionFeedback.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspActionFeedback.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspActionFeedback.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Generating C++ code from franka_gripper/GraspActionFeedback.msg"
-	cd /home/rnm/rnm_group_2/src/franka_ros/franka_gripper && /home/rnm/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspActionFeedback.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingFeedback.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingFeedback.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingFeedback.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingFeedback.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Generating C++ code from franka_gripper/HomingFeedback.msg"
+	cd /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper && /home/suyashs/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingFeedback.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
 
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopGoal.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopGoal.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopGoal.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopGoal.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Generating C++ code from franka_gripper/StopGoal.msg"
-	cd /home/rnm/rnm_group_2/src/franka_ros/franka_gripper && /home/rnm/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopGoal.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveAction.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveAction.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveAction.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveAction.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveAction.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveFeedback.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveAction.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveAction.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveActionResult.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveAction.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveGoal.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveAction.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveActionFeedback.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveAction.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveActionGoal.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveAction.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveAction.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveResult.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveAction.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Generating C++ code from franka_gripper/MoveAction.msg"
+	cd /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper && /home/suyashs/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveAction.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
 
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspFeedback.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspFeedback.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspFeedback.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspFeedback.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Generating C++ code from franka_gripper/GraspFeedback.msg"
-	cd /home/rnm/rnm_group_2/src/franka_ros/franka_gripper && /home/rnm/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspFeedback.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveResult.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveResult.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveResult.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveResult.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Generating C++ code from franka_gripper/MoveResult.msg"
+	cd /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper && /home/suyashs/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/MoveResult.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
 
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopAction.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopAction.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopAction.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopAction.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopAction.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopAction.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopResult.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopAction.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopActionGoal.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopAction.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopFeedback.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopAction.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopActionFeedback.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopAction.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopActionResult.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopAction.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopAction.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopGoal.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopAction.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Generating C++ code from franka_gripper/StopAction.msg"
-	cd /home/rnm/rnm_group_2/src/franka_ros/franka_gripper && /home/rnm/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopAction.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspActionFeedback.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspActionFeedback.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspActionFeedback.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspActionFeedback.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspFeedback.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspActionFeedback.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspActionFeedback.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspActionFeedback.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspActionFeedback.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Generating C++ code from franka_gripper/GraspActionFeedback.msg"
+	cd /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper && /home/suyashs/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspActionFeedback.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
 
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingGoal.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingGoal.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingGoal.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingGoal.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Generating C++ code from franka_gripper/HomingGoal.msg"
-	cd /home/rnm/rnm_group_2/src/franka_ros/franka_gripper && /home/rnm/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingGoal.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingAction.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingAction.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingAction.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingAction.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingActionFeedback.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingAction.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingAction.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingAction.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingActionGoal.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingAction.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingFeedback.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingAction.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingActionResult.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingAction.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingAction.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingGoal.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingAction.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingResult.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingAction.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Generating C++ code from franka_gripper/HomingAction.msg"
+	cd /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper && /home/suyashs/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingAction.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
 
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingAction.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingAction.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingAction.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingAction.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingAction.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingActionGoal.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingAction.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingAction.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingFeedback.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingAction.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingActionResult.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingAction.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingActionFeedback.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingAction.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingGoal.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingAction.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingAction.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingResult.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/HomingAction.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Generating C++ code from franka_gripper/HomingAction.msg"
-	cd /home/rnm/rnm_group_2/src/franka_ros/franka_gripper && /home/rnm/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/HomingAction.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingActionGoal.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingActionGoal.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingActionGoal.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingActionGoal.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingGoal.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingActionGoal.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingActionGoal.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingActionGoal.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Generating C++ code from franka_gripper/HomingActionGoal.msg"
+	cd /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper && /home/suyashs/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingActionGoal.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
 
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspEpsilon.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspEpsilon.h: /home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg/GraspEpsilon.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspEpsilon.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Generating C++ code from franka_gripper/GraspEpsilon.msg"
-	cd /home/rnm/rnm_group_2/src/franka_ros/franka_gripper && /home/rnm/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg/GraspEpsilon.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopGoal.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopGoal.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopGoal.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopGoal.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Generating C++ code from franka_gripper/StopGoal.msg"
+	cd /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper && /home/suyashs/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopGoal.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
 
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspActionGoal.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspActionGoal.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspActionGoal.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspActionGoal.h: /home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg/GraspEpsilon.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspActionGoal.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspActionGoal.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspGoal.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspActionGoal.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspActionGoal.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Generating C++ code from franka_gripper/GraspActionGoal.msg"
-	cd /home/rnm/rnm_group_2/src/franka_ros/franka_gripper && /home/rnm/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspActionGoal.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspActionGoal.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspActionGoal.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspActionGoal.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspActionGoal.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspGoal.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspActionGoal.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspActionGoal.h: /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg/GraspEpsilon.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspActionGoal.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspActionGoal.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Generating C++ code from franka_gripper/GraspActionGoal.msg"
+	cd /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper && /home/suyashs/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/GraspActionGoal.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
 
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveGoal.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveGoal.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveGoal.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/MoveGoal.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Generating C++ code from franka_gripper/MoveGoal.msg"
-	cd /home/rnm/rnm_group_2/src/franka_ros/franka_gripper && /home/rnm/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/MoveGoal.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopActionResult.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopActionResult.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopActionResult.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopActionResult.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopResult.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopActionResult.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopActionResult.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopActionResult.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopActionResult.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Generating C++ code from franka_gripper/StopActionResult.msg"
+	cd /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper && /home/suyashs/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopActionResult.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
 
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspActionResult.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspActionResult.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspActionResult.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspActionResult.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspActionResult.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspResult.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspActionResult.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspActionResult.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/GraspActionResult.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Generating C++ code from franka_gripper/GraspActionResult.msg"
-	cd /home/rnm/rnm_group_2/src/franka_ros/franka_gripper && /home/rnm/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/GraspActionResult.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingGoal.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingGoal.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingGoal.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingGoal.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Generating C++ code from franka_gripper/HomingGoal.msg"
+	cd /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper && /home/suyashs/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/HomingGoal.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
 
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopActionResult.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopActionResult.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopActionResult.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopActionResult.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopActionResult.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopActionResult.h: /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopResult.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopActionResult.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-/home/rnm/rnm_group_2/devel/include/franka_gripper/StopActionResult.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rnm/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Generating C++ code from franka_gripper/StopActionResult.msg"
-	cd /home/rnm/rnm_group_2/src/franka_ros/franka_gripper && /home/rnm/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rnm/rnm_group_2/devel/share/franka_gripper/msg/StopActionResult.msg -Ifranka_gripper:/home/rnm/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/rnm/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/rnm/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopActionFeedback.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopActionFeedback.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopActionFeedback.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopActionFeedback.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopActionFeedback.h: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopActionFeedback.h: /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopFeedback.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopActionFeedback.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+/home/suyashs/rnm_group_2/devel/include/franka_gripper/StopActionFeedback.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/suyashs/rnm_group_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Generating C++ code from franka_gripper/StopActionFeedback.msg"
+	cd /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper && /home/suyashs/rnm_group_2/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/suyashs/rnm_group_2/devel/share/franka_gripper/msg/StopActionFeedback.msg -Ifranka_gripper:/home/suyashs/rnm_group_2/devel/share/franka_gripper/msg -Ifranka_gripper:/home/suyashs/rnm_group_2/src/franka_ros/franka_gripper/msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p franka_gripper -o /home/suyashs/rnm_group_2/devel/include/franka_gripper -e /opt/ros/melodic/share/gencpp/cmake/..
 
 franka_gripper_generate_messages_cpp: franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp
-franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/MoveFeedback.h
-franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/HomingActionFeedback.h
-franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/MoveActionGoal.h
-franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/HomingActionResult.h
-franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/StopActionGoal.h
-franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/GraspAction.h
-franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/GraspGoal.h
-franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/HomingResult.h
-franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/GraspResult.h
-franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/HomingFeedback.h
-franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/MoveActionResult.h
-franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/StopActionFeedback.h
-franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/StopResult.h
-franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/MoveAction.h
-franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/StopFeedback.h
-franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/MoveResult.h
-franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/HomingActionGoal.h
-franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/MoveActionFeedback.h
-franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/GraspActionFeedback.h
-franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/StopGoal.h
-franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/GraspFeedback.h
-franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/StopAction.h
-franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/HomingGoal.h
-franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/HomingAction.h
-franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/GraspEpsilon.h
-franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/GraspActionGoal.h
-franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/MoveGoal.h
-franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/GraspActionResult.h
-franka_gripper_generate_messages_cpp: /home/rnm/rnm_group_2/devel/include/franka_gripper/StopActionResult.h
+franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingResult.h
+franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveGoal.h
+franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/StopResult.h
+franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveActionResult.h
+franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspEpsilon.h
+franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingActionResult.h
+franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveFeedback.h
+franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspActionResult.h
+franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/StopActionGoal.h
+franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveActionFeedback.h
+franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/StopFeedback.h
+franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveActionGoal.h
+franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingActionFeedback.h
+franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspFeedback.h
+franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspGoal.h
+franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspResult.h
+franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspAction.h
+franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/StopAction.h
+franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingFeedback.h
+franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveAction.h
+franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/MoveResult.h
+franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspActionFeedback.h
+franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingAction.h
+franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingActionGoal.h
+franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/StopGoal.h
+franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/GraspActionGoal.h
+franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/StopActionResult.h
+franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/HomingGoal.h
+franka_gripper_generate_messages_cpp: /home/suyashs/rnm_group_2/devel/include/franka_gripper/StopActionFeedback.h
 franka_gripper_generate_messages_cpp: franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp.dir/build.make
 
 .PHONY : franka_gripper_generate_messages_cpp
@@ -381,10 +381,10 @@ franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp.dir/bu
 .PHONY : franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp.dir/build
 
 franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp.dir/clean:
-	cd /home/rnm/rnm_group_2/build/franka_ros/franka_gripper && $(CMAKE_COMMAND) -P CMakeFiles/franka_gripper_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/suyashs/rnm_group_2/build/franka_ros/franka_gripper && $(CMAKE_COMMAND) -P CMakeFiles/franka_gripper_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp.dir/clean
 
 franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp.dir/depend:
-	cd /home/rnm/rnm_group_2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rnm/rnm_group_2/src /home/rnm/rnm_group_2/src/franka_ros/franka_gripper /home/rnm/rnm_group_2/build /home/rnm/rnm_group_2/build/franka_ros/franka_gripper /home/rnm/rnm_group_2/build/franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/suyashs/rnm_group_2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/suyashs/rnm_group_2/src /home/suyashs/rnm_group_2/src/franka_ros/franka_gripper /home/suyashs/rnm_group_2/build /home/suyashs/rnm_group_2/build/franka_ros/franka_gripper /home/suyashs/rnm_group_2/build/franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : franka_ros/franka_gripper/CMakeFiles/franka_gripper_generate_messages_cpp.dir/depend
 

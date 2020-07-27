@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/messages_generate_messages_nodejs"
-  "/home/rnm/rnm_group_2/devel/share/gennodejs/ros/messages/srv/ImageCapture.js"
+  "/home/suyashs/rnm_group_2/devel/share/gennodejs/ros/messages/srv/ImageCapture.js"
 )
 
 # Per-language clean rules from dependency scanning.

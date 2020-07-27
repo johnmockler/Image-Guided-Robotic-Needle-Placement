@@ -57,8 +57,8 @@ struct DataType< ::franka_control::SetForceTorqueCollisionBehavior > {
 };
 
 
-// service_traits::MD5Sum< ::franka_control::SetForceTorqueCollisionBehaviorRequest> should match 
-// service_traits::MD5Sum< ::franka_control::SetForceTorqueCollisionBehavior > 
+// service_traits::MD5Sum< ::franka_control::SetForceTorqueCollisionBehaviorRequest> should match
+// service_traits::MD5Sum< ::franka_control::SetForceTorqueCollisionBehavior >
 template<>
 struct MD5Sum< ::franka_control::SetForceTorqueCollisionBehaviorRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::franka_control::SetForceTorqueCollisionBehaviorRequest>
   }
 };
 
-// service_traits::DataType< ::franka_control::SetForceTorqueCollisionBehaviorRequest> should match 
-// service_traits::DataType< ::franka_control::SetForceTorqueCollisionBehavior > 
+// service_traits::DataType< ::franka_control::SetForceTorqueCollisionBehaviorRequest> should match
+// service_traits::DataType< ::franka_control::SetForceTorqueCollisionBehavior >
 template<>
 struct DataType< ::franka_control::SetForceTorqueCollisionBehaviorRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::franka_control::SetForceTorqueCollisionBehaviorRequest>
   }
 };
 
-// service_traits::MD5Sum< ::franka_control::SetForceTorqueCollisionBehaviorResponse> should match 
-// service_traits::MD5Sum< ::franka_control::SetForceTorqueCollisionBehavior > 
+// service_traits::MD5Sum< ::franka_control::SetForceTorqueCollisionBehaviorResponse> should match
+// service_traits::MD5Sum< ::franka_control::SetForceTorqueCollisionBehavior >
 template<>
 struct MD5Sum< ::franka_control::SetForceTorqueCollisionBehaviorResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::franka_control::SetForceTorqueCollisionBehaviorResponse>
   }
 };
 
-// service_traits::DataType< ::franka_control::SetForceTorqueCollisionBehaviorResponse> should match 
-// service_traits::DataType< ::franka_control::SetForceTorqueCollisionBehavior > 
+// service_traits::DataType< ::franka_control::SetForceTorqueCollisionBehaviorResponse> should match
+// service_traits::DataType< ::franka_control::SetForceTorqueCollisionBehavior >
 template<>
 struct DataType< ::franka_control::SetForceTorqueCollisionBehaviorResponse>
 {

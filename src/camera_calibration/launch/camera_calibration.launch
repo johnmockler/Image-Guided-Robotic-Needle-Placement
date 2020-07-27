@@ -1,6 +1,0 @@
-<launch>
-
-    <node name="camera_calibration" pkg="camera_calibration" type="camera_calibration_node" output="screen">
-    </node>
-
-</launch>

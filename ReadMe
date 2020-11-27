@@ -1,3 +1,6 @@
+
+Control a Panda Robotic arm to to scan a chest cadaver using a Kinect camera, align it to a 3D model, then plan a path to a specified target to simulate a needle insertion.
+
 ***Post Cloning setup****
 After cloning the repository, build the workspace by running the following commands in the terminal
 

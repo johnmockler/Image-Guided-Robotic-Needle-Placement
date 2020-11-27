@@ -1,8 +1,0 @@
-prefix=/home/suyashs/rnm_group_2/install
-
-Name: trajectory_planning_cc
-Description: Description of trajectory_planning_cc
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

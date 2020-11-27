@@ -1,8 +1,0 @@
-prefix=/home/suyashs/rnm_group_2/install
-
-Name: master_sim
-Description: Description of master_sim
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: messages

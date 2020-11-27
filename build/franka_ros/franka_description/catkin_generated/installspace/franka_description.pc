@@ -1,8 +1,0 @@
-prefix=/home/suyashs/rnm_group_2/install
-
-Name: franka_description
-Description: Description of franka_description
-Version: 0.7.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: xacro

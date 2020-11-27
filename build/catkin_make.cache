@@ -1,2 +1,0 @@
-Azure_Kinect_ROS_Driver-melodic:camera_calibration:forward_kinematics:franka_ros/franka_control:franka_ros/franka_description:franka_ros/franka_example_controllers:franka_ros/franka_gripper:franka_ros/franka_hw:franka_ros/franka_msgs:franka_ros/franka_ros:franka_ros/franka_visualization:inverse_kinematics:master_sim:messages:pathPlanning_cc:pathplanning_model:pc_sim:point_cloud_generator:trajectory_planning_cc
--DCATKIN_DEVEL_PREFIX=/home/suyashs/rnm_group_2/devel -DCMAKE_INSTALL_PREFIX=/home/suyashs/rnm_group_2/install -G Unix Makefiles

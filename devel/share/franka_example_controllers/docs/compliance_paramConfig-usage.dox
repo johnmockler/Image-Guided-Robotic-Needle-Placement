@@ -1,9 +1,0 @@
-\subsubsection usage Usage
-\verbatim
-<node name="dynamic_compliance" pkg="franka_example_controllers" type="dynamic_compliance">
-  <param name="translational_stiffness" type="double" value="200.0" />
-  <param name="rotational_stiffness" type="double" value="10.0" />
-  <param name="nullspace_stiffness" type="double" value="0.0" />
-</node>
-\endverbatim
-
